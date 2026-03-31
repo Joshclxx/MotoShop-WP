@@ -1,0 +1,25 @@
+/**
+ * Reading Time Estimator — front-end styles.
+ *
+ * @package ReadingTimeEstimator
+ */
+
+.rte-reading-time {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35em;
+	margin-bottom: 1.5em;
+	padding: 0.45em 0.9em;
+	background-color: #f0f4f8;
+	border-left: 4px solid #0073aa;
+	border-radius: 3px;
+	font-size: 0.875rem;
+	font-style: italic;
+	color: #3c434a;
+	line-height: 1.4;
+}
+
+.rte-icon {
+	font-size: 1rem;
+	line-height: 1;
+}

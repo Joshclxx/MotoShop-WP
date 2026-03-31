@@ -1,0 +1,132 @@
+/**
+ * Admin Login — MotoShop Parts Staff Portal
+ *
+ * Dark-branded login page for staff and admin users.
+ * Enqueued via login_enqueue_scripts hook in functions.php.
+ *
+ * @package SwiftCart
+ * @since   1.0.0
+ */
+
+/* ─── Page Background ───────────────────────────────────────────────────────── */
+body.login {
+	background: #0C1805;
+	font-family: 'Inter', 'Poppins', system-ui, -apple-system, sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+/* ─── Login Card ─────────────────────────────────────────────────────────────── */
+body.login #login {
+	background: #fff;
+	border-radius: 12px;
+	padding: 40px;
+	box-shadow: 0 8px 48px rgba(0, 0, 0, 0.4);
+	margin-top: 0;
+	width: 360px;
+}
+
+/* ─── Logo / Header ──────────────────────────────────────────────────────────── */
+body.login h1 a {
+	background-image: none !important;
+	background-color: #99BD49;
+	-webkit-mask-image: none;
+	mask-image: none;
+	width: 100%;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0;
+	color: transparent;
+	text-decoration: none;
+	border-radius: 8px;
+	margin-bottom: 8px;
+	text-indent: -9999px;
+	overflow: hidden;
+	position: relative;
+}
+
+body.login h1 a::after {
+	content: '⚙ MotoShop Parts';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.4rem;
+	font-weight: 700;
+	color: #fff;
+	text-indent: 0;
+}
+
+/* ─── Role Label ─────────────────────────────────────────────────────────────── */
+body.login .sc-login-role-label {
+	text-align: center;
+	color: #518123;
+	font-weight: 600;
+	font-size: 0.85rem;
+	margin-bottom: 16px;
+}
+
+/* ─── Form Fields ────────────────────────────────────────────────────────────── */
+body.login label {
+	color: #0C1805;
+	font-weight: 500;
+}
+
+body.login input[type="text"],
+body.login input[type="password"] {
+	border: 2px solid #BBD394 !important;
+	border-radius: 8px !important;
+	padding: 10px 14px !important;
+	font-size: 1rem !important;
+	transition: border-color 0.2s;
+}
+
+body.login input[type="text"]:focus,
+body.login input[type="password"]:focus {
+	border-color: #99BD49 !important;
+	box-shadow: 0 0 0 3px rgba(153, 189, 73, 0.2) !important;
+	outline: none !important;
+}
+
+/* ─── Submit Button ──────────────────────────────────────────────────────────── */
+body.login .button-primary {
+	background: #99BD49 !important;
+	border: none !important;
+	border-radius: 8px !important;
+	font-size: 1rem !important;
+	font-weight: 600 !important;
+	padding: 12px !important;
+	width: 100% !important;
+	transition: background 0.2s !important;
+	text-shadow: none !important;
+}
+
+body.login .button-primary:hover {
+	background: #518123 !important;
+}
+
+/* ─── Links ──────────────────────────────────────────────────────────────────── */
+body.login #nav a,
+body.login #backtoblog a {
+	color: #518123;
+}
+
+body.login #nav a:hover,
+body.login #backtoblog a:hover {
+	color: #99BD49;
+}
+
+/* ─── Messages / Errors ─────────────────────────────────────────────────────── */
+body.login .message,
+body.login #login_error {
+	border-radius: 8px;
+	border-left-color: #99BD49;
+}

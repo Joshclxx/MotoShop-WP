@@ -1,0 +1,1677 @@
+[18-Mar-2026 11:48:09 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "DB_NAME" in /Users/jay/Studio/motoshop-parts/wp-includes/update.php:124
+Stack trace:
+#0 /Users/jay/Studio/motoshop-parts/wp-includes/class-wp-hook.php(339): wp_version_check()
+#1 /Users/jay/Studio/motoshop-parts/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#2 /Users/jay/Studio/motoshop-parts/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#3 /Users/jay/Studio/motoshop-parts/wp-admin/includes/class-wp-upgrader.php(987): do_action('upgrader_proces...', Object(Plugin_Upgrader), Array)
+#4 /Users/jay/Studio/motoshop-parts/wp-admin/includes/class-plugin-upgrader.php(135): WP_Upgrader->run(Array)
+#5 phar:///usr/local/bin/wp/vendor/wp-cli/extension-command/src/Plugin_Command.php(633): Plugin_Upgrader->install('https://downloa...')
+#6 phar:///usr/local/bin/wp/vendor/wp-cli/extension-command/src/WP_CLI/CommandWithUpgrade.php(245): Plugin_Command->install_from_repo('woocommerce', Array)
+#7 phar:///usr/local/bin/wp/vendor/wp-cli/extension-command/src/Plugin_Command.php(1050): WP_CLI\CommandWithUpgrade->install(Array, Array)
+#8 [internal function]: Plugin_Command->install(Array, Array)
+#9 phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/WP_CLI/Dispatcher/CommandFactory.php(100): call_user_func(Array, Array, Array)
+#10 [internal function]: WP_CLI\Dispatcher\CommandFactory::{closure:WP_CLI\Dispatcher\CommandFactory::create_subcommand():97}(Array, Array)
+#11 phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/WP_CLI/Dispatcher/Subcommand.php(497): call_user_func(Object(Closure), Array, Array)
+#12 phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(470): WP_CLI\Dispatcher\Subcommand->invoke(Array, Array, Array)
+#13 phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(493): WP_CLI\Runner->run_command(Array, Array)
+#14 phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1295): WP_CLI\Runner->run_command_and_exit()
+#15 phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php(28): WP_CLI\Runner->start()
+#16 phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/bootstrap.php(84): WP_CLI\Bootstrap\LaunchRunner->process(Object(WP_CLI\Bootstrap\BootstrapState))
+#17 phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/wp-cli.php(35): WP_CLI\bootstrap()
+#18 phar:///usr/local/bin/wp/php/boot-phar.php(20): include('phar:///usr/loc...')
+#19 /usr/local/bin/wp(4): include('phar:///usr/loc...')
+#20 {main}
+  thrown in /Users/jay/Studio/motoshop-parts/wp-includes/update.php on line 124
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:49:42 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 11:50:27 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:10 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:05:19 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:25:50 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:27:30 UTC] PHP Deprecated:  Using null as an array offset is deprecated, use an empty string instead in phar:///usr/local/bin/wp/vendor/wp-cli/php-cli-tools/lib/cli/Colors.php on line 95
+[18-Mar-2026 12:43:37 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>INSERT wp_actionscheduler_logs (action_id, message, log_date_gmt, log_date_local) VALUES (8, 'action canceled', '2026-03-18 12:43:37', '2026-03-18 12:43:37')</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: INSERT wp_actionscheduler_logs (action_id, message, log_date_gmt, log_date_local) VALUES (8, :param0 , :param1 , :param2 ) | parameters: action canceled, 2026-03-18 12:43:37, 2026-03-18 12:43:37</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "wp_actionscheduler_logs": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/Studio/motoshop-parts/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/Studio/motoshop-parts/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('INSERT wp_actio...')
+#2 /Users/jay/Studio/motoshop-parts/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBLogger.php(152): WP_SQLite_DB->query('INSERT wp_actio...')
+#3 /Users/jay/Studio/motoshop-parts/wp-includes/class-wp-hook.php(341): ActionScheduler_DBLogger->bulk_log_cancel_actions(Array)
+#4 /Users/jay/Studio/motoshop-parts/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#5 /Users/jay/Studio/motoshop-parts/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#6 /Users/jay/Studio/motoshop-parts/wp-content/plugins/woocommerce/packages/action-scheduler/classes/abstracts/ActionScheduler_Store.php(445): do_action('action_schedule...', Array)
+#7 /Users/jay/Studio/motoshop-parts/wp-content/plugins/woocommerce/packages/action-scheduler/classes/abstracts/ActionScheduler_Store.php(402): ActionScheduler_Store->bulk_cancel_actions(Array)
+#8 /Users/jay/Studio/motoshop-parts/wp-content/plugins/woocommerce/packages/action-scheduler/functions.php(318): ActionScheduler_Store->cancel_actions_by_hook('wc_run_batch_pr...')
+#9 /Users/jay/Studio/motoshop-parts/wp-content/plugins/woocommerce/src/Internal/BatchProcessing/BatchProcessingController.php(427): as_unschedule_all_actions('wc_run_batch_pr...')
+#10 /Users/jay/Studio/motoshop-parts/wp-content/plugins/woocommerce/src/Internal/BatchProcessing/BatchProcessingController.php(413): Automattic\WooCommerce\Internal\BatchProcessing\BatchProcessingController->force_clear_all_processes()
+#11 /Users/jay/Studio/motoshop-parts/wp-content/plugins/woocommerce/src/Internal/BatchProcessing/BatchProcessingController.php(574): Automattic\WooCommerce\Internal\BatchProcessing\BatchProcessingController->remove_processor('Automattic\\WooC...')
+#12 /Users/jay/Studio/motoshop-parts/wp-content/plugins/woocommerce/src/Internal/BatchProcessing/BatchProcessingController.php(86): Automattic\WooCommerce\Internal\BatchProcessing\BatchProcessingController->remove_or_retry_failed_processors()
+#13 /Users/jay/Studio/motoshop-parts/wp-includes/class-wp-hook.php(341): Automattic\WooCommerce\Internal\BatchProcessing\BatchProcessingController->{closure:Automattic\WooCommerce\Internal\BatchProcessing\BatchProcessingController::__construct():85}('')
+#14 /Users/jay/Studio/motoshop-parts/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters(NULL, Array)
+#15 /Users/jay/Studio/motoshop-parts/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#16 /Users/jay/Studio/motoshop-parts/wp-includes/load.php(1308): do_action('shutdown')
+#17 [internal function]: shutdown_action_hook()
+#18 {main}</pre>
+ for query INSERT wp_actionscheduler_logs (action_id, message, log_date_gmt, log_date_local) VALUES (8, 'action canceled', '2026-03-18 12:43:37', '2026-03-18 12:43:37') made by shutdown_action_hook, do_action('shutdown'), WP_Hook->do_action, WP_Hook->apply_filters, Automattic\WooCommerce\Internal\BatchProcessing\BatchProcessingController->{closure:Automattic\WooCommerce\Internal\BatchProcessing\BatchProcessingController::__construct():85}, Automattic\WooCommerce\Internal\BatchProcessing\BatchProcessingController->remove_or_retry_failed_processors, Automattic\WooCommerce\Internal\BatchProcessing\BatchProcessingController->remove_processor, Automattic\WooCommerce\Internal\BatchProcessing\BatchProcessingController->force_clear_all_processes, as_unschedule_all_actions, ActionScheduler_Store->cancel_actions_by_hook, ActionScheduler_Store->bulk_cancel_actions, do_action('action_scheduler_bulk_cancel_actions'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_DBLogger->bulk_log_cancel_actions, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[18-Mar-2026 12:48:56 UTC] PHP Fatal error:  Uncaught TypeError: in_array(): Argument #2 ($haystack) must be of type array, string given in phar:///usr/local/bin/wp/vendor/wp-cli/eval-command/src/Eval_Command.php(39) : eval()'d code:8
+Stack trace:
+#0 phar:///usr/local/bin/wp/vendor/wp-cli/eval-command/src/Eval_Command.php(39) : eval()'d code(8): in_array('PH', '')
+#1 phar:///usr/local/bin/wp/vendor/wp-cli/eval-command/src/Eval_Command.php(39): eval()
+#2 [internal function]: Eval_Command->__invoke(Array, Array)
+#3 phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/WP_CLI/Dispatcher/CommandFactory.php(100): call_user_func(Array, Array, Array)
+#4 [internal function]: WP_CLI\Dispatcher\CommandFactory::{closure:WP_CLI\Dispatcher\CommandFactory::create_subcommand():97}(Array, Array)
+#5 phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/WP_CLI/Dispatcher/Subcommand.php(497): call_user_func(Object(Closure), Array, Array)
+#6 phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(470): WP_CLI\Dispatcher\Subcommand->invoke(Array, Array, Array)
+#7 phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(493): WP_CLI\Runner->run_command(Array, Array)
+#8 phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(136): WP_CLI\Runner->run_command_and_exit()
+#9 phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1228): WP_CLI\Runner->do_early_invoke('before_wp_load')
+#10 phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php(28): WP_CLI\Runner->start()
+#11 phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/bootstrap.php(84): WP_CLI\Bootstrap\LaunchRunner->process(Object(WP_CLI\Bootstrap\BootstrapState))
+#12 phar:///usr/local/bin/wp/vendor/wp-cli/wp-cli/php/wp-cli.php(35): WP_CLI\bootstrap()
+#13 phar:///usr/local/bin/wp/php/boot-phar.php(20): include('phar:///usr/loc...')
+#14 /usr/local/bin/wp(4): include('phar:///usr/loc...')
+#15 {main}
+  thrown in phar:///usr/local/bin/wp/vendor/wp-cli/eval-command/src/Eval_Command.php(39) : eval()'d code on line 8
+[20-Mar-2026 00:00:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>CREATE TABLE IF NOT EXISTS wp_sc_blacklist (
+  id bigint(20) unsigned NOT NULL auto_increment,
+  phone varchar(20) NOT NULL DEFAULT '',
+  reason longtext NOT NULL DEFAULT '',
+  active tinyint(1) NOT NULL DEFAULT 1,
+  created_by bigint(20) unsigned NOT NULL DEFAULT 0,
+  created_at datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  KEY phone (phone),
+  KEY active (active)
+) DEFAULT CHARACTER SET utf8mb4</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN IMMEDIATE | (no parameters)</li>
+<li>Executing: SELECT 1 FROM `_wp_sqlite_mysql_information_schema_tables` WHERE table_schema = ? AND table_name = ? | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_tables` (`table_schema`, `table_name`, `table_type`, `engine`, `row_format`, `table_collation`, `table_comment`) VALUES (?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, BASE TABLE, InnoDB, Dynamic, utf8mb4_0900_ai_ci, </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, id, 1, , NO, bigint, , , 20, 0, , , , bigint(20) unsigned, , auto_increment, select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, phone, 2, , NO, varchar, 20, 80, , , , utf8mb4, utf8mb4_0900_ai_ci, varchar(20), , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, reason, 3, , NO, longtext, 4294967295, 4294967295, , , , utf8mb4, utf8mb4_0900_ai_ci, longtext, , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, active, 4, 1, NO, tinyint, , , 3, 0, , , , tinyint(1), , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, created_by, 5, 0, NO, bigint, , , 20, 0, , , , bigint(20) unsigned, , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, created_at, 6, 0000-00-00 00:00:00, NO, datetime, , , , , 0, , , datetime, , , select,insert,update,references, , , </li>
+<li>Executing: 
+					SELECT column_name, data_type, is_nullable, character_maximum_length
+					FROM `_wp_sqlite_mysql_information_schema_columns`
+					WHERE table_schema = ?
+					AND table_name = ?
+					AND column_name IN (?)
+				 | parameters: sqlite_database, wp_sc_blacklist, id</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_statistics` (`table_schema`, `table_name`, `non_unique`, `index_schema`, `index_name`, `seq_in_index`, `column_name`, `collation`, `cardinality`, `sub_part`, `packed`, `nullable`, `index_type`, `comment`, `index_comment`, `is_visible`, `expression`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, 0, sqlite_database, PRIMARY, 1, id, A, 0, , , , BTREE, , , YES, </li>
+<li>Executing: 
+				UPDATE `_wp_sqlite_mysql_information_schema_columns` AS c
+				SET (column_key, is_nullable) = (
+					SELECT
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;PRI&#039;
+							WHEN MAX(s.non_unique = 0 AND s.seq_in_index = 1) THEN &#039;UNI&#039;
+							WHEN MAX(s.seq_in_index = 1) THEN &#039;MUL&#039;
+							ELSE &#039;&#039;
+						END,
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;NO&#039;
+							ELSE c.is_nullable
+						END
+					FROM `_wp_sqlite_mysql_information_schema_statistics` AS s
+					WHERE s.table_schema = c.table_schema
+					AND s.table_name = c.table_name
+					AND s.column_name = c.column_name
+				)
+			    WHERE c.table_schema = ?
+			    AND c.table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_table_constraints` (`table_schema`, `table_name`, `constraint_schema`, `constraint_name`, `constraint_type`, `enforced`) VALUES (?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, sqlite_database, PRIMARY, PRIMARY KEY, YES</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_key_column_usage` (`constraint_schema`, `constraint_name`, `table_schema`, `table_name`, `column_name`, `ordinal_position`, `position_in_unique_constraint`, `referenced_table_schema`, `referenced_table_name`, `referenced_column_name`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, PRIMARY, sqlite_database, wp_sc_blacklist, id, 1, , , , </li>
+<li>Executing: 
+					SELECT column_name, data_type, is_nullable, character_maximum_length
+					FROM `_wp_sqlite_mysql_information_schema_columns`
+					WHERE table_schema = ?
+					AND table_name = ?
+					AND column_name IN (?)
+				 | parameters: sqlite_database, wp_sc_blacklist, phone</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_statistics` (`table_schema`, `table_name`, `non_unique`, `index_schema`, `index_name`, `seq_in_index`, `column_name`, `collation`, `cardinality`, `sub_part`, `packed`, `nullable`, `index_type`, `comment`, `index_comment`, `is_visible`, `expression`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, 1, sqlite_database, phone, 1, phone, A, 0, , , , BTREE, , , YES, </li>
+<li>Executing: 
+				UPDATE `_wp_sqlite_mysql_information_schema_columns` AS c
+				SET (column_key, is_nullable) = (
+					SELECT
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;PRI&#039;
+							WHEN MAX(s.non_unique = 0 AND s.seq_in_index = 1) THEN &#039;UNI&#039;
+							WHEN MAX(s.seq_in_index = 1) THEN &#039;MUL&#039;
+							ELSE &#039;&#039;
+						END,
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;NO&#039;
+							ELSE c.is_nullable
+						END
+					FROM `_wp_sqlite_mysql_information_schema_statistics` AS s
+					WHERE s.table_schema = c.table_schema
+					AND s.table_name = c.table_name
+					AND s.column_name = c.column_name
+				)
+			    WHERE c.table_schema = ?
+			    AND c.table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: 
+					SELECT column_name, data_type, is_nullable, character_maximum_length
+					FROM `_wp_sqlite_mysql_information_schema_columns`
+					WHERE table_schema = ?
+					AND table_name = ?
+					AND column_name IN (?)
+				 | parameters: sqlite_database, wp_sc_blacklist, active</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_statistics` (`table_schema`, `table_name`, `non_unique`, `index_schema`, `index_name`, `seq_in_index`, `column_name`, `collation`, `cardinality`, `sub_part`, `packed`, `nullable`, `index_type`, `comment`, `index_comment`, `is_visible`, `expression`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, 1, sqlite_database, active, 1, active, A, 0, , , , BTREE, , , YES, </li>
+<li>Executing: 
+				UPDATE `_wp_sqlite_mysql_information_schema_columns` AS c
+				SET (column_key, is_nullable) = (
+					SELECT
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;PRI&#039;
+							WHEN MAX(s.non_unique = 0 AND s.seq_in_index = 1) THEN &#039;UNI&#039;
+							WHEN MAX(s.seq_in_index = 1) THEN &#039;MUL&#039;
+							ELSE &#039;&#039;
+						END,
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;NO&#039;
+							ELSE c.is_nullable
+						END
+					FROM `_wp_sqlite_mysql_information_schema_statistics` AS s
+					WHERE s.table_schema = c.table_schema
+					AND s.table_name = c.table_name
+					AND s.column_name = c.column_name
+				)
+			    WHERE c.table_schema = ?
+			    AND c.table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: 
+				SELECT *
+				FROM `_wp_sqlite_mysql_information_schema_tables`
+				WHERE table_type = &#039;BASE TABLE&#039;
+				AND table_schema = ?
+				AND table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: SELECT * FROM `_wp_sqlite_mysql_information_schema_columns` WHERE table_schema = ? AND table_name = ? ORDER BY ordinal_position | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: 
+					SELECT *
+					FROM `_wp_sqlite_mysql_information_schema_statistics`
+					WHERE table_schema = ?
+					AND table_name = ?
+					ORDER BY
+						INDEX_NAME = &#039;PRIMARY&#039; DESC,
+						NON_UNIQUE = &#039;0&#039; DESC,
+						INDEX_TYPE = &#039;SPATIAL&#039; DESC,
+						INDEX_TYPE = &#039;BTREE&#039; DESC,
+						INDEX_TYPE = &#039;FULLTEXT&#039; DESC,
+						ROWID,
+						SEQ_IN_INDEX
+				 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: SELECT * FROM `_wp_sqlite_mysql_information_schema_referential_constraints` WHERE constraint_schema = ? AND table_name = ? ORDER BY constraint_name | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: SELECT tc.*, cc.check_clause
+				FROM `_wp_sqlite_mysql_information_schema_table_constraints` tc
+				JOIN `_wp_sqlite_mysql_information_schema_check_constraints` cc ON cc.constraint_name = tc.constraint_name
+				WHERE tc.constraint_schema = ?
+				AND tc.table_name = ?
+				ORDER BY tc.constraint_name | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: CREATE TABLE `wp_sc_blacklist` (
+  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  `phone` TEXT COLLATE NOCASE NOT NULL DEFAULT &#039;&#039;,
+  `reason` TEXT COLLATE NOCASE NOT NULL DEFAULT &#039;&#039;,
+  `active` INTEGER NOT NULL DEFAULT &#039;1&#039;,
+  `created_by` INTEGER NOT NULL DEFAULT &#039;0&#039;,
+  `created_at` TEXT COLLATE NOCASE NOT NULL DEFAULT &#039;0000-00-00 00:00:00&#039;
+) STRICT | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+SQLSTATE[HY000]: General error: 1 table `wp_sc_blacklist` already exists
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-pdo-mysql-on-sqlite.php(921): WP_PDO_MySQL_On_SQLite->new_driver_exception('SQLSTATE[HY000]...', 'HY000', Object(PDOException))
+#1 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-sqlite-driver.php(160): WP_PDO_MySQL_On_SQLite->query('CREATE TABLE IF...', 5)
+#2 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(524): WP_SQLite_Driver->query('CREATE TABLE IF...')
+#3 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('CREATE TABLE IF...')
+#4 /wordpress/wp-admin/includes/upgrade.php(3324): WP_SQLite_DB->query('CREATE TABLE IF...')
+#5 /wordpress/wp-content/plugins/swiftcart-cod/includes/class-activator.php(63): dbDelta(Array)
+#6 /wordpress/wp-content/plugins/swiftcart-cod/swiftcart-cod.php(86): SwiftCart\Activator::create_tables()
+#7 /wordpress/wp-includes/class-wp-hook.php(341): {closure}('')
+#8 /wordpress/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters(Object(MotoParts\MotoParts), Array)
+#9 /wordpress/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#10 /wordpress/wp-settings.php(593): do_action('plugins_loaded')
+#11 /wordpress/wp-config.php(97): require_once('/wordpress/wp-s...')
+#12 /wordpress/wp-load.php(50): require_once('/wordpress/wp-c...')
+#13 /internal/eval.php(8): require('/wordpress/wp-l...')
+#14 {main}</pre>
+ for query CREATE TABLE IF NOT EXISTS wp_sc_blacklist (
+  id bigint(20) unsigned NOT NULL auto_increment,
+  phone varchar(20) NOT NULL DEFAULT '',
+  reason longtext NOT NULL DEFAULT '',
+  active tinyint(1) NOT NULL DEFAULT 1,
+  created_by bigint(20) unsigned NOT NULL DEFAULT 0,
+  created_at datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  KEY phone (phone),
+  KEY active (active)
+) DEFAULT CHARACTER SET utf8mb4 made by require('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), WP_Hook->do_action, WP_Hook->apply_filters, {closure}, SwiftCart\Activator::create_tables, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[20-Mar-2026 00:00:24 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>CREATE TABLE IF NOT EXISTS wp_sc_blacklist (
+  id bigint(20) unsigned NOT NULL auto_increment,
+  phone varchar(20) NOT NULL DEFAULT '',
+  reason longtext NOT NULL DEFAULT '',
+  active tinyint(1) NOT NULL DEFAULT 1,
+  created_by bigint(20) unsigned NOT NULL DEFAULT 0,
+  created_at datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  KEY phone (phone),
+  KEY active (active)
+) DEFAULT CHARACTER SET utf8mb4</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN IMMEDIATE | (no parameters)</li>
+<li>Executing: SELECT 1 FROM `_wp_sqlite_mysql_information_schema_tables` WHERE table_schema = ? AND table_name = ? | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_tables` (`table_schema`, `table_name`, `table_type`, `engine`, `row_format`, `table_collation`, `table_comment`) VALUES (?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, BASE TABLE, InnoDB, Dynamic, utf8mb4_0900_ai_ci, </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, id, 1, , NO, bigint, , , 20, 0, , , , bigint(20) unsigned, , auto_increment, select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, phone, 2, , NO, varchar, 20, 80, , , , utf8mb4, utf8mb4_0900_ai_ci, varchar(20), , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, reason, 3, , NO, longtext, 4294967295, 4294967295, , , , utf8mb4, utf8mb4_0900_ai_ci, longtext, , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, active, 4, 1, NO, tinyint, , , 3, 0, , , , tinyint(1), , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, created_by, 5, 0, NO, bigint, , , 20, 0, , , , bigint(20) unsigned, , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, created_at, 6, 0000-00-00 00:00:00, NO, datetime, , , , , 0, , , datetime, , , select,insert,update,references, , , </li>
+<li>Executing: 
+					SELECT column_name, data_type, is_nullable, character_maximum_length
+					FROM `_wp_sqlite_mysql_information_schema_columns`
+					WHERE table_schema = ?
+					AND table_name = ?
+					AND column_name IN (?)
+				 | parameters: sqlite_database, wp_sc_blacklist, id</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_statistics` (`table_schema`, `table_name`, `non_unique`, `index_schema`, `index_name`, `seq_in_index`, `column_name`, `collation`, `cardinality`, `sub_part`, `packed`, `nullable`, `index_type`, `comment`, `index_comment`, `is_visible`, `expression`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, 0, sqlite_database, PRIMARY, 1, id, A, 0, , , , BTREE, , , YES, </li>
+<li>Executing: 
+				UPDATE `_wp_sqlite_mysql_information_schema_columns` AS c
+				SET (column_key, is_nullable) = (
+					SELECT
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;PRI&#039;
+							WHEN MAX(s.non_unique = 0 AND s.seq_in_index = 1) THEN &#039;UNI&#039;
+							WHEN MAX(s.seq_in_index = 1) THEN &#039;MUL&#039;
+							ELSE &#039;&#039;
+						END,
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;NO&#039;
+							ELSE c.is_nullable
+						END
+					FROM `_wp_sqlite_mysql_information_schema_statistics` AS s
+					WHERE s.table_schema = c.table_schema
+					AND s.table_name = c.table_name
+					AND s.column_name = c.column_name
+				)
+			    WHERE c.table_schema = ?
+			    AND c.table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_table_constraints` (`table_schema`, `table_name`, `constraint_schema`, `constraint_name`, `constraint_type`, `enforced`) VALUES (?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, sqlite_database, PRIMARY, PRIMARY KEY, YES</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_key_column_usage` (`constraint_schema`, `constraint_name`, `table_schema`, `table_name`, `column_name`, `ordinal_position`, `position_in_unique_constraint`, `referenced_table_schema`, `referenced_table_name`, `referenced_column_name`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, PRIMARY, sqlite_database, wp_sc_blacklist, id, 1, , , , </li>
+<li>Executing: 
+					SELECT column_name, data_type, is_nullable, character_maximum_length
+					FROM `_wp_sqlite_mysql_information_schema_columns`
+					WHERE table_schema = ?
+					AND table_name = ?
+					AND column_name IN (?)
+				 | parameters: sqlite_database, wp_sc_blacklist, phone</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_statistics` (`table_schema`, `table_name`, `non_unique`, `index_schema`, `index_name`, `seq_in_index`, `column_name`, `collation`, `cardinality`, `sub_part`, `packed`, `nullable`, `index_type`, `comment`, `index_comment`, `is_visible`, `expression`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, 1, sqlite_database, phone, 1, phone, A, 0, , , , BTREE, , , YES, </li>
+<li>Executing: 
+				UPDATE `_wp_sqlite_mysql_information_schema_columns` AS c
+				SET (column_key, is_nullable) = (
+					SELECT
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;PRI&#039;
+							WHEN MAX(s.non_unique = 0 AND s.seq_in_index = 1) THEN &#039;UNI&#039;
+							WHEN MAX(s.seq_in_index = 1) THEN &#039;MUL&#039;
+							ELSE &#039;&#039;
+						END,
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;NO&#039;
+							ELSE c.is_nullable
+						END
+					FROM `_wp_sqlite_mysql_information_schema_statistics` AS s
+					WHERE s.table_schema = c.table_schema
+					AND s.table_name = c.table_name
+					AND s.column_name = c.column_name
+				)
+			    WHERE c.table_schema = ?
+			    AND c.table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: 
+					SELECT column_name, data_type, is_nullable, character_maximum_length
+					FROM `_wp_sqlite_mysql_information_schema_columns`
+					WHERE table_schema = ?
+					AND table_name = ?
+					AND column_name IN (?)
+				 | parameters: sqlite_database, wp_sc_blacklist, active</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_statistics` (`table_schema`, `table_name`, `non_unique`, `index_schema`, `index_name`, `seq_in_index`, `column_name`, `collation`, `cardinality`, `sub_part`, `packed`, `nullable`, `index_type`, `comment`, `index_comment`, `is_visible`, `expression`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, 1, sqlite_database, active, 1, active, A, 0, , , , BTREE, , , YES, </li>
+<li>Executing: 
+				UPDATE `_wp_sqlite_mysql_information_schema_columns` AS c
+				SET (column_key, is_nullable) = (
+					SELECT
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;PRI&#039;
+							WHEN MAX(s.non_unique = 0 AND s.seq_in_index = 1) THEN &#039;UNI&#039;
+							WHEN MAX(s.seq_in_index = 1) THEN &#039;MUL&#039;
+							ELSE &#039;&#039;
+						END,
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;NO&#039;
+							ELSE c.is_nullable
+						END
+					FROM `_wp_sqlite_mysql_information_schema_statistics` AS s
+					WHERE s.table_schema = c.table_schema
+					AND s.table_name = c.table_name
+					AND s.column_name = c.column_name
+				)
+			    WHERE c.table_schema = ?
+			    AND c.table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: 
+				SELECT *
+				FROM `_wp_sqlite_mysql_information_schema_tables`
+				WHERE table_type = &#039;BASE TABLE&#039;
+				AND table_schema = ?
+				AND table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: SELECT * FROM `_wp_sqlite_mysql_information_schema_columns` WHERE table_schema = ? AND table_name = ? ORDER BY ordinal_position | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: 
+					SELECT *
+					FROM `_wp_sqlite_mysql_information_schema_statistics`
+					WHERE table_schema = ?
+					AND table_name = ?
+					ORDER BY
+						INDEX_NAME = &#039;PRIMARY&#039; DESC,
+						NON_UNIQUE = &#039;0&#039; DESC,
+						INDEX_TYPE = &#039;SPATIAL&#039; DESC,
+						INDEX_TYPE = &#039;BTREE&#039; DESC,
+						INDEX_TYPE = &#039;FULLTEXT&#039; DESC,
+						ROWID,
+						SEQ_IN_INDEX
+				 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: SELECT * FROM `_wp_sqlite_mysql_information_schema_referential_constraints` WHERE constraint_schema = ? AND table_name = ? ORDER BY constraint_name | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: SELECT tc.*, cc.check_clause
+				FROM `_wp_sqlite_mysql_information_schema_table_constraints` tc
+				JOIN `_wp_sqlite_mysql_information_schema_check_constraints` cc ON cc.constraint_name = tc.constraint_name
+				WHERE tc.constraint_schema = ?
+				AND tc.table_name = ?
+				ORDER BY tc.constraint_name | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: CREATE TABLE `wp_sc_blacklist` (
+  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  `phone` TEXT COLLATE NOCASE NOT NULL DEFAULT &#039;&#039;,
+  `reason` TEXT COLLATE NOCASE NOT NULL DEFAULT &#039;&#039;,
+  `active` INTEGER NOT NULL DEFAULT &#039;1&#039;,
+  `created_by` INTEGER NOT NULL DEFAULT &#039;0&#039;,
+  `created_at` TEXT COLLATE NOCASE NOT NULL DEFAULT &#039;0000-00-00 00:00:00&#039;
+) STRICT | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+SQLSTATE[HY000]: General error: 1 table `wp_sc_blacklist` already exists
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-pdo-mysql-on-sqlite.php(921): WP_PDO_MySQL_On_SQLite->new_driver_exception('SQLSTATE[HY000]...', 'HY000', Object(PDOException))
+#1 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-sqlite-driver.php(160): WP_PDO_MySQL_On_SQLite->query('CREATE TABLE IF...', 5)
+#2 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(524): WP_SQLite_Driver->query('CREATE TABLE IF...')
+#3 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('CREATE TABLE IF...')
+#4 /wordpress/wp-admin/includes/upgrade.php(3324): WP_SQLite_DB->query('CREATE TABLE IF...')
+#5 /wordpress/wp-content/plugins/swiftcart-cod/includes/class-activator.php(63): dbDelta(Array)
+#6 /wordpress/wp-content/plugins/swiftcart-cod/swiftcart-cod.php(86): SwiftCart\Activator::create_tables()
+#7 /wordpress/wp-includes/class-wp-hook.php(341): {closure}('')
+#8 /wordpress/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters(Object(MotoParts\MotoParts), Array)
+#9 /wordpress/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#10 /wordpress/wp-settings.php(593): do_action('plugins_loaded')
+#11 /wordpress/wp-config.php(97): require_once('/wordpress/wp-s...')
+#12 /wordpress/wp-load.php(50): require_once('/wordpress/wp-c...')
+#13 /internal/eval.php(8): require('/wordpress/wp-l...')
+#14 {main}</pre>
+ for query CREATE TABLE IF NOT EXISTS wp_sc_blacklist (
+  id bigint(20) unsigned NOT NULL auto_increment,
+  phone varchar(20) NOT NULL DEFAULT '',
+  reason longtext NOT NULL DEFAULT '',
+  active tinyint(1) NOT NULL DEFAULT 1,
+  created_by bigint(20) unsigned NOT NULL DEFAULT 0,
+  created_at datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  KEY phone (phone),
+  KEY active (active)
+) DEFAULT CHARACTER SET utf8mb4 made by require('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), WP_Hook->do_action, WP_Hook->apply_filters, {closure}, SwiftCart\Activator::create_tables, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[23-Mar-2026 09:50:14 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>CREATE TABLE IF NOT EXISTS wp_sc_blacklist (
+  id bigint(20) unsigned NOT NULL auto_increment,
+  phone varchar(20) NOT NULL DEFAULT '',
+  reason longtext NOT NULL DEFAULT '',
+  active tinyint(1) NOT NULL DEFAULT 1,
+  created_by bigint(20) unsigned NOT NULL DEFAULT 0,
+  created_at datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  KEY phone (phone),
+  KEY active (active)
+) DEFAULT CHARACTER SET utf8mb4</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN IMMEDIATE | (no parameters)</li>
+<li>Executing: SELECT 1 FROM `_wp_sqlite_mysql_information_schema_tables` WHERE table_schema = ? AND table_name = ? | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_tables` (`table_schema`, `table_name`, `table_type`, `engine`, `row_format`, `table_collation`, `table_comment`) VALUES (?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, BASE TABLE, InnoDB, Dynamic, utf8mb4_0900_ai_ci, </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, id, 1, , NO, bigint, , , 20, 0, , , , bigint(20) unsigned, , auto_increment, select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, phone, 2, , NO, varchar, 20, 80, , , , utf8mb4, utf8mb4_0900_ai_ci, varchar(20), , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, reason, 3, , NO, longtext, 4294967295, 4294967295, , , , utf8mb4, utf8mb4_0900_ai_ci, longtext, , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, active, 4, 1, NO, tinyint, , , 3, 0, , , , tinyint(1), , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, created_by, 5, 0, NO, bigint, , , 20, 0, , , , bigint(20) unsigned, , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, created_at, 6, 0000-00-00 00:00:00, NO, datetime, , , , , 0, , , datetime, , , select,insert,update,references, , , </li>
+<li>Executing: 
+					SELECT column_name, data_type, is_nullable, character_maximum_length
+					FROM `_wp_sqlite_mysql_information_schema_columns`
+					WHERE table_schema = ?
+					AND table_name = ?
+					AND column_name IN (?)
+				 | parameters: sqlite_database, wp_sc_blacklist, id</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_statistics` (`table_schema`, `table_name`, `non_unique`, `index_schema`, `index_name`, `seq_in_index`, `column_name`, `collation`, `cardinality`, `sub_part`, `packed`, `nullable`, `index_type`, `comment`, `index_comment`, `is_visible`, `expression`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, 0, sqlite_database, PRIMARY, 1, id, A, 0, , , , BTREE, , , YES, </li>
+<li>Executing: 
+				UPDATE `_wp_sqlite_mysql_information_schema_columns` AS c
+				SET (column_key, is_nullable) = (
+					SELECT
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;PRI&#039;
+							WHEN MAX(s.non_unique = 0 AND s.seq_in_index = 1) THEN &#039;UNI&#039;
+							WHEN MAX(s.seq_in_index = 1) THEN &#039;MUL&#039;
+							ELSE &#039;&#039;
+						END,
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;NO&#039;
+							ELSE c.is_nullable
+						END
+					FROM `_wp_sqlite_mysql_information_schema_statistics` AS s
+					WHERE s.table_schema = c.table_schema
+					AND s.table_name = c.table_name
+					AND s.column_name = c.column_name
+				)
+			    WHERE c.table_schema = ?
+			    AND c.table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_table_constraints` (`table_schema`, `table_name`, `constraint_schema`, `constraint_name`, `constraint_type`, `enforced`) VALUES (?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, sqlite_database, PRIMARY, PRIMARY KEY, YES</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_key_column_usage` (`constraint_schema`, `constraint_name`, `table_schema`, `table_name`, `column_name`, `ordinal_position`, `position_in_unique_constraint`, `referenced_table_schema`, `referenced_table_name`, `referenced_column_name`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, PRIMARY, sqlite_database, wp_sc_blacklist, id, 1, , , , </li>
+<li>Executing: 
+					SELECT column_name, data_type, is_nullable, character_maximum_length
+					FROM `_wp_sqlite_mysql_information_schema_columns`
+					WHERE table_schema = ?
+					AND table_name = ?
+					AND column_name IN (?)
+				 | parameters: sqlite_database, wp_sc_blacklist, phone</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_statistics` (`table_schema`, `table_name`, `non_unique`, `index_schema`, `index_name`, `seq_in_index`, `column_name`, `collation`, `cardinality`, `sub_part`, `packed`, `nullable`, `index_type`, `comment`, `index_comment`, `is_visible`, `expression`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, 1, sqlite_database, phone, 1, phone, A, 0, , , , BTREE, , , YES, </li>
+<li>Executing: 
+				UPDATE `_wp_sqlite_mysql_information_schema_columns` AS c
+				SET (column_key, is_nullable) = (
+					SELECT
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;PRI&#039;
+							WHEN MAX(s.non_unique = 0 AND s.seq_in_index = 1) THEN &#039;UNI&#039;
+							WHEN MAX(s.seq_in_index = 1) THEN &#039;MUL&#039;
+							ELSE &#039;&#039;
+						END,
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;NO&#039;
+							ELSE c.is_nullable
+						END
+					FROM `_wp_sqlite_mysql_information_schema_statistics` AS s
+					WHERE s.table_schema = c.table_schema
+					AND s.table_name = c.table_name
+					AND s.column_name = c.column_name
+				)
+			    WHERE c.table_schema = ?
+			    AND c.table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: 
+					SELECT column_name, data_type, is_nullable, character_maximum_length
+					FROM `_wp_sqlite_mysql_information_schema_columns`
+					WHERE table_schema = ?
+					AND table_name = ?
+					AND column_name IN (?)
+				 | parameters: sqlite_database, wp_sc_blacklist, active</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_statistics` (`table_schema`, `table_name`, `non_unique`, `index_schema`, `index_name`, `seq_in_index`, `column_name`, `collation`, `cardinality`, `sub_part`, `packed`, `nullable`, `index_type`, `comment`, `index_comment`, `is_visible`, `expression`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, 1, sqlite_database, active, 1, active, A, 0, , , , BTREE, , , YES, </li>
+<li>Executing: 
+				UPDATE `_wp_sqlite_mysql_information_schema_columns` AS c
+				SET (column_key, is_nullable) = (
+					SELECT
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;PRI&#039;
+							WHEN MAX(s.non_unique = 0 AND s.seq_in_index = 1) THEN &#039;UNI&#039;
+							WHEN MAX(s.seq_in_index = 1) THEN &#039;MUL&#039;
+							ELSE &#039;&#039;
+						END,
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;NO&#039;
+							ELSE c.is_nullable
+						END
+					FROM `_wp_sqlite_mysql_information_schema_statistics` AS s
+					WHERE s.table_schema = c.table_schema
+					AND s.table_name = c.table_name
+					AND s.column_name = c.column_name
+				)
+			    WHERE c.table_schema = ?
+			    AND c.table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: 
+				SELECT *
+				FROM `_wp_sqlite_mysql_information_schema_tables`
+				WHERE table_type = &#039;BASE TABLE&#039;
+				AND table_schema = ?
+				AND table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: SELECT * FROM `_wp_sqlite_mysql_information_schema_columns` WHERE table_schema = ? AND table_name = ? ORDER BY ordinal_position | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: 
+					SELECT *
+					FROM `_wp_sqlite_mysql_information_schema_statistics`
+					WHERE table_schema = ?
+					AND table_name = ?
+					ORDER BY
+						INDEX_NAME = &#039;PRIMARY&#039; DESC,
+						NON_UNIQUE = &#039;0&#039; DESC,
+						INDEX_TYPE = &#039;SPATIAL&#039; DESC,
+						INDEX_TYPE = &#039;BTREE&#039; DESC,
+						INDEX_TYPE = &#039;FULLTEXT&#039; DESC,
+						ROWID,
+						SEQ_IN_INDEX
+				 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: SELECT * FROM `_wp_sqlite_mysql_information_schema_referential_constraints` WHERE constraint_schema = ? AND table_name = ? ORDER BY constraint_name | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: SELECT tc.*, cc.check_clause
+				FROM `_wp_sqlite_mysql_information_schema_table_constraints` tc
+				JOIN `_wp_sqlite_mysql_information_schema_check_constraints` cc ON cc.constraint_name = tc.constraint_name
+				WHERE tc.constraint_schema = ?
+				AND tc.table_name = ?
+				ORDER BY tc.constraint_name | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: CREATE TABLE `wp_sc_blacklist` (
+  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  `phone` TEXT COLLATE NOCASE NOT NULL DEFAULT &#039;&#039;,
+  `reason` TEXT COLLATE NOCASE NOT NULL DEFAULT &#039;&#039;,
+  `active` INTEGER NOT NULL DEFAULT &#039;1&#039;,
+  `created_by` INTEGER NOT NULL DEFAULT &#039;0&#039;,
+  `created_at` TEXT COLLATE NOCASE NOT NULL DEFAULT &#039;0000-00-00 00:00:00&#039;
+) STRICT | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+SQLSTATE[HY000]: General error: 1 table `wp_sc_blacklist` already exists
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-pdo-mysql-on-sqlite.php(921): WP_PDO_MySQL_On_SQLite->new_driver_exception('SQLSTATE[HY000]...', 'HY000', Object(PDOException))
+#1 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-sqlite-driver.php(160): WP_PDO_MySQL_On_SQLite->query('CREATE TABLE IF...', 5)
+#2 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(524): WP_SQLite_Driver->query('CREATE TABLE IF...')
+#3 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('CREATE TABLE IF...')
+#4 /wordpress/wp-admin/includes/upgrade.php(3324): WP_SQLite_DB->query('CREATE TABLE IF...')
+#5 /wordpress/wp-content/plugins/swiftcart-cod/includes/class-activator.php(63): dbDelta(Array)
+#6 /wordpress/wp-content/plugins/swiftcart-cod/swiftcart-cod.php(86): SwiftCart\Activator::create_tables()
+#7 /wordpress/wp-includes/class-wp-hook.php(341): {closure}('')
+#8 /wordpress/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters(Object(MotoParts\MotoParts), Array)
+#9 /wordpress/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#10 /wordpress/wp-settings.php(593): do_action('plugins_loaded')
+#11 /wordpress/wp-config.php(97): require_once('/wordpress/wp-s...')
+#12 /wordpress/wp-load.php(50): require_once('/wordpress/wp-c...')
+#13 /internal/eval.php(8): require('/wordpress/wp-l...')
+#14 {main}</pre>
+ for query CREATE TABLE IF NOT EXISTS wp_sc_blacklist (
+  id bigint(20) unsigned NOT NULL auto_increment,
+  phone varchar(20) NOT NULL DEFAULT '',
+  reason longtext NOT NULL DEFAULT '',
+  active tinyint(1) NOT NULL DEFAULT 1,
+  created_by bigint(20) unsigned NOT NULL DEFAULT 0,
+  created_at datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  KEY phone (phone),
+  KEY active (active)
+) DEFAULT CHARACTER SET utf8mb4 made by require('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), WP_Hook->do_action, WP_Hook->apply_filters, {closure}, SwiftCart\Activator::create_tables, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[23-Mar-2026 09:50:16 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>CREATE TABLE IF NOT EXISTS wp_sc_blacklist (
+  id bigint(20) unsigned NOT NULL auto_increment,
+  phone varchar(20) NOT NULL DEFAULT '',
+  reason longtext NOT NULL DEFAULT '',
+  active tinyint(1) NOT NULL DEFAULT 1,
+  created_by bigint(20) unsigned NOT NULL DEFAULT 0,
+  created_at datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  KEY phone (phone),
+  KEY active (active)
+) DEFAULT CHARACTER SET utf8mb4</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN IMMEDIATE | (no parameters)</li>
+<li>Executing: SELECT 1 FROM `_wp_sqlite_mysql_information_schema_tables` WHERE table_schema = ? AND table_name = ? | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_tables` (`table_schema`, `table_name`, `table_type`, `engine`, `row_format`, `table_collation`, `table_comment`) VALUES (?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, BASE TABLE, InnoDB, Dynamic, utf8mb4_0900_ai_ci, </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, id, 1, , NO, bigint, , , 20, 0, , , , bigint(20) unsigned, , auto_increment, select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, phone, 2, , NO, varchar, 20, 80, , , , utf8mb4, utf8mb4_0900_ai_ci, varchar(20), , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, reason, 3, , NO, longtext, 4294967295, 4294967295, , , , utf8mb4, utf8mb4_0900_ai_ci, longtext, , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, active, 4, 1, NO, tinyint, , , 3, 0, , , , tinyint(1), , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, created_by, 5, 0, NO, bigint, , , 20, 0, , , , bigint(20) unsigned, , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, created_at, 6, 0000-00-00 00:00:00, NO, datetime, , , , , 0, , , datetime, , , select,insert,update,references, , , </li>
+<li>Executing: 
+					SELECT column_name, data_type, is_nullable, character_maximum_length
+					FROM `_wp_sqlite_mysql_information_schema_columns`
+					WHERE table_schema = ?
+					AND table_name = ?
+					AND column_name IN (?)
+				 | parameters: sqlite_database, wp_sc_blacklist, id</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_statistics` (`table_schema`, `table_name`, `non_unique`, `index_schema`, `index_name`, `seq_in_index`, `column_name`, `collation`, `cardinality`, `sub_part`, `packed`, `nullable`, `index_type`, `comment`, `index_comment`, `is_visible`, `expression`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, 0, sqlite_database, PRIMARY, 1, id, A, 0, , , , BTREE, , , YES, </li>
+<li>Executing: 
+				UPDATE `_wp_sqlite_mysql_information_schema_columns` AS c
+				SET (column_key, is_nullable) = (
+					SELECT
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;PRI&#039;
+							WHEN MAX(s.non_unique = 0 AND s.seq_in_index = 1) THEN &#039;UNI&#039;
+							WHEN MAX(s.seq_in_index = 1) THEN &#039;MUL&#039;
+							ELSE &#039;&#039;
+						END,
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;NO&#039;
+							ELSE c.is_nullable
+						END
+					FROM `_wp_sqlite_mysql_information_schema_statistics` AS s
+					WHERE s.table_schema = c.table_schema
+					AND s.table_name = c.table_name
+					AND s.column_name = c.column_name
+				)
+			    WHERE c.table_schema = ?
+			    AND c.table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_table_constraints` (`table_schema`, `table_name`, `constraint_schema`, `constraint_name`, `constraint_type`, `enforced`) VALUES (?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, sqlite_database, PRIMARY, PRIMARY KEY, YES</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_key_column_usage` (`constraint_schema`, `constraint_name`, `table_schema`, `table_name`, `column_name`, `ordinal_position`, `position_in_unique_constraint`, `referenced_table_schema`, `referenced_table_name`, `referenced_column_name`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, PRIMARY, sqlite_database, wp_sc_blacklist, id, 1, , , , </li>
+<li>Executing: 
+					SELECT column_name, data_type, is_nullable, character_maximum_length
+					FROM `_wp_sqlite_mysql_information_schema_columns`
+					WHERE table_schema = ?
+					AND table_name = ?
+					AND column_name IN (?)
+				 | parameters: sqlite_database, wp_sc_blacklist, phone</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_statistics` (`table_schema`, `table_name`, `non_unique`, `index_schema`, `index_name`, `seq_in_index`, `column_name`, `collation`, `cardinality`, `sub_part`, `packed`, `nullable`, `index_type`, `comment`, `index_comment`, `is_visible`, `expression`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, 1, sqlite_database, phone, 1, phone, A, 0, , , , BTREE, , , YES, </li>
+<li>Executing: 
+				UPDATE `_wp_sqlite_mysql_information_schema_columns` AS c
+				SET (column_key, is_nullable) = (
+					SELECT
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;PRI&#039;
+							WHEN MAX(s.non_unique = 0 AND s.seq_in_index = 1) THEN &#039;UNI&#039;
+							WHEN MAX(s.seq_in_index = 1) THEN &#039;MUL&#039;
+							ELSE &#039;&#039;
+						END,
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;NO&#039;
+							ELSE c.is_nullable
+						END
+					FROM `_wp_sqlite_mysql_information_schema_statistics` AS s
+					WHERE s.table_schema = c.table_schema
+					AND s.table_name = c.table_name
+					AND s.column_name = c.column_name
+				)
+			    WHERE c.table_schema = ?
+			    AND c.table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: 
+					SELECT column_name, data_type, is_nullable, character_maximum_length
+					FROM `_wp_sqlite_mysql_information_schema_columns`
+					WHERE table_schema = ?
+					AND table_name = ?
+					AND column_name IN (?)
+				 | parameters: sqlite_database, wp_sc_blacklist, active</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_statistics` (`table_schema`, `table_name`, `non_unique`, `index_schema`, `index_name`, `seq_in_index`, `column_name`, `collation`, `cardinality`, `sub_part`, `packed`, `nullable`, `index_type`, `comment`, `index_comment`, `is_visible`, `expression`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, 1, sqlite_database, active, 1, active, A, 0, , , , BTREE, , , YES, </li>
+<li>Executing: 
+				UPDATE `_wp_sqlite_mysql_information_schema_columns` AS c
+				SET (column_key, is_nullable) = (
+					SELECT
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;PRI&#039;
+							WHEN MAX(s.non_unique = 0 AND s.seq_in_index = 1) THEN &#039;UNI&#039;
+							WHEN MAX(s.seq_in_index = 1) THEN &#039;MUL&#039;
+							ELSE &#039;&#039;
+						END,
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;NO&#039;
+							ELSE c.is_nullable
+						END
+					FROM `_wp_sqlite_mysql_information_schema_statistics` AS s
+					WHERE s.table_schema = c.table_schema
+					AND s.table_name = c.table_name
+					AND s.column_name = c.column_name
+				)
+			    WHERE c.table_schema = ?
+			    AND c.table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: 
+				SELECT *
+				FROM `_wp_sqlite_mysql_information_schema_tables`
+				WHERE table_type = &#039;BASE TABLE&#039;
+				AND table_schema = ?
+				AND table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: SELECT * FROM `_wp_sqlite_mysql_information_schema_columns` WHERE table_schema = ? AND table_name = ? ORDER BY ordinal_position | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: 
+					SELECT *
+					FROM `_wp_sqlite_mysql_information_schema_statistics`
+					WHERE table_schema = ?
+					AND table_name = ?
+					ORDER BY
+						INDEX_NAME = &#039;PRIMARY&#039; DESC,
+						NON_UNIQUE = &#039;0&#039; DESC,
+						INDEX_TYPE = &#039;SPATIAL&#039; DESC,
+						INDEX_TYPE = &#039;BTREE&#039; DESC,
+						INDEX_TYPE = &#039;FULLTEXT&#039; DESC,
+						ROWID,
+						SEQ_IN_INDEX
+				 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: SELECT * FROM `_wp_sqlite_mysql_information_schema_referential_constraints` WHERE constraint_schema = ? AND table_name = ? ORDER BY constraint_name | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: SELECT tc.*, cc.check_clause
+				FROM `_wp_sqlite_mysql_information_schema_table_constraints` tc
+				JOIN `_wp_sqlite_mysql_information_schema_check_constraints` cc ON cc.constraint_name = tc.constraint_name
+				WHERE tc.constraint_schema = ?
+				AND tc.table_name = ?
+				ORDER BY tc.constraint_name | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: CREATE TABLE `wp_sc_blacklist` (
+  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  `phone` TEXT COLLATE NOCASE NOT NULL DEFAULT &#039;&#039;,
+  `reason` TEXT COLLATE NOCASE NOT NULL DEFAULT &#039;&#039;,
+  `active` INTEGER NOT NULL DEFAULT &#039;1&#039;,
+  `created_by` INTEGER NOT NULL DEFAULT &#039;0&#039;,
+  `created_at` TEXT COLLATE NOCASE NOT NULL DEFAULT &#039;0000-00-00 00:00:00&#039;
+) STRICT | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+SQLSTATE[HY000]: General error: 1 table `wp_sc_blacklist` already exists
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-pdo-mysql-on-sqlite.php(921): WP_PDO_MySQL_On_SQLite->new_driver_exception('SQLSTATE[HY000]...', 'HY000', Object(PDOException))
+#1 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-sqlite-driver.php(160): WP_PDO_MySQL_On_SQLite->query('CREATE TABLE IF...', 5)
+#2 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(524): WP_SQLite_Driver->query('CREATE TABLE IF...')
+#3 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('CREATE TABLE IF...')
+#4 /wordpress/wp-admin/includes/upgrade.php(3324): WP_SQLite_DB->query('CREATE TABLE IF...')
+#5 /wordpress/wp-content/plugins/swiftcart-cod/includes/class-activator.php(63): dbDelta(Array)
+#6 /wordpress/wp-content/plugins/swiftcart-cod/swiftcart-cod.php(86): SwiftCart\Activator::create_tables()
+#7 /wordpress/wp-includes/class-wp-hook.php(341): {closure}('')
+#8 /wordpress/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters(Object(MotoParts\MotoParts), Array)
+#9 /wordpress/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#10 /wordpress/wp-settings.php(593): do_action('plugins_loaded')
+#11 /wordpress/wp-config.php(97): require_once('/wordpress/wp-s...')
+#12 /wordpress/wp-load.php(50): require_once('/wordpress/wp-c...')
+#13 /internal/eval.php(8): require('/wordpress/wp-l...')
+#14 {main}</pre>
+ for query CREATE TABLE IF NOT EXISTS wp_sc_blacklist (
+  id bigint(20) unsigned NOT NULL auto_increment,
+  phone varchar(20) NOT NULL DEFAULT '',
+  reason longtext NOT NULL DEFAULT '',
+  active tinyint(1) NOT NULL DEFAULT 1,
+  created_by bigint(20) unsigned NOT NULL DEFAULT 0,
+  created_at datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  KEY phone (phone),
+  KEY active (active)
+) DEFAULT CHARACTER SET utf8mb4 made by require('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), WP_Hook->do_action, WP_Hook->apply_filters, {closure}, SwiftCart\Activator::create_tables, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[23-Mar-2026 10:32:38 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>CREATE TABLE IF NOT EXISTS wp_sc_blacklist (
+  id bigint(20) unsigned NOT NULL auto_increment,
+  phone varchar(20) NOT NULL DEFAULT '',
+  reason longtext NOT NULL DEFAULT '',
+  active tinyint(1) NOT NULL DEFAULT 1,
+  created_by bigint(20) unsigned NOT NULL DEFAULT 0,
+  created_at datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  KEY phone (phone),
+  KEY active (active)
+) DEFAULT CHARACTER SET utf8mb4</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN IMMEDIATE | (no parameters)</li>
+<li>Executing: SELECT 1 FROM `_wp_sqlite_mysql_information_schema_tables` WHERE table_schema = ? AND table_name = ? | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_tables` (`table_schema`, `table_name`, `table_type`, `engine`, `row_format`, `table_collation`, `table_comment`) VALUES (?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, BASE TABLE, InnoDB, Dynamic, utf8mb4_0900_ai_ci, </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, id, 1, , NO, bigint, , , 20, 0, , , , bigint(20) unsigned, , auto_increment, select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, phone, 2, , NO, varchar, 20, 80, , , , utf8mb4, utf8mb4_0900_ai_ci, varchar(20), , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, reason, 3, , NO, longtext, 4294967295, 4294967295, , , , utf8mb4, utf8mb4_0900_ai_ci, longtext, , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, active, 4, 1, NO, tinyint, , , 3, 0, , , , tinyint(1), , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, created_by, 5, 0, NO, bigint, , , 20, 0, , , , bigint(20) unsigned, , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, created_at, 6, 0000-00-00 00:00:00, NO, datetime, , , , , 0, , , datetime, , , select,insert,update,references, , , </li>
+<li>Executing: 
+					SELECT column_name, data_type, is_nullable, character_maximum_length
+					FROM `_wp_sqlite_mysql_information_schema_columns`
+					WHERE table_schema = ?
+					AND table_name = ?
+					AND column_name IN (?)
+				 | parameters: sqlite_database, wp_sc_blacklist, id</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_statistics` (`table_schema`, `table_name`, `non_unique`, `index_schema`, `index_name`, `seq_in_index`, `column_name`, `collation`, `cardinality`, `sub_part`, `packed`, `nullable`, `index_type`, `comment`, `index_comment`, `is_visible`, `expression`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, 0, sqlite_database, PRIMARY, 1, id, A, 0, , , , BTREE, , , YES, </li>
+<li>Executing: 
+				UPDATE `_wp_sqlite_mysql_information_schema_columns` AS c
+				SET (column_key, is_nullable) = (
+					SELECT
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;PRI&#039;
+							WHEN MAX(s.non_unique = 0 AND s.seq_in_index = 1) THEN &#039;UNI&#039;
+							WHEN MAX(s.seq_in_index = 1) THEN &#039;MUL&#039;
+							ELSE &#039;&#039;
+						END,
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;NO&#039;
+							ELSE c.is_nullable
+						END
+					FROM `_wp_sqlite_mysql_information_schema_statistics` AS s
+					WHERE s.table_schema = c.table_schema
+					AND s.table_name = c.table_name
+					AND s.column_name = c.column_name
+				)
+			    WHERE c.table_schema = ?
+			    AND c.table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_table_constraints` (`table_schema`, `table_name`, `constraint_schema`, `constraint_name`, `constraint_type`, `enforced`) VALUES (?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, sqlite_database, PRIMARY, PRIMARY KEY, YES</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_key_column_usage` (`constraint_schema`, `constraint_name`, `table_schema`, `table_name`, `column_name`, `ordinal_position`, `position_in_unique_constraint`, `referenced_table_schema`, `referenced_table_name`, `referenced_column_name`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, PRIMARY, sqlite_database, wp_sc_blacklist, id, 1, , , , </li>
+<li>Executing: 
+					SELECT column_name, data_type, is_nullable, character_maximum_length
+					FROM `_wp_sqlite_mysql_information_schema_columns`
+					WHERE table_schema = ?
+					AND table_name = ?
+					AND column_name IN (?)
+				 | parameters: sqlite_database, wp_sc_blacklist, phone</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_statistics` (`table_schema`, `table_name`, `non_unique`, `index_schema`, `index_name`, `seq_in_index`, `column_name`, `collation`, `cardinality`, `sub_part`, `packed`, `nullable`, `index_type`, `comment`, `index_comment`, `is_visible`, `expression`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, 1, sqlite_database, phone, 1, phone, A, 0, , , , BTREE, , , YES, </li>
+<li>Executing: 
+				UPDATE `_wp_sqlite_mysql_information_schema_columns` AS c
+				SET (column_key, is_nullable) = (
+					SELECT
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;PRI&#039;
+							WHEN MAX(s.non_unique = 0 AND s.seq_in_index = 1) THEN &#039;UNI&#039;
+							WHEN MAX(s.seq_in_index = 1) THEN &#039;MUL&#039;
+							ELSE &#039;&#039;
+						END,
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;NO&#039;
+							ELSE c.is_nullable
+						END
+					FROM `_wp_sqlite_mysql_information_schema_statistics` AS s
+					WHERE s.table_schema = c.table_schema
+					AND s.table_name = c.table_name
+					AND s.column_name = c.column_name
+				)
+			    WHERE c.table_schema = ?
+			    AND c.table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: 
+					SELECT column_name, data_type, is_nullable, character_maximum_length
+					FROM `_wp_sqlite_mysql_information_schema_columns`
+					WHERE table_schema = ?
+					AND table_name = ?
+					AND column_name IN (?)
+				 | parameters: sqlite_database, wp_sc_blacklist, active</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_statistics` (`table_schema`, `table_name`, `non_unique`, `index_schema`, `index_name`, `seq_in_index`, `column_name`, `collation`, `cardinality`, `sub_part`, `packed`, `nullable`, `index_type`, `comment`, `index_comment`, `is_visible`, `expression`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, 1, sqlite_database, active, 1, active, A, 0, , , , BTREE, , , YES, </li>
+<li>Executing: 
+				UPDATE `_wp_sqlite_mysql_information_schema_columns` AS c
+				SET (column_key, is_nullable) = (
+					SELECT
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;PRI&#039;
+							WHEN MAX(s.non_unique = 0 AND s.seq_in_index = 1) THEN &#039;UNI&#039;
+							WHEN MAX(s.seq_in_index = 1) THEN &#039;MUL&#039;
+							ELSE &#039;&#039;
+						END,
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;NO&#039;
+							ELSE c.is_nullable
+						END
+					FROM `_wp_sqlite_mysql_information_schema_statistics` AS s
+					WHERE s.table_schema = c.table_schema
+					AND s.table_name = c.table_name
+					AND s.column_name = c.column_name
+				)
+			    WHERE c.table_schema = ?
+			    AND c.table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: 
+				SELECT *
+				FROM `_wp_sqlite_mysql_information_schema_tables`
+				WHERE table_type = &#039;BASE TABLE&#039;
+				AND table_schema = ?
+				AND table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: SELECT * FROM `_wp_sqlite_mysql_information_schema_columns` WHERE table_schema = ? AND table_name = ? ORDER BY ordinal_position | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: 
+					SELECT *
+					FROM `_wp_sqlite_mysql_information_schema_statistics`
+					WHERE table_schema = ?
+					AND table_name = ?
+					ORDER BY
+						INDEX_NAME = &#039;PRIMARY&#039; DESC,
+						NON_UNIQUE = &#039;0&#039; DESC,
+						INDEX_TYPE = &#039;SPATIAL&#039; DESC,
+						INDEX_TYPE = &#039;BTREE&#039; DESC,
+						INDEX_TYPE = &#039;FULLTEXT&#039; DESC,
+						ROWID,
+						SEQ_IN_INDEX
+				 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: SELECT * FROM `_wp_sqlite_mysql_information_schema_referential_constraints` WHERE constraint_schema = ? AND table_name = ? ORDER BY constraint_name | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: SELECT tc.*, cc.check_clause
+				FROM `_wp_sqlite_mysql_information_schema_table_constraints` tc
+				JOIN `_wp_sqlite_mysql_information_schema_check_constraints` cc ON cc.constraint_name = tc.constraint_name
+				WHERE tc.constraint_schema = ?
+				AND tc.table_name = ?
+				ORDER BY tc.constraint_name | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: CREATE TABLE `wp_sc_blacklist` (
+  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  `phone` TEXT COLLATE NOCASE NOT NULL DEFAULT &#039;&#039;,
+  `reason` TEXT COLLATE NOCASE NOT NULL DEFAULT &#039;&#039;,
+  `active` INTEGER NOT NULL DEFAULT &#039;1&#039;,
+  `created_by` INTEGER NOT NULL DEFAULT &#039;0&#039;,
+  `created_at` TEXT COLLATE NOCASE NOT NULL DEFAULT &#039;0000-00-00 00:00:00&#039;
+) STRICT | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+SQLSTATE[HY000]: General error: 1 table `wp_sc_blacklist` already exists
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-pdo-mysql-on-sqlite.php(921): WP_PDO_MySQL_On_SQLite->new_driver_exception('SQLSTATE[HY000]...', 'HY000', Object(PDOException))
+#1 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-sqlite-driver.php(160): WP_PDO_MySQL_On_SQLite->query('CREATE TABLE IF...', 5)
+#2 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(524): WP_SQLite_Driver->query('CREATE TABLE IF...')
+#3 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('CREATE TABLE IF...')
+#4 /wordpress/wp-admin/includes/upgrade.php(3324): WP_SQLite_DB->query('CREATE TABLE IF...')
+#5 /wordpress/wp-content/plugins/swiftcart-cod/includes/class-activator.php(63): dbDelta(Array)
+#6 /wordpress/wp-content/plugins/swiftcart-cod/swiftcart-cod.php(86): SwiftCart\Activator::create_tables()
+#7 /wordpress/wp-includes/class-wp-hook.php(341): {closure}('')
+#8 /wordpress/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters(Object(MotoParts\MotoParts), Array)
+#9 /wordpress/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#10 /wordpress/wp-settings.php(593): do_action('plugins_loaded')
+#11 /wordpress/wp-config.php(97): require_once('/wordpress/wp-s...')
+#12 /wordpress/wp-load.php(50): require_once('/wordpress/wp-c...')
+#13 /internal/eval.php(8): require('/wordpress/wp-l...')
+#14 {main}</pre>
+ for query CREATE TABLE IF NOT EXISTS wp_sc_blacklist (
+  id bigint(20) unsigned NOT NULL auto_increment,
+  phone varchar(20) NOT NULL DEFAULT '',
+  reason longtext NOT NULL DEFAULT '',
+  active tinyint(1) NOT NULL DEFAULT 1,
+  created_by bigint(20) unsigned NOT NULL DEFAULT 0,
+  created_at datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  KEY phone (phone),
+  KEY active (active)
+) DEFAULT CHARACTER SET utf8mb4 made by require('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), WP_Hook->do_action, WP_Hook->apply_filters, {closure}, SwiftCart\Activator::create_tables, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[23-Mar-2026 10:32:40 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>CREATE TABLE IF NOT EXISTS wp_sc_blacklist (
+  id bigint(20) unsigned NOT NULL auto_increment,
+  phone varchar(20) NOT NULL DEFAULT '',
+  reason longtext NOT NULL DEFAULT '',
+  active tinyint(1) NOT NULL DEFAULT 1,
+  created_by bigint(20) unsigned NOT NULL DEFAULT 0,
+  created_at datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  KEY phone (phone),
+  KEY active (active)
+) DEFAULT CHARACTER SET utf8mb4</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN IMMEDIATE | (no parameters)</li>
+<li>Executing: SELECT 1 FROM `_wp_sqlite_mysql_information_schema_tables` WHERE table_schema = ? AND table_name = ? | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_tables` (`table_schema`, `table_name`, `table_type`, `engine`, `row_format`, `table_collation`, `table_comment`) VALUES (?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, BASE TABLE, InnoDB, Dynamic, utf8mb4_0900_ai_ci, </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, id, 1, , NO, bigint, , , 20, 0, , , , bigint(20) unsigned, , auto_increment, select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, phone, 2, , NO, varchar, 20, 80, , , , utf8mb4, utf8mb4_0900_ai_ci, varchar(20), , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, reason, 3, , NO, longtext, 4294967295, 4294967295, , , , utf8mb4, utf8mb4_0900_ai_ci, longtext, , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, active, 4, 1, NO, tinyint, , , 3, 0, , , , tinyint(1), , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, created_by, 5, 0, NO, bigint, , , 20, 0, , , , bigint(20) unsigned, , , select,insert,update,references, , , </li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_columns` (`table_schema`, `table_name`, `column_name`, `ordinal_position`, `column_default`, `is_nullable`, `data_type`, `character_maximum_length`, `character_octet_length`, `numeric_precision`, `numeric_scale`, `datetime_precision`, `character_set_name`, `collation_name`, `column_type`, `column_key`, `extra`, `privileges`, `column_comment`, `generation_expression`, `srs_id`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, created_at, 6, 0000-00-00 00:00:00, NO, datetime, , , , , 0, , , datetime, , , select,insert,update,references, , , </li>
+<li>Executing: 
+					SELECT column_name, data_type, is_nullable, character_maximum_length
+					FROM `_wp_sqlite_mysql_information_schema_columns`
+					WHERE table_schema = ?
+					AND table_name = ?
+					AND column_name IN (?)
+				 | parameters: sqlite_database, wp_sc_blacklist, id</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_statistics` (`table_schema`, `table_name`, `non_unique`, `index_schema`, `index_name`, `seq_in_index`, `column_name`, `collation`, `cardinality`, `sub_part`, `packed`, `nullable`, `index_type`, `comment`, `index_comment`, `is_visible`, `expression`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, 0, sqlite_database, PRIMARY, 1, id, A, 0, , , , BTREE, , , YES, </li>
+<li>Executing: 
+				UPDATE `_wp_sqlite_mysql_information_schema_columns` AS c
+				SET (column_key, is_nullable) = (
+					SELECT
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;PRI&#039;
+							WHEN MAX(s.non_unique = 0 AND s.seq_in_index = 1) THEN &#039;UNI&#039;
+							WHEN MAX(s.seq_in_index = 1) THEN &#039;MUL&#039;
+							ELSE &#039;&#039;
+						END,
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;NO&#039;
+							ELSE c.is_nullable
+						END
+					FROM `_wp_sqlite_mysql_information_schema_statistics` AS s
+					WHERE s.table_schema = c.table_schema
+					AND s.table_name = c.table_name
+					AND s.column_name = c.column_name
+				)
+			    WHERE c.table_schema = ?
+			    AND c.table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_table_constraints` (`table_schema`, `table_name`, `constraint_schema`, `constraint_name`, `constraint_type`, `enforced`) VALUES (?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, sqlite_database, PRIMARY, PRIMARY KEY, YES</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_key_column_usage` (`constraint_schema`, `constraint_name`, `table_schema`, `table_name`, `column_name`, `ordinal_position`, `position_in_unique_constraint`, `referenced_table_schema`, `referenced_table_name`, `referenced_column_name`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, PRIMARY, sqlite_database, wp_sc_blacklist, id, 1, , , , </li>
+<li>Executing: 
+					SELECT column_name, data_type, is_nullable, character_maximum_length
+					FROM `_wp_sqlite_mysql_information_schema_columns`
+					WHERE table_schema = ?
+					AND table_name = ?
+					AND column_name IN (?)
+				 | parameters: sqlite_database, wp_sc_blacklist, phone</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_statistics` (`table_schema`, `table_name`, `non_unique`, `index_schema`, `index_name`, `seq_in_index`, `column_name`, `collation`, `cardinality`, `sub_part`, `packed`, `nullable`, `index_type`, `comment`, `index_comment`, `is_visible`, `expression`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, 1, sqlite_database, phone, 1, phone, A, 0, , , , BTREE, , , YES, </li>
+<li>Executing: 
+				UPDATE `_wp_sqlite_mysql_information_schema_columns` AS c
+				SET (column_key, is_nullable) = (
+					SELECT
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;PRI&#039;
+							WHEN MAX(s.non_unique = 0 AND s.seq_in_index = 1) THEN &#039;UNI&#039;
+							WHEN MAX(s.seq_in_index = 1) THEN &#039;MUL&#039;
+							ELSE &#039;&#039;
+						END,
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;NO&#039;
+							ELSE c.is_nullable
+						END
+					FROM `_wp_sqlite_mysql_information_schema_statistics` AS s
+					WHERE s.table_schema = c.table_schema
+					AND s.table_name = c.table_name
+					AND s.column_name = c.column_name
+				)
+			    WHERE c.table_schema = ?
+			    AND c.table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: 
+					SELECT column_name, data_type, is_nullable, character_maximum_length
+					FROM `_wp_sqlite_mysql_information_schema_columns`
+					WHERE table_schema = ?
+					AND table_name = ?
+					AND column_name IN (?)
+				 | parameters: sqlite_database, wp_sc_blacklist, active</li>
+<li>Executing: INSERT INTO `_wp_sqlite_mysql_information_schema_statistics` (`table_schema`, `table_name`, `non_unique`, `index_schema`, `index_name`, `seq_in_index`, `column_name`, `collation`, `cardinality`, `sub_part`, `packed`, `nullable`, `index_type`, `comment`, `index_comment`, `is_visible`, `expression`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) | parameters: sqlite_database, wp_sc_blacklist, 1, sqlite_database, active, 1, active, A, 0, , , , BTREE, , , YES, </li>
+<li>Executing: 
+				UPDATE `_wp_sqlite_mysql_information_schema_columns` AS c
+				SET (column_key, is_nullable) = (
+					SELECT
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;PRI&#039;
+							WHEN MAX(s.non_unique = 0 AND s.seq_in_index = 1) THEN &#039;UNI&#039;
+							WHEN MAX(s.seq_in_index = 1) THEN &#039;MUL&#039;
+							ELSE &#039;&#039;
+						END,
+						CASE
+							WHEN MAX(s.index_name = &#039;PRIMARY&#039;) THEN &#039;NO&#039;
+							ELSE c.is_nullable
+						END
+					FROM `_wp_sqlite_mysql_information_schema_statistics` AS s
+					WHERE s.table_schema = c.table_schema
+					AND s.table_name = c.table_name
+					AND s.column_name = c.column_name
+				)
+			    WHERE c.table_schema = ?
+			    AND c.table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: 
+				SELECT *
+				FROM `_wp_sqlite_mysql_information_schema_tables`
+				WHERE table_type = &#039;BASE TABLE&#039;
+				AND table_schema = ?
+				AND table_name = ?
+			 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: SELECT * FROM `_wp_sqlite_mysql_information_schema_columns` WHERE table_schema = ? AND table_name = ? ORDER BY ordinal_position | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: 
+					SELECT *
+					FROM `_wp_sqlite_mysql_information_schema_statistics`
+					WHERE table_schema = ?
+					AND table_name = ?
+					ORDER BY
+						INDEX_NAME = &#039;PRIMARY&#039; DESC,
+						NON_UNIQUE = &#039;0&#039; DESC,
+						INDEX_TYPE = &#039;SPATIAL&#039; DESC,
+						INDEX_TYPE = &#039;BTREE&#039; DESC,
+						INDEX_TYPE = &#039;FULLTEXT&#039; DESC,
+						ROWID,
+						SEQ_IN_INDEX
+				 | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: SELECT * FROM `_wp_sqlite_mysql_information_schema_referential_constraints` WHERE constraint_schema = ? AND table_name = ? ORDER BY constraint_name | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: SELECT tc.*, cc.check_clause
+				FROM `_wp_sqlite_mysql_information_schema_table_constraints` tc
+				JOIN `_wp_sqlite_mysql_information_schema_check_constraints` cc ON cc.constraint_name = tc.constraint_name
+				WHERE tc.constraint_schema = ?
+				AND tc.table_name = ?
+				ORDER BY tc.constraint_name | parameters: sqlite_database, wp_sc_blacklist</li>
+<li>Executing: CREATE TABLE `wp_sc_blacklist` (
+  `id` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  `phone` TEXT COLLATE NOCASE NOT NULL DEFAULT &#039;&#039;,
+  `reason` TEXT COLLATE NOCASE NOT NULL DEFAULT &#039;&#039;,
+  `active` INTEGER NOT NULL DEFAULT &#039;1&#039;,
+  `created_by` INTEGER NOT NULL DEFAULT &#039;0&#039;,
+  `created_at` TEXT COLLATE NOCASE NOT NULL DEFAULT &#039;0000-00-00 00:00:00&#039;
+) STRICT | (no parameters)</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+SQLSTATE[HY000]: General error: 1 table `wp_sc_blacklist` already exists
+</div>
+<p>Backtrace:</p>
+<pre>#0 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-pdo-mysql-on-sqlite.php(921): WP_PDO_MySQL_On_SQLite->new_driver_exception('SQLSTATE[HY000]...', 'HY000', Object(PDOException))
+#1 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite-ast/class-wp-sqlite-driver.php(160): WP_PDO_MySQL_On_SQLite->query('CREATE TABLE IF...', 5)
+#2 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(524): WP_SQLite_Driver->query('CREATE TABLE IF...')
+#3 /wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('CREATE TABLE IF...')
+#4 /wordpress/wp-admin/includes/upgrade.php(3324): WP_SQLite_DB->query('CREATE TABLE IF...')
+#5 /wordpress/wp-content/plugins/swiftcart-cod/includes/class-activator.php(63): dbDelta(Array)
+#6 /wordpress/wp-content/plugins/swiftcart-cod/swiftcart-cod.php(86): SwiftCart\Activator::create_tables()
+#7 /wordpress/wp-includes/class-wp-hook.php(341): {closure}('')
+#8 /wordpress/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters(Object(MotoParts\MotoParts), Array)
+#9 /wordpress/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#10 /wordpress/wp-settings.php(593): do_action('plugins_loaded')
+#11 /wordpress/wp-config.php(97): require_once('/wordpress/wp-s...')
+#12 /wordpress/wp-load.php(50): require_once('/wordpress/wp-c...')
+#13 /internal/eval.php(8): require('/wordpress/wp-l...')
+#14 {main}</pre>
+ for query CREATE TABLE IF NOT EXISTS wp_sc_blacklist (
+  id bigint(20) unsigned NOT NULL auto_increment,
+  phone varchar(20) NOT NULL DEFAULT '',
+  reason longtext NOT NULL DEFAULT '',
+  active tinyint(1) NOT NULL DEFAULT 1,
+  created_by bigint(20) unsigned NOT NULL DEFAULT 0,
+  created_at datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY  (id),
+  KEY phone (phone),
+  KEY active (active)
+) DEFAULT CHARACTER SET utf8mb4 made by require('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('plugins_loaded'), WP_Hook->do_action, WP_Hook->apply_filters, {closure}, SwiftCart\Activator::create_tables, dbDelta, WP_SQLite_DB->query, WP_SQLite_DB->print_error

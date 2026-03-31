@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php -v)",
+      "Bash(wp --info)",
+      "Bash(wp --path=. option update swiftcart_cutoff_hour 10)",
+      "Bash(wp rewrite:*)"
+    ]
+  }
+}

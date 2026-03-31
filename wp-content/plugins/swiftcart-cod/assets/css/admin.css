@@ -1,0 +1,139 @@
+/**
+ * SwiftCart COD — Admin Styles
+ *
+ * Palette: Dendro / Nature Green
+ * #518123 · #99BD49 · #B6D455 · #EBF7A9
+ * #225808 · #8ABB63 · #0C1805 · #88B43A · #BBD394 · #C4CC82
+ *
+ * @package SwiftCart
+ * @since   1.0.0
+ */
+
+/* Inline design tokens — admin pages don't load the child theme. */
+:root {
+	--sc-primary:      #99BD49;
+	--sc-primary-dark: #518123;
+	--sc-primary-deep: #225808;
+	--sc-primary-lite: #EBF7A9;
+
+	--sc-orange:  #99BD49;
+	--sc-green:   #225808;
+	--sc-amber:   #88B43A;
+	--sc-red:     #D32F2F;
+	--sc-blue:    #518123;
+	--sc-surface: #F4FAE8;
+	--sc-text:    #0C1805;
+	--sc-border:  #BBD394;
+	--sc-radius:  8px;
+	--sc-shadow:  0 2px 8px rgba(12,24,5,0.10);
+}
+
+.sc-admin-wrap { max-width: 1400px; }
+
+/* ── Widgets Row (replaces KPI cards) ──────────────────── */
+.sc-widgets-row {
+	display:    grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap:        16px;
+	margin:     16px 0 24px;
+}
+
+.sc-widget {
+	background:    #fff;
+	border:        1px solid var(--sc-border);
+	border-radius: var(--sc-radius);
+	padding:       20px 16px;
+	box-shadow:    var(--sc-shadow);
+	display:       flex;
+	flex-direction: column;
+	gap:           4px;
+	border-top:    3px solid var(--sc-border);
+}
+
+.sc-widget__icon  { font-size: 26px; line-height: 1; margin-bottom: 4px; }
+.sc-widget__value { font-size: 30px; font-weight: 900; line-height: 1.1; }
+.sc-widget__label { font-size: 12px; color: #555; font-weight: 600; }
+.sc-widget__sub   { font-size: 11px; color: #888; margin-top: 2px; }
+
+.sc-widget--orange { border-top-color: #99BD49; }
+.sc-widget--orange .sc-widget__value { color: #518123; }
+
+.sc-widget--green  { border-top-color: #225808; }
+.sc-widget--green  .sc-widget__value { color: #225808; }
+
+.sc-widget--amber  { border-top-color: #88B43A; }
+.sc-widget--amber  .sc-widget__value { color: #88B43A; }
+
+.sc-widget--red    { border-top-color: #D32F2F; }
+.sc-widget--red    .sc-widget__value { color: #D32F2F; }
+
+.sc-widget--blue   { border-top-color: #518123; }
+.sc-widget--blue   .sc-widget__value { color: #518123; }
+
+/* ── Status badges ─────────────────────────────────────── */
+.sc-status {
+	display:       inline-flex;
+	padding:       3px 10px;
+	border-radius: 999px;
+	font-size:     11px;
+	font-weight:   700;
+	white-space:   nowrap;
+}
+
+.sc-status--pending    { background: #EBF7A9; color: #518123; }
+.sc-status--confirmed  { background: #B6D455; color: #225808; }
+.sc-status--packed     { background: #C4CC82; color: #518123; }
+.sc-status--dispatched { background: #8ABB63; color: #0C1805; }
+.sc-status--delivered  { background: #225808; color: #EBF7A9; }
+.sc-status--cancelled  { background: #FFEBEE; color: #C62828; }
+.sc-status--returned   { background: #F4FAE8; color: #518123; }
+
+/* ── Risk level badges ─────────────────────────────────── */
+.sc-risk-badge {
+	display:       inline-block;
+	padding:       3px 10px;
+	border-radius: 999px;
+	font-size:     11px;
+	font-weight:   700;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+}
+
+.sc-risk-badge--normal    { background: #EBF7A9; color: #225808; }
+.sc-risk-badge--watchlist { background: #C4CC82; color: #518123; }
+.sc-risk-badge--flagged   { background: #FFEBEE; color: #D32F2F; }
+
+/* ── KPI Cards (legacy, kept for backwards compat) ─────── */
+.sc-kpi-row {
+	display:   flex;
+	gap:       12px;
+	flex-wrap: wrap;
+	margin:    16px 0 24px;
+}
+
+.sc-kpi-card {
+	flex:          1;
+	min-width:     130px;
+	background:    #fff;
+	border:        1px solid var(--sc-border);
+	border-radius: var(--sc-radius);
+	padding:       16px;
+	box-shadow:    var(--sc-shadow);
+}
+
+.sc-kpi-card__value { font-size: 28px; font-weight: 900; line-height: 1; }
+.sc-kpi-card__label { font-size: 12px; color: #888; margin-top: 4px; }
+
+.sc-kpi-card--orange .sc-kpi-card__value { color: #518123; }
+.sc-kpi-card--green  .sc-kpi-card__value { color: #225808; }
+.sc-kpi-card--amber  .sc-kpi-card__value { color: #88B43A; }
+.sc-kpi-card--red    .sc-kpi-card__value { color: #D32F2F; }
+.sc-kpi-card--blue   .sc-kpi-card__value { color: #518123; }
+
+/* ── Orders table ──────────────────────────────────────── */
+.sc-orders-table .sc-order-actions { white-space: nowrap; }
+.sc-orders-table .sc-order-actions .button { margin-right: 4px; }
+
+/* ── Filters ───────────────────────────────────────────── */
+.sc-filters input[type="text"],
+.sc-filters select { height: 32px; }
