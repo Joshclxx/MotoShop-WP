@@ -2422,3 +2422,1054 @@ Stack trace:
   thrown in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 1019
 [01-Apr-2026 02:12:21 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
 [01-Apr-2026 02:12:21 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 02:14:45 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 02:14:45 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 02:14:47 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 02:14:47' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=11, last_attempt_gmt='2026-04-01 02:14:47', last_attempt_local='2026-04-01 02:14:47'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=11, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 02:14:47, pending, 2026-04-01 02:14:47, 2026-04-01 02:14:47</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(11, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+ for query UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 02:14:47' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=11, last_attempt_gmt='2026-04-01 02:14:47', last_attempt_local='2026-04-01 02:14:47' made by do_action_ref_array('action_scheduler_run_queue'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->run, ActionScheduler_QueueRunner->do_batch, ActionScheduler_HybridStore->stake_claim, ActionScheduler_DBStore->stake_claim, ActionScheduler_DBStore->claim_actions, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[01-Apr-2026 02:14:47 UTC] PHP Fatal error:  Uncaught RuntimeException: Unable to claim actions. Database error: <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 02:14:47' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=11, last_attempt_gmt='2026-04-01 02:14:47', last_attempt_local='2026-04-01 02:14:47'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=11, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 02:14:47, pending, 2026-04-01 02:14:47, 2026-04-01 02:14:47</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(11, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+. in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1019
+Stack trace:
+#0 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(11, 25, NULL, '', '')
+#1 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#4 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#5 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#7 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#8 {main}
+  thrown in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 1019
+[01-Apr-2026 02:32:16 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 02:32:17 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 02:32:18 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 02:32:18' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=12, last_attempt_gmt='2026-04-01 02:32:18', last_attempt_local='2026-04-01 02:32:18'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=12, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 02:32:18, pending, 2026-04-01 02:32:18, 2026-04-01 02:32:18</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(12, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+ for query UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 02:32:18' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=12, last_attempt_gmt='2026-04-01 02:32:18', last_attempt_local='2026-04-01 02:32:18' made by do_action_ref_array('action_scheduler_run_queue'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->run, ActionScheduler_QueueRunner->do_batch, ActionScheduler_HybridStore->stake_claim, ActionScheduler_DBStore->stake_claim, ActionScheduler_DBStore->claim_actions, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[01-Apr-2026 02:32:18 UTC] PHP Fatal error:  Uncaught RuntimeException: Unable to claim actions. Database error: <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 02:32:18' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=12, last_attempt_gmt='2026-04-01 02:32:18', last_attempt_local='2026-04-01 02:32:18'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=12, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 02:32:18, pending, 2026-04-01 02:32:18, 2026-04-01 02:32:18</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(12, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+. in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1019
+Stack trace:
+#0 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(12, 25, NULL, '', '')
+#1 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#4 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#5 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#7 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#8 {main}
+  thrown in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 1019
+[01-Apr-2026 02:32:20 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 02:32:20 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 02:35:43 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 02:35:43 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 02:35:44 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 02:35:44' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=13, last_attempt_gmt='2026-04-01 02:35:44', last_attempt_local='2026-04-01 02:35:44'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=13, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 02:35:44, pending, 2026-04-01 02:35:44, 2026-04-01 02:35:44</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(13, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+ for query UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 02:35:44' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=13, last_attempt_gmt='2026-04-01 02:35:44', last_attempt_local='2026-04-01 02:35:44' made by do_action_ref_array('action_scheduler_run_queue'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->run, ActionScheduler_QueueRunner->do_batch, ActionScheduler_HybridStore->stake_claim, ActionScheduler_DBStore->stake_claim, ActionScheduler_DBStore->claim_actions, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[01-Apr-2026 02:35:44 UTC] PHP Fatal error:  Uncaught RuntimeException: Unable to claim actions. Database error: <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 02:35:44' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=13, last_attempt_gmt='2026-04-01 02:35:44', last_attempt_local='2026-04-01 02:35:44'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=13, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 02:35:44, pending, 2026-04-01 02:35:44, 2026-04-01 02:35:44</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(13, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+. in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1019
+Stack trace:
+#0 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(13, 25, NULL, '', '')
+#1 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#4 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#5 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#7 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#8 {main}
+  thrown in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 1019
+[01-Apr-2026 02:35:58 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 02:35:58 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 02:47:16 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 02:47:16 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 02:47:17 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 02:47:17' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=14, last_attempt_gmt='2026-04-01 02:47:17', last_attempt_local='2026-04-01 02:47:17'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=14, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 02:47:17, pending, 2026-04-01 02:47:17, 2026-04-01 02:47:17</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(14, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+ for query UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 02:47:17' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=14, last_attempt_gmt='2026-04-01 02:47:17', last_attempt_local='2026-04-01 02:47:17' made by do_action_ref_array('action_scheduler_run_queue'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->run, ActionScheduler_QueueRunner->do_batch, ActionScheduler_HybridStore->stake_claim, ActionScheduler_DBStore->stake_claim, ActionScheduler_DBStore->claim_actions, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[01-Apr-2026 02:47:17 UTC] PHP Fatal error:  Uncaught RuntimeException: Unable to claim actions. Database error: <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 02:47:17' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=14, last_attempt_gmt='2026-04-01 02:47:17', last_attempt_local='2026-04-01 02:47:17'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=14, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 02:47:17, pending, 2026-04-01 02:47:17, 2026-04-01 02:47:17</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(14, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+. in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1019
+Stack trace:
+#0 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(14, 25, NULL, '', '')
+#1 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#4 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#5 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#7 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#8 {main}
+  thrown in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 1019
+[01-Apr-2026 03:02:10 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:02:10 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:02:11 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:02:11' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=15, last_attempt_gmt='2026-04-01 03:02:11', last_attempt_local='2026-04-01 03:02:11'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=15, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:02:11, pending, 2026-04-01 03:02:11, 2026-04-01 03:02:11</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(15, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+ for query UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:02:11' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=15, last_attempt_gmt='2026-04-01 03:02:11', last_attempt_local='2026-04-01 03:02:11' made by do_action_ref_array('action_scheduler_run_queue'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->run, ActionScheduler_QueueRunner->do_batch, ActionScheduler_HybridStore->stake_claim, ActionScheduler_DBStore->stake_claim, ActionScheduler_DBStore->claim_actions, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[01-Apr-2026 03:02:11 UTC] PHP Fatal error:  Uncaught RuntimeException: Unable to claim actions. Database error: <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:02:11' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=15, last_attempt_gmt='2026-04-01 03:02:11', last_attempt_local='2026-04-01 03:02:11'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=15, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:02:11, pending, 2026-04-01 03:02:11, 2026-04-01 03:02:11</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(15, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+. in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1019
+Stack trace:
+#0 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(15, 25, NULL, '', '')
+#1 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#4 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#5 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#7 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#8 {main}
+  thrown in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 1019
+[01-Apr-2026 03:02:19 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:02:19 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:02:53 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:02:53 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:03:16 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:03:16 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:03:17 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:03:17' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=16, last_attempt_gmt='2026-04-01 03:03:17', last_attempt_local='2026-04-01 03:03:17'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=16, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:03:17, pending, 2026-04-01 03:03:17, 2026-04-01 03:03:17</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(16, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+ for query UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:03:17' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=16, last_attempt_gmt='2026-04-01 03:03:17', last_attempt_local='2026-04-01 03:03:17' made by do_action_ref_array('action_scheduler_run_queue'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->run, ActionScheduler_QueueRunner->do_batch, ActionScheduler_HybridStore->stake_claim, ActionScheduler_DBStore->stake_claim, ActionScheduler_DBStore->claim_actions, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[01-Apr-2026 03:03:17 UTC] PHP Fatal error:  Uncaught RuntimeException: Unable to claim actions. Database error: <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:03:17' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=16, last_attempt_gmt='2026-04-01 03:03:17', last_attempt_local='2026-04-01 03:03:17'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=16, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:03:17, pending, 2026-04-01 03:03:17, 2026-04-01 03:03:17</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(16, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+. in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1019
+Stack trace:
+#0 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(16, 25, NULL, '', '')
+#1 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#4 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#5 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#7 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#8 {main}
+  thrown in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 1019
+[01-Apr-2026 03:04:11 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:04:11 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:04:21 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:04:21 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:04:22 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:04:22' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=17, last_attempt_gmt='2026-04-01 03:04:22', last_attempt_local='2026-04-01 03:04:22'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=17, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:04:22, pending, 2026-04-01 03:04:22, 2026-04-01 03:04:22</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(17, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+ for query UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:04:22' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=17, last_attempt_gmt='2026-04-01 03:04:22', last_attempt_local='2026-04-01 03:04:22' made by do_action_ref_array('action_scheduler_run_queue'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->run, ActionScheduler_QueueRunner->do_batch, ActionScheduler_HybridStore->stake_claim, ActionScheduler_DBStore->stake_claim, ActionScheduler_DBStore->claim_actions, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[01-Apr-2026 03:04:22 UTC] PHP Fatal error:  Uncaught RuntimeException: Unable to claim actions. Database error: <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:04:22' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=17, last_attempt_gmt='2026-04-01 03:04:22', last_attempt_local='2026-04-01 03:04:22'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=17, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:04:22, pending, 2026-04-01 03:04:22, 2026-04-01 03:04:22</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(17, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+. in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1019
+Stack trace:
+#0 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(17, 25, NULL, '', '')
+#1 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#4 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#5 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#7 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#8 {main}
+  thrown in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 1019
+[01-Apr-2026 03:05:27 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:05:27 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:05:28 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:05:28' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=18, last_attempt_gmt='2026-04-01 03:05:28', last_attempt_local='2026-04-01 03:05:28'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=18, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:05:28, pending, 2026-04-01 03:05:28, 2026-04-01 03:05:28</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(18, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+ for query UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:05:28' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=18, last_attempt_gmt='2026-04-01 03:05:28', last_attempt_local='2026-04-01 03:05:28' made by do_action_ref_array('action_scheduler_run_queue'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->run, ActionScheduler_QueueRunner->do_batch, ActionScheduler_HybridStore->stake_claim, ActionScheduler_DBStore->stake_claim, ActionScheduler_DBStore->claim_actions, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[01-Apr-2026 03:05:28 UTC] PHP Fatal error:  Uncaught RuntimeException: Unable to claim actions. Database error: <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:05:28' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=18, last_attempt_gmt='2026-04-01 03:05:28', last_attempt_local='2026-04-01 03:05:28'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=18, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:05:28, pending, 2026-04-01 03:05:28, 2026-04-01 03:05:28</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(18, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+. in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1019
+Stack trace:
+#0 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(18, 25, NULL, '', '')
+#1 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#4 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#5 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#7 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#8 {main}
+  thrown in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 1019
+[01-Apr-2026 03:05:30 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:05:30 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:07:10 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:07:10 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:07:11 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:07:11' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=19, last_attempt_gmt='2026-04-01 03:07:11', last_attempt_local='2026-04-01 03:07:11'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=19, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:07:11, pending, 2026-04-01 03:07:11, 2026-04-01 03:07:11</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(19, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+ for query UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:07:11' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=19, last_attempt_gmt='2026-04-01 03:07:11', last_attempt_local='2026-04-01 03:07:11' made by do_action_ref_array('action_scheduler_run_queue'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->run, ActionScheduler_QueueRunner->do_batch, ActionScheduler_HybridStore->stake_claim, ActionScheduler_DBStore->stake_claim, ActionScheduler_DBStore->claim_actions, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[01-Apr-2026 03:07:11 UTC] PHP Fatal error:  Uncaught RuntimeException: Unable to claim actions. Database error: <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:07:11' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=19, last_attempt_gmt='2026-04-01 03:07:11', last_attempt_local='2026-04-01 03:07:11'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=19, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:07:11, pending, 2026-04-01 03:07:11, 2026-04-01 03:07:11</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(19, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+. in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1019
+Stack trace:
+#0 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(19, 25, NULL, '', '')
+#1 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#4 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#5 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#7 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#8 {main}
+  thrown in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 1019
+[01-Apr-2026 03:07:55 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:07:55 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:08:22 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:08:22 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:08:23 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:08:23' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=20, last_attempt_gmt='2026-04-01 03:08:23', last_attempt_local='2026-04-01 03:08:23'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=20, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:08:23, pending, 2026-04-01 03:08:23, 2026-04-01 03:08:23</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(20, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+ for query UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:08:23' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=20, last_attempt_gmt='2026-04-01 03:08:23', last_attempt_local='2026-04-01 03:08:23' made by do_action_ref_array('action_scheduler_run_queue'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->run, ActionScheduler_QueueRunner->do_batch, ActionScheduler_HybridStore->stake_claim, ActionScheduler_DBStore->stake_claim, ActionScheduler_DBStore->claim_actions, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[01-Apr-2026 03:08:23 UTC] PHP Fatal error:  Uncaught RuntimeException: Unable to claim actions. Database error: <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:08:23' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=20, last_attempt_gmt='2026-04-01 03:08:23', last_attempt_local='2026-04-01 03:08:23'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=20, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:08:23, pending, 2026-04-01 03:08:23, 2026-04-01 03:08:23</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(20, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+. in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1019
+Stack trace:
+#0 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(20, 25, NULL, '', '')
+#1 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#4 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#5 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#7 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#8 {main}
+  thrown in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 1019
+[01-Apr-2026 03:09:30 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:09:30 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:09:31 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:09:31' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=21, last_attempt_gmt='2026-04-01 03:09:31', last_attempt_local='2026-04-01 03:09:31'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=21, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:09:31, pending, 2026-04-01 03:09:31, 2026-04-01 03:09:31</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(21, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+ for query UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:09:31' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=21, last_attempt_gmt='2026-04-01 03:09:31', last_attempt_local='2026-04-01 03:09:31' made by do_action_ref_array('action_scheduler_run_queue'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->run, ActionScheduler_QueueRunner->do_batch, ActionScheduler_HybridStore->stake_claim, ActionScheduler_DBStore->stake_claim, ActionScheduler_DBStore->claim_actions, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[01-Apr-2026 03:09:31 UTC] PHP Fatal error:  Uncaught RuntimeException: Unable to claim actions. Database error: <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:09:31' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=21, last_attempt_gmt='2026-04-01 03:09:31', last_attempt_local='2026-04-01 03:09:31'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=21, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:09:31, pending, 2026-04-01 03:09:31, 2026-04-01 03:09:31</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(21, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+. in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1019
+Stack trace:
+#0 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(21, 25, NULL, '', '')
+#1 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#4 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#5 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#7 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#8 {main}
+  thrown in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 1019
+[01-Apr-2026 03:10:04 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:10:04 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:15:18 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:15:18 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:15:20 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:15:20' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=22, last_attempt_gmt='2026-04-01 03:15:20', last_attempt_local='2026-04-01 03:15:20'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=22, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:15:20, pending, 2026-04-01 03:15:20, 2026-04-01 03:15:20</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(22, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+ for query UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:15:20' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=22, last_attempt_gmt='2026-04-01 03:15:20', last_attempt_local='2026-04-01 03:15:20' made by do_action_ref_array('action_scheduler_run_queue'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->run, ActionScheduler_QueueRunner->do_batch, ActionScheduler_HybridStore->stake_claim, ActionScheduler_DBStore->stake_claim, ActionScheduler_DBStore->claim_actions, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[01-Apr-2026 03:15:20 UTC] PHP Fatal error:  Uncaught RuntimeException: Unable to claim actions. Database error: <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:15:20' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=22, last_attempt_gmt='2026-04-01 03:15:20', last_attempt_local='2026-04-01 03:15:20'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=22, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:15:20, pending, 2026-04-01 03:15:20, 2026-04-01 03:15:20</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(22, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+. in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1019
+Stack trace:
+#0 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(22, 25, NULL, '', '')
+#1 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#4 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#5 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#7 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#8 {main}
+  thrown in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 1019
+[01-Apr-2026 03:22:28 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:22:28 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:22:29 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:22:29' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=23, last_attempt_gmt='2026-04-01 03:22:29', last_attempt_local='2026-04-01 03:22:29'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=23, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:22:29, pending, 2026-04-01 03:22:29, 2026-04-01 03:22:29</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(23, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+ for query UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:22:29' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=23, last_attempt_gmt='2026-04-01 03:22:29', last_attempt_local='2026-04-01 03:22:29' made by do_action_ref_array('action_scheduler_run_queue'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->run, ActionScheduler_QueueRunner->do_batch, ActionScheduler_HybridStore->stake_claim, ActionScheduler_DBStore->stake_claim, ActionScheduler_DBStore->claim_actions, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[01-Apr-2026 03:22:29 UTC] PHP Fatal error:  Uncaught RuntimeException: Unable to claim actions. Database error: <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:22:29' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=23, last_attempt_gmt='2026-04-01 03:22:29', last_attempt_local='2026-04-01 03:22:29'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=23, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:22:29, pending, 2026-04-01 03:22:29, 2026-04-01 03:22:29</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(23, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+. in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1019
+Stack trace:
+#0 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(23, 25, NULL, '', '')
+#1 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#4 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#5 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#7 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#8 {main}
+  thrown in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 1019
+[01-Apr-2026 03:30:08 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:30:08 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:30:09 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:30:09' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=24, last_attempt_gmt='2026-04-01 03:30:09', last_attempt_local='2026-04-01 03:30:09'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=24, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:30:09, pending, 2026-04-01 03:30:09, 2026-04-01 03:30:09</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(24, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+ for query UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:30:09' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=24, last_attempt_gmt='2026-04-01 03:30:09', last_attempt_local='2026-04-01 03:30:09' made by do_action_ref_array('action_scheduler_run_queue'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->run, ActionScheduler_QueueRunner->do_batch, ActionScheduler_HybridStore->stake_claim, ActionScheduler_DBStore->stake_claim, ActionScheduler_DBStore->claim_actions, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[01-Apr-2026 03:30:09 UTC] PHP Fatal error:  Uncaught RuntimeException: Unable to claim actions. Database error: <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:30:09' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=24, last_attempt_gmt='2026-04-01 03:30:09', last_attempt_local='2026-04-01 03:30:09'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=24, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:30:09, pending, 2026-04-01 03:30:09, 2026-04-01 03:30:09</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(24, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+. in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1019
+Stack trace:
+#0 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(24, 25, NULL, '', '')
+#1 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#4 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#5 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#7 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#8 {main}
+  thrown in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 1019
+[01-Apr-2026 03:35:16 UTC] PHP Deprecated:  File Theme without header.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a header.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:35:16 UTC] PHP Deprecated:  File Theme without footer.php is <strong>deprecated</strong> since version 3.0.0 with no alternative available. Please include a footer.php template in your theme. in /Users/jay/personal/MotoShop-WP/wp-includes/functions.php on line 6131
+[01-Apr-2026 03:35:17 UTC] WordPress database error <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:35:17' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=25, last_attempt_gmt='2026-04-01 03:35:17', last_attempt_local='2026-04-01 03:35:17'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=25, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:35:17, pending, 2026-04-01 03:35:17, 2026-04-01 03:35:17</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(25, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+ for query UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:35:17' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=25, last_attempt_gmt='2026-04-01 03:35:17', last_attempt_local='2026-04-01 03:35:17' made by do_action_ref_array('action_scheduler_run_queue'), WP_Hook->do_action, WP_Hook->apply_filters, ActionScheduler_QueueRunner->run, ActionScheduler_QueueRunner->do_batch, ActionScheduler_HybridStore->stake_claim, ActionScheduler_DBStore->stake_claim, ActionScheduler_DBStore->claim_actions, WP_SQLite_DB->query, WP_SQLite_DB->print_error
+[01-Apr-2026 03:35:17 UTC] PHP Fatal error:  Uncaught RuntimeException: Unable to claim actions. Database error: <div style="clear:both">&nbsp;</div>
+<div class="queries" style="clear:both;margin-bottom:2px;border:red dotted thin;">
+<p>MySQL query:</p>
+<p>UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt <= '2026-04-01 03:35:17' AND status='pending' ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=25, last_attempt_gmt='2026-04-01 03:35:17', last_attempt_local='2026-04-01 03:35:17'</p>
+<p>Queries made or created this session were:</p>
+<ol>
+<li>Executing: BEGIN | (no parameters)</li>
+<li>Executing: UPDATE wp_actionscheduler_actions t1 JOIN ( SELECT action_id from wp_actionscheduler_actions WHERE claim_id = 0 AND scheduled_date_gmt &lt;= :param0  AND status=:param1  ORDER BY priority ASC, attempts ASC, scheduled_date_gmt ASC, action_id ASC LIMIT 25 FOR UPDATE ) t2 ON t1.action_id = t2.action_id SET claim_id=25, last_attempt_gmt=:param2 , last_attempt_local=:param3  | parameters: 2026-04-01 03:35:17, pending, 2026-04-01 03:35:17, 2026-04-01 03:35:17</li>
+<li>Executing: ROLLBACK | (no parameters)</li>
+</ol>
+</div>
+<div style="clear:both;margin-bottom:2px;border:red dotted thin;" class="error_message" style="border-bottom:dotted blue thin;">
+Error occurred at line 4197 in Function <code>handle_error</code>. Error message was: SQLSTATE[HY000]: General error: 1 near "t1": syntax error.
+</div>
+<p>Backtrace:</p>
+<pre>#0 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(530): WP_SQLite_Translator->get_error_message()
+#1 /Users/jay/personal/MotoShop-WP/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(436): WP_SQLite_DB->_do_query('UPDATE wp_actio...')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(1014): WP_SQLite_DB->query('UPDATE wp_actio...')
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(25, 25, NULL, '', '')
+#4 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#5 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#6 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#7 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#8 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#9 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#10 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#11 {main}</pre>
+. in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:1019
+Stack trace:
+#0 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php(861): ActionScheduler_DBStore->claim_actions(25, 25, NULL, '', '')
+#1 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php(253): ActionScheduler_DBStore->stake_claim(25, NULL, Array, '')
+#2 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(179): ActionScheduler_HybridStore->stake_claim(25)
+#3 /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php(158): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#4 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(341): ActionScheduler_QueueRunner->run('WP Cron')
+#5 /Users/jay/personal/MotoShop-WP/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#6 /Users/jay/personal/MotoShop-WP/wp-includes/plugin.php(570): WP_Hook->do_action(Array)
+#7 /Users/jay/personal/MotoShop-WP/wp-cron.php(191): do_action_ref_array('action_schedule...', Array)
+#8 {main}
+  thrown in /Users/jay/personal/MotoShop-WP/wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php on line 1019

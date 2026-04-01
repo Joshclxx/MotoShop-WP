@@ -3029,3 +3029,25 @@ body:not(.wp-admin) {
     padding-top: 48px;
   }
 }
+
+/* MotoShop - Force Brand Colors & Fix UI overrides */
+.sc-btn--buy-now {
+  background-color: #ff5722 !important;
+  color: #fff !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+}
+
+.sc-btn--buy-now::before {
+  content: none !important;
+}
+
+.sc-shop-page nav.woocommerce-pagination ul.page-numbers li span.current,
+.woocommerce-pagination ul.page-numbers li .page-numbers.current,
+.woocommerce-pagination ul.page-numbers li span[aria-current="page"] {
+  background-color: #ff5722 !important;
+  border-color: #ff5722 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(255, 87, 34, 0.3) !important;
+}
