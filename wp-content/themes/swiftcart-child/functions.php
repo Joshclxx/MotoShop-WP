@@ -424,43 +424,90 @@ add_filter( 'woocommerce_add_to_cart_validation', static function ( $passed, $pr
 }, 10, 3 );
 
 /* ═══════════════════════════════════════════════════════════════════════════
- * TASK 5 — Header Account Links
+ * TASK 5 + TASK B1 — Unified Sticky Header
+ *
+ * All three header elements (nav pill, logo, account bar) are output inside a
+ * single <header id="sc-sticky-header"> wrapper so they form one cohesive bar.
+ * A small inline script adds .scrolled when the user scrolls past 10 px,
+ * triggering the dark solid-background transition in CSS.
  * ═══════════════════════════════════════════════════════════════════════════ */
 
 /**
- * Inject role-based account links into the header via wp_footer.
+ * Output the unified sticky header and scroll-state script.
  *
- * Uses a fixed-position overlay in the top-right corner to avoid
- * overriding Twenty Twenty-Five block templates.
+ * Replaces the former separate priority-10 nav/logo hook and priority-20
+ * account-bar hook. Both are now a single priority-10 emission so the DOM
+ * order is: wrapper open → left (nav) → centre (logo) → right (account) → close.
  *
- * @since 1.0.0
+ * @since 1.4.0
  */
 add_action( 'wp_footer', static function (): void {
 	if ( is_admin() ) {
 		return;
 	}
 
-	echo '<div class="sc-header-account-bar">';
+	$shop_url = wc_get_page_permalink( 'shop' ) ?: home_url( '/shop/' );
+	$home_url = home_url( '/' );
+	$acct_url = wc_get_page_permalink( 'myaccount' );
+	$logo_url = get_stylesheet_directory_uri() . '/assets/images/logo-3-card.svg';
 
+	echo '<header id="sc-sticky-header" class="sc-sticky-header" role="banner">';
+
+	// Left column — navigation pill.
+	echo '<div class="sc-sticky-header__left">';
+	echo '<nav class="sc-main-nav" aria-label="Main Navigation">';
+	echo '<a href="' . esc_url( $home_url ) . '" class="sc-main-nav__link' . ( is_front_page() ? ' sc-main-nav__link--active' : '' ) . '">🏠 Home</a>';
+	echo '<a href="' . esc_url( $shop_url ) . '" class="sc-main-nav__link' . ( is_shop() ? ' sc-main-nav__link--active' : '' ) . '">🛒 Shop</a>';
+	echo '<a href="' . esc_url( $acct_url ) . '" class="sc-main-nav__link' . ( is_account_page() ? ' sc-main-nav__link--active' : '' ) . '">👤 Account</a>';
+	echo '</nav>';
+	echo '</div>';
+
+	// Centre column — logo.
+	echo '<div class="sc-sticky-header__centre">';
+	echo '<a href="' . esc_url( $home_url ) . '" class="sc-site-logo" aria-label="' . esc_attr__( 'MotoShop Parts — Home', 'swiftcart-cod' ) . '">';
+	echo '<img src="' . esc_url( $logo_url ) . '" alt="' . esc_attr__( 'MotoShop Parts', 'swiftcart-cod' ) . '" width="170" height="45" loading="eager" />';
+	echo '</a>';
+	echo '</div>';
+
+	// Right column — role-based account links.
+	echo '<div class="sc-sticky-header__right">';
+	echo '<div class="sc-header-account-bar">';
 	if ( is_user_logged_in() ) {
 		if ( current_user_can( 'manage_woocommerce' ) || current_user_can( 'manage_options' ) ) {
 			echo '<a href="' . esc_url( admin_url() ) . '" class="sc-header-account sc-header-account--admin">⚙ Admin Panel</a>';
 			echo '<a href="' . esc_url( admin_url( 'admin.php?page=swiftcart' ) ) . '" class="sc-header-account sc-header-account--admin">📦 Orders</a>';
 			echo '<a href="' . esc_url( admin_url( 'edit.php?post_type=product' ) ) . '" class="sc-header-account sc-header-account--admin">🛒 Products</a>';
 		}
-
 		if ( ! current_user_can( 'manage_woocommerce' ) && ! current_user_can( 'manage_options' ) ) {
 			echo '<a href="' . esc_url( wc_get_account_endpoint_url( 'dashboard' ) ) . '" class="sc-header-account">My Account</a>';
 		}
-
-		// All users get a logout button.
+		// All logged-in users get a logout link.
 		echo '<a href="' . esc_url( wp_logout_url( home_url() ) ) . '" class="sc-header-account sc-header-account--logout">Logout</a>';
 	} else {
 		echo '<a href="' . esc_url( wc_get_page_permalink( 'myaccount' ) ) . '" class="sc-header-account">Login / Register</a>';
 	}
-
 	echo '</div>';
-}, 20 );
+	echo '</div>';
+
+	echo '</header>';
+	?>
+	<script>
+	(function () {
+		var header = document.getElementById('sc-sticky-header');
+		if (!header) return;
+		function onScroll() {
+			if (window.scrollY > 10) {
+				header.classList.add('scrolled');
+			} else {
+				header.classList.remove('scrolled');
+			}
+		}
+		window.addEventListener('scroll', onScroll, { passive: true });
+		onScroll(); // run once on load in case page starts scrolled
+	}());
+	</script>
+	<?php
+}, 10 );
 
 /**
  * Guest JS redirect — intercept AJAX add-to-cart clicks for non-logged-in users.
@@ -488,29 +535,6 @@ add_action( 'wp_footer', static function (): void {
 	<?php
 }, 30 );
 
-/* ═══════════════════════════════════════════════════════════════════════════
- * TASK B1 — Main Navigation Menu
- * ═══════════════════════════════════════════════════════════════════════════ */
-
-/**
- * Inject a fixed main navigation bar at the top of the page.
- *
- * Uses wp_footer to avoid overriding the Twenty Twenty-Five block template.
- *
- * @since 1.3.0
- */
-add_action( 'wp_footer', static function (): void {
-	if ( is_admin() ) {
-		return;
-	}
-
-	$shop_url = wc_get_page_permalink( 'shop' ) ?: home_url( '/shop/' );
-	$home_url = home_url( '/' );
-	$acct_url = wc_get_page_permalink( 'myaccount' );
-
-	echo '<nav class="sc-main-nav" aria-label="Main Navigation">';
-	echo '<a href="' . esc_url( $home_url ) . '" class="sc-main-nav__link' . ( is_front_page() ? ' sc-main-nav__link--active' : '' ) . '">🏠 Home</a>';
-	echo '<a href="' . esc_url( $shop_url ) . '" class="sc-main-nav__link' . ( is_shop() ? ' sc-main-nav__link--active' : '' ) . '">🛒 Shop</a>';
-	echo '<a href="' . esc_url( $acct_url ) . '" class="sc-main-nav__link' . ( is_account_page() ? ' sc-main-nav__link--active' : '' ) . '">👤 Account</a>';
-	echo '</nav>';
-}, 10 );
+/* Note: TASK B1 (nav + logo injection) is now consolidated into the unified
+ * sticky header hook above (TASK 5 + TASK B1). The former standalone hook
+ * has been removed to prevent duplicate output. */

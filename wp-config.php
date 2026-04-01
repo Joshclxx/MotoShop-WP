@@ -83,7 +83,8 @@ define( 'WP_DEBUG_LOG', true );
 define( 'WP_DEBUG_DISPLAY', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
-
+define( 'WP_HOME', 'http://localhost:4000' );
+define( 'WP_SITEURL', 'http://localhost:4000' );
 
 
 /* That's all, stop editing! Happy publishing. */

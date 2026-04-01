@@ -24,27 +24,28 @@ get_header();
 ?>
 
 <!-- ═══════════════════════════════════════════════════════
-     ANNOUNCEMENT BAR
-═══════════════════════════════════════════════════════ -->
-<div class="sc-announcement-bar" role="banner" aria-label="<?php esc_attr_e( 'Promotions', 'swiftcart-cod' ); ?>">
-	<div class="sc-announcement-bar__inner">
-		<span class="sc-announcement-bar__item sc-announcement-bar__item--active">
-			🛵 <?php esc_html_e( 'Free delivery on orders ₱500 and above', 'swiftcart-cod' ); ?>
-		</span>
-		<span class="sc-announcement-bar__item">
-			⏰ <?php esc_html_e( 'Order before 10 AM for same-day dispatch', 'swiftcart-cod' ); ?>
-		</span>
-		<span class="sc-announcement-bar__item">
-			💳 <?php esc_html_e( 'Pay cash on delivery — no card needed', 'swiftcart-cod' ); ?>
-		</span>
-	</div>
-	<button class="sc-announcement-bar__close" aria-label="<?php esc_attr_e( 'Dismiss', 'swiftcart-cod' ); ?>">✕</button>
-</div>
-
-<!-- ═══════════════════════════════════════════════════════
      HERO BANNER
 ═══════════════════════════════════════════════════════ -->
 <section class="sc-hero" aria-label="<?php esc_attr_e( 'Hero', 'swiftcart-cod' ); ?>">
+	<!-- ═══════════════════════════════════════════════════════
+     ANNOUNCEMENT BAR
+	═══════════════════════════════════════════════════════ -->
+	<div class="sc-announcement-bar" role="banner" aria-label="<?php esc_attr_e( 'Promotions', 'swiftcart-cod' ); ?>">
+		<div class="sc-announcement-bar__inner">
+			<span class="sc-announcement-bar__item sc-announcement-bar__item--active">
+				🛵 <?php esc_html_e( 'Free delivery on orders ₱500 and above', 'swiftcart-cod' ); ?>
+			</span>
+			<span class="sc-announcement-bar__item">
+				⏰ <?php esc_html_e( 'Order before 10 AM for same-day dispatch', 'swiftcart-cod' ); ?>
+			</span>
+			<span class="sc-announcement-bar__item">
+				💳 <?php esc_html_e( 'Pay cash on delivery — no card needed', 'swiftcart-cod' ); ?>
+			</span>
+		</div>
+		<button class="sc-announcement-bar__close" aria-label="<?php esc_attr_e( 'Dismiss', 'swiftcart-cod' ); ?>">✕</button>
+	</div>
+
+
 	<div class="sc-hero__inner sc-container">
 		<div class="sc-hero__content">
 			<div class="sc-hero__badge">

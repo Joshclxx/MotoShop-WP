@@ -4,7 +4,27 @@
       "Bash(php -v)",
       "Bash(wp --info)",
       "Bash(wp --path=. option update swiftcart_cutoff_hour 10)",
-      "Bash(wp rewrite:*)"
+      "Bash(wp rewrite:*)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(grep -r \"blogname\\\\|site_name\\\\|MotoShop\\\\|MotoParts\\\\|Moto\" /Users/jay/personal/MotoShop-WP/wp-content/themes/swiftcart-child/ --include=*.php -l)",
+      "Bash(wp --allow-root option get blogname)",
+      "Bash(wp --allow-root option get blogdescription)",
+      "Skill(claude-api)",
+      "Skill(claude-api:*)"
+    ]
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"hookSpecificOutput\":{\"hookEventName\":\"UserPromptSubmit\",\"additionalContext\":\"WORKFLOW REMINDER: For any development task (new feature, bug fix, UI change, schema change, code review), invoke the project-manager agent first. The project-manager will plan the work and delegate to the correct specialist agents: backend-wordpress-developer, frontend-wordpress-developer, php-reviewer, or ui-ux-designer. Skip this only for simple questions, file reads, or non-development requests.\"}}'",
+            "statusMessage": "Loading project workflow..."
+          }
+        ]
+      }
     ]
   }
 }

@@ -2,8 +2,8 @@
  * SwiftCart COD — Admin Styles
  *
  * Palette: Dendro / Nature Green
- * #518123 · #99BD49 · #B6D455 · #EBF7A9
- * #225808 · #8ABB63 · #0C1805 · #88B43A · #BBD394 · #C4CC82
+ * #E64A19 · #FF5722 · #FF8A65 · #FFCCBC
+ * #2E7D32 · #8ABB63 · #111111 · #F57F17 · #E0E0E0 · #C4CC82
  *
  * @package SwiftCart
  * @since   1.0.0
@@ -11,19 +11,19 @@
 
 /* Inline design tokens — admin pages don't load the child theme. */
 :root {
-	--sc-primary:      #99BD49;
-	--sc-primary-dark: #518123;
-	--sc-primary-deep: #225808;
-	--sc-primary-lite: #EBF7A9;
+	--sc-primary:      #FF5722;
+	--sc-primary-dark: #E64A19;
+	--sc-primary-deep: #2E7D32;
+	--sc-primary-lite: #FFCCBC;
 
-	--sc-orange:  #99BD49;
-	--sc-green:   #225808;
-	--sc-amber:   #88B43A;
+	--sc-primary:  #FF5722;
+	--sc-green:   #2E7D32;
+	--sc-amber:   #F57F17;
 	--sc-red:     #D32F2F;
-	--sc-blue:    #518123;
-	--sc-surface: #F4FAE8;
-	--sc-text:    #0C1805;
-	--sc-border:  #BBD394;
+	--sc-blue:    #E64A19;
+	--sc-surface: #F5F6F8;
+	--sc-text:    #111111;
+	--sc-border:  #E0E0E0;
 	--sc-radius:  8px;
 	--sc-shadow:  0 2px 8px rgba(12,24,5,0.10);
 }
@@ -55,20 +55,20 @@
 .sc-widget__label { font-size: 12px; color: #555; font-weight: 600; }
 .sc-widget__sub   { font-size: 11px; color: #888; margin-top: 2px; }
 
-.sc-widget--orange { border-top-color: #99BD49; }
-.sc-widget--orange .sc-widget__value { color: #518123; }
+.sc-widget--orange { border-top-color: #FF5722; }
+.sc-widget--orange .sc-widget__value { color: #E64A19; }
 
-.sc-widget--green  { border-top-color: #225808; }
-.sc-widget--green  .sc-widget__value { color: #225808; }
+.sc-widget--green  { border-top-color: #2E7D32; }
+.sc-widget--green  .sc-widget__value { color: #2E7D32; }
 
-.sc-widget--amber  { border-top-color: #88B43A; }
-.sc-widget--amber  .sc-widget__value { color: #88B43A; }
+.sc-widget--amber  { border-top-color: #F57F17; }
+.sc-widget--amber  .sc-widget__value { color: #F57F17; }
 
 .sc-widget--red    { border-top-color: #D32F2F; }
 .sc-widget--red    .sc-widget__value { color: #D32F2F; }
 
-.sc-widget--blue   { border-top-color: #518123; }
-.sc-widget--blue   .sc-widget__value { color: #518123; }
+.sc-widget--blue   { border-top-color: #E64A19; }
+.sc-widget--blue   .sc-widget__value { color: #E64A19; }
 
 /* ── Status badges ─────────────────────────────────────── */
 .sc-status {
@@ -80,13 +80,13 @@
 	white-space:   nowrap;
 }
 
-.sc-status--pending    { background: #EBF7A9; color: #518123; }
-.sc-status--confirmed  { background: #B6D455; color: #225808; }
-.sc-status--packed     { background: #C4CC82; color: #518123; }
-.sc-status--dispatched { background: #8ABB63; color: #0C1805; }
-.sc-status--delivered  { background: #225808; color: #EBF7A9; }
+.sc-status--pending    { background: #FFCCBC; color: #E64A19; }
+.sc-status--confirmed  { background: #FF8A65; color: #2E7D32; }
+.sc-status--packed     { background: #C4CC82; color: #E64A19; }
+.sc-status--dispatched { background: #8ABB63; color: #111111; }
+.sc-status--delivered  { background: #2E7D32; color: #FFCCBC; }
 .sc-status--cancelled  { background: #FFEBEE; color: #C62828; }
-.sc-status--returned   { background: #F4FAE8; color: #518123; }
+.sc-status--returned   { background: #F5F6F8; color: #E64A19; }
 
 /* ── Risk level badges ─────────────────────────────────── */
 .sc-risk-badge {
@@ -99,8 +99,8 @@
 	letter-spacing: 0.3px;
 }
 
-.sc-risk-badge--normal    { background: #EBF7A9; color: #225808; }
-.sc-risk-badge--watchlist { background: #C4CC82; color: #518123; }
+.sc-risk-badge--normal    { background: #FFCCBC; color: #2E7D32; }
+.sc-risk-badge--watchlist { background: #C4CC82; color: #E64A19; }
 .sc-risk-badge--flagged   { background: #FFEBEE; color: #D32F2F; }
 
 /* ── KPI Cards (legacy, kept for backwards compat) ─────── */
@@ -124,11 +124,11 @@
 .sc-kpi-card__value { font-size: 28px; font-weight: 900; line-height: 1; }
 .sc-kpi-card__label { font-size: 12px; color: #888; margin-top: 4px; }
 
-.sc-kpi-card--orange .sc-kpi-card__value { color: #518123; }
-.sc-kpi-card--green  .sc-kpi-card__value { color: #225808; }
-.sc-kpi-card--amber  .sc-kpi-card__value { color: #88B43A; }
+.sc-kpi-card--primary .sc-kpi-card__value { color: #E64A19; }
+.sc-kpi-card--green  .sc-kpi-card__value { color: #2E7D32; }
+.sc-kpi-card--amber  .sc-kpi-card__value { color: #F57F17; }
 .sc-kpi-card--red    .sc-kpi-card__value { color: #D32F2F; }
-.sc-kpi-card--blue   .sc-kpi-card__value { color: #518123; }
+.sc-kpi-card--blue   .sc-kpi-card__value { color: #E64A19; }
 
 /* ── Orders table ──────────────────────────────────────── */
 .sc-orders-table .sc-order-actions { white-space: nowrap; }

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="MotoShop Parts">
+  <title>MotoShop Parts</title>
+
+  <!-- Dark background circle -->
+  <circle cx="100" cy="100" r="98" fill="#1A1A1A"/>
+
+  <!-- Outer orange ring -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#FF5722" stroke-width="4"/>
+
+  <!-- Inner subtle ring -->
+  <circle cx="100" cy="100" r="82" fill="none" stroke="#FF5722" stroke-width="1" stroke-opacity="0.25"/>
+
+  <!-- 8-tooth gear centred at (100, 78), scaled 0.9× -->
+  <!-- transform: shift to origin → scale → place at (100,78) -->
+  <g transform="translate(100,78) scale(0.9) translate(-40,-40)">
+    <path d="M55.71,33.49 L61.58,35.71 L61.58,44.29 L55.71,46.51
+             L58.28,52.23 L52.23,58.28 L46.51,55.71 L44.29,61.58
+             L35.71,61.58 L33.49,55.71 L27.77,58.28 L21.72,52.23
+             L24.29,46.51 L18.42,44.29 L18.42,35.71 L24.29,33.49
+             L21.72,27.77 L27.77,21.72 L33.49,24.29 L35.71,18.42
+             L44.29,18.42 L46.51,24.29 L52.23,21.72 L58.28,27.77 Z"
+          fill="#FF5722"/>
+    <circle cx="40" cy="40" r="9"  fill="#1A1A1A"/>
+    <circle cx="40" cy="40" r="4"  fill="#FF5722"/>
+  </g>
+
+  <!-- Thin orange rule below gear -->
+  <line x1="66" y1="110" x2="134" y2="110" stroke="#FF5722" stroke-width="1.5" stroke-opacity="0.55"/>
+
+  <!-- MOTO (white) -->
+  <text x="100" y="136"
+        text-anchor="middle"
+        font-family="'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="900" font-size="28" fill="#FFFFFF">MOTO</text>
+
+  <!-- SHOP (orange) -->
+  <text x="100" y="160"
+        text-anchor="middle"
+        font-family="'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="900" font-size="22" fill="#FF5722">SHOP</text>
+
+  <!-- PARTS (muted) -->
+  <text x="100" y="179"
+        text-anchor="middle"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="12" fill="#777777" letter-spacing="5">PARTS</text>
+</svg>

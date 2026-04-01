@@ -10,7 +10,7 @@
 
 /* ─── Page Background ───────────────────────────────────────────────────────── */
 body.login {
-	background: #0C1805;
+	background: #111111;
 	font-family: 'Inter', 'Poppins', system-ui, -apple-system, sans-serif;
 	display: flex;
 	align-items: center;
@@ -31,7 +31,7 @@ body.login #login {
 /* ─── Logo / Header ──────────────────────────────────────────────────────────── */
 body.login h1 a {
 	background-image: none !important;
-	background-color: #99BD49;
+	background-color: #FF5722;
 	-webkit-mask-image: none;
 	mask-image: none;
 	width: 100%;
@@ -68,7 +68,7 @@ body.login h1 a::after {
 /* ─── Role Label ─────────────────────────────────────────────────────────────── */
 body.login .sc-login-role-label {
 	text-align: center;
-	color: #518123;
+	color: #E64A19;
 	font-weight: 600;
 	font-size: 0.85rem;
 	margin-bottom: 16px;
@@ -76,13 +76,13 @@ body.login .sc-login-role-label {
 
 /* ─── Form Fields ────────────────────────────────────────────────────────────── */
 body.login label {
-	color: #0C1805;
+	color: #111111;
 	font-weight: 500;
 }
 
 body.login input[type="text"],
 body.login input[type="password"] {
-	border: 2px solid #BBD394 !important;
+	border: 2px solid #E0E0E0 !important;
 	border-radius: 8px !important;
 	padding: 10px 14px !important;
 	font-size: 1rem !important;
@@ -91,14 +91,14 @@ body.login input[type="password"] {
 
 body.login input[type="text"]:focus,
 body.login input[type="password"]:focus {
-	border-color: #99BD49 !important;
-	box-shadow: 0 0 0 3px rgba(153, 189, 73, 0.2) !important;
+	border-color: #FF5722 !important;
+	box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.2) !important;
 	outline: none !important;
 }
 
 /* ─── Submit Button ──────────────────────────────────────────────────────────── */
 body.login .button-primary {
-	background: #99BD49 !important;
+	background: #FF5722 !important;
 	border: none !important;
 	border-radius: 8px !important;
 	font-size: 1rem !important;
@@ -110,23 +110,23 @@ body.login .button-primary {
 }
 
 body.login .button-primary:hover {
-	background: #518123 !important;
+	background: #E64A19 !important;
 }
 
 /* ─── Links ──────────────────────────────────────────────────────────────────── */
 body.login #nav a,
 body.login #backtoblog a {
-	color: #518123;
+	color: #E64A19;
 }
 
 body.login #nav a:hover,
 body.login #backtoblog a:hover {
-	color: #99BD49;
+	color: #FF5722;
 }
 
 /* ─── Messages / Errors ─────────────────────────────────────────────────────── */
 body.login .message,
 body.login #login_error {
 	border-radius: 8px;
-	border-left-color: #99BD49;
+	border-left-color: #FF5722;
 }

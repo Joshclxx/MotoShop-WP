@@ -235,8 +235,8 @@ Defined in [`style.css`](file:///Users/jay/Studio/motoshop-parts/wp-content/them
 
 | Token | Value | Purpose |
 |-------|-------|---------|
-| `--sc-orange` | `#99BD49` | Primary CTA (lime green) |
-| `--sc-orange-dark` | `#518123` | Primary hover (dark olive) |
+| `--sc-primary` | `#99BD49` | Primary CTA (lime green) |
+| `--sc-primary-dark` | `#518123` | Primary hover (dark olive) |
 | `--sc-green` | `#225808` | Success / forest green |
 | `--sc-amber` | `#88B43A` | Warning / olive |
 | `--sc-red` | `#D32F2F` | Danger / error |
