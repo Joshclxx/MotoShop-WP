@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 90" role="img" aria-label="MotoShop Parts">
+  <title>MotoShop Parts</title>
+
+  <!-- Dark card background -->
+  <rect width="340" height="90" rx="10" fill="#1C1C1C"/>
+
+  <!-- ── Socket wrench icon ──────────────────────────── -->
+  <!-- Outer head circle (orange) -->
+  <circle cx="44" cy="45" r="23" fill="#FF5722"/>
+
+  <!-- Hexagonal bolt-hole (same colour as background) -->
+  <!-- flat-top hex, r=12, centre (44,45)              -->
+  <polygon points="44,33 54.4,39 54.4,51 44,57 33.6,51 33.6,39"
+           fill="#1C1C1C"/>
+
+  <!-- Handle bar -->
+  <rect x="64" y="41" width="24" height="8" rx="3" fill="#FF5722"/>
+
+  <!-- T-end cap (ratchet knob) -->
+  <rect x="84" y="37" width="7" height="16" rx="3" fill="#FF5722"/>
+  <!-- ─────────────────────────────────────────────────── -->
+
+  <!-- Vertical divider -->
+  <rect x="104" y="16" width="1.5" height="58" rx="0.5"
+        fill="#FF5722" fill-opacity="0.35"/>
+
+  <!-- Brand name  (MOTO white / SHOP orange) -->
+  <text x="118" y="51"
+        font-family="'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="900" font-size="32" fill="#FFFFFF">MOTO<tspan fill="#FF5722">SHOP</tspan></text>
+
+  <!-- "PARTS" sub-label -->
+  <text x="120" y="68"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="11" fill="#666666" letter-spacing="6.5">PARTS</text>
+</svg>

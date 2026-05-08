@@ -11,7 +11,6 @@
  * @package wp-sqlite-integration
  */
 
-define( 'SQLITE_MAIN_FILE', __FILE__ );
 define( 'SQLITE_DB_DROPIN_VERSION', '1.8.0' );
 
 // Tweak to allow copy-pasting the file without having to run string-replacements.
@@ -47,7 +46,10 @@ add_action(
 		if ( ! function_exists( 'activate_plugin' ) ) {
 			require_once ABSPATH . 'wp-admin/includes/plugin.php';
 		}
-		if ( is_plugin_inactive( '{SQLITE_PLUGIN}' ) ) {
+
+		$plugin_path = WP_PLUGIN_DIR . '/' . '{SQLITE_PLUGIN}';
+
+		if ( file_exists( $plugin_path ) && is_plugin_inactive( '{SQLITE_PLUGIN}' ) ) {
 			// If `activate_plugin()` returns a value other than null (like WP_Error),
 			// the plugin could not be found. Try with a hardcoded string,
 			// because that probably means the file was directly copy-pasted.

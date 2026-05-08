@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 80" role="img" aria-label="MotoShop Parts">
+  <title>MotoShop Parts</title>
+
+  <!-- 8-tooth sprocket gear -->
+  <path d="M55.71,33.49 L61.58,35.71 L61.58,44.29 L55.71,46.51
+           L58.28,52.23 L52.23,58.28 L46.51,55.71 L44.29,61.58
+           L35.71,61.58 L33.49,55.71 L27.77,58.28 L21.72,52.23
+           L24.29,46.51 L18.42,44.29 L18.42,35.71 L24.29,33.49
+           L21.72,27.77 L27.77,21.72 L33.49,24.29 L35.71,18.42
+           L44.29,18.42 L46.51,24.29 L52.23,21.72 L58.28,27.77 Z"
+        fill="#FF5722"/>
+  <!-- Gear hub hole -->
+  <circle cx="40" cy="40" r="9"   fill="#ffffff"/>
+  <!-- Gear centre pip -->
+  <circle cx="40" cy="40" r="4"   fill="#FF5722"/>
+
+  <!-- Vertical divider -->
+  <rect x="74" y="14" width="2" height="52" rx="1" fill="#DDDDDD"/>
+
+  <!-- Brand name  (MOTO dark / SHOP orange) -->
+  <text x="90" y="46"
+        font-family="'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="900" font-size="32" fill="#1A1A1A">MOTO<tspan fill="#FF5722">SHOP</tspan></text>
+
+  <!-- "PARTS" sub-label -->
+  <text x="92" y="63"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="11" fill="#AAAAAA" letter-spacing="6.5">PARTS</text>
+</svg>

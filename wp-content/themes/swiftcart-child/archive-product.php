@@ -14,11 +14,15 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
 
-<div class="sc-shop-page sc-container">
-
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-		<h1 class="sc-shop-page__title"><?php woocommerce_page_title(); ?></h1>
+		<div class="sc-shop-hero">
+			<div class="sc-shop-hero__inner sc-container">
+				<h1 class="sc-shop-page__title"><?php woocommerce_page_title(); ?></h1>
+			</div>
+		</div>
 	<?php endif; ?>
+
+<div class="sc-shop-page sc-container">
 
 	<?php
 	/**
@@ -32,16 +36,18 @@ get_header();
 
 	<?php if ( woocommerce_product_loop() ) : ?>
 
-		<?php
-		/**
-		 * Hook: woocommerce_before_shop_loop.
-		 *
-		 * @hooked woocommerce_output_all_notices - 10
-		 * @hooked woocommerce_result_count - 20
-		 * @hooked woocommerce_catalog_ordering - 30
-		 */
-		do_action( 'woocommerce_before_shop_loop' );
-		?>
+		<div class="sc-shop-toolbar">
+			<?php
+			/**
+			 * Hook: woocommerce_before_shop_loop.
+			 *
+			 * @hooked woocommerce_output_all_notices - 10
+			 * @hooked woocommerce_result_count - 20
+			 * @hooked woocommerce_catalog_ordering - 30
+			 */
+			do_action( 'woocommerce_before_shop_loop' );
+			?>
+		</div>
 
 		<?php woocommerce_product_loop_start(); ?>
 

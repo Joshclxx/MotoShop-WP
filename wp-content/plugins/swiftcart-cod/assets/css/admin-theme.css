@@ -1,0 +1,341 @@
+/**
+ * MoTo Shop — WordPress Admin Theme Override
+ *
+ * Global reskin of wp-admin with MoTo Shop brand palette:
+ * Green (#1b5e20 → #2E7D32), Orange (#FF5722 → #E64A19)
+ *
+ * @package SwiftCart
+ * @since   1.1.0
+ */
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 1. Admin Menu Sidebar
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+#adminmenuback,
+#adminmenuwrap,
+#adminmenu {
+	background: #14341a !important;
+}
+
+#adminmenu a {
+	color: rgba(255,255,255,0.75) !important;
+	transition: color 0.15s ease, background 0.15s ease;
+}
+
+#adminmenu a:hover,
+#adminmenu li.menu-top:hover > a,
+#adminmenu li.opensub > a {
+	color: #fff !important;
+	background: rgba(255,255,255,0.08) !important;
+}
+
+/* Active / current menu item */
+#adminmenu .current a,
+#adminmenu .wp-has-current-submenu a.wp-has-current-submenu,
+#adminmenu a.wp-has-current-submenu:focus,
+#adminmenu .wp-has-current-submenu .wp-submenu,
+#adminmenu > li.current > a.menu-top {
+	background: #1b5e20 !important;
+	color: #fff !important;
+}
+
+/* Active left accent bar */
+#adminmenu li.current a.menu-top,
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
+	border-left: 4px solid #FF5722 !important;
+}
+
+/* Submenu */
+#adminmenu .wp-submenu {
+	background: #0d2912 !important;
+}
+
+#adminmenu .wp-submenu a {
+	color: rgba(255,255,255,0.65) !important;
+}
+
+#adminmenu .wp-submenu a:hover,
+#adminmenu .wp-submenu li.current a {
+	color: #FF5722 !important;
+}
+
+/* Menu icon colors */
+#adminmenu div.wp-menu-image::before {
+	color: rgba(255,255,255,0.6) !important;
+	transition: color 0.15s ease;
+}
+
+#adminmenu li:hover div.wp-menu-image::before,
+#adminmenu li.current div.wp-menu-image::before,
+#adminmenu li.wp-has-current-submenu div.wp-menu-image::before {
+	color: #FF5722 !important;
+}
+
+/* Separator lines */
+#adminmenu li.wp-menu-separator {
+	border-color: rgba(255,255,255,0.08) !important;
+}
+
+/* Update/notification bubbles */
+#adminmenu .update-plugins .update-count,
+#adminmenu .awaiting-mod .pending-count {
+	background: #FF5722 !important;
+	color: #fff !important;
+}
+
+/* Collapse button */
+#collapse-menu {
+	color: rgba(255,255,255,0.5) !important;
+	border-top-color: rgba(255,255,255,0.08) !important;
+}
+
+#collapse-menu:hover {
+	color: #fff !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 2. Admin Top Bar
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+#wpadminbar {
+	background: #1b5e20 !important;
+}
+
+#wpadminbar .ab-item,
+#wpadminbar a.ab-item,
+#wpadminbar > #wp-toolbar span.ab-label,
+#wpadminbar > #wp-toolbar span.noticon {
+	color: rgba(255,255,255,0.85) !important;
+}
+
+#wpadminbar a.ab-item:hover,
+#wpadminbar .hover .ab-item {
+	color: #fff !important;
+	background: rgba(255,255,255,0.12) !important;
+}
+
+#wpadminbar .ab-submenu,
+#wpadminbar .menupop .ab-sub-wrapper {
+	background: #14341a !important;
+}
+
+#wpadminbar .ab-submenu .ab-item,
+#wpadminbar .menupop .ab-sub-wrapper a {
+	color: rgba(255,255,255,0.75) !important;
+}
+
+#wpadminbar .ab-submenu .ab-item:hover,
+#wpadminbar .menupop .ab-sub-wrapper a:hover {
+	color: #fff !important;
+	background: rgba(255,255,255,0.08) !important;
+}
+
+#wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon::before {
+	color: rgba(255,255,255,0.7) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 3. Content Area
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+#wpcontent,
+#wpbody-content {
+	background: #f0f2f1 !important;
+}
+
+/* Page titles */
+.wrap h1,
+.wrap h1.wp-heading-inline {
+	color: #1b5e20 !important;
+	font-weight: 700 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 4. Buttons
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Primary buttons */
+.wp-core-ui .button-primary,
+.wp-core-ui .button-primary:visited {
+	background: #1b5e20 !important;
+	border-color: #14461a !important;
+	color: #fff !important;
+	box-shadow: 0 1px 0 #0d2912 !important;
+	text-shadow: none !important;
+}
+
+.wp-core-ui .button-primary:hover,
+.wp-core-ui .button-primary:focus {
+	background: #2E7D32 !important;
+	border-color: #1b5e20 !important;
+}
+
+.wp-core-ui .button-primary:active {
+	background: #14461a !important;
+}
+
+/* Secondary buttons */
+.wp-core-ui .button,
+.wp-core-ui .button-secondary {
+	border-color: #1b5e20 !important;
+	color: #1b5e20 !important;
+}
+
+.wp-core-ui .button:hover,
+.wp-core-ui .button-secondary:hover {
+	background: #e8f5e9 !important;
+	border-color: #2E7D32 !important;
+	color: #1b5e20 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 5. Links & Accents
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+#wpbody-content a {
+	color: #1b5e20;
+}
+
+#wpbody-content a:hover {
+	color: #FF5722;
+}
+
+/* Form focus states */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="url"]:focus,
+select:focus,
+textarea:focus {
+	border-color: #2E7D32 !important;
+	box-shadow: 0 0 0 1px #2E7D32 !important;
+}
+
+/* Checkboxes */
+input[type="checkbox"]:checked::before {
+	color: #1b5e20 !important;
+}
+
+input[type="checkbox"]:focus {
+	border-color: #2E7D32 !important;
+	box-shadow: 0 0 0 1px #2E7D32 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 6. Notices
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.notice-info,
+div.updated {
+	border-left-color: #2E7D32 !important;
+}
+
+.notice-success {
+	border-left-color: #4CAF50 !important;
+}
+
+.notice-warning {
+	border-left-color: #FF5722 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 7. Dashboard Welcome Panel
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.welcome-panel {
+	border-color: #c8e6c9 !important;
+	background: linear-gradient(135deg, #e8f5e9, #f1f8e9) !important;
+}
+
+.welcome-panel h2 {
+	color: #1b5e20 !important;
+}
+
+.welcome-panel .welcome-panel-column .button-primary {
+	background: #FF5722 !important;
+	border-color: #E64A19 !important;
+}
+
+.welcome-panel .welcome-panel-column .button-primary:hover {
+	background: #E64A19 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 8. Postbox / Meta box headers
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.postbox .postbox-header {
+	border-bottom-color: #c8e6c9 !important;
+}
+
+.postbox .postbox-header h2 {
+	color: #1b5e20 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 9. WooCommerce Admin Overrides
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+/* WooCommerce activity panel header */
+.woocommerce-layout__header {
+	background: #1b5e20 !important;
+}
+
+.woocommerce-layout__header-breadcrumbs a,
+.woocommerce-layout__header-breadcrumbs span {
+	color: #fff !important;
+}
+
+/* WooCommerce tabs */
+.woocommerce-layout .components-tab-panel__tabs .components-button.is-active {
+	border-bottom-color: #FF5722 !important;
+	color: #1b5e20 !important;
+}
+
+/* Stat cards */
+.woocommerce-summary__item-value {
+	color: #1b5e20 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 10. Footer
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+#wpfooter {
+	border-top-color: #c8e6c9 !important;
+}
+
+#footer-thankyou {
+	color: #666 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 11. WP List Tables
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.wp-list-table thead th {
+	color: #1b5e20 !important;
+}
+
+.wp-list-table tbody tr:hover td {
+	background: #e8f5e9 !important;
+}
+
+.tablenav .tablenav-pages .current-page:focus {
+	border-color: #2E7D32 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 12. Screen Options & Help Tabs
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+#screen-meta-links .screen-meta-toggle a {
+	color: #1b5e20 !important;
+}
+
+#screen-meta-links .screen-meta-toggle a:hover {
+	color: #FF5722 !important;
+}

@@ -37,7 +37,7 @@ class COD_Reports {
 	 */
 	public function register_menu_page(): void {
 		add_submenu_page(
-			'swiftcart',
+			'swiftcart-dashboard',
 			__( 'COD Reports', 'swiftcart-cod' ),
 			__( 'COD Reports', 'swiftcart-cod' ),
 			'view_swiftcart_reports',
@@ -70,7 +70,7 @@ class COD_Reports {
 			<h1><?php esc_html_e( 'COD Reports', 'swiftcart-cod' ); ?></h1>
 
 			<!-- Date range tabs -->
-			<div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;">
+			<div class="sc-report-tabs">
 				<?php foreach ( array( 'today' => 'Today', 'yesterday' => 'Yesterday', 'this_week' => 'This Week', 'this_month' => 'This Month' ) as $key => $label ) : ?>
 					<a href="?page=swiftcart-reports&sc_range=<?php echo esc_attr( $key ); ?>"
 					   class="button <?php echo ( $range === $key ) ? 'button-primary' : ''; ?>">
@@ -107,7 +107,7 @@ class COD_Reports {
 				</div>
 			</div>
 
-			<p style="color:#666;font-size:13px;margin-top:24px;">
+			<p class="sc-report-note">
 				<?php esc_html_e( 'Collection Rate = Collected ÷ (Collected + Failed + Returned)', 'swiftcart-cod' ); ?>
 			</p>
 		</div>

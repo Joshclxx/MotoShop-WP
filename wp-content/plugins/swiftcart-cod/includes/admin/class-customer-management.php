@@ -37,7 +37,7 @@ class Customer_Management {
 	 */
 	public function register_menu_page(): void {
 		add_submenu_page(
-			'swiftcart',
+			'swiftcart-dashboard',
 			__( 'Customers', 'swiftcart-cod' ),
 			__( 'Customers', 'swiftcart-cod' ),
 			'manage_swiftcart',
@@ -65,7 +65,7 @@ class Customer_Management {
 		<div class="wrap sc-admin-wrap">
 			<h1><?php esc_html_e( 'Customers', 'swiftcart-cod' ); ?></h1>
 
-			<form method="get" style="display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+			<form method="get" class="sc-filters">
 				<input type="hidden" name="page" value="swiftcart-customers">
 				<input type="text" name="sc_search" value="<?php echo esc_attr( $search ); ?>" placeholder="<?php esc_attr_e( 'Name or phone…', 'swiftcart-cod' ); ?>">
 				<label><input type="checkbox" name="sc_blacklisted" <?php checked( $show_bl ); ?>> <?php esc_html_e( 'Blacklisted only', 'swiftcart-cod' ); ?></label>
@@ -85,20 +85,20 @@ class Customer_Management {
 				<tbody>
 				<?php foreach ( $customers as $c ) : ?>
 					<?php
-					$rate_color  = $c['cancel_rate'] >= 30 ? '#F57C00' : '#2E7D32';
-					$bl_color    = $c['blacklisted'] ? '#D32F2F' : '#888';
+					$rate_color  = $c['cancel_rate'] >= 30 ? 'sc-rate--warn' : 'sc-rate--ok';
+					$bl_color    = $c['blacklisted'] ? 'sc-bl-status--yes' : 'sc-bl-status--no';
 					$bl_label    = $c['blacklisted'] ? __( 'Blacklisted', 'swiftcart-cod' ) : __( 'Clear', 'swiftcart-cod' );
 					?>
 					<tr>
 						<td><?php echo esc_html( $c['name'] ); ?></td>
 						<td><a href="tel:<?php echo esc_attr( $c['phone'] ); ?>"><?php echo esc_html( $c['phone'] ); ?></a></td>
 						<td><?php echo esc_html( $c['total_orders'] ); ?></td>
-						<td><strong style="color:<?php echo esc_attr( $rate_color ); ?>;"><?php echo esc_html( $c['cancel_rate'] ); ?>%</strong></td>
-						<td><span style="color:<?php echo esc_attr( $bl_color ); ?>;"><?php echo esc_html( $bl_label ); ?></span></td>
+						<td><strong class="<?php echo esc_attr( $rate_color ); ?>"><?php echo esc_html( $c['cancel_rate'] ); ?>%</strong></td>
+						<td><span class="<?php echo esc_attr( $bl_color ); ?>"><?php echo esc_html( $bl_label ); ?></span></td>
 					</tr>
 				<?php endforeach; ?>
 				<?php if ( empty( $customers ) ) : ?>
-					<tr><td colspan="5" style="text-align:center;padding:24px;color:#666;"><?php esc_html_e( 'No customers found.', 'swiftcart-cod' ); ?></td></tr>
+					<tr class="sc-empty-row"><td colspan="5"><?php esc_html_e( 'No customers found.', 'swiftcart-cod' ); ?></td></tr>
 				<?php endif; ?>
 				</tbody>
 			</table>
@@ -134,7 +134,7 @@ class Customer_Management {
 					'phone'        => $phone,
 					'total_orders' => 0,
 					'cancelled'    => 0,
-					'blacklisted'  => (bool) get_post_meta( $order->get_id(), '_sc_blacklist_flag', true ),
+					'blacklisted'  => (bool) $order->get_meta( '_sc_blacklist_flag' ),
 				);
 			}
 

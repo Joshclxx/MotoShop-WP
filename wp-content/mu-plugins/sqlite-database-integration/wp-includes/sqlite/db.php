@@ -9,10 +9,10 @@
 /**
  * Load the "SQLITE_DRIVER_VERSION" constant.
  */
-require_once dirname( __DIR__, 2 ) . '/version.php';
+require_once __DIR__ . '/../database/version.php';
 
 // Require the constants file.
-require_once dirname( __DIR__, 2 ) . '/constants.php';
+require_once __DIR__ . '/../../constants.php';
 
 // Bail early if DB_ENGINE is not defined as sqlite.
 if ( ! defined( 'DB_ENGINE' ) || 'sqlite' !== DB_ENGINE ) {
@@ -47,28 +47,11 @@ if ( ! extension_loaded( 'pdo_sqlite' ) ) {
 	);
 }
 
-require_once __DIR__ . '/class-wp-sqlite-lexer.php';
-require_once __DIR__ . '/class-wp-sqlite-query-rewriter.php';
-require_once __DIR__ . '/class-wp-sqlite-translator.php';
-require_once __DIR__ . '/class-wp-sqlite-token.php';
-require_once __DIR__ . '/class-wp-sqlite-pdo-user-defined-functions.php';
+require_once __DIR__ . '/../database/load.php';
 require_once __DIR__ . '/class-wp-sqlite-db.php';
 require_once __DIR__ . '/install-functions.php';
 
-/**
- * The DB_NAME constant is required by the new SQLite driver.
- *
- * There are some existing projects in which the DB_NAME constant is missing in
- * wp-config.php. To enable easier early adoption and testing of the new SQLite
- * driver, let's allow using a default database name when DB_NAME is not set.
- *
- * TODO: For version 3.0, enforce the DB_NAME constant and remove the fallback.
- */
-if ( defined( 'DB_NAME' ) && '' !== DB_NAME ) {
-	$db_name = DB_NAME;
-} else {
-	$db_name = apply_filters( 'wp_sqlite_default_db_name', 'database_name_here' );
-}
+$db_name = defined( 'DB_NAME' ) ? DB_NAME : '';
 
 /*
  * Debug: Cross-check with MySQL.
@@ -76,7 +59,7 @@ if ( defined( 'DB_NAME' ) && '' !== DB_NAME ) {
  * that are present in the GitHub repository
  * but not the plugin published on WordPress.org.
  */
-$crosscheck_tests_file_path = dirname( __DIR__, 2 ) . '/tests/class-wp-sqlite-crosscheck-db.php';
+$crosscheck_tests_file_path = __DIR__ . '/class-wp-sqlite-crosscheck-db.php';
 if ( defined( 'SQLITE_DEBUG_CROSSCHECK' ) && SQLITE_DEBUG_CROSSCHECK && file_exists( $crosscheck_tests_file_path ) ) {
 	require_once $crosscheck_tests_file_path;
 	$GLOBALS['wpdb'] = new WP_SQLite_Crosscheck_DB( $db_name );
@@ -84,5 +67,5 @@ if ( defined( 'SQLITE_DEBUG_CROSSCHECK' ) && SQLITE_DEBUG_CROSSCHECK && file_exi
 	$GLOBALS['wpdb'] = new WP_SQLite_DB( $db_name );
 
 	// Boot the Query Monitor plugin if it is active.
-	require_once dirname( __DIR__, 2 ) . '/integrations/query-monitor/boot.php';
+	require_once __DIR__ . '/../../integrations/query-monitor/boot.php';
 }

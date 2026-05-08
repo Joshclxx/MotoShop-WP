@@ -1,0 +1,14729 @@
+# Libraries
+
+- `wp-admin/includes/class-automatic-upgrader-skin.php`
+  - class Automatic_Upgrader_Skin
+  - function request_filesystem_credentials
+  - function get_upgrade_messages
+  - function feedback
+  - function header
+  - function footer
+- `wp-admin/includes/class-bulk-plugin-upgrader-skin.php`
+  - class Bulk_Plugin_Upgrader_Skin
+  - function add_strings
+  - function before
+  - function after
+  - function bulk_footer
+- `wp-admin/includes/class-bulk-theme-upgrader-skin.php`
+  - class Bulk_Theme_Upgrader_Skin
+  - function add_strings
+  - function before
+  - function after
+  - function bulk_footer
+- `wp-admin/includes/class-bulk-upgrader-skin.php`
+  - class Bulk_Upgrader_Skin
+  - function __construct
+  - function add_strings
+  - function feedback
+  - function header
+  - function footer
+  - _...7 more_
+- `wp-admin/includes/class-core-upgrader.php`
+  - class Core_Upgrader
+  - function upgrade_strings
+  - function upgrade
+  - function should_update_to_version
+  - function check_files
+- `wp-admin/includes/class-custom-background.php`
+  - class Custom_Background
+  - function __construct
+  - function init
+  - function admin_load
+  - function take_action
+  - function admin_page
+  - _...5 more_
+- `wp-admin/includes/class-custom-image-header.php`
+  - class Custom_Image_Header
+  - function __construct
+  - function init
+  - function help
+  - function step
+  - function js_includes
+  - _...28 more_
+- `wp-admin/includes/class-file-upload-upgrader.php`
+  - class File_Upload_Upgrader
+  - function __construct
+  - function cleanup
+- `wp-admin/includes/class-ftp-pure.php` — class ftp_pure
+- `wp-admin/includes/class-ftp-sockets.php` — class ftp_sockets
+- `wp-admin/includes/class-ftp.php`
+  - class ftp_base
+  - class ftp
+  - class ftp
+- `wp-admin/includes/class-language-pack-upgrader-skin.php`
+  - class Language_Pack_Upgrader_Skin
+  - function __construct
+  - function before
+  - function error
+  - function after
+  - function bulk_footer
+- `wp-admin/includes/class-language-pack-upgrader.php`
+  - class Language_Pack_Upgrader
+  - function async_upgrade
+  - function upgrade_strings
+  - function upgrade
+  - function bulk_upgrade
+  - function check_package
+  - _...2 more_
+- `wp-admin/includes/class-pclzip.php` — class PclZip
+- `wp-admin/includes/class-plugin-installer-skin.php`
+  - class Plugin_Installer_Skin
+  - function __construct
+  - function before
+  - function hide_process_failed
+  - function after
+- `wp-admin/includes/class-plugin-upgrader-skin.php`
+  - class Plugin_Upgrader_Skin
+  - function __construct
+  - function after
+- `wp-admin/includes/class-plugin-upgrader.php`
+  - class Plugin_Upgrader
+  - function upgrade_strings
+  - function install_strings
+  - function install
+  - function upgrade
+  - function bulk_upgrade
+  - _...6 more_
+- `wp-admin/includes/class-theme-installer-skin.php`
+  - class Theme_Installer_Skin
+  - function __construct
+  - function before
+  - function hide_process_failed
+  - function after
+- `wp-admin/includes/class-theme-upgrader-skin.php`
+  - class Theme_Upgrader_Skin
+  - function __construct
+  - function after
+- `wp-admin/includes/class-theme-upgrader.php`
+  - class Theme_Upgrader
+  - function upgrade_strings
+  - function install_strings
+  - function check_parent_theme_filter
+  - function hide_activate_preview_actions
+  - function install
+  - _...7 more_
+- `wp-admin/includes/class-walker-category-checklist.php`
+  - class Walker_Category_Checklist
+  - function start_lvl
+  - function end_lvl
+  - function start_el
+  - function end_el
+- `wp-admin/includes/class-walker-nav-menu-checklist.php`
+  - class Walker_Nav_Menu_Checklist
+  - function __construct
+  - function start_lvl
+  - function end_lvl
+  - function start_el
+- `wp-admin/includes/class-walker-nav-menu-edit.php`
+  - class Walker_Nav_Menu_Edit
+  - function start_lvl
+  - function end_lvl
+  - function start_el
+- `wp-admin/includes/class-wp-ajax-upgrader-skin.php`
+  - class WP_Ajax_Upgrader_Skin
+  - function __construct
+  - function get_errors
+  - function get_error_messages
+  - function error
+  - function feedback
+- `wp-admin/includes/class-wp-application-passwords-list-table.php`
+  - class WP_Application_Passwords_List_Table
+  - function get_columns
+  - function prepare_items
+  - function column_name
+  - function column_created
+  - function column_last_used
+  - _...4 more_
+- `wp-admin/includes/class-wp-automatic-updater.php`
+  - class WP_Automatic_Updater
+  - function is_disabled
+  - function is_allowed_dir
+  - function is_vcs_checkout
+  - function should_update
+  - function update
+  - _...1 more_
+- `wp-admin/includes/class-wp-comments-list-table.php`
+  - class WP_Comments_List_Table
+  - function __construct
+  - function floated_admin_avatar
+  - function ajax_user_can
+  - function prepare_items
+  - function get_per_page
+  - _...11 more_
+- `wp-admin/includes/class-wp-community-events.php`
+  - class WP_Community_Events
+  - function __construct
+  - function get_events
+  - function get_unsafe_client_ip
+  - function get_cached_events
+- `wp-admin/includes/class-wp-debug-data.php`
+  - class WP_Debug_Data
+  - function check_for_updates
+  - function debug_data
+  - function get_mysql_var
+  - function format
+  - function get_database_size
+  - _...1 more_
+- `wp-admin/includes/class-wp-filesystem-base.php`
+  - class WP_Filesystem_Base
+  - function abspath
+  - function wp_content_dir
+  - function wp_plugins_dir
+  - function wp_themes_dir
+  - function wp_lang_dir
+  - _...34 more_
+- `wp-admin/includes/class-wp-filesystem-direct.php`
+  - class WP_Filesystem_Direct
+  - function __construct
+  - function get_contents
+  - function get_contents_array
+  - function put_contents
+  - function cwd
+  - _...22 more_
+- `wp-admin/includes/class-wp-filesystem-ftpext.php`
+  - class WP_Filesystem_FTPext
+  - function __construct
+  - function connect
+  - function get_contents
+  - function get_contents_array
+  - function put_contents
+  - _...23 more_
+- `wp-admin/includes/class-wp-filesystem-ftpsockets.php`
+  - class WP_Filesystem_ftpsockets
+  - function __construct
+  - function connect
+  - function get_contents
+  - function get_contents_array
+  - function put_contents
+  - _...22 more_
+- `wp-admin/includes/class-wp-filesystem-ssh2.php`
+  - class WP_Filesystem_SSH2
+  - function __construct
+  - function connect
+  - function sftp_path
+  - function run_command
+  - function get_contents
+  - _...25 more_
+- `wp-admin/includes/class-wp-importer.php`
+  - class WP_Importer
+  - function __construct
+  - function get_imported_posts
+  - function count_imported_posts
+  - function get_imported_comments
+  - function set_blog
+  - _...7 more_
+- `wp-admin/includes/class-wp-internal-pointers.php`
+  - class WP_Internal_Pointers
+  - function enqueue_scripts
+  - function pointer_wp330_toolbar
+  - function pointer_wp330_media_uploader
+  - function pointer_wp330_saving_widgets
+  - function pointer_wp340_customize_current_theme_link
+  - _...8 more_
+- `wp-admin/includes/class-wp-links-list-table.php`
+  - class WP_Links_List_Table
+  - function __construct
+  - function ajax_user_can
+  - function prepare_items
+  - function no_items
+  - function get_columns
+  - _...9 more_
+- `wp-admin/includes/class-wp-list-table-compat.php`
+  - class _WP_List_Table_Compat
+  - function __construct
+  - function get_columns
+- `wp-admin/includes/class-wp-list-table.php`
+  - class WP_List_Table
+  - function __construct
+  - function __get
+  - function __set
+  - function __isset
+  - function __unset
+  - _...21 more_
+- `wp-admin/includes/class-wp-media-list-table.php`
+  - class WP_Media_List_Table
+  - function __construct
+  - function ajax_user_can
+  - function prepare_items
+  - function current_action
+  - function has_items
+  - _...12 more_
+- `wp-admin/includes/class-wp-ms-sites-list-table.php`
+  - class WP_MS_Sites_List_Table
+  - function __construct
+  - function ajax_user_can
+  - function prepare_items
+  - function no_items
+  - function get_columns
+  - _...9 more_
+- `wp-admin/includes/class-wp-ms-themes-list-table.php`
+  - class WP_MS_Themes_List_Table
+  - function __construct
+  - function ajax_user_can
+  - function prepare_items
+  - function _search_callback
+  - function _order_callback
+  - _...10 more_
+- `wp-admin/includes/class-wp-ms-users-list-table.php`
+  - class WP_MS_Users_List_Table
+  - function ajax_user_can
+  - function prepare_items
+  - function no_items
+  - function get_columns
+  - function column_cb
+  - _...8 more_
+- `wp-admin/includes/class-wp-plugin-install-list-table.php`
+  - class WP_Plugin_Install_List_Table
+  - function ajax_user_can
+  - function prepare_items
+  - function no_items
+  - function views
+  - function display
+  - _...2 more_
+- `wp-admin/includes/class-wp-plugins-list-table.php`
+  - class WP_Plugins_List_Table
+  - function __construct
+  - function ajax_user_can
+  - function prepare_items
+  - function _search_callback
+  - function _order_callback
+  - _...7 more_
+- `wp-admin/includes/class-wp-post-comments-list-table.php`
+  - class WP_Post_Comments_List_Table
+  - function display
+  - function get_per_page
+- `wp-admin/includes/class-wp-posts-list-table.php`
+  - class WP_Posts_List_Table
+  - function __construct
+  - function set_hierarchical_display
+  - function ajax_user_can
+  - function prepare_items
+  - function has_items
+  - _...12 more_
+- `wp-admin/includes/class-wp-privacy-data-export-requests-list-table.php`
+  - class WP_Privacy_Data_Export_Requests_List_Table
+  - function column_email
+  - function column_next_steps
+- `wp-admin/includes/class-wp-privacy-data-removal-requests-list-table.php`
+  - class WP_Privacy_Data_Removal_Requests_List_Table
+  - function column_email
+  - function column_next_steps
+- `wp-admin/includes/class-wp-privacy-policy-content.php`
+  - class WP_Privacy_Policy_Content
+  - function add
+  - function text_change_check
+  - function policy_text_changed_notice
+  - function _policy_page_updated
+  - function get_suggested_policy_text
+  - _...4 more_
+- `wp-admin/includes/class-wp-privacy-requests-table.php`
+  - class WP_Privacy_Requests_Table
+  - function get_columns
+  - function process_bulk_action
+  - function prepare_items
+  - function column_cb
+  - function column_status
+  - _...6 more_
+- `wp-admin/includes/class-wp-screen.php`
+  - class WP_Screen
+  - function get
+  - function set_current_screen
+  - function in_admin
+  - function is_block_editor
+  - function add_old_compat_help
+  - _...27 more_
+- `wp-admin/includes/class-wp-site-health-auto-updates.php`
+  - class WP_Site_Health_Auto_Updates
+  - function __construct
+  - function run_tests
+  - function test_constants
+  - function test_wp_version_check_attached
+  - function test_filters_automatic_updater_disabled
+  - _...7 more_
+- `wp-admin/includes/class-wp-site-health.php`
+  - class WP_Site_Health
+  - function __construct
+  - function show_site_health_tab
+  - function get_instance
+  - function enqueue_scripts
+  - function check_wp_version_check_exists
+  - _...38 more_
+- `wp-admin/includes/class-wp-site-icon.php`
+  - class WP_Site_Icon
+  - function __construct
+  - function create_attachment_object
+  - function insert_attachment
+  - function additional_sizes
+  - function intermediate_image_sizes
+  - _...2 more_
+- `wp-admin/includes/class-wp-terms-list-table.php`
+  - class WP_Terms_List_Table
+  - function __construct
+  - function ajax_user_can
+  - function prepare_items
+  - function no_items
+  - function current_action
+  - _...11 more_
+- `wp-admin/includes/class-wp-theme-install-list-table.php`
+  - class WP_Theme_Install_List_Table
+  - function ajax_user_can
+  - function prepare_items
+  - function no_items
+  - function display
+  - function display_rows
+  - _...5 more_
+- `wp-admin/includes/class-wp-themes-list-table.php`
+  - class WP_Themes_List_Table
+  - function __construct
+  - function ajax_user_can
+  - function prepare_items
+  - function no_items
+  - function tablenav
+  - _...6 more_
+- `wp-admin/includes/class-wp-upgrader-skin.php`
+  - class WP_Upgrader_Skin
+  - function __construct
+  - function set_upgrader
+  - function add_strings
+  - function set_result
+  - function request_filesystem_credentials
+  - _...9 more_
+- `wp-admin/includes/class-wp-upgrader.php`
+  - class WP_Upgrader
+  - function __construct
+  - function init
+  - function generic_strings
+  - function fs_connect
+  - function download_package
+  - _...10 more_
+- `wp-admin/includes/class-wp-users-list-table.php`
+  - class WP_Users_List_Table
+  - function __construct
+  - function ajax_user_can
+  - function prepare_items
+  - function no_items
+  - function current_action
+  - _...3 more_
+- `wp-admin/includes/deprecated.php`
+  - class WP_User_Search
+  - class WP_Privacy_Data_Export_Requests_Table
+  - class WP_Privacy_Data_Removal_Requests_Table
+  - function prepare_query
+  - function query
+  - function do_paging
+  - _...1 more_
+- `wp-content/mu-plugins/sqlite-database-integration/integrations/query-monitor/qm3.php` — class SQLite_QM_Output_Html_DB_Queries
+- `wp-content/mu-plugins/sqlite-database-integration/integrations/query-monitor/qm4.php`
+  - class SQLite_QM_Data
+  - class SQLite_QM_Collector
+  - class SQLite_QM_Output_Html
+  - function get_storage
+  - function process
+  - function name
+  - _...1 more_
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/database/mysql/class-wp-mysql-lexer.php`
+  - class WP_MySQL_Lexer
+  - function __construct
+  - function next_token
+  - function get_token
+  - function remaining_tokens
+  - function get_mysql_version
+  - _...3 more_
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/database/mysql/class-wp-mysql-parser.php`
+  - class WP_MySQL_Parser
+  - function next_query
+  - function get_query_ast
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/database/mysql/class-wp-mysql-token.php`
+  - class WP_MySQL_Token
+  - function __construct
+  - function get_name
+  - function get_value
+  - function __toString
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/database/parser/class-wp-parser-grammar.php`
+  - class WP_Parser_Grammar
+  - function __construct
+  - function get_rule_name
+  - function get_rule_id
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/database/parser/class-wp-parser-node.php`
+  - class WP_Parser_Node
+  - function __construct
+  - function append_child
+  - function merge_fragment
+  - function has_child
+  - function has_child_node
+  - _...14 more_
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/database/parser/class-wp-parser-token.php`
+  - class WP_Parser_Token
+  - function __construct
+  - function get_bytes
+  - function get_value
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/database/parser/class-wp-parser.php`
+  - class WP_Parser
+  - function __construct
+  - function parse
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/database/sqlite/class-wp-pdo-mysql-on-sqlite.php`
+  - class WP_PDO_MySQL_On_SQLite
+  - function __construct
+  - function query
+  - function exec
+  - function beginTransaction
+  - function begin_transaction
+  - _...19 more_
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/database/sqlite/class-wp-pdo-proxy-statement.php`
+  - class WP_PDO_Proxy_Statement_PHP_Compat
+  - class WP_PDO_Proxy_Statement_PHP_Compat
+  - class WP_PDO_Proxy_Statement
+  - class ValueError
+  - function setFetchMode
+  - function fetchAll
+  - _...19 more_
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/database/sqlite/class-wp-sqlite-configurator.php`
+  - class WP_SQLite_Configurator
+  - function __construct
+  - function ensure_database_configured
+  - function configure_database
+  - function ensure_database_data
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/database/sqlite/class-wp-sqlite-connection.php`
+  - class WP_SQLite_Connection
+  - function __construct
+  - function query
+  - function prepare
+  - function get_last_insert_id
+  - function quote
+  - _...3 more_
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/database/sqlite/class-wp-sqlite-driver-exception.php`
+  - class WP_SQLite_Driver_Exception
+  - function __construct
+  - function getDriver
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/database/sqlite/class-wp-sqlite-driver.php`
+  - class WP_SQLite_Driver
+  - function __construct
+  - function get_connection
+  - function get_sqlite_version
+  - function get_saved_driver_version
+  - function is_sql_mode_active
+  - _...15 more_
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/database/sqlite/class-wp-sqlite-information-schema-builder.php`
+  - class WP_SQLite_Information_Schema_Builder
+  - function __construct
+  - function get_table_name
+  - function temporary_table_exists
+  - function ensure_information_schema_tables
+  - function get_computed_information_schema_table_definition
+  - _...9 more_
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/database/sqlite/class-wp-sqlite-information-schema-exception.php`
+  - class WP_SQLite_Information_Schema_Exception
+  - function __construct
+  - function get_type
+  - function get_data
+  - function duplicate_table_name
+  - function duplicate_column_name
+  - _...4 more_
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/database/sqlite/class-wp-sqlite-information-schema-reconstructor.php`
+  - class WP_SQLite_Information_Schema_Reconstructor
+  - function __construct
+  - function ensure_correct_information_schema
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/database/sqlite/class-wp-sqlite-pdo-user-defined-functions.php`
+  - class WP_SQLite_PDO_User_Defined_Functions
+  - function register_for
+  - function throw
+  - function unix_timestamp
+  - function from_unixtime
+  - function now
+  - _...38 more_
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-crosscheck-db.php`
+  - class WP_SQLite_Crosscheck_DB_
+  - function __construct
+  - function query
+- `wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php`
+  - class WP_SQLite_DB
+  - function __construct
+  - function set_charset
+  - function get_col_charset
+  - function set_sql_mode
+  - function close
+  - _...11 more_
+- `wp-content/plugins/akismet/class-akismet-compatible-plugins.php`
+  - class Akismet_Compatible_Plugins
+  - function get_installed_compatible_plugins
+  - function init
+  - function handle_plugin_change
+- `wp-content/plugins/akismet/class.akismet-admin.php`
+  - class Akismet_Admin
+  - function init
+  - function init_hooks
+  - function admin_init
+  - function admin_menu
+  - function is_jetpack_active
+  - _...44 more_
+- `wp-content/plugins/akismet/class.akismet-cli.php`
+  - class Akismet_CLI
+  - function check
+  - function recheck_queue
+  - function stats
+- `wp-content/plugins/akismet/class.akismet-rest-api.php`
+  - class Akismet_REST_API
+  - function init
+  - function get_key
+  - function set_key
+  - function delete_key
+  - function get_settings
+  - _...11 more_
+- `wp-content/plugins/akismet/class.akismet-widget.php`
+  - class Akismet_Widget
+  - function form
+  - function update
+  - function widget
+- `wp-content/plugins/akismet/class.akismet.php`
+  - class Akismet
+  - function init
+  - function get_api_key
+  - function get_access_token
+  - function check_key_status
+  - function verify_key
+  - _...58 more_
+- `wp-content/plugins/motoparts/includes/admin/class-capabilities.php`
+  - class Capabilities
+  - function register
+  - function add_caps
+  - function remove_caps
+- `wp-content/plugins/motoparts/includes/class-activator.php`
+  - class Activator
+  - function activate
+  - function uninstall
+- `wp-content/plugins/motoparts/includes/class-assets.php`
+  - class Assets
+  - function register
+  - function enqueue_frontend
+  - function enqueue_admin
+- `wp-content/plugins/motoparts/includes/class-autoloader.php`
+  - class Autoloader
+  - function register
+  - function load
+- `wp-content/plugins/motoparts/includes/class-deactivator.php` — class Deactivator, function deactivate
+- `wp-content/plugins/motoparts/includes/class-motoparts.php`
+  - class MotoParts
+  - function get_instance
+  - function load_textdomain
+- `wp-content/plugins/motoparts/includes/cpt/class-order-cpt.php`
+  - class Order_CPT
+  - function register
+  - function register_cpt
+  - function register_status_taxonomy
+  - function seed_default_statuses
+- `wp-content/plugins/motoparts/includes/cpt/class-product-cpt.php`
+  - class Product_CPT
+  - function register
+  - function register_cpt
+- `wp-content/plugins/motoparts/includes/db/class-db-tables.php`
+  - class DB_Tables
+  - function create_tables
+  - function get_table_names
+  - function get_db_version
+- `wp-content/plugins/reading-time-estimator/includes/class-reading-time.php`
+  - class Reading_Time
+  - function register_hooks
+  - function prepend_reading_time
+  - function calculate
+- `wp-content/plugins/swiftcart-cod/includes/admin/class-cod-reports.php`
+  - class COD_Reports
+  - function register
+  - function register_menu_page
+  - function render_page
+- `wp-content/plugins/swiftcart-cod/includes/admin/class-customer-management.php`
+  - class Customer_Management
+  - function register
+  - function register_menu_page
+  - function render_page
+- `wp-content/plugins/swiftcart-cod/includes/admin/class-delivery-zones.php`
+  - class Delivery_Zones
+  - function register
+  - function register_menu_page
+  - function render_page
+- `wp-content/plugins/swiftcart-cod/includes/admin/class-orders-dashboard.php`
+  - class Orders_Dashboard
+  - function register
+  - function register_menu_pages
+  - function enqueue_admin_assets
+  - function render_orders_page
+  - function ajax_update_order_status
+  - _...1 more_
+- `wp-content/plugins/swiftcart-cod/includes/admin/class-product-stock-meta.php`
+  - class Product_Stock_Meta
+  - function register
+  - function add_bulk_actions
+  - function handle_bulk_actions
+  - function bulk_action_admin_notice
+- `wp-content/plugins/swiftcart-cod/includes/checkout/class-checkout-fields.php`
+  - class Checkout_Fields
+  - function register
+  - function modify_checkout_fields
+  - function validate_checkout
+  - function save_custom_fields
+  - function display_custom_fields_admin
+  - _...3 more_
+- `wp-content/plugins/swiftcart-cod/includes/checkout/class-checkout-steps.php`
+  - class Checkout_Steps
+  - function register
+  - function register_order_statuses
+  - function add_order_statuses_to_wc
+  - function add_cod_fee
+  - function order_received_title
+- `wp-content/plugins/swiftcart-cod/includes/class-activator.php`
+  - class Activator
+  - function activate
+  - function create_tables
+  - function uninstall
+- `wp-content/plugins/swiftcart-cod/includes/class-autoloader.php`
+  - class Autoloader
+  - function register
+  - function load
+- `wp-content/plugins/swiftcart-cod/includes/class-deactivator.php` — class Deactivator, function deactivate
+- `wp-content/plugins/swiftcart-cod/includes/class-swiftcart.php`
+  - class SwiftCart
+  - function get_instance
+  - function load_textdomain
+- `wp-content/plugins/swiftcart-cod/includes/stock/class-stock-status.php`
+  - class Stock_Status
+  - function register
+  - function add_metabox
+  - function render_metabox
+  - function save_metabox
+  - function render_loop_badge
+  - _...6 more_
+- `wp-content/plugins/swiftcart-cod/includes/warehouse/class-warehouse-dashboard.php`
+  - class Warehouse_Dashboard
+  - function register
+  - function add_rewrite_rules
+  - function add_query_vars
+  - function handle_warehouse_request
+  - function ajax_warehouse_action
+- `wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-address-provider.php` — class WC_Address_Provider
+- `wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-data.php`
+  - class WC_Data
+  - function __construct
+  - function __sleep
+  - function __wakeup
+  - function __clone
+  - function set_clone_mode
+  - _...31 more_
+- `wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-deprecated-hooks.php`
+  - class WC_Deprecated_Hooks
+  - function __construct
+  - function hook_in
+  - function get_old_hooks
+  - function maybe_handle_deprecated_hook
+  - function handle_deprecated_hook
+- `wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-integration.php`
+  - class WC_Integration
+  - function get_method_title
+  - function get_method_description
+  - function admin_options
+  - function init_settings
+- `wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-log-handler.php` — class WC_Log_Handler
+- `wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-object-query.php`
+  - class WC_Object_Query
+  - function __construct
+  - function get_query_vars
+  - function get
+  - function set
+- `wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-order.php`
+  - class WC_Abstract_Order
+  - function __construct
+  - function __clone
+  - function get_type
+  - function get_data
+  - function save
+  - _...86 more_
+- `wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-payment-gateway.php`
+  - class WC_Payment_Gateway
+  - function get_tokens
+  - function get_method_title
+  - function get_method_description
+  - function admin_options
+  - function init_settings
+  - _...23 more_
+- `wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-payment-token.php`
+  - class WC_Payment_Token
+  - function __construct
+  - function get_token
+  - function get_type
+  - function get_display_name
+  - function get_user_id
+  - _...8 more_
+- `wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-privacy.php`
+  - class WC_Abstract_Privacy
+  - function __construct
+  - function add_privacy_message
+  - function get_privacy_message
+  - function register_exporters
+  - function register_erasers
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-product.php`
+  - class WC_Product
+  - function __construct
+  - function get_type
+  - function get_name
+  - function get_slug
+  - function get_date_created
+  - _...159 more_
+- `wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-session.php`
+  - class WC_Session
+  - function init
+  - function cleanup_sessions
+  - function __get
+  - function __set
+  - function __isset
+  - _...4 more_
+- `wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-settings-api.php`
+  - class WC_Settings_API
+  - function get_form_fields
+  - function admin_options
+  - function init_form_fields
+  - function get_option_key
+  - function get_field_type
+  - _...38 more_
+- `wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-shipping-method.php`
+  - class WC_Shipping_Method
+  - function __construct
+  - function supports
+  - function calculate_shipping
+  - function is_taxable
+  - function is_enabled
+  - _...18 more_
+- `wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-widget.php`
+  - class WC_Widget
+  - function __construct
+  - function get_cached_widget
+  - function cache_widget
+  - function flush_widget_cache
+  - function widget_start
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/abstracts/class-wc-background-process.php`
+  - class WC_Background_Process
+  - function schedule_cron_healthcheck
+  - function delete_all_batches
+  - function kill_process
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-addons.php`
+  - class WC_Admin_Addons
+  - function fetch_featured
+  - function fetch_product_preview
+  - function is_ssl_error
+  - function get_sections
+  - function get_section
+  - _...7 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-api-keys-table-list.php`
+  - class WC_Admin_API_Keys_Table_List
+  - function __construct
+  - function no_items
+  - function get_columns
+  - function column_cb
+  - function column_title
+  - _...6 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-api-keys.php`
+  - class WC_Admin_API_Keys
+  - function __construct
+  - function allow_save_settings
+  - function page_output
+  - function screen_option
+  - function actions
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-assets.php`
+  - class WC_Admin_Assets
+  - function __construct
+  - function admin_styles
+  - function register_scripts
+  - function admin_scripts
+  - function enqueue_block_editor_assets
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-attributes.php`
+  - class WC_Admin_Attributes
+  - function output
+  - function edit_attribute
+  - function add_attribute
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-brands.php`
+  - class WC_Brands_Admin
+  - function __construct
+  - function add_settings_section
+  - function add_settings_tab
+  - function add_coupon_brands_fields
+  - function save_coupon_brands
+  - _...24 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-customize.php`
+  - class WC_Admin_Customize
+  - function __construct
+  - function register_customize_nav_menu_item_types
+  - function register_customize_nav_menu_items
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-dashboard-setup.php`
+  - class WC_Admin_Dashboard_Setup
+  - function __construct
+  - function render
+  - function get_button_link
+  - function get_task_list
+  - function set_task_list
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-dashboard.php`
+  - class WC_Admin_Dashboard
+  - function __construct
+  - function init
+  - function register_network_order_widget
+  - function status_widget
+  - function status_widget_content
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-duplicate-product.php`
+  - class WC_Admin_Duplicate_Product
+  - function __construct
+  - function dupe_link
+  - function dupe_button
+  - function duplicate_product_action
+  - function product_duplicate
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-exporters.php`
+  - class WC_Admin_Exporters
+  - function __construct
+  - function add_to_menus
+  - function hide_from_menus
+  - function menu_highlight_for_product_export
+  - function admin_scripts
+  - _...4 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-help.php`
+  - class WC_Admin_Help
+  - function __construct
+  - function add_tabs
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-importers.php`
+  - class WC_Admin_Importers
+  - function __construct
+  - function add_to_menus
+  - function hide_from_menus
+  - function menu_highlight_for_product_import
+  - function admin_scripts
+  - _...6 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-log-table-list.php`
+  - class WC_Admin_Log_Table_List
+  - function __construct
+  - function level_dropdown
+  - function display_rows
+  - function get_columns
+  - function column_cb
+  - _...7 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-marketplace-promotions.php`
+  - class WC_Admin_Marketplace_Promotions
+  - function init
+  - function update_promotions
+  - function get_active_promotions
+  - function filter_marketplace_menu_items
+  - function clear_cron_event
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-menus.php`
+  - class WC_Admin_Menus
+  - function __construct
+  - function admin_menu
+  - function reports_menu
+  - function settings_menu
+  - function can_view_woocommerce_menu_item
+  - _...22 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-meta-boxes.php`
+  - class WC_Admin_Meta_Boxes
+  - function __construct
+  - function add_error
+  - function save_errors
+  - function append_to_error_store
+  - function output_errors
+  - _...6 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-notices.php`
+  - class WC_Admin_Notices
+  - function init
+  - function prepare_note_with_nonce
+  - function store_notices
+  - function get_notices
+  - function remove_all_notices
+  - _...30 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-permalink-settings.php`
+  - class WC_Admin_Permalink_Settings
+  - function __construct
+  - function settings_init
+  - function product_category_slug_input
+  - function product_tag_slug_input
+  - function product_attribute_slug_input
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-pointers.php`
+  - class WC_Admin_Pointers
+  - function __construct
+  - function setup_pointers_for_screen
+  - function create_product_tutorial
+  - function create_variable_product_tutorial
+  - function create_wc_addons_tutorial
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-post-types.php`
+  - class WC_Admin_Post_Types
+  - function __construct
+  - function setup_screen
+  - function post_updated_messages
+  - function order_updated_messages
+  - function bulk_post_updated_messages
+  - _...15 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-profile.php`
+  - class WC_Admin_Profile
+  - function __construct
+  - function get_customer_meta_fields
+  - function add_customer_meta_fields
+  - function save_customer_meta_fields
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-reports.php`
+  - class WC_Admin_Reports
+  - function register_hook_handlers
+  - function register_orders_hook_handlers
+  - function delete_legacy_reports_transients
+  - function get_report_instance
+  - function replace_dashboard_status_widget_reports
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-settings.php`
+  - class WC_Admin_Settings
+  - function get_settings_pages
+  - function reset_settings_pages_on_feature_change
+  - function save
+  - function add_message
+  - function add_error
+  - _...7 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-setup-wizard.php`
+  - class WC_Admin_Setup_Wizard
+  - function __construct
+  - function admin_menus
+  - function enqueue_scripts
+  - function setup_wizard
+  - function get_next_step_link
+  - _...25 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-status.php`
+  - class WC_Admin_Status
+  - function output
+  - function status_report
+  - function status_tools
+  - function get_tools
+  - function status_logs
+  - _...9 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-taxonomies.php`
+  - class WC_Admin_Taxonomies
+  - function get_instance
+  - function __construct
+  - function create_term
+  - function delete_term
+  - function add_category_fields
+  - _...11 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-upload-downloadable-product.php`
+  - class WC_Admin_Upload_Downloadable_Product
+  - function __construct
+  - function upload_dir
+  - function update_filename
+  - function unique_filename
+  - function woocommerce_media_upload_downloadable_product
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-webhooks-table-list.php`
+  - class WC_Admin_Webhooks_Table_List
+  - function __construct
+  - function no_items
+  - function get_columns
+  - function column_cb
+  - function column_title
+  - _...7 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin-webhooks.php`
+  - class WC_Admin_Webhooks
+  - function __construct
+  - function allow_save_settings
+  - function bulk_delete
+  - function actions
+  - function page_output
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/admin/class-wc-admin.php`
+  - class WC_Admin
+  - function __construct
+  - function buffer
+  - function includes
+  - function init_page_controller
+  - function conditional_includes
+  - _...8 more_
+- `wp-content/plugins/woocommerce/includes/admin/helper/class-wc-helper-admin.php`
+  - class WC_Helper_Admin
+  - function load
+  - function add_marketplace_settings
+  - function get_connection_url
+  - function register_rest_routes
+  - function get_permission
+  - _...4 more_
+- `wp-content/plugins/woocommerce/includes/admin/helper/class-wc-helper-api.php`
+  - class WC_Helper_API
+  - function load
+  - function request
+  - function add_auth_parameters
+  - function get
+  - function post
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/admin/helper/class-wc-helper-compat.php`
+  - class WC_Helper_Compat
+  - function load
+  - function helper_loaded
+  - function remove_actions
+  - function migrate_connection
+  - function deactivate_plugin
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/admin/helper/class-wc-helper-options.php`
+  - class WC_Helper_Options
+  - function update
+  - function get
+- `wp-content/plugins/woocommerce/includes/admin/helper/class-wc-helper-orders-api.php`
+  - class WC_Helper_Orders_API
+  - function load
+  - function register_rest_routes
+  - function get_permission
+  - function create_order
+- `wp-content/plugins/woocommerce/includes/admin/helper/class-wc-helper-sanitization.php`
+  - class WC_Helper_Sanitization
+  - function sanitize_css
+  - function sanitize_html
+  - function wc_pre_sanitize_svg
+  - function wc_kses_safe_svg_tags
+- `wp-content/plugins/woocommerce/includes/admin/helper/class-wc-helper-subscriptions-api.php`
+  - class WC_Helper_Subscriptions_API
+  - function load
+  - function register_rest_routes
+  - function get_permission
+  - function get_subscriptions
+  - function refresh
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/admin/helper/class-wc-helper-updater.php`
+  - class WC_Helper_Updater
+  - function load
+  - function add_hook_for_modifying_update_notices
+  - function setup_message_for_expired_and_expiring_subscriptions
+  - function setup_message_for_plugins_without_subscription
+  - function transient_update_plugins
+  - _...16 more_
+- `wp-content/plugins/woocommerce/includes/admin/helper/class-wc-helper.php`
+  - class WC_Helper
+  - function get_view_filename
+  - function load
+  - function render_helper_output
+  - function add_utm_params_to_url_for_subscription_link
+  - function get_filters
+  - _...45 more_
+- `wp-content/plugins/woocommerce/includes/admin/helper/class-wc-plugin-api-updater.php`
+  - class WC_Plugin_Api_Updater
+  - function load
+  - function plugins_api
+  - function themes_api
+  - function override_products_api_response
+- `wp-content/plugins/woocommerce/includes/admin/helper/class-wc-product-usage-notice.php`
+  - class WC_Product_Usage_Notice
+  - function load
+  - function maybe_show_product_usage_notice
+  - function enqueue_product_usage_notice_scripts
+  - function ajax_dismiss
+  - function ajax_remind_later
+- `wp-content/plugins/woocommerce/includes/admin/helper/class-wc-woo-helper-connection.php`
+  - class WC_Woo_Helper_Connection
+  - function get_connection_url_notice
+  - function get_deleted_connection_notice
+  - function has_host_plan_orders
+- `wp-content/plugins/woocommerce/includes/admin/helper/class-wc-woo-update-manager-plugin.php`
+  - class WC_Woo_Update_Manager_Plugin
+  - function load
+  - function is_plugin_active
+  - function is_plugin_installed
+  - function generate_install_url
+  - function get_plugin_slug
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/admin/importers/class-wc-product-csv-importer-controller.php`
+  - class WC_Product_CSV_Importer_Controller
+  - function get_importer
+  - function is_file_valid_csv
+  - function __construct
+  - function get_next_step_link
+  - function dispatch
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/admin/importers/class-wc-tax-rate-importer.php`
+  - class WC_Tax_Rate_Importer
+  - function __construct
+  - function dispatch
+  - function format_data_from_csv
+  - function import
+  - function import_end
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/admin/list-tables/abstract-class-wc-admin-list-table.php`
+  - class WC_Admin_List_Table
+  - function __construct
+  - function maybe_render_blank_state
+  - function disable_view_mode
+  - function restrict_manage_posts
+  - function request_query
+  - _...8 more_
+- `wp-content/plugins/woocommerce/includes/admin/list-tables/class-wc-admin-list-table-coupons.php`
+  - class WC_Admin_List_Table_Coupons
+  - function __construct
+  - function define_columns
+- `wp-content/plugins/woocommerce/includes/admin/list-tables/class-wc-admin-list-table-orders.php`
+  - class WC_Admin_List_Table_Orders
+  - function __construct
+  - function define_sortable_columns
+  - function define_columns
+  - function define_bulk_actions
+  - function order_preview_template
+  - _...10 more_
+- `wp-content/plugins/woocommerce/includes/admin/list-tables/class-wc-admin-list-table-products.php`
+  - class WC_Admin_List_Table_Products
+  - function __construct
+  - function define_sortable_columns
+  - function define_columns
+  - function add_custom_query_var
+  - function render_products_stock_status_filter
+  - _...18 more_
+- `wp-content/plugins/woocommerce/includes/admin/marketplace-suggestions/class-wc-marketplace-suggestions.php`
+  - class WC_Marketplace_Suggestions
+  - function init
+  - function product_data_tabs
+  - function product_data_panels
+  - function get_dismissed_suggestions
+  - function post_add_dismissed_suggestion_handler
+  - _...6 more_
+- `wp-content/plugins/woocommerce/includes/admin/marketplace-suggestions/class-wc-marketplace-updater.php`
+  - class WC_Marketplace_Updater
+  - function load
+  - function init
+  - function update_marketplace_suggestions
+  - function retry
+  - function add_personalization_data
+- `wp-content/plugins/woocommerce/includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php`
+  - class WC_Meta_Box_Coupon_Data
+  - function output
+  - function save
+- `wp-content/plugins/woocommerce/includes/admin/meta-boxes/class-wc-meta-box-order-actions.php`
+  - class WC_Meta_Box_Order_Actions
+  - function output
+  - function save
+  - function set_email_sent_message
+- `wp-content/plugins/woocommerce/includes/admin/meta-boxes/class-wc-meta-box-order-data.php`
+  - class WC_Meta_Box_Order_Data
+  - function init_address_fields
+  - function output
+  - function save
+- `wp-content/plugins/woocommerce/includes/admin/meta-boxes/class-wc-meta-box-order-downloads.php`
+  - class WC_Meta_Box_Order_Downloads
+  - function output
+  - function save
+- `wp-content/plugins/woocommerce/includes/admin/meta-boxes/class-wc-meta-box-order-items.php`
+  - class WC_Meta_Box_Order_Items
+  - function output
+  - function save
+- `wp-content/plugins/woocommerce/includes/admin/meta-boxes/class-wc-meta-box-order-notes.php` — class WC_Meta_Box_Order_Notes, function output
+- `wp-content/plugins/woocommerce/includes/admin/meta-boxes/class-wc-meta-box-product-categories.php` — class WC_Meta_Box_Product_Categories, function output
+- `wp-content/plugins/woocommerce/includes/admin/meta-boxes/class-wc-meta-box-product-data.php`
+  - class WC_Meta_Box_Product_Data
+  - function output
+  - function output_variations
+  - function prepare_attributes
+  - function save
+  - function save_variations
+- `wp-content/plugins/woocommerce/includes/admin/meta-boxes/class-wc-meta-box-product-images.php`
+  - class WC_Meta_Box_Product_Images
+  - function output
+  - function save
+- `wp-content/plugins/woocommerce/includes/admin/meta-boxes/class-wc-meta-box-product-reviews.php`
+  - class WC_Meta_Box_Product_Reviews
+  - function output
+  - function save
+- `wp-content/plugins/woocommerce/includes/admin/meta-boxes/class-wc-meta-box-product-short-description.php` — class WC_Meta_Box_Product_Short_Description, function output
+- `wp-content/plugins/woocommerce/includes/admin/notes/class-wc-notes-refund-returns.php`
+  - class WC_Notes_Refund_Returns
+  - function init
+  - function on_newly_installed
+  - function possibly_add_note
+  - function get_note
+  - function get_note_from_db
+- `wp-content/plugins/woocommerce/includes/admin/notes/class-wc-notes-run-db-update.php`
+  - class WC_Notes_Run_Db_Update
+  - function maybe_update_notice
+  - function set_notice_actioned
+  - function add_notice
+  - function show_reminder
+- `wp-content/plugins/woocommerce/includes/admin/plugin-updates/class-wc-plugin-updates.php` — class WC_Plugin_Updates, function get_untested_plugins
+- `wp-content/plugins/woocommerce/includes/admin/plugin-updates/class-wc-plugins-screen-updates.php`
+  - class WC_Plugins_Screen_Updates
+  - function __construct
+  - function in_plugin_update_message
+  - function plugin_screen_modal_js
+- `wp-content/plugins/woocommerce/includes/admin/plugin-updates/class-wc-updates-screen-updates.php`
+  - class WC_Updates_Screen_Updates
+  - function __construct
+  - function update_screen_modal
+- `wp-content/plugins/woocommerce/includes/admin/reports/class-wc-admin-report.php`
+  - class WC_Admin_Report
+  - function get_order_report_data
+  - function maybe_update_transients
+  - function prepare_chart_data
+  - function get_sales_sparkline
+  - function sales_sparkline
+  - _...8 more_
+- `wp-content/plugins/woocommerce/includes/admin/reports/class-wc-report-coupon-usage.php`
+  - class WC_Report_Coupon_Usage
+  - function __construct
+  - function get_chart_legend
+  - function output_report
+  - function get_chart_widgets
+  - function coupons_widget
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/admin/reports/class-wc-report-customer-list.php`
+  - class WC_Report_Customer_List
+  - function __construct
+  - function no_items
+  - function output_report
+  - function column_default
+  - function get_columns
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/admin/reports/class-wc-report-customers.php`
+  - class WC_Report_Customers
+  - function get_chart_legend
+  - function get_chart_widgets
+  - function customers_vs_guests
+  - function output_report
+  - function get_export_button
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/admin/reports/class-wc-report-downloads.php`
+  - class WC_Report_Downloads
+  - function __construct
+  - function display_tablenav
+  - function output_report
+  - function column_default
+  - function get_columns
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/admin/reports/class-wc-report-low-in-stock.php`
+  - class WC_Report_Low_In_Stock
+  - function no_items
+  - function get_items
+- `wp-content/plugins/woocommerce/includes/admin/reports/class-wc-report-most-stocked.php` — class WC_Report_Most_Stocked, function get_items
+- `wp-content/plugins/woocommerce/includes/admin/reports/class-wc-report-out-of-stock.php`
+  - class WC_Report_Out_Of_Stock
+  - function no_items
+  - function get_items
+- `wp-content/plugins/woocommerce/includes/admin/reports/class-wc-report-sales-by-category.php`
+  - class WC_Report_Sales_By_Category
+  - function __construct
+  - function get_products_in_category
+  - function get_chart_legend
+  - function output_report
+  - function get_chart_widgets
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/admin/reports/class-wc-report-sales-by-date.php`
+  - class WC_Report_Sales_By_Date
+  - function get_report_data
+  - function get_chart_legend
+  - function output_report
+  - function get_export_button
+  - function get_main_chart
+- `wp-content/plugins/woocommerce/includes/admin/reports/class-wc-report-sales-by-product.php`
+  - class WC_Report_Sales_By_Product
+  - function __construct
+  - function get_chart_legend
+  - function output_report
+  - function get_chart_widgets
+  - function current_filters
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/admin/reports/class-wc-report-stock.php`
+  - class WC_Report_Stock
+  - function __construct
+  - function no_items
+  - function display_tablenav
+  - function output_report
+  - function column_default
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/admin/reports/class-wc-report-taxes-by-code.php`
+  - class WC_Report_Taxes_By_Code
+  - function get_chart_legend
+  - function get_export_button
+  - function output_report
+  - function get_main_chart
+- `wp-content/plugins/woocommerce/includes/admin/reports/class-wc-report-taxes-by-date.php`
+  - class WC_Report_Taxes_By_Date
+  - function get_chart_legend
+  - function get_export_button
+  - function output_report
+  - function get_main_chart
+- `wp-content/plugins/woocommerce/includes/admin/settings/class-wc-settings-accounts.php`
+  - class WC_Settings_Accounts
+  - function __construct
+  - function output
+- `wp-content/plugins/woocommerce/includes/admin/settings/class-wc-settings-advanced.php`
+  - class WC_Settings_Advanced
+  - class WC_Settings_Rest_API
+  - function __construct
+  - function form_method
+  - function output
+  - function save
+- `wp-content/plugins/woocommerce/includes/admin/settings/class-wc-settings-emails.php`
+  - class WC_Settings_Emails
+  - function __construct
+  - function get_custom_fonts
+  - function output
+  - function save
+  - function email_notification_setting
+  - _...12 more_
+- `wp-content/plugins/woocommerce/includes/admin/settings/class-wc-settings-general.php`
+  - class WC_Settings_General
+  - function __construct
+  - function color_picker
+  - function output
+- `wp-content/plugins/woocommerce/includes/admin/settings/class-wc-settings-integrations.php`
+  - class WC_Settings_Integrations
+  - function __construct
+  - function output
+- `wp-content/plugins/woocommerce/includes/admin/settings/class-wc-settings-page.php`
+  - class WC_Settings_Page
+  - function __construct
+  - function get_id
+  - function get_label
+  - function add_settings_slot
+  - function add_settings_page
+  - _...9 more_
+- `wp-content/plugins/woocommerce/includes/admin/settings/class-wc-settings-payment-gateways.php`
+  - class WC_Settings_Payment_Gateways
+  - function __construct
+  - function should_render_react_section
+  - function add_body_classes
+  - function output
+  - function get_sections
+  - _...4 more_
+- `wp-content/plugins/woocommerce/includes/admin/settings/class-wc-settings-point-of-sale.php`
+  - class WC_Settings_Point_Of_Sale
+  - function __construct
+  - function add_settings_page
+- `wp-content/plugins/woocommerce/includes/admin/settings/class-wc-settings-products.php`
+  - class WC_Settings_Products
+  - function __construct
+  - function save
+- `wp-content/plugins/woocommerce/includes/admin/settings/class-wc-settings-shipping.php`
+  - class WC_Settings_Shipping
+  - function __construct
+  - function add_settings_page
+  - function output
+  - function save
+- `wp-content/plugins/woocommerce/includes/admin/settings/class-wc-settings-site-visibility.php` — class WC_Settings_Site_Visibility, function __construct
+- `wp-content/plugins/woocommerce/includes/admin/settings/class-wc-settings-tax.php`
+  - class WC_Settings_Tax
+  - function __construct
+  - function conflict_error
+  - function add_settings_page
+  - function get_settings_for_default_section
+  - function output
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/blocks/class-wc-blocks-utils.php`
+  - class WC_Blocks_Utils
+  - function get_blocks_from_page
+  - function has_block_in_page
+- `wp-content/plugins/woocommerce/includes/class-wc-ajax.php`
+  - class WC_AJAX
+  - function init
+  - function get_endpoint
+  - function define_ajax
+  - function do_wc_ajax
+  - function add_ajax_events
+  - _...66 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-auth.php`
+  - class WC_Auth
+  - function __construct
+  - function add_query_vars
+  - function add_endpoint
+  - function handle_auth_requests
+- `wp-content/plugins/woocommerce/includes/class-wc-autoloader.php`
+  - class WC_Autoloader
+  - function __construct
+  - function autoload
+- `wp-content/plugins/woocommerce/includes/class-wc-background-emailer.php`
+  - class WC_Background_Emailer
+  - function __construct
+  - function dispatch_queue
+- `wp-content/plugins/woocommerce/includes/class-wc-background-updater.php`
+  - class WC_Background_Updater
+  - function __construct
+  - function dispatch
+  - function handle_cron_healthcheck
+  - function is_updating
+  - function is_memory_exceeded
+- `wp-content/plugins/woocommerce/includes/class-wc-brands-brand-settings-manager.php`
+  - class WC_Brands_Brand_Settings_Manager
+  - function set_brand_settings_on_coupon
+  - function get_brand_settings_on_coupon
+- `wp-content/plugins/woocommerce/includes/class-wc-brands-coupons.php`
+  - class WC_Brands_Coupons
+  - function __construct
+  - function is_coupon_valid
+  - function is_valid_for_product
+  - function brand_exclusion_error
+- `wp-content/plugins/woocommerce/includes/class-wc-brands.php`
+  - class WC_Brands
+  - function __construct
+  - function register_hooks
+  - function recount_after_stock_change
+  - function recount_all_brands
+  - function update_product_query_tax_query
+  - _...31 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-breadcrumb.php`
+  - class WC_Breadcrumb
+  - function add_crumb
+  - function reset
+  - function get_breadcrumb
+  - function generate
+- `wp-content/plugins/woocommerce/includes/class-wc-cache-helper.php`
+  - class WC_Cache_Helper
+  - function init
+  - function prevent_caching
+  - function queue_delete_transient
+  - function delete_transients_on_shutdown
+  - function invalidate_attribute_count
+  - _...8 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-cart-fees.php`
+  - class WC_Cart_Fees
+  - function __construct
+  - function init
+  - function add_fee
+  - function get_fees
+  - function set_fees
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-cart-session.php`
+  - class WC_Cart_Session
+  - function __construct
+  - function set_cart
+  - function init
+  - function get_cart_from_session
+  - function destroy_cart_session
+  - _...6 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-cart-totals.php`
+  - class WC_Cart_Totals
+  - function __construct
+  - function get_total
+  - function get_totals
+- `wp-content/plugins/woocommerce/includes/class-wc-cart.php`
+  - class WC_Cart
+  - function __construct
+  - function __clone
+  - function get_cart_contents
+  - function get_removed_cart_contents
+  - function get_applied_coupons
+  - _...102 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-checkout.php`
+  - class WC_Checkout
+  - function instance
+  - function __isset
+  - function __set
+  - function __get
+  - function __clone
+  - _...18 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-cli.php`
+  - class WC_CLI
+  - function __construct
+  - function add_blueprint_cli_hook
+- `wp-content/plugins/woocommerce/includes/class-wc-comments.php`
+  - class WC_Comments
+  - function init
+  - function comments_open
+  - function exclude_order_comments
+  - function akismet_excluded_comment_types
+  - function exclude_order_comments_from_feed_join
+  - _...26 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-countries.php`
+  - class WC_Countries
+  - function __get
+  - function get_countries
+  - function country_exists
+  - function get_country_from_alpha_3_code
+  - function get_continents
+  - _...30 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-coupon.php`
+  - class WC_Coupon
+  - function __construct
+  - function get_data
+  - function is_type
+  - function get_code
+  - function get_description
+  - _...63 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-customer-download-log.php`
+  - class WC_Customer_Download_Log
+  - function __construct
+  - function get_timestamp
+  - function get_permission_id
+  - function get_user_id
+  - function get_user_ip_address
+  - _...4 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-customer-download.php`
+  - class WC_Customer_Download
+  - function __construct
+  - function get_download_id
+  - function get_product_id
+  - function get_user_id
+  - function get_user_email
+  - _...23 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-customer.php`
+  - class WC_Customer
+  - function __construct
+  - function delete_and_reassign
+  - function is_customer_outside_base
+  - function get_avatar_url
+  - function get_taxable_address
+  - _...84 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-data-exception.php`
+  - class WC_Data_Exception
+  - function __construct
+  - function getErrorCode
+  - function getErrorData
+- `wp-content/plugins/woocommerce/includes/class-wc-data-store.php`
+  - class WC_Data_Store
+  - function __construct
+  - function __sleep
+  - function __wakeup
+  - function load
+  - function get_current_class_name
+  - _...7 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-datetime.php`
+  - class WC_DateTime
+  - function __toString
+  - function set_utc_offset
+  - function getOffset
+  - function setTimezone
+  - function getTimestamp
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-deprecated-action-hooks.php`
+  - class WC_Deprecated_Action_Hooks
+  - function hook_in
+  - function handle_deprecated_hook
+- `wp-content/plugins/woocommerce/includes/class-wc-deprecated-filter-hooks.php`
+  - class WC_Deprecated_Filter_Hooks
+  - function hook_in
+  - function handle_deprecated_hook
+- `wp-content/plugins/woocommerce/includes/class-wc-discounts.php`
+  - class WC_Discounts
+  - function __construct
+  - function set_items
+  - function set_items_from_cart
+  - function set_items_from_order
+  - function get_object
+  - _...10 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-download-handler.php`
+  - class WC_Download_Handler
+  - function init
+  - function download_product
+  - function count_download
+  - function download
+  - function download_file_redirect
+  - _...6 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-emails.php`
+  - class WC_Emails
+  - function instance
+  - function __clone
+  - function __wakeup
+  - function init_transactional_emails
+  - function queue_transactional_email
+  - _...31 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-embed.php`
+  - class WC_Embed
+  - function init
+  - function remove_comments_button
+  - function is_embedded_product
+  - function the_excerpt
+  - function product_buttons
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-form-handler.php`
+  - class WC_Form_Handler
+  - function init
+  - function redirect_reset_password_link
+  - function save_address
+  - function save_account_details
+  - function checkout_action
+  - _...12 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-frontend-scripts.php`
+  - class WC_Frontend_Scripts
+  - function init
+  - function get_styles
+  - function enqueue_block_assets
+  - function load_scripts
+  - function localize_printed_scripts
+- `wp-content/plugins/woocommerce/includes/class-wc-geo-ip.php`
+  - class WC_Geo_IP
+  - class WC_Geo_IP_Record
+  - function log
+  - function geoip_open
+  - function geoip_close
+  - function _geoip_seek_country_v6
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-geolite-integration.php`
+  - class WC_Geolite_Integration
+  - function __construct
+  - function get_country_iso
+- `wp-content/plugins/woocommerce/includes/class-wc-geolocation.php`
+  - class WC_Geolocation
+  - function get_ip_address
+  - function get_external_ip_address
+  - function geolocate_ip
+  - function get_local_database_path
+  - function update_database
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-https.php`
+  - class WC_HTTPS
+  - function init
+  - function force_https_url
+  - function force_https_page_link
+  - function force_https_template_redirect
+  - function unforce_https_template_redirect
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-install.php`
+  - class WC_Install
+  - function init
+  - function newly_installed
+  - function check_version
+  - function manual_database_update
+  - function wc_admin_db_update_notice
+  - _...39 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-integrations.php`
+  - class WC_Integrations
+  - function __construct
+  - function get_integrations
+  - function get_integration
+- `wp-content/plugins/woocommerce/includes/class-wc-log-levels.php`
+  - class WC_Log_Levels
+  - function is_valid_level
+  - function get_level_severity
+  - function get_all_level_severities
+  - function get_severity_level
+  - function get_all_severity_levels
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-logger.php`
+  - class WC_Logger
+  - function __construct
+  - function add
+  - function log
+  - function emergency
+  - function alert
+  - _...8 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-meta-data.php`
+  - class WC_Meta_Data
+  - function __construct
+  - function jsonSerialize
+  - function apply_changes
+  - function __set
+  - function __isset
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-order-factory.php`
+  - class WC_Order_Factory
+  - function get_order
+  - function get_orders
+  - function get_order_item
+  - function get_order_id
+  - function get_class_names_for_order_ids
+- `wp-content/plugins/woocommerce/includes/class-wc-order-item-coupon.php`
+  - class WC_Order_Item_Coupon
+  - function set_name
+  - function set_code
+  - function set_discount
+  - function set_discount_tax
+  - function get_type
+  - _...7 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-order-item-fee.php`
+  - class WC_Order_Item_Fee
+  - function calculate_taxes
+  - function set_amount
+  - function set_tax_class
+  - function set_tax_status
+  - function set_total
+  - _...13 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-order-item-meta.php`
+  - class WC_Order_Item_Meta
+  - function __construct
+  - function display
+  - function get_formatted
+  - function get_formatted_legacy
+- `wp-content/plugins/woocommerce/includes/class-wc-order-item-product.php`
+  - class WC_Order_Item_Product
+  - function set_quantity
+  - function set_tax_class
+  - function set_product_id
+  - function set_variation_id
+  - function set_subtotal
+  - _...27 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-order-item-shipping.php`
+  - class WC_Order_Item_Shipping
+  - function calculate_taxes
+  - function set_name
+  - function set_method_title
+  - function set_method_id
+  - function set_instance_id
+  - _...17 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-order-item-tax.php`
+  - class WC_Order_Item_Tax
+  - function set_name
+  - function set_rate_code
+  - function set_label
+  - function set_rate_id
+  - function set_tax_total
+  - _...17 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-order-item.php`
+  - class WC_Order_Item
+  - function __construct
+  - function apply_changes
+  - function get_order_id
+  - function get_name
+  - function get_type
+  - _...21 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-order-query.php` — class WC_Order_Query, function get_orders
+- `wp-content/plugins/woocommerce/includes/class-wc-order-refund.php`
+  - class WC_Order_Refund
+  - function get_type
+  - function get_status
+  - function get_post_title
+  - function get_amount
+  - function get_reason
+  - _...12 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-order.php`
+  - class WC_Order
+  - function payment_complete
+  - function get_formatted_order_total
+  - function save
+  - function set_status
+  - function maybe_set_date_paid
+  - _...130 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-payment-gateways.php`
+  - class WC_Payment_Gateways
+  - function instance
+  - function __clone
+  - function __wakeup
+  - function __construct
+  - function init
+  - _...7 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-payment-tokens.php`
+  - class WC_Payment_Tokens
+  - function get_tokens
+  - function get_customer_tokens
+  - function get_customer_default_token
+  - function get_order_tokens
+  - function get
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-post-data.php`
+  - class WC_Post_Data
+  - function init
+  - function variation_post_link
+  - function do_deferred_product_sync
+  - function deferred_product_sync
+  - function transition_post_status
+  - _...31 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-post-types.php`
+  - class WC_Post_Types
+  - function init
+  - function register_taxonomies
+  - function register_post_types
+  - function updated_term_messages
+  - function register_post_status
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-privacy-background-process.php` — class WC_Privacy_Background_Process, function __construct
+- `wp-content/plugins/woocommerce/includes/class-wc-privacy-erasers.php`
+  - class WC_Privacy_Erasers
+  - function customer_data_eraser
+  - function order_data_eraser
+  - function download_data_eraser
+  - function remove_order_personal_data
+  - function customer_tokens_eraser
+- `wp-content/plugins/woocommerce/includes/class-wc-privacy-exporters.php`
+  - class WC_Privacy_Exporters
+  - function customer_data_exporter
+  - function order_data_exporter
+  - function download_data_exporter
+  - function customer_tokens_exporter
+- `wp-content/plugins/woocommerce/includes/class-wc-privacy.php`
+  - class WC_Privacy
+  - function __construct
+  - function register_erasers_exporters
+  - function get_privacy_message
+  - function queue_cleanup_personal_data
+  - function anonymize_custom_data_types
+  - _...6 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-product-attribute.php`
+  - class WC_Product_Attribute
+  - function is_taxonomy
+  - function get_taxonomy
+  - function get_taxonomy_object
+  - function get_terms
+  - function get_slugs
+  - _...20 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-product-download.php`
+  - class WC_Product_Download
+  - function get_data
+  - function get_allowed_mime_types
+  - function get_type_of_file_path
+  - function get_file_type
+  - function get_file_extension
+  - _...20 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-product-external.php`
+  - class WC_Product_External
+  - function get_type
+  - function get_product_url
+  - function get_button_text
+  - function set_product_url
+  - function set_button_text
+  - _...8 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-product-factory.php`
+  - class WC_Product_Factory
+  - function get_product
+  - function get_product_classname
+  - function get_product_type
+  - function get_classname_from_product_type
+- `wp-content/plugins/woocommerce/includes/class-wc-product-grouped.php`
+  - class WC_Product_Grouped
+  - function get_type
+  - function add_to_cart_text
+  - function add_to_cart_description
+  - function is_on_sale
+  - function is_purchasable
+  - _...7 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-product-query.php` — class WC_Product_Query, function get_products
+- `wp-content/plugins/woocommerce/includes/class-wc-product-simple.php`
+  - class WC_Product_Simple
+  - function __construct
+  - function get_type
+  - function add_to_cart_url
+  - function add_to_cart_text
+  - function add_to_cart_description
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-product-variable.php`
+  - class WC_Product_Variable
+  - function get_type
+  - function add_to_cart_aria_describedby
+  - function add_to_cart_text
+  - function add_to_cart_description
+  - function get_variation_prices
+  - _...28 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-product-variation.php`
+  - class WC_Product_Variation
+  - function __construct
+  - function get_type
+  - function get_stock_managed_by_id
+  - function get_title
+  - function get_formatted_name
+  - _...29 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-query.php`
+  - class WC_Query
+  - function __construct
+  - function reset_chosen_attributes
+  - function get_errors
+  - function init_query_vars
+  - function get_endpoint_title
+  - _...38 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-rate-limiter.php`
+  - class WC_Rate_Limiter
+  - function init
+  - function storage_id
+  - function retried_too_soon
+  - function set_rate_limit
+  - function cleanup
+- `wp-content/plugins/woocommerce/includes/class-wc-regenerate-images-request.php`
+  - class WC_Regenerate_Images_Request
+  - function __construct
+  - function is_running
+  - function filter_image_sizes_to_only_missing_thumbnails
+  - function adjust_intermediate_image_sizes
+- `wp-content/plugins/woocommerce/includes/class-wc-regenerate-images.php`
+  - class WC_Regenerate_Images
+  - function init
+  - function filter_image_get_intermediate_size
+  - function add_uncropped_metadata
+  - function regenerating_notice
+  - function dismiss_regenerating_notice
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-register-wp-admin-settings.php`
+  - class WC_Register_WP_Admin_Settings
+  - function __construct
+  - function register_email_group
+  - function register_email_settings
+  - function register_page_group
+  - function register_page_settings
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-rest-authentication.php`
+  - class WC_REST_Authentication
+  - function instance
+  - function __construct
+  - function authenticate
+  - function authentication_fallback
+  - function check_authentication_error
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-rest-exception.php` — class WC_REST_Exception
+- `wp-content/plugins/woocommerce/includes/class-wc-session-handler.php`
+  - class WC_Session_Handler
+  - function __construct
+  - function init
+  - function init_session_cookie
+  - function maybe_set_customer_session_cookie
+  - function set_customer_session_cookie
+  - _...15 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-shipping-rate.php`
+  - class WC_Shipping_Rate
+  - function __construct
+  - function __isset
+  - function __get
+  - function __set
+  - function jsonSerialize
+  - _...21 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-shipping-zone.php`
+  - class WC_Shipping_Zone
+  - function __construct
+  - function get_zone_name
+  - function get_zone_order
+  - function get_zone_locations
+  - function get_formatted_location
+  - _...11 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-shipping-zones.php`
+  - class WC_Shipping_Zones
+  - function get_zones
+  - function get_shipping_zones
+  - function get_zone
+  - function get_zone_by
+  - function get_shipping_method
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-shipping.php`
+  - class WC_Shipping
+  - function instance
+  - function __clone
+  - function __wakeup
+  - function __get
+  - function __construct
+  - _...13 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php`
+  - class WC_Shortcodes
+  - function init
+  - function shortcode_wrapper
+  - function cart
+  - function checkout
+  - function order_tracking
+  - _...17 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-structured-data.php`
+  - class WC_Structured_Data
+  - function __construct
+  - function set_data
+  - function get_data
+  - function get_structured_data
+  - function output_email_structured_data
+  - _...8 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-tax.php`
+  - class WC_Tax
+  - function init
+  - function maybe_remove_tax_class_rates
+  - function calc_tax
+  - function calc_shipping_tax
+  - function round
+  - _...30 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-template-loader.php`
+  - class WC_Template_Loader
+  - function init
+  - function template_loader
+  - function comments_template_loader
+  - function unsupported_theme_init
+  - function unsupported_archive_layered_nav_compatibility
+  - _...8 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-tracker.php`
+  - class WC_Tracker
+  - function init
+  - function send_tracking_data
+  - function get_tracking_data
+  - function get_address_autocomplete_info
+  - function get_theme_info
+  - _...10 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-validation.php`
+  - class WC_Validation
+  - function is_email
+  - function is_phone
+  - function is_postcode
+  - function is_gb_postcode
+  - function format_postcode
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/class-wc-webhook.php`
+  - class WC_Webhook
+  - function __construct
+  - function enqueue
+  - function process
+  - function deliver
+  - function build_payload
+  - _...32 more_
+- `wp-content/plugins/woocommerce/includes/class-woocommerce.php`
+  - class WooCommerce
+  - function instance
+  - function __clone
+  - function __wakeup
+  - function __get
+  - function __set
+  - _...55 more_
+- `wp-content/plugins/woocommerce/includes/cli/class-wc-cli-com-command.php`
+  - class WC_CLI_COM_Command
+  - function register_commands
+  - function list_extensions
+  - function disconnect
+  - function connect
+- `wp-content/plugins/woocommerce/includes/cli/class-wc-cli-com-extension-command.php`
+  - class WC_CLI_COM_Extension_Command
+  - function register_commands
+  - function install
+- `wp-content/plugins/woocommerce/includes/cli/class-wc-cli-rest-command.php`
+  - class WC_CLI_REST_Command
+  - function __construct
+  - function set_supported_ids
+  - function get_supported_ids
+  - function create_item
+  - function delete_item
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/cli/class-wc-cli-runner.php` — class WC_CLI_Runner, function after_wp_load
+- `wp-content/plugins/woocommerce/includes/cli/class-wc-cli-tool-command.php` — class WC_CLI_Tool_Command, function register_commands
+- `wp-content/plugins/woocommerce/includes/cli/class-wc-cli-tracker-command.php`
+  - class WC_CLI_Tracker_Command
+  - function register_commands
+  - function show_tracker_snapshot
+- `wp-content/plugins/woocommerce/includes/cli/class-wc-cli-update-command.php`
+  - class WC_CLI_Update_Command
+  - function register_commands
+  - function update
+- `wp-content/plugins/woocommerce/includes/customizer/class-wc-customizer-control-cropping.php` — class WC_Customizer_Control_Cropping, function render_content
+- `wp-content/plugins/woocommerce/includes/customizer/class-wc-shop-customizer.php`
+  - class WC_Shop_Customizer
+  - function __construct
+  - function add_sections
+  - function add_frontend_scripts
+  - function add_styles
+  - function add_scripts
+  - _...8 more_
+- `wp-content/plugins/woocommerce/includes/data-stores/abstract-wc-order-data-store-cpt.php`
+  - class Abstract_WC_Order_Data_Store_CPT
+  - function get_internal_data_store_key_getters
+  - function create
+  - function order_exists
+  - function read
+  - function update
+  - _...10 more_
+- `wp-content/plugins/woocommerce/includes/data-stores/abstract-wc-order-item-type-data-store.php`
+  - class Abstract_WC_Order_Item_Type_Data_Store
+  - function __construct
+  - function create
+  - function update
+  - function delete
+  - function read
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-coupon-data-store-cpt.php`
+  - class WC_Coupon_Data_Store_CPT
+  - function create
+  - function read
+  - function update
+  - function delete
+  - function increase_usage_count
+  - _...9 more_
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store-session.php`
+  - class WC_Customer_Data_Store_Session
+  - function create
+  - function update
+  - function save_to_session
+  - function read
+  - function delete
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-data-store.php`
+  - class WC_Customer_Data_Store
+  - function create
+  - function read
+  - function update
+  - function delete
+  - function get_last_order
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-download-data-store.php`
+  - class WC_Customer_Download_Data_Store
+  - function create_from_data
+  - function create
+  - function read
+  - function update
+  - function delete
+  - _...9 more_
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-customer-download-log-data-store.php`
+  - class WC_Customer_Download_Log_Data_Store
+  - function get_table_name
+  - function create
+  - function read
+  - function update
+  - function get_download_logs
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-data-store-wp.php`
+  - class WC_Data_Store_WP
+  - function read_meta
+  - function filter_raw_meta_data
+  - function delete_meta
+  - function add_meta
+  - function update_meta
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-order-data-store-cpt.php`
+  - class WC_Order_Data_Store_CPT
+  - function create
+  - function update
+  - function get_total_refunded
+  - function get_total_tax_refunded
+  - function get_total_shipping_refunded
+  - _...27 more_
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-order-item-coupon-data-store.php`
+  - class WC_Order_Item_Coupon_Data_Store
+  - function read
+  - function save_item_data
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-order-item-data-store.php`
+  - class WC_Order_Item_Data_Store
+  - function add_order_item
+  - function update_order_item
+  - function delete_order_item
+  - function update_metadata
+  - function add_metadata
+  - _...4 more_
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-order-item-fee-data-store.php`
+  - class WC_Order_Item_Fee_Data_Store
+  - function read
+  - function save_item_data
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-order-item-product-data-store.php`
+  - class WC_Order_Item_Product_Data_Store
+  - function read
+  - function save_item_data
+  - function get_download_ids
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-order-item-shipping-data-store.php`
+  - class WC_Order_Item_Shipping_Data_Store
+  - function read
+  - function save_item_data
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-order-item-tax-data-store.php`
+  - class WC_Order_Item_Tax_Data_Store
+  - function read
+  - function save_item_data
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-order-refund-data-store-cpt.php`
+  - class WC_Order_Refund_Data_Store_CPT
+  - function delete
+  - function update
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-payment-token-data-store.php`
+  - class WC_Payment_Token_Data_Store
+  - function create
+  - function update
+  - function delete
+  - function read
+  - function get_tokens
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-product-data-store-cpt.php`
+  - class WC_Product_Data_Store_CPT
+  - function create
+  - function read
+  - function update
+  - function delete
+  - function read_stock_quantity
+  - _...25 more_
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-product-grouped-data-store-cpt.php` — class WC_Product_Grouped_Data_Store_CPT, function sync_price
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-product-variable-data-store-cpt.php`
+  - class WC_Product_Variable_Data_Store_CPT
+  - function read_children
+  - function read_variation_attributes
+  - function read_price_data
+  - function __construct
+  - function apply_user_discount
+  - _...11 more_
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-product-variation-data-store-cpt.php`
+  - class WC_Product_Variation_Data_Store_CPT
+  - function read
+  - function create
+  - function update
+  - function get_attribute_summary
+  - function update_post_meta
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-shipping-zone-data-store.php`
+  - class WC_Shipping_Zone_Data_Store
+  - function create
+  - function update
+  - function read
+  - function read_multiple
+  - function delete
+  - _...12 more_
+- `wp-content/plugins/woocommerce/includes/data-stores/class-wc-webhook-data-store.php`
+  - class WC_Webhook_Data_Store
+  - function create
+  - function read
+  - function update
+  - function delete
+  - function get_api_version_number
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-cancelled-order.php`
+  - class WC_Email_Cancelled_Order
+  - function __construct
+  - function get_default_subject
+  - function get_default_heading
+  - function trigger
+  - function get_content_html
+  - _...4 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-customer-cancelled-order.php`
+  - class WC_Email_Customer_Cancelled_Order
+  - function __construct
+  - function get_default_subject
+  - function get_default_heading
+  - function trigger
+  - function get_content_html
+  - _...4 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-customer-completed-order.php`
+  - class WC_Email_Customer_Completed_Order
+  - function __construct
+  - function trigger
+  - function get_default_subject
+  - function get_default_heading
+  - function get_content_html
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-customer-failed-order.php`
+  - class WC_Email_Customer_Failed_Order
+  - function __construct
+  - function trigger
+  - function get_default_subject
+  - function get_default_heading
+  - function get_content_html
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-customer-fulfillment-created.php`
+  - class WC_Email_Customer_Fulfillment_Created
+  - function __construct
+  - function trigger
+  - function get_default_subject
+  - function get_default_heading
+  - function get_content_html
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-customer-fulfillment-deleted.php`
+  - class WC_Email_Customer_Fulfillment_Deleted
+  - function __construct
+  - function trigger
+  - function get_default_subject
+  - function get_default_heading
+  - function get_content_html
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-customer-fulfillment-updated.php`
+  - class WC_Email_Customer_Fulfillment_Updated
+  - function __construct
+  - function trigger
+  - function get_default_subject
+  - function get_default_heading
+  - function get_content_html
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-customer-invoice.php`
+  - class WC_Email_Customer_Invoice
+  - function __construct
+  - function get_default_subject
+  - function get_default_heading
+  - function get_subject
+  - function get_heading
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-customer-new-account.php`
+  - class WC_Email_Customer_New_Account
+  - function __construct
+  - function get_default_subject
+  - function get_default_heading
+  - function trigger
+  - function get_content_html
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-customer-note.php`
+  - class WC_Email_Customer_Note
+  - function __construct
+  - function get_default_subject
+  - function get_default_heading
+  - function trigger
+  - function get_content_html
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-customer-on-hold-order.php`
+  - class WC_Email_Customer_On_Hold_Order
+  - function __construct
+  - function get_default_subject
+  - function get_default_heading
+  - function trigger
+  - function get_content_html
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-customer-partially-refunded-order.php`
+  - class WC_Email_Customer_Partially_Refunded_Order
+  - function __construct
+  - function get_block_editor_email_template_content
+  - function get_subject
+  - function get_option_key
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-customer-pos-completed-order.php`
+  - class WC_Email_Customer_POS_Completed_Order
+  - function __construct
+  - function trigger
+  - function get_default_subject
+  - function get_default_heading
+  - function get_content_html
+  - _...9 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-customer-pos-refunded-order.php`
+  - class WC_Email_Customer_POS_Refunded_Order
+  - function __construct
+  - function get_default_subject
+  - function get_default_heading
+  - function get_subject
+  - function get_heading
+  - _...13 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-customer-processing-order.php`
+  - class WC_Email_Customer_Processing_Order
+  - function __construct
+  - function get_default_subject
+  - function get_default_heading
+  - function trigger
+  - function get_content_html
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-customer-refunded-order.php`
+  - class WC_Email_Customer_Refunded_Order
+  - function __construct
+  - function get_default_subject
+  - function get_default_heading
+  - function get_subject
+  - function get_heading
+  - _...9 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-customer-reset-password.php`
+  - class WC_Email_Customer_Reset_Password
+  - function __construct
+  - function get_default_subject
+  - function get_default_heading
+  - function trigger
+  - function get_content_html
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-failed-order.php`
+  - class WC_Email_Failed_Order
+  - function __construct
+  - function get_default_subject
+  - function get_default_heading
+  - function trigger
+  - function get_content_html
+  - _...4 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email-new-order.php`
+  - class WC_Email_New_Order
+  - function __construct
+  - function get_default_subject
+  - function get_default_heading
+  - function trigger
+  - function get_content_html
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/emails/class-wc-email.php`
+  - class WC_Email
+  - function __construct
+  - function handle_multipart
+  - function format_string
+  - function setup_locale
+  - function restore_locale
+  - _...42 more_
+- `wp-content/plugins/woocommerce/includes/export/abstract-wc-csv-batch-exporter.php`
+  - class WC_CSV_Batch_Exporter
+  - function __construct
+  - function get_headers_row_file
+  - function get_file
+  - function export
+  - function generate_file
+  - _...4 more_
+- `wp-content/plugins/woocommerce/includes/export/abstract-wc-csv-exporter.php`
+  - class WC_CSV_Exporter
+  - function prepare_data_to_export
+  - function get_column_names
+  - function set_column_names
+  - function get_columns_to_export
+  - function get_delimiter
+  - _...14 more_
+- `wp-content/plugins/woocommerce/includes/export/class-wc-product-csv-exporter.php`
+  - class WC_Product_CSV_Exporter
+  - function __construct
+  - function enable_meta_export
+  - function set_product_types_to_export
+  - function set_product_category_to_export
+  - function set_product_ids_to_export
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/gateways/bacs/class-wc-gateway-bacs.php`
+  - class WC_Gateway_BACS
+  - function __construct
+  - function init_form_fields
+  - function generate_account_details_html
+  - function save_account_details
+  - function thankyou_page
+  - _...4 more_
+- `wp-content/plugins/woocommerce/includes/gateways/cheque/class-wc-gateway-cheque.php`
+  - class WC_Gateway_Cheque
+  - function __construct
+  - function init_form_fields
+  - function thankyou_page
+  - function email_instructions
+  - function process_payment
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/gateways/class-wc-payment-gateway-cc.php`
+  - class WC_Payment_Gateway_CC
+  - function payment_fields
+  - function field_name
+  - function form
+- `wp-content/plugins/woocommerce/includes/gateways/class-wc-payment-gateway-echeck.php`
+  - class WC_Payment_Gateway_ECheck
+  - function payment_fields
+  - function form
+- `wp-content/plugins/woocommerce/includes/gateways/cod/class-wc-gateway-cod.php`
+  - class WC_Gateway_COD
+  - function __construct
+  - function init_form_fields
+  - function is_available
+  - function process_payment
+  - function thankyou_page
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/gateways/paypal/class-wc-gateway-paypal-buttons.php`
+  - class WC_Gateway_Paypal_Buttons
+  - function __construct
+  - function get_options
+  - function get_common_options
+  - function get_client_id
+  - function get_page_type
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/gateways/paypal/class-wc-gateway-paypal.php`
+  - class WC_Gateway_Paypal
+  - function get_instance
+  - function set_instance
+  - function __construct
+  - function update_addresses_in_order
+  - function maybe_onboard_with_transact
+  - _...27 more_
+- `wp-content/plugins/woocommerce/includes/gateways/paypal/includes/class-wc-gateway-paypal-api-handler.php`
+  - class WC_Gateway_Paypal_API_Handler
+  - class WC_Gateway_Paypal_Refund
+  - function get_capture_request
+  - function get_refund_request
+  - function do_capture
+  - function refund_transaction
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/gateways/paypal/includes/class-wc-gateway-paypal-constants.php` — class WC_Gateway_Paypal_Constants
+- `wp-content/plugins/woocommerce/includes/gateways/paypal/includes/class-wc-gateway-paypal-helper.php`
+  - class WC_Gateway_Paypal_Helper
+  - function is_paypal_gateway_available
+  - function is_orders_v2_migration_eligible
+  - function get_wc_order_from_paypal_custom_id
+  - function redact_data
+  - function mask_email
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/gateways/paypal/includes/class-wc-gateway-paypal-ipn-handler.php`
+  - class WC_Gateway_Paypal_IPN_Handler
+  - function __construct
+  - function check_response
+  - function valid_response
+  - function validate_ipn
+- `wp-content/plugins/woocommerce/includes/gateways/paypal/includes/class-wc-gateway-paypal-notices.php`
+  - class WC_Gateway_Paypal_Notices
+  - function __construct
+  - function add_paypal_notices
+  - function add_paypal_notices_on_payments_settings_page
+  - function add_paypal_migration_notice_on_payments_settings_page
+  - function add_paypal_migration_notice
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/gateways/paypal/includes/class-wc-gateway-paypal-pdt-handler.php`
+  - class WC_Gateway_Paypal_PDT_Handler
+  - function __construct
+  - function set_receiver_email
+  - function check_response
+  - function check_response_for_order
+- `wp-content/plugins/woocommerce/includes/gateways/paypal/includes/class-wc-gateway-paypal-request.php`
+  - class WC_Gateway_Paypal_Request
+  - function __construct
+  - function get_request_url
+  - function create_paypal_order
+  - function get_paypal_order_details
+  - function authorize_or_capture_payment
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/gateways/paypal/includes/class-wc-gateway-paypal-response.php` — class WC_Gateway_Paypal_Response
+- `wp-content/plugins/woocommerce/includes/gateways/paypal/includes/class-wc-gateway-paypal-transact-account-manager.php`
+  - class WC_Gateway_Paypal_Transact_Account_Manager
+  - function __construct
+  - function do_onboarding
+  - function get_transact_account_data
+- `wp-content/plugins/woocommerce/includes/gateways/paypal/includes/class-wc-gateway-paypal-webhook-handler.php`
+  - class WC_Gateway_Paypal_Webhook_Handler
+  - function __construct
+  - function process_webhook
+- `wp-content/plugins/woocommerce/includes/import/abstract-wc-product-importer.php`
+  - class WC_Product_Importer
+  - function get_raw_keys
+  - function get_mapped_keys
+  - function get_raw_data
+  - function get_parsed_data
+  - function get_params
+  - _...4 more_
+- `wp-content/plugins/woocommerce/includes/import/class-wc-product-csv-importer.php`
+  - class WC_Product_CSV_Importer
+  - function __construct
+  - function parse_relative_field
+  - function parse_id_field
+  - function parse_relative_comma_field
+  - function parse_comma_field
+  - _...19 more_
+- `wp-content/plugins/woocommerce/includes/integrations/maxmind-geolocation/class-wc-integration-maxmind-database-service.php`
+  - class WC_Integration_MaxMind_Database_Service
+  - function __construct
+  - function get_database_path
+  - function download_database
+  - function get_iso_country_code_for_ip
+- `wp-content/plugins/woocommerce/includes/integrations/maxmind-geolocation/class-wc-integration-maxmind-geolocation.php`
+  - class WC_Integration_MaxMind_Geolocation
+  - function __construct
+  - function admin_options
+  - function init_form_fields
+  - function get_database_service
+  - function validate_license_key_field
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-abstract-order-data-store-interface.php`
+  - interface WC_Abstract_Order_Data_Store_Interface
+  - function read_items
+  - function delete_items
+  - function get_payment_token_ids
+  - function update_payment_token_ids
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-coupon-data-store-interface.php`
+  - interface WC_Coupon_Data_Store_Interface
+  - function increase_usage_count
+  - function decrease_usage_count
+  - function get_usage_by_user_id
+  - function get_code_by_id
+  - function get_ids_by_code
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-customer-data-store-interface.php`
+  - interface WC_Customer_Data_Store_Interface
+  - function get_last_order
+  - function get_order_count
+  - function get_total_spent
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-customer-download-data-store-interface.php`
+  - interface WC_Customer_Download_Data_Store_Interface
+  - function delete_by_id
+  - function delete_by_order_id
+  - function delete_by_download_id
+  - function get_downloads
+  - function update_download_id
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-customer-download-log-data-store-interface.php`
+  - interface WC_Customer_Download_Log_Data_Store_Interface
+  - function get_download_logs
+  - function get_download_logs_for_permission
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-importer-interface.php`
+  - interface WC_Importer_Interface
+  - function import
+  - function get_raw_keys
+  - function get_mapped_keys
+  - function get_raw_data
+  - function get_parsed_data
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-log-handler-interface.php` — interface WC_Log_Handler_Interface, function handle
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-logger-interface.php`
+  - interface WC_Logger_Interface
+  - function add
+  - function log
+  - function emergency
+  - function alert
+  - function critical
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-object-data-store-interface.php`
+  - interface WC_Object_Data_Store_Interface
+  - function create
+  - function read
+  - function update
+  - function delete
+  - function read_meta
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-order-data-store-interface.php`
+  - interface WC_Order_Data_Store_Interface
+  - function get_total_refunded
+  - function get_total_tax_refunded
+  - function get_total_shipping_refunded
+  - function get_order_id_by_order_key
+  - function get_order_count
+  - _...10 more_
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-order-item-data-store-interface.php`
+  - interface WC_Order_Item_Data_Store_Interface
+  - function add_order_item
+  - function update_order_item
+  - function delete_order_item
+  - function update_metadata
+  - function add_metadata
+  - _...4 more_
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-order-item-product-data-store-interface.php` — interface WC_Order_Item_Product_Data_Store_Interface, function get_download_ids
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-order-item-type-data-store-interface.php` — interface WC_Order_Item_Type_Data_Store_Interface, function save_item_data
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-payment-token-data-store-interface.php`
+  - interface WC_Payment_Token_Data_Store_Interface
+  - function get_tokens
+  - function get_users_default_token
+  - function get_token_by_id
+  - function get_metadata
+  - function get_token_type_by_id
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-product-data-store-interface.php`
+  - interface WC_Product_Data_Store_Interface
+  - function get_on_sale_products
+  - function get_featured_product_ids
+  - function is_existing_sku
+  - function get_product_id_by_sku
+  - function get_starting_sales
+  - _...9 more_
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-product-variable-data-store-interface.php`
+  - interface WC_Product_Variable_Data_Store_Interface
+  - function child_has_weight
+  - function child_has_dimensions
+  - function child_is_in_stock
+  - function sync_variation_names
+  - function sync_managed_variation_stock_status
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-queue-interface.php`
+  - interface WC_Queue_Interface
+  - function add
+  - function schedule_single
+  - function schedule_recurring
+  - function schedule_cron
+  - function cancel
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-shipping-zone-data-store-interface.php`
+  - interface WC_Shipping_Zone_Data_Store_Interface
+  - function get_methods
+  - function get_method_count
+  - function add_method
+  - function delete_method
+  - function get_method
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/interfaces/class-wc-webhooks-data-store-interface.php`
+  - interface WC_Webhook_Data_Store_Interface
+  - function get_api_version_number
+  - function get_webhooks_ids
+- `wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-order.php`
+  - class WC_Abstract_Legacy_Order
+  - function add_coupon
+  - function add_tax
+  - function add_shipping
+  - function add_fee
+  - function update_product
+  - _...29 more_
+- `wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-payment-token.php`
+  - class WC_Legacy_Payment_Token
+  - function set_type
+  - function read
+  - function update
+  - function create
+- `wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-product.php`
+  - class WC_Abstract_Legacy_Product
+  - function __isset
+  - function __get
+  - function get_variation_default_attributes
+  - function get_gallery_attachment_ids
+  - function set_stock
+  - _...34 more_
+- `wp-content/plugins/woocommerce/includes/legacy/class-wc-legacy-cart.php`
+  - class WC_Legacy_Cart
+  - function __isset
+  - function __set
+  - function get_cart_from_session
+  - function maybe_set_cart_cookies
+  - function set_session
+  - _...18 more_
+- `wp-content/plugins/woocommerce/includes/legacy/class-wc-legacy-coupon.php`
+  - class WC_Legacy_Coupon
+  - function __isset
+  - function __get
+  - function format_array
+  - function apply_before_tax
+  - function enable_free_shipping
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/legacy/class-wc-legacy-customer.php`
+  - class WC_Legacy_Customer
+  - function __isset
+  - function __get
+  - function __set
+  - function set_location
+  - function get_default_country
+  - _...6 more_
+- `wp-content/plugins/woocommerce/includes/legacy/class-wc-legacy-shipping-zone.php`
+  - class WC_Legacy_Shipping_Zone
+  - function get_zone_id
+  - function read
+  - function update
+  - function create
+- `wp-content/plugins/woocommerce/includes/legacy/class-wc-legacy-webhook.php`
+  - class WC_Legacy_Webhook
+  - function __isset
+  - function __get
+  - function get_post_data
+  - function update_status
+- `wp-content/plugins/woocommerce/includes/libraries/class-wc-eval-math.php`
+  - class WC_Eval_Math
+  - class WC_Eval_Math_Stack
+  - function evaluate
+  - function push
+  - function pop
+  - function last
+- `wp-content/plugins/woocommerce/includes/libraries/wp-async-request.php`
+  - class WP_Async_Request
+  - function __construct
+  - function data
+  - function dispatch
+  - function maybe_handle
+- `wp-content/plugins/woocommerce/includes/libraries/wp-background-process.php`
+  - class WP_Background_Process
+  - function __construct
+  - function dispatch
+  - function push_to_queue
+  - function save
+  - function update
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/log-handlers/class-wc-log-handler-db.php`
+  - class WC_Log_Handler_DB
+  - function handle
+  - function flush
+  - function clear
+  - function delete
+  - function delete_logs_before_timestamp
+- `wp-content/plugins/woocommerce/includes/log-handlers/class-wc-log-handler-email.php`
+  - class WC_Log_Handler_Email
+  - function __construct
+  - function set_threshold
+  - function handle
+  - function send_log_email
+  - function add_email
+- `wp-content/plugins/woocommerce/includes/log-handlers/class-wc-log-handler-file.php`
+  - class WC_Log_Handler_File
+  - function __construct
+  - function __destruct
+  - function handle
+  - function clear
+  - function remove
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/payment-tokens/class-wc-payment-token-cc.php`
+  - class WC_Payment_Token_CC
+  - function get_display_name
+  - function validate
+  - function get_card_type
+  - function set_card_type
+  - function get_expiry_year
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/payment-tokens/class-wc-payment-token-echeck.php`
+  - class WC_Payment_Token_ECheck
+  - function get_display_name
+  - function validate
+  - function get_last4
+  - function set_last4
+- `wp-content/plugins/woocommerce/includes/product-usage/class-wc-product-usage-rule-set.php`
+  - class WC_Product_Usage_Rule_Set
+  - function __construct
+  - function get_rule
+- `wp-content/plugins/woocommerce/includes/product-usage/class-wc-product-usage.php`
+  - class WC_Product_Usage
+  - function load
+  - function get_rules_for_product
+- `wp-content/plugins/woocommerce/includes/queue/class-wc-action-queue.php`
+  - class WC_Action_Queue
+  - function add
+  - function schedule_single
+  - function schedule_recurring
+  - function schedule_cron
+  - function cancel
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/queue/class-wc-queue.php` — class WC_Queue, function instance
+- `wp-content/plugins/woocommerce/includes/react-admin/class-experimental-abtest.php`
+  - class Experimental_Abtest
+  - function __construct
+  - function in_treatment
+  - function get_variation
+  - function request_assignment
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Telemetry/class-wc-rest-telemetry-controller.php`
+  - class WC_REST_Telemetry_Controller
+  - function register_routes
+  - function telemetry_permissions_check
+  - function record_usage_data
+  - function get_usage_data
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-coupons-v1-controller.php`
+  - class WC_REST_Coupons_V1_Controller
+  - function __construct
+  - function register_routes
+  - function query_args
+  - function prepare_item_for_response
+  - function create_item
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-customer-downloads-v1-controller.php`
+  - class WC_REST_Customer_Downloads_V1_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function prepare_item_for_response
+  - function get_item_schema
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-customers-v1-controller.php`
+  - class WC_REST_Customers_V1_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function create_item_permissions_check
+  - function get_item_permissions_check
+  - function update_item_permissions_check
+  - _...10 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-order-notes-v1-controller.php`
+  - class WC_REST_Order_Notes_V1_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function create_item_permissions_check
+  - function get_item_permissions_check
+  - function delete_item_permissions_check
+  - _...7 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-order-refunds-v1-controller.php`
+  - class WC_REST_Order_Refunds_V1_Controller
+  - function __construct
+  - function register_routes
+  - function prepare_item_for_response
+  - function query_args
+  - function create_item
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-orders-v1-controller.php`
+  - class WC_REST_Orders_V1_Controller
+  - function __construct
+  - function register_routes
+  - function prepare_item_for_response
+  - function query_args
+  - function create_item
+  - _...6 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-product-attribute-terms-v1-controller.php`
+  - class WC_REST_Product_Attribute_Terms_V1_Controller
+  - function register_routes
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php`
+  - class WC_REST_Product_Attributes_V1_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function create_item_permissions_check
+  - function get_item_permissions_check
+  - function update_item_permissions_check
+  - _...10 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-product-categories-v1-controller.php`
+  - class WC_REST_Product_Categories_V1_Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-product-reviews-v1-controller.php`
+  - class WC_REST_Product_Reviews_V1_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_item_permissions_check
+  - function create_item_permissions_check
+  - function update_item_permissions_check
+  - _...9 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-product-shipping-classes-v1-controller.php`
+  - class WC_REST_Product_Shipping_Classes_V1_Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-product-tags-v1-controller.php`
+  - class WC_REST_Product_Tags_V1_Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-products-v1-controller.php`
+  - class WC_REST_Products_V1_Controller
+  - function __construct
+  - function register_routes
+  - function query_args
+  - function prepare_item_for_response
+  - function create_item
+  - _...6 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-report-sales-v1-controller.php`
+  - class WC_REST_Report_Sales_V1_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function prepare_item_for_response
+  - function get_item_schema
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-report-top-sellers-v1-controller.php`
+  - class WC_REST_Report_Top_Sellers_V1_Controller
+  - function get_items
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-reports-v1-controller.php`
+  - class WC_REST_Reports_V1_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function prepare_item_for_response
+  - function get_item_schema
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-tax-classes-v1-controller.php`
+  - class WC_REST_Tax_Classes_V1_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function create_item_permissions_check
+  - function delete_item_permissions_check
+  - function get_items
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-taxes-v1-controller.php`
+  - class WC_REST_Taxes_V1_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function create_item_permissions_check
+  - function get_item_permissions_check
+  - _...11 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-webhook-deliveries-v1-controller.php`
+  - class WC_REST_Webhook_Deliveries_V1_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_item_permissions_check
+  - function get_items
+  - function get_item
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version1/class-wc-rest-webhooks-v1-controller.php`
+  - class WC_REST_Webhooks_V1_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function create_item_permissions_check
+  - function get_item_permissions_check
+  - function update_item_permissions_check
+  - _...10 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-coupons-v2-controller.php`
+  - class WC_REST_Coupons_V2_Controller
+  - function register_routes
+  - function prepare_object_for_response
+  - function get_item_schema
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-customer-downloads-v2-controller.php`
+  - class WC_REST_Customer_Downloads_V2_Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-customers-v2-controller.php`
+  - class WC_REST_Customers_V2_Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-network-orders-v2-controller.php`
+  - class WC_REST_Network_Orders_V2_Controller
+  - function register_routes
+  - function get_public_item_schema
+  - function network_orders_permissions_check
+  - function network_orders
+  - function network_orders_filter_args
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-order-notes-v2-controller.php`
+  - class WC_REST_Order_Notes_V2_Controller
+  - function get_items
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-order-refunds-v2-controller.php`
+  - class WC_REST_Order_Refunds_V2_Controller
+  - function __construct
+  - function register_routes
+  - function prepare_object_for_response
+  - function get_item_schema
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-orders-v2-controller.php`
+  - class WC_REST_Orders_V2_Controller
+  - function register_routes
+  - function get_item_permissions_check
+  - function update_item_permissions_check
+  - function delete_item_permissions_check
+  - function prepare_object_for_response
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-payment-gateways-v2-controller.php`
+  - class WC_REST_Payment_Gateways_V2_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_item_permissions_check
+  - function update_items_permissions_check
+  - function get_items
+  - _...7 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-product-attribute-terms-v2-controller.php` — class WC_REST_Product_Attribute_Terms_V2_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-product-attributes-v2-controller.php` — class WC_REST_Product_Attributes_V2_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-product-brands-v2-controller.php` — class WC_REST_Product_Brands_V2_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-product-categories-v2-controller.php`
+  - class WC_REST_Product_Categories_V2_Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-product-reviews-v2-controller.php`
+  - class WC_REST_Product_Reviews_V2_Controller
+  - function register_routes
+  - function batch_items_permissions_check
+  - function prepare_item_for_response
+  - function batch_items
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-product-shipping-classes-v2-controller.php` — class WC_REST_Product_Shipping_Classes_V2_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-product-tags-v2-controller.php` — class WC_REST_Product_Tags_V2_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php`
+  - class WC_REST_Product_Variations_V2_Controller
+  - function register_routes
+  - function get_item_permissions_check
+  - function update_item_permissions_check
+  - function delete_item_permissions_check
+  - function prepare_object_for_response
+  - _...4 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-products-v2-controller.php`
+  - class WC_REST_Products_V2_Controller
+  - function __construct
+  - function register_routes
+  - function batch_items
+  - function prepare_object_for_response
+  - function get_related_products
+  - _...4 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-report-sales-v2-controller.php` — class WC_REST_Report_Sales_V2_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-report-top-sellers-v2-controller.php` — class WC_REST_Report_Top_Sellers_V2_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-reports-v2-controller.php` — class WC_REST_Reports_V2_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-setting-options-v2-controller.php`
+  - class WC_REST_Setting_Options_V2_Controller
+  - function register_routes
+  - function get_item
+  - function get_items
+  - function get_group_settings
+  - function get_setting
+  - _...11 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-settings-v2-controller.php`
+  - class WC_REST_Settings_V2_Controller
+  - function register_routes
+  - function get_items
+  - function prepare_item_for_response
+  - function filter_group
+  - function allowed_group_keys
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-shipping-methods-v2-controller.php`
+  - class WC_REST_Shipping_Methods_V2_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_item_permissions_check
+  - function get_items
+  - function get_item
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-shipping-zone-locations-v2-controller.php`
+  - class WC_REST_Shipping_Zone_Locations_V2_Controller
+  - function register_routes
+  - function get_items
+  - function update_items
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-shipping-zone-methods-v2-controller.php`
+  - class WC_REST_Shipping_Zone_Methods_V2_Controller
+  - function register_routes
+  - function get_item
+  - function get_items
+  - function create_item
+  - function delete_item
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-shipping-zones-v2-controller.php`
+  - class WC_REST_Shipping_Zones_V2_Controller
+  - function register_routes
+  - function get_item
+  - function get_items
+  - function create_item
+  - function update_item
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-system-status-tools-v2-controller.php`
+  - class WC_REST_System_Status_Tools_V2_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_item_permissions_check
+  - function update_item_permissions_check
+  - function get_tools
+  - _...7 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-system-status-v2-controller.php`
+  - class WC_REST_System_Status_V2_Controller
+  - function register_cache_clean
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function get_item_schema
+  - _...17 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-tax-classes-v2-controller.php`
+  - class WC_REST_Tax_Classes_V2_Controller
+  - function register_routes
+  - function get_item
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-taxes-v2-controller.php` — class WC_REST_Taxes_V2_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-webhook-deliveries-v2-controller.php`
+  - class WC_REST_Webhook_Deliveries_V2_Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version2/class-wc-rest-webhooks-v2-controller.php`
+  - class WC_REST_Webhooks_V2_Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-controller.php`
+  - class WC_REST_Controller
+  - function get_endpoint_args_for_item_schema
+  - function batch_items
+  - function validate_setting_text_field
+  - function validate_setting_select_field
+  - function validate_setting_multiselect_field
+  - _...6 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-coupons-controller.php` — class WC_REST_Coupons_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-crud-controller.php`
+  - class WC_REST_CRUD_Controller
+  - function get_item_permissions_check
+  - function update_item_permissions_check
+  - function delete_item_permissions_check
+  - function get_item
+  - function create_item
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-customer-downloads-controller.php` — class WC_REST_Customer_Downloads_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-customers-controller.php` — class WC_REST_Customers_Controller, function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-data-continents-controller.php`
+  - class WC_REST_Data_Continents_Controller
+  - function __construct
+  - function register_routes
+  - function get_continent
+  - function get_items
+  - function get_item
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-data-controller.php`
+  - class WC_REST_Data_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_item_permissions_check
+  - function get_items
+  - function prepare_item_for_response
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-data-countries-controller.php`
+  - class WC_REST_Data_Countries_Controller
+  - function __construct
+  - function register_routes
+  - function get_country
+  - function get_items
+  - function get_item
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-data-currencies-controller.php`
+  - class WC_REST_Data_Currencies_Controller
+  - function __construct
+  - function register_routes
+  - function get_currency
+  - function get_items
+  - function get_item
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-layout-templates-controller.php`
+  - class WC_REST_Layout_Templates_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_item_permissions_check
+  - function get_items
+  - function get_item
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-network-orders-controller.php` — class WC_REST_Network_Orders_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-order-notes-controller.php`
+  - class WC_REST_Order_Notes_Controller
+  - function prepare_item_for_response
+  - function create_item
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-order-refunds-controller.php` — class WC_REST_Order_Refunds_Controller, function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-orders-controller.php`
+  - class WC_REST_Orders_Controller
+  - function get_item_schema
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-payment-gateways-controller.php`
+  - class WC_REST_Payment_Gateways_Controller
+  - function prepare_item_for_response
+  - function get_settings
+  - function get_item_schema
+  - function validate_setting_multiselect_field
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-paypal-buttons-controller.php`
+  - class WC_REST_Paypal_Buttons_Controller
+  - function register_routes
+  - function validate_create_order_request
+  - function validate_cancel_payment_request
+  - function create_order
+  - function cancel_payment
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-paypal-standard-controller.php`
+  - class WC_REST_Paypal_Standard_Controller
+  - function register_routes
+  - function validate_shipping_callback_request
+  - function process_shipping_callback
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-paypal-webhooks-controller.php`
+  - class WC_REST_Paypal_Webhooks_Controller
+  - function register_routes
+  - function validate_webhook
+  - function process_webhook
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-posts-controller.php`
+  - class WC_REST_Posts_Controller
+  - function get_items_permissions_check
+  - function create_item_permissions_check
+  - function get_item_permissions_check
+  - function update_item_permissions_check
+  - function delete_item_permissions_check
+  - _...7 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-product-attribute-terms-controller.php` — class WC_REST_Product_Attribute_Terms_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-product-attributes-controller.php` — class WC_REST_Product_Attributes_Controller, function create_item
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-product-brands-controller.php` — class WC_REST_Product_Brands_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-product-categories-controller.php`
+  - class WC_REST_Product_Categories_Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-product-custom-fields-controller.php`
+  - class WC_REST_Product_Custom_Fields_Controller
+  - function register_routes
+  - function get_item_names
+  - function get_items_permissions_check
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-product-reviews-controller.php`
+  - class WC_REST_Product_Reviews_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_item_permissions_check
+  - function create_item_permissions_check
+  - function update_item_permissions_check
+  - _...10 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-product-shipping-classes-controller.php`
+  - class WC_REST_Product_Shipping_Classes_Controller
+  - function register_routes
+  - function suggest_slug
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-product-tags-controller.php` — class WC_REST_Product_Tags_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-product-variations-controller.php`
+  - class WC_REST_Product_Variations_Controller
+  - function register_routes
+  - function prepare_object_for_response
+  - function get_item_schema
+  - function get_collection_params
+  - function generate
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-products-catalog-controller.php`
+  - class WC_REST_Products_Catalog_Controller
+  - function register_routes
+  - function request_catalog
+  - function request_catalog_permissions_check
+  - function validate_fields_arg
+  - function sanitize_fields_arg
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-products-controller.php`
+  - class WC_REST_Products_Controller
+  - function register_routes
+  - function duplicate_product
+  - function add_search_criteria_to_wp_query_join
+  - function add_search_criteria_to_wp_query_where
+  - function exclude_product_statuses
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-refunds-controller.php`
+  - class WC_REST_Refunds_Controller
+  - function register_routes
+  - function prepare_object_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-report-coupons-totals-controller.php`
+  - class WC_REST_Report_Coupons_Totals_Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-report-customers-totals-controller.php`
+  - class WC_REST_Report_Customers_Totals_Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-report-orders-totals-controller.php`
+  - class WC_REST_Report_Orders_Totals_Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-report-products-totals-controller.php`
+  - class WC_REST_Report_Products_Totals_Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-report-reviews-totals-controller.php`
+  - class WC_REST_Report_Reviews_Totals_Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-report-sales-controller.php` — class WC_REST_Report_Sales_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-report-top-sellers-controller.php` — class WC_REST_Report_Top_Sellers_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-reports-controller.php` — class WC_REST_Reports_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-setting-options-controller.php`
+  - class WC_REST_Setting_Options_Controller
+  - function get_setting
+  - function allowed_setting_keys
+  - function get_group_settings
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-settings-controller.php`
+  - class WC_REST_Settings_Controller
+  - function register_routes
+  - function update_items_permissions_check
+  - function update_item
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-shipping-methods-controller.php` — class WC_REST_Shipping_Methods_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-shipping-zone-locations-controller.php` — class WC_REST_Shipping_Zone_Locations_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-shipping-zone-methods-controller.php` — class WC_REST_Shipping_Zone_Methods_Controller, function get_item_schema
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-shipping-zones-controller-base.php`
+  - class WC_REST_Shipping_Zones_Controller_Base
+  - function get_items_permissions_check
+  - function create_item_permissions_check
+  - function update_items_permissions_check
+  - function delete_items_permissions_check
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-shipping-zones-controller.php` — class WC_REST_Shipping_Zones_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-system-status-controller.php` — class WC_REST_System_Status_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-system-status-tools-controller.php` — class WC_REST_System_Status_Tools_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-tax-classes-controller.php` — class WC_REST_Tax_Classes_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-taxes-controller.php`
+  - class WC_REST_Taxes_Controller
+  - function get_item_schema
+  - function create_item
+  - function update_item
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-terms-controller.php`
+  - class WC_REST_Terms_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function create_item_permissions_check
+  - function get_item_permissions_check
+  - function update_item_permissions_check
+  - _...8 more_
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-variations-controller.php` — class WC_REST_Variations_Controller, function register_routes
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version3/class-wc-rest-webhooks-controller.php` — class WC_REST_Webhooks_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version4/class-wc-rest-settings-v4-controller.php` — class WC_REST_Settings_V4_Controller
+- `wp-content/plugins/woocommerce/includes/rest-api/Controllers/Version4/class-wc-rest-v4-controller.php` — class WC_REST_V4_Controller, function prepare_response_for_collection
+- `wp-content/plugins/woocommerce/includes/rest-api/Package.php`
+  - class Package
+  - function init
+  - function get_version
+  - function get_path
+- `wp-content/plugins/woocommerce/includes/rest-api/Server.php`
+  - class Server
+  - function init
+  - function register_rest_routes
+  - function get_path
+- `wp-content/plugins/woocommerce/includes/rest-api/Utilities/ImageAttachment.php`
+  - class ImageAttachment
+  - function __construct
+  - function upload_image_from_src
+  - function update_alt_text
+  - function update_name
+- `wp-content/plugins/woocommerce/includes/rest-api/Utilities/SingletonTrait.php`
+  - class SingletonTrait
+  - function instance
+  - function __wakeup
+- `wp-content/plugins/woocommerce/includes/shipping/flat-rate/class-wc-shipping-flat-rate.php`
+  - class WC_Shipping_Flat_Rate
+  - function __construct
+  - function init
+  - function fee
+  - function calculate_shipping
+  - function get_package_item_qty
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/shipping/free-shipping/class-wc-shipping-free-shipping.php`
+  - class WC_Shipping_Free_Shipping
+  - function __construct
+  - function init
+  - function sanitize_cost
+  - function init_form_fields
+  - function get_instance_form_fields
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/shipping/legacy-flat-rate/class-wc-shipping-legacy-flat-rate.php`
+  - class WC_Shipping_Legacy_Flat_Rate
+  - function __construct
+  - function process_admin_options
+  - function get_option_key
+  - function init
+  - function init_form_fields
+  - _...7 more_
+- `wp-content/plugins/woocommerce/includes/shipping/legacy-free-shipping/class-wc-shipping-legacy-free-shipping.php`
+  - class WC_Shipping_Legacy_Free_Shipping
+  - function __construct
+  - function process_admin_options
+  - function get_option_key
+  - function init
+  - function init_form_fields
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/shipping/legacy-international-delivery/class-wc-shipping-legacy-international-delivery.php`
+  - class WC_Shipping_Legacy_International_Delivery
+  - function __construct
+  - function get_option_key
+  - function init_form_fields
+  - function is_available
+- `wp-content/plugins/woocommerce/includes/shipping/legacy-local-delivery/class-wc-shipping-legacy-local-delivery.php`
+  - class WC_Shipping_Legacy_Local_Delivery
+  - function __construct
+  - function process_admin_options
+  - function get_option_key
+  - function init
+  - function calculate_shipping
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/shipping/legacy-local-pickup/class-wc-shipping-legacy-local-pickup.php`
+  - class WC_Shipping_Legacy_Local_Pickup
+  - function __construct
+  - function process_admin_options
+  - function get_option_key
+  - function init
+  - function calculate_shipping
+  - _...5 more_
+- `wp-content/plugins/woocommerce/includes/shipping/local-pickup/class-wc-shipping-local-pickup.php`
+  - class WC_Shipping_Local_Pickup
+  - function __construct
+  - function init
+  - function calculate_shipping
+  - function sanitize_cost
+  - function init_form_fields
+- `wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-cart.php`
+  - class WC_Shortcode_Cart
+  - function calculate_shipping
+  - function output
+- `wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-checkout.php`
+  - class WC_Shortcode_Checkout
+  - function get
+  - function output
+- `wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-my-account.php`
+  - class WC_Shortcode_My_Account
+  - function get
+  - function output
+  - function view_order
+  - function edit_account
+  - function edit_address
+  - _...6 more_
+- `wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-order-tracking.php`
+  - class WC_Shortcode_Order_Tracking
+  - function get
+  - function output
+- `wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-products.php`
+  - class WC_Shortcode_Products
+  - function __construct
+  - function get_attributes
+  - function get_query_args
+  - function get_type
+  - function get_content
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/theme-support/class-wc-twenty-eleven.php`
+  - class WC_Twenty_Eleven
+  - function init
+  - function output_content_wrapper
+  - function output_content_wrapper_end
+- `wp-content/plugins/woocommerce/includes/theme-support/class-wc-twenty-fifteen.php`
+  - class WC_Twenty_Fifteen
+  - function init
+  - function output_content_wrapper
+  - function output_content_wrapper_end
+- `wp-content/plugins/woocommerce/includes/theme-support/class-wc-twenty-fourteen.php`
+  - class WC_Twenty_Fourteen
+  - function init
+  - function output_content_wrapper
+  - function output_content_wrapper_end
+- `wp-content/plugins/woocommerce/includes/theme-support/class-wc-twenty-nineteen.php`
+  - class WC_Twenty_Nineteen
+  - function init
+  - function output_content_wrapper
+  - function output_content_wrapper_end
+  - function enqueue_styles
+  - function tweak_theme_features
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/theme-support/class-wc-twenty-seventeen.php`
+  - class WC_Twenty_Seventeen
+  - function init
+  - function enqueue_styles
+  - function output_content_wrapper
+  - function output_content_wrapper_end
+  - function custom_colors_css
+- `wp-content/plugins/woocommerce/includes/theme-support/class-wc-twenty-sixteen.php`
+  - class WC_Twenty_Sixteen
+  - function init
+  - function output_content_wrapper
+  - function output_content_wrapper_end
+- `wp-content/plugins/woocommerce/includes/theme-support/class-wc-twenty-ten.php`
+  - class WC_Twenty_Ten
+  - function init
+  - function output_content_wrapper
+  - function output_content_wrapper_end
+- `wp-content/plugins/woocommerce/includes/theme-support/class-wc-twenty-thirteen.php`
+  - class WC_Twenty_Thirteen
+  - function init
+  - function output_content_wrapper
+  - function output_content_wrapper_end
+- `wp-content/plugins/woocommerce/includes/theme-support/class-wc-twenty-twelve.php`
+  - class WC_Twenty_Twelve
+  - function init
+  - function output_content_wrapper
+  - function output_content_wrapper_end
+  - function enqueue_styles
+- `wp-content/plugins/woocommerce/includes/theme-support/class-wc-twenty-twenty-one.php`
+  - class WC_Twenty_Twenty_One
+  - function init
+  - function enqueue_styles
+  - function enqueue_admin_styles
+- `wp-content/plugins/woocommerce/includes/theme-support/class-wc-twenty-twenty-three.php`
+  - class WC_Twenty_Twenty_Three
+  - function init
+  - function enqueue_styles
+  - function before_order_review
+  - function after_order_review
+- `wp-content/plugins/woocommerce/includes/theme-support/class-wc-twenty-twenty-two.php`
+  - class WC_Twenty_Twenty_Two
+  - function init
+  - function enqueue_styles
+  - function before_order_review
+  - function after_order_review
+- `wp-content/plugins/woocommerce/includes/theme-support/class-wc-twenty-twenty.php`
+  - class WC_Twenty_Twenty
+  - function init
+  - function output_content_wrapper
+  - function output_content_wrapper_end
+  - function set_white_background
+  - function enqueue_styles
+- `wp-content/plugins/woocommerce/includes/tracks/class-wc-site-tracking.php`
+  - class WC_Site_Tracking
+  - function is_tracking_enabled
+  - function register_scripts
+  - function enqueue_scripts
+  - function add_tracking_function
+  - function add_enable_tracking_function
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/tracks/class-wc-tracks-client.php`
+  - class WC_Tracks_Client
+  - function init
+  - function maybe_set_identity_cookie
+  - function record_event
+  - function record_event_batched
+  - function record_pixel
+  - _...6 more_
+- `wp-content/plugins/woocommerce/includes/tracks/class-wc-tracks-event.php`
+  - class WC_Tracks_Event
+  - function __construct
+  - function record
+  - function validate_and_sanitize
+  - function build_pixel_url
+  - function event_name_is_valid
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/tracks/class-wc-tracks-footer-pixel.php`
+  - class WC_Tracks_Footer_Pixel
+  - function instance
+  - function __construct
+  - function record_event
+  - function add_event
+  - function render_tracking_pixels
+  - _...3 more_
+- `wp-content/plugins/woocommerce/includes/tracks/class-wc-tracks.php`
+  - class WC_Tracks
+  - function get_products_count
+  - function get_blog_details
+  - function get_server_details
+  - function get_role_details
+  - function record_event
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/tracks/events/class-wc-admin-setup-wizard-tracking.php`
+  - class WC_Admin_Setup_Wizard_Tracking
+  - function init
+  - function get_current_step
+  - function add_footer_scripts
+  - function dequeue_non_allowed_scripts
+  - function track_start
+  - _...10 more_
+- `wp-content/plugins/woocommerce/includes/tracks/events/class-wc-coupon-tracking.php`
+  - class WC_Coupon_Tracking
+  - function init
+  - function track_coupon_updated
+- `wp-content/plugins/woocommerce/includes/tracks/events/class-wc-coupons-tracking.php`
+  - class WC_Coupons_Tracking
+  - function init
+  - function tracks_coupons_bulk_actions
+  - function tracks_coupons_events
+- `wp-content/plugins/woocommerce/includes/tracks/events/class-wc-extensions-tracking.php`
+  - class WC_Extensions_Tracking
+  - function init
+  - function track_extensions_page
+  - function track_extensions_page_connection_error
+  - function track_helper_connection_start
+  - function track_helper_connection_cancelled
+  - _...4 more_
+- `wp-content/plugins/woocommerce/includes/tracks/events/class-wc-importer-tracking.php`
+  - class WC_Importer_Tracking
+  - function init
+  - function track_product_importer
+  - function track_product_importer_start
+  - function track_product_importer_complete
+- `wp-content/plugins/woocommerce/includes/tracks/events/class-wc-order-tracking.php`
+  - class WC_Order_Tracking
+  - function init
+  - function track_order_viewed
+- `wp-content/plugins/woocommerce/includes/tracks/events/class-wc-orders-tracking.php`
+  - class WC_Orders_Tracking
+  - function init
+  - function track_order_search
+  - function track_search_in_orders_list
+  - function track_orders_view
+  - function track_order_status_change
+  - _...4 more_
+- `wp-content/plugins/woocommerce/includes/tracks/events/class-wc-product-collection-block-tracking.php`
+  - class WC_Product_Collection_Block_Tracking
+  - function init
+  - function track_collection_instances
+- `wp-content/plugins/woocommerce/includes/tracks/events/class-wc-products-tracking.php`
+  - class WC_Products_Tracking
+  - function init
+  - function track_products_view
+  - function track_categories_and_tags_view
+  - function track_product_updated
+  - function track_product_updated_client_side
+  - _...8 more_
+- `wp-content/plugins/woocommerce/includes/tracks/events/class-wc-settings-tracking.php`
+  - class WC_Settings_Tracking
+  - function init
+  - function add_option_to_list_and_track_setting_change
+  - function add_option_to_list
+  - function track_setting_change
+  - function send_settings_change_event
+  - _...2 more_
+- `wp-content/plugins/woocommerce/includes/tracks/events/class-wc-status-tracking.php`
+  - class WC_Status_Tracking
+  - function init
+  - function track_status_view
+- `wp-content/plugins/woocommerce/includes/tracks/events/class-wc-theme-tracking.php`
+  - class WC_Theme_Tracking
+  - function init
+  - function track_initial_theme
+  - function track_activated_theme
+- `wp-content/plugins/woocommerce/includes/traits/trait-wc-item-totals.php`
+  - class WC_Item_Totals
+  - function get_rounded_items_total
+  - function round_item_subtotal
+- `wp-content/plugins/woocommerce/includes/walkers/class-wc-product-cat-dropdown-walker.php`
+  - class WC_Product_Cat_Dropdown_Walker
+  - function start_el
+  - function display_element
+- `wp-content/plugins/woocommerce/includes/walkers/class-wc-product-cat-list-walker.php`
+  - class WC_Product_Cat_List_Walker
+  - function start_lvl
+  - function end_lvl
+  - function start_el
+  - function end_el
+  - function display_element
+- `wp-content/plugins/woocommerce/includes/wccom-site/class-wc-wccom-site-installer.php`
+  - class WC_WCCOM_Site_Installer
+  - function get_wporg_plugin_main_file
+  - function get_plugin_info
+  - function get_wp_upgrader
+- `wp-content/plugins/woocommerce/includes/wccom-site/class-wc-wccom-site.php`
+  - class WC_WCCOM_Site
+  - function load
+  - function authenticate_wccom
+  - function register_rest_namespace
+- `wp-content/plugins/woocommerce/includes/wccom-site/installation/class-wc-wccom-site-installation-manager.php`
+  - class WC_WCCOM_Site_Installation_Manager
+  - function __construct
+  - function get_installation_status
+  - function run_installation
+  - function reset_installation
+- `wp-content/plugins/woocommerce/includes/wccom-site/installation/class-wc-wccom-site-installation-state-storage.php`
+  - class WC_WCCOM_Site_Installation_State_Storage
+  - function get_state
+  - function save_state
+  - function delete_state
+- `wp-content/plugins/woocommerce/includes/wccom-site/installation/class-wc-wccom-site-installation-state.php`
+  - class WC_WCCOM_Site_Installation_State
+  - function initiate_existing
+  - function initiate_new
+  - function get_product_id
+  - function get_idempotency_key
+  - function get_last_step_name
+  - _...20 more_
+- `wp-content/plugins/woocommerce/includes/wccom-site/installation/installation-steps/class-wc-wccom-site-installation-step-activate-product.php`
+  - class WC_WCCOM_Site_Installation_Step_Activate_Product
+  - function __construct
+  - function run
+- `wp-content/plugins/woocommerce/includes/wccom-site/installation/installation-steps/class-wc-wccom-site-installation-step-download-product.php`
+  - class WC_WCCOM_Site_Installation_Step_Download_Product
+  - function __construct
+  - function run
+- `wp-content/plugins/woocommerce/includes/wccom-site/installation/installation-steps/class-wc-wccom-site-installation-step-get-product-info.php`
+  - class WC_WCCOM_Site_Installation_Step_Get_Product_Info
+  - function __construct
+  - function run
+- `wp-content/plugins/woocommerce/includes/wccom-site/installation/installation-steps/class-wc-wccom-site-installation-step-move-product.php`
+  - class WC_WCCOM_Site_Installation_Step_Move_Product
+  - function __construct
+  - function run
+- `wp-content/plugins/woocommerce/includes/wccom-site/installation/installation-steps/class-wc-wccom-site-installation-step-unpack-product.php`
+  - class WC_WCCOM_Site_Installation_Step_Unpack_Product
+  - function __construct
+  - function run
+- `wp-content/plugins/woocommerce/includes/wccom-site/installation/installation-steps/interface-installaton-step.php`
+  - interface WC_WCCOM_Site_Installation_Step
+  - function __construct
+  - function run
+- `wp-content/plugins/woocommerce/includes/wccom-site/rest-api/class-wc-rest-wccom-site-installer-error-codes.php` — class WC_REST_WCCOM_Site_Installer_Error_Codes
+- `wp-content/plugins/woocommerce/includes/wccom-site/rest-api/class-wc-rest-wccom-site-installer-error.php`
+  - class WC_REST_WCCOM_Site_Installer_Error
+  - function __construct
+  - function get_error_code
+  - function get_error_message
+  - function get_http_code
+- `wp-content/plugins/woocommerce/includes/wccom-site/rest-api/endpoints/abstract-wc-rest-wccom-site-controller.php` — class WC_REST_WCCOM_Site_Controller, function check_permission
+- `wp-content/plugins/woocommerce/includes/wccom-site/rest-api/endpoints/class-wc-rest-wccom-site-connection-controller.php`
+  - class WC_REST_WCCOM_Site_Connection_Controller
+  - function register_routes
+  - function user_has_permission
+  - function handle_disconnect_request
+  - function handle_status_request
+- `wp-content/plugins/woocommerce/includes/wccom-site/rest-api/endpoints/class-wc-rest-wccom-site-installer-controller.php`
+  - class WC_REST_WCCOM_Site_Installer_Controller
+  - function register_routes
+  - function user_has_permission
+  - function get_product_install_state
+  - function install
+  - function reset_install
+- `wp-content/plugins/woocommerce/includes/wccom-site/rest-api/endpoints/class-wc-rest-wccom-site-ssr-controller.php`
+  - class WC_REST_WCCOM_Site_SSR_Controller
+  - function register_routes
+  - function user_has_permission
+  - function handle_ssr_request
+- `wp-content/plugins/woocommerce/includes/wccom-site/rest-api/endpoints/class-wc-rest-wccom-site-status-controller.php`
+  - class WC_REST_WCCOM_Site_Status_Controller
+  - function register_routes
+  - function user_has_permission
+  - function handle_status_request
+- `wp-content/plugins/woocommerce/includes/widgets/class-wc-widget-brand-description.php`
+  - class WC_Widget_Brand_Description
+  - function __construct
+  - function widget
+  - function update
+  - function form
+- `wp-content/plugins/woocommerce/includes/widgets/class-wc-widget-brand-nav.php`
+  - class WC_Widget_Brand_Nav
+  - function __construct
+  - function filter_out_cats
+  - function widget
+  - function update
+  - function form
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/widgets/class-wc-widget-brand-thumbnails.php`
+  - class WC_Widget_Brand_Thumbnails
+  - function __construct
+  - function widget
+  - function update
+  - function form
+- `wp-content/plugins/woocommerce/includes/widgets/class-wc-widget-cart.php`
+  - class WC_Widget_Cart
+  - function __construct
+  - function widget
+- `wp-content/plugins/woocommerce/includes/widgets/class-wc-widget-layered-nav-filters.php`
+  - class WC_Widget_Layered_Nav_Filters
+  - function __construct
+  - function widget
+- `wp-content/plugins/woocommerce/includes/widgets/class-wc-widget-layered-nav.php`
+  - class WC_Widget_Layered_Nav
+  - function __construct
+  - function update
+  - function form
+  - function init_settings
+  - function widget
+- `wp-content/plugins/woocommerce/includes/widgets/class-wc-widget-price-filter.php`
+  - class WC_Widget_Price_Filter
+  - function __construct
+  - function widget
+- `wp-content/plugins/woocommerce/includes/widgets/class-wc-widget-product-categories.php`
+  - class WC_Widget_Product_Categories
+  - function __construct
+  - function widget
+- `wp-content/plugins/woocommerce/includes/widgets/class-wc-widget-product-search.php`
+  - class WC_Widget_Product_Search
+  - function __construct
+  - function widget
+- `wp-content/plugins/woocommerce/includes/widgets/class-wc-widget-product-tag-cloud.php`
+  - class WC_Widget_Product_Tag_Cloud
+  - function __construct
+  - function widget
+  - function get_current_taxonomy
+  - function topic_count_text
+  - function _get_current_taxonomy
+  - _...1 more_
+- `wp-content/plugins/woocommerce/includes/widgets/class-wc-widget-products.php`
+  - class WC_Widget_Products
+  - function __construct
+  - function get_products
+  - function widget
+- `wp-content/plugins/woocommerce/includes/widgets/class-wc-widget-rating-filter.php`
+  - class WC_Widget_Rating_Filter
+  - function __construct
+  - function widget
+- `wp-content/plugins/woocommerce/includes/widgets/class-wc-widget-recent-reviews.php`
+  - class WC_Widget_Recent_Reviews
+  - function __construct
+  - function widget
+- `wp-content/plugins/woocommerce/includes/widgets/class-wc-widget-recently-viewed.php`
+  - class WC_Widget_Recently_Viewed
+  - function __construct
+  - function widget
+- `wp-content/plugins/woocommerce/includes/widgets/class-wc-widget-top-rated-products.php`
+  - class WC_Widget_Top_Rated_Products
+  - function __construct
+  - function widget
+- `wp-content/plugins/woocommerce/lib/classes/symfony/polyfill-php80/Resources/stubs/Attribute.php` — class WC_Vendor_Attribute, function __construct
+- `wp-content/plugins/woocommerce/lib/classes/symfony/polyfill-php80/Resources/stubs/PhpToken.php` — class WC_Vendor_PhpToken
+- `wp-content/plugins/woocommerce/lib/classes/symfony/polyfill-php80/Resources/stubs/Stringable.php` — interface WC_Vendor_Stringable, function __toString
+- `wp-content/plugins/woocommerce/lib/classes/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php` — class WC_Vendor_UnhandledMatchError
+- `wp-content/plugins/woocommerce/lib/classes/symfony/polyfill-php80/Resources/stubs/ValueError.php` — class WC_Vendor_ValueError
+- `wp-content/plugins/woocommerce/lib/packages/Detection/MobileDetect.php`
+  - class MobileDetect
+  - function __construct
+  - function getScriptVersion
+  - function setHttpHeaders
+  - function getHttpHeaders
+  - function getHttpHeader
+  - _...23 more_
+- `wp-content/plugins/woocommerce/lib/packages/League/ISO3166/Exception/DomainException.php` — class DomainException
+- `wp-content/plugins/woocommerce/lib/packages/League/ISO3166/Exception/OutOfBoundsException.php` — class OutOfBoundsException
+- `wp-content/plugins/woocommerce/lib/packages/League/ISO3166/Guards.php`
+  - class Guards
+  - function guardAgainstInvalidName
+  - function guardAgainstInvalidAlpha2
+  - function guardAgainstInvalidAlpha3
+  - function guardAgainstInvalidNumeric
+- `wp-content/plugins/woocommerce/lib/packages/League/ISO3166/ISO3166.php`
+  - class ISO3166
+  - function __construct
+  - function name
+  - function alpha2
+  - function alpha3
+  - function numeric
+  - _...5 more_
+- `wp-content/plugins/woocommerce/lib/packages/League/ISO3166/ISO3166DataProvider.php`
+  - interface ISO3166DataProvider
+  - function name
+  - function alpha2
+  - function alpha3
+  - function numeric
+- `wp-content/plugins/woocommerce/lib/packages/League/ISO3166/ISO3166DataValidator.php` — class ISO3166DataValidator, function validate
+- `wp-content/plugins/woocommerce/lib/packages/League/ISO3166/ISO3166WithAliases.php`
+  - class ISO3166WithAliases
+  - function __construct
+  - function name
+  - function alpha2
+  - function alpha3
+  - function numeric
+- `wp-content/plugins/woocommerce/lib/packages/Pelago/Emogrifier/Caching/SimpleStringCache.php`
+  - class SimpleStringCache
+  - function has
+  - function get
+  - function set
+- `wp-content/plugins/woocommerce/lib/packages/Pelago/Emogrifier/Css/CssDocument.php`
+  - class CssDocument
+  - function __construct
+  - function getStyleRulesData
+  - function renderNonConditionalAtRules
+- `wp-content/plugins/woocommerce/lib/packages/Pelago/Emogrifier/Css/StyleRule.php`
+  - class StyleRule
+  - function __construct
+  - function getSelectors
+  - function getDeclarationAsText
+  - function hasAtLeastOneDeclaration
+  - function getContainingAtRule
+  - _...1 more_
+- `wp-content/plugins/woocommerce/lib/packages/Pelago/Emogrifier/CssInliner.php`
+  - class CssInliner
+  - function inlineCss
+  - function disableInlineStyleAttributesParsing
+  - function disableStyleBlocksParsing
+  - function addAllowedMediaType
+  - function removeAllowedMediaType
+  - _...6 more_
+- `wp-content/plugins/woocommerce/lib/packages/Pelago/Emogrifier/HtmlProcessor/AbstractHtmlProcessor.php`
+  - class AbstractHtmlProcessor
+  - function fromHtml
+  - function fromDomDocument
+  - function getDomDocument
+  - function render
+  - function renderBodyContent
+- `wp-content/plugins/woocommerce/lib/packages/Pelago/Emogrifier/HtmlProcessor/CssToAttributeConverter.php` — class CssToAttributeConverter, function convertCssToVisualAttributes
+- `wp-content/plugins/woocommerce/lib/packages/Pelago/Emogrifier/HtmlProcessor/CssVariableEvaluator.php` — class CssVariableEvaluator, function evaluateVariables
+- `wp-content/plugins/woocommerce/lib/packages/Pelago/Emogrifier/HtmlProcessor/HtmlNormalizer.php` — class HtmlNormalizer
+- `wp-content/plugins/woocommerce/lib/packages/Pelago/Emogrifier/HtmlProcessor/HtmlPruner.php`
+  - class HtmlPruner
+  - function removeElementsWithDisplayNone
+  - function removeRedundantClasses
+  - function removeRedundantClassesAfterCssInlined
+- `wp-content/plugins/woocommerce/lib/packages/Pelago/Emogrifier/Utilities/ArrayIntersector.php`
+  - class ArrayIntersector
+  - function __construct
+  - function intersectWith
+- `wp-content/plugins/woocommerce/lib/packages/Pelago/Emogrifier/Utilities/CssConcatenator.php`
+  - class CssConcatenator
+  - function append
+  - function getCss
+- `wp-content/plugins/woocommerce/lib/packages/Pelago/Emogrifier/Utilities/DeclarationBlockParser.php`
+  - class DeclarationBlockParser
+  - function normalizePropertyName
+  - function parse
+- `wp-content/plugins/woocommerce/lib/packages/Pelago/Emogrifier/Utilities/Preg.php`
+  - class Preg
+  - function throwExceptions
+  - function replace
+  - function replaceCallback
+  - function split
+  - function match
+  - _...1 more_
+- `wp-content/plugins/woocommerce/lib/packages/Psr/Container/ContainerInterface.php`
+  - interface ContainerInterface
+  - function get
+  - function has
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/CSSList/AtRuleBlockList.php`
+  - class AtRuleBlockList
+  - function __construct
+  - function atRuleName
+  - function atRuleArgs
+  - function __toString
+  - function render
+  - _...1 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/CSSList/CSSBlockList.php`
+  - class CSSBlockList
+  - function __construct
+  - function getAllValues
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/CSSList/CSSList.php`
+  - class CSSList
+  - function __construct
+  - function parseList
+  - function prepend
+  - function append
+  - function splice
+  - _...11 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/CSSList/Document.php`
+  - class Document
+  - function __construct
+  - function parse
+  - function getAllDeclarationBlocks
+  - function getAllSelectors
+  - function getAllRuleSets
+  - _...5 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/CSSList/KeyFrame.php`
+  - class KeyFrame
+  - function __construct
+  - function setVendorKeyFrame
+  - function getVendorKeyFrame
+  - function setAnimationName
+  - function getAnimationName
+  - _...5 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Comment/Comment.php`
+  - class Comment
+  - function __construct
+  - function getComment
+  - function setComment
+  - function __toString
+  - function render
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Comment/Commentable.php`
+  - interface Commentable
+  - function addComments
+  - function getComments
+  - function setComments
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/OutputFormat.php`
+  - class OutputFormat
+  - function __construct
+  - function get
+  - function set
+  - function __call
+  - function indentWithTabs
+  - _...8 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/OutputFormatter.php`
+  - class OutputFormatter
+  - function __construct
+  - function space
+  - function spaceAfterRuleName
+  - function spaceBeforeRules
+  - function spaceAfterRules
+  - _...13 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Parser.php`
+  - class Parser
+  - function __construct
+  - function setCharset
+  - function getCharset
+  - function parse
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Parsing/Anchor.php`
+  - class Anchor
+  - function __construct
+  - function backtrack
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Parsing/OutputException.php` — class OutputException, function __construct
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Parsing/ParserState.php`
+  - class ParserState
+  - function __construct
+  - function setCharset
+  - function getCharset
+  - function currentLine
+  - function currentColumn
+  - _...16 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Parsing/SourceException.php` — class SourceException, function __construct
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Parsing/UnexpectedEOFException.php` — class UnexpectedEOFException
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Parsing/UnexpectedTokenException.php` — class UnexpectedTokenException, function __construct
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Position/Position.php`
+  - class Position
+  - function getLineNumber
+  - function getLineNo
+  - function getColumnNumber
+  - function getColNo
+  - function setPosition
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Position/Positionable.php`
+  - interface Positionable
+  - function getLineNumber
+  - function getLineNo
+  - function getColumnNumber
+  - function getColNo
+  - function setPosition
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Property/AtRule.php`
+  - interface AtRule
+  - function atRuleName
+  - function atRuleArgs
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Property/CSSNamespace.php`
+  - class CSSNamespace
+  - function __construct
+  - function __toString
+  - function render
+  - function getUrl
+  - function getPrefix
+  - _...7 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Property/Charset.php`
+  - class Charset
+  - function __construct
+  - function setCharset
+  - function getCharset
+  - function __toString
+  - function render
+  - _...5 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Property/Import.php`
+  - class Import
+  - function __construct
+  - function setLocation
+  - function getLocation
+  - function __toString
+  - function render
+  - _...6 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Property/KeyframeSelector.php` — class KeyframeSelector
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Property/Selector.php`
+  - class Selector
+  - function isValid
+  - function __construct
+  - function getSelector
+  - function setSelector
+  - function __toString
+  - _...1 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Renderable.php`
+  - interface Renderable
+  - function __toString
+  - function render
+  - function getLineNo
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Rule/Rule.php`
+  - class Rule
+  - function __construct
+  - function parse
+  - function setRule
+  - function getRule
+  - function getValue
+  - _...14 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/RuleSet/AtRuleSet.php`
+  - class AtRuleSet
+  - function __construct
+  - function atRuleName
+  - function atRuleArgs
+  - function __toString
+  - function render
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php`
+  - class DeclarationBlock
+  - function __construct
+  - function parse
+  - function setSelectors
+  - function removeSelector
+  - function getSelector
+  - _...17 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/RuleSet/RuleSet.php`
+  - class RuleSet
+  - function __construct
+  - function parseRuleSet
+  - function addRule
+  - function getRules
+  - function setRules
+  - _...8 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Settings.php`
+  - class Settings
+  - function create
+  - function withMultibyteSupport
+  - function withDefaultCharset
+  - function withLenientParsing
+  - function beStrict
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Value/CSSFunction.php`
+  - class CSSFunction
+  - function __construct
+  - function parse
+  - function getName
+  - function setName
+  - function getArguments
+  - _...2 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Value/CSSString.php`
+  - class CSSString
+  - function __construct
+  - function parse
+  - function setString
+  - function getString
+  - function __toString
+  - _...1 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Value/CalcFunction.php` — class CalcFunction, function parse
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Value/CalcRuleValueList.php`
+  - class CalcRuleValueList
+  - function __construct
+  - function render
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Value/Color.php`
+  - class Color
+  - function __construct
+  - function parse
+  - function getColor
+  - function setColor
+  - function getColorDescription
+  - _...2 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Value/LineName.php`
+  - class LineName
+  - function __construct
+  - function parse
+  - function __toString
+  - function render
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Value/PrimitiveValue.php` — class PrimitiveValue, function __construct
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Value/RuleValueList.php` — class RuleValueList, function __construct
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Value/Size.php`
+  - class Size
+  - function __construct
+  - function parse
+  - function setUnit
+  - function getUnit
+  - function setSize
+  - _...6 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Value/URL.php`
+  - class URL
+  - function __construct
+  - function parse
+  - function setURL
+  - function getURL
+  - function __toString
+  - _...1 more_
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Value/Value.php`
+  - class Value
+  - function __construct
+  - function parseValue
+  - function parseIdentifierOrFunction
+  - function parsePrimitiveValue
+- `wp-content/plugins/woocommerce/lib/packages/Sabberworm/CSS/Value/ValueList.php`
+  - class ValueList
+  - function __construct
+  - function addListComponent
+  - function getListComponents
+  - function setListComponents
+  - function getListSeparator
+  - _...3 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/CssSelectorConverter.php`
+  - class CssSelectorConverter
+  - function __construct
+  - function toXPath
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Exception/ExpressionErrorException.php` — class ExpressionErrorException
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Exception/InternalErrorException.php` — class InternalErrorException
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Exception/ParseException.php` — class ParseException
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Exception/SyntaxErrorException.php`
+  - class SyntaxErrorException
+  - function unexpectedToken
+  - function pseudoElementFound
+  - function unclosedString
+  - function nestedNot
+  - function stringAsFunctionArgument
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Node/AbstractNode.php` — class AbstractNode, function getNodeName
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Node/AttributeNode.php`
+  - class AttributeNode
+  - function __construct
+  - function getSelector
+  - function getNamespace
+  - function getAttribute
+  - function getOperator
+  - _...3 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Node/ClassNode.php`
+  - class ClassNode
+  - function __construct
+  - function getSelector
+  - function getName
+  - function getSpecificity
+  - function __toString
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Node/CombinedSelectorNode.php`
+  - class CombinedSelectorNode
+  - function __construct
+  - function getSelector
+  - function getCombinator
+  - function getSubSelector
+  - function getSpecificity
+  - _...1 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Node/ElementNode.php`
+  - class ElementNode
+  - function __construct
+  - function getNamespace
+  - function getElement
+  - function getSpecificity
+  - function __toString
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Node/FunctionNode.php`
+  - class FunctionNode
+  - function __construct
+  - function getSelector
+  - function getName
+  - function getArguments
+  - function getSpecificity
+  - _...1 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Node/HashNode.php`
+  - class HashNode
+  - function __construct
+  - function getSelector
+  - function getId
+  - function getSpecificity
+  - function __toString
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Node/NegationNode.php`
+  - class NegationNode
+  - function __construct
+  - function getSelector
+  - function getSubSelector
+  - function getSpecificity
+  - function __toString
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Node/NodeInterface.php`
+  - interface NodeInterface
+  - function getNodeName
+  - function getSpecificity
+  - function __toString
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Node/PseudoNode.php`
+  - class PseudoNode
+  - function __construct
+  - function getSelector
+  - function getIdentifier
+  - function getSpecificity
+  - function __toString
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Node/SelectorNode.php`
+  - class SelectorNode
+  - function __construct
+  - function getTree
+  - function getPseudoElement
+  - function getSpecificity
+  - function __toString
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Node/Specificity.php`
+  - class Specificity
+  - function __construct
+  - function plus
+  - function getValue
+  - function compareTo
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/Handler/CommentHandler.php` — class CommentHandler, function handle
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/Handler/HandlerInterface.php` — interface HandlerInterface, function handle
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/Handler/HashHandler.php`
+  - class HashHandler
+  - function __construct
+  - function handle
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/Handler/IdentifierHandler.php`
+  - class IdentifierHandler
+  - function __construct
+  - function handle
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/Handler/NumberHandler.php`
+  - class NumberHandler
+  - function __construct
+  - function handle
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/Handler/StringHandler.php`
+  - class StringHandler
+  - function __construct
+  - function handle
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/Handler/WhitespaceHandler.php` — class WhitespaceHandler, function handle
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/Parser.php`
+  - class Parser
+  - function __construct
+  - function parse
+  - function parseSeries
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/ParserInterface.php` — interface ParserInterface, function parse
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/Reader.php`
+  - class Reader
+  - function __construct
+  - function isEOF
+  - function getPosition
+  - function getRemainingLength
+  - function getSubstring
+  - _...4 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/Shortcut/ClassParser.php` — class ClassParser, function parse
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/Shortcut/ElementParser.php` — class ElementParser, function parse
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/Shortcut/EmptyStringParser.php` — class EmptyStringParser, function parse
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/Shortcut/HashParser.php` — class HashParser, function parse
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/Token.php`
+  - class Token
+  - function __construct
+  - function getType
+  - function getValue
+  - function getPosition
+  - function isFileEnd
+  - _...7 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/TokenStream.php`
+  - class TokenStream
+  - function push
+  - function freeze
+  - function getNext
+  - function getPeek
+  - function getUsed
+  - _...3 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/Tokenizer/Tokenizer.php`
+  - class Tokenizer
+  - function __construct
+  - function tokenize
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/Tokenizer/TokenizerEscaping.php`
+  - class TokenizerEscaping
+  - function __construct
+  - function escapeUnicode
+  - function escapeUnicodeAndNewLine
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/Parser/Tokenizer/TokenizerPatterns.php`
+  - class TokenizerPatterns
+  - function __construct
+  - function getNewLineEscapePattern
+  - function getSimpleEscapePattern
+  - function getUnicodeEscapePattern
+  - function getIdentifierPattern
+  - _...3 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/XPath/Extension/AbstractExtension.php`
+  - class AbstractExtension
+  - function getNodeTranslators
+  - function getCombinationTranslators
+  - function getFunctionTranslators
+  - function getPseudoClassTranslators
+  - function getAttributeMatchingTranslators
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/XPath/Extension/AttributeMatchingExtension.php`
+  - class AttributeMatchingExtension
+  - function getAttributeMatchingTranslators
+  - function translateExists
+  - function translateEquals
+  - function translateIncludes
+  - function translateDashMatch
+  - _...5 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/XPath/Extension/CombinationExtension.php`
+  - class CombinationExtension
+  - function getCombinationTranslators
+  - function translateDescendant
+  - function translateChild
+  - function translateDirectAdjacent
+  - function translateIndirectAdjacent
+  - _...1 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/XPath/Extension/ExtensionInterface.php`
+  - interface ExtensionInterface
+  - function getNodeTranslators
+  - function getCombinationTranslators
+  - function getFunctionTranslators
+  - function getPseudoClassTranslators
+  - function getAttributeMatchingTranslators
+  - _...1 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/XPath/Extension/FunctionExtension.php`
+  - class FunctionExtension
+  - function getFunctionTranslators
+  - function translateNthChild
+  - function translateNthLastChild
+  - function translateNthOfType
+  - function translateNthLastOfType
+  - _...3 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/XPath/Extension/HtmlExtension.php`
+  - class HtmlExtension
+  - function __construct
+  - function getPseudoClassTranslators
+  - function getFunctionTranslators
+  - function translateChecked
+  - function translateLink
+  - _...8 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/XPath/Extension/NodeExtension.php`
+  - class NodeExtension
+  - function __construct
+  - function setFlag
+  - function hasFlag
+  - function getNodeTranslators
+  - function translateSelector
+  - _...9 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/XPath/Extension/PseudoClassExtension.php`
+  - class PseudoClassExtension
+  - function getPseudoClassTranslators
+  - function translateRoot
+  - function translateFirstChild
+  - function translateLastChild
+  - function translateFirstOfType
+  - _...5 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/XPath/Translator.php`
+  - class Translator
+  - function __construct
+  - function getXpathLiteral
+  - function cssToXPath
+  - function selectorToXPath
+  - function registerExtension
+  - _...7 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/XPath/TranslatorInterface.php`
+  - interface TranslatorInterface
+  - function cssToXPath
+  - function selectorToXPath
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Component/CssSelector/XPath/XPathExpr.php`
+  - class XPathExpr
+  - function __construct
+  - function getElement
+  - function addCondition
+  - function getCondition
+  - function addNameTest
+  - _...3 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Polyfill/Php80/Php80.php`
+  - class Php80
+  - function fdiv
+  - function get_debug_type
+  - function get_resource_id
+  - function preg_last_error_msg
+  - function str_contains
+  - _...2 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Polyfill/Php80/PhpToken.php`
+  - class PhpToken
+  - function __construct
+  - function getTokenName
+  - function is
+  - function isIgnorable
+  - function __toString
+  - _...1 more_
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Polyfill/Php80/Resources/stubs/Attribute.php` — class Attribute, function __construct
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Polyfill/Php80/Resources/stubs/PhpToken.php` — class PhpToken
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Polyfill/Php80/Resources/stubs/Stringable.php` — interface Stringable, function __toString
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Polyfill/Php80/Resources/stubs/UnhandledMatchError.php` — class UnhandledMatchError
+- `wp-content/plugins/woocommerce/lib/packages/Symfony/Polyfill/Php80/Resources/stubs/ValueError.php` — class ValueError
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_ActionClaim.php`
+  - class ActionScheduler_ActionClaim
+  - function __construct
+  - function get_id
+  - function get_actions
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_ActionFactory.php`
+  - class ActionScheduler_ActionFactory
+  - function get_stored_action
+  - function async
+  - function async_unique
+  - function single
+  - function single_unique
+  - _...6 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_AdminView.php`
+  - class ActionScheduler_AdminView
+  - function instance
+  - function init
+  - function system_status_report
+  - function register_system_status_tab
+  - function register_menu
+  - _...4 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_AsyncRequest_QueueRunner.php`
+  - class ActionScheduler_AsyncRequest_QueueRunner
+  - function __construct
+  - function maybe_dispatch
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_Compatibility.php`
+  - class ActionScheduler_Compatibility
+  - function convert_hr_to_bytes
+  - function raise_memory_limit
+  - function raise_time_limit
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_DataController.php`
+  - class ActionScheduler_DataController
+  - function dependencies_met
+  - function is_migration_complete
+  - function mark_migration_complete
+  - function mark_migration_incomplete
+  - function set_store_class
+  - _...7 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_DateTime.php`
+  - class ActionScheduler_DateTime
+  - function getTimestamp
+  - function setUtcOffset
+  - function getOffset
+  - function setTimezone
+  - function getOffsetTimestamp
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_FatalErrorMonitor.php`
+  - class ActionScheduler_FatalErrorMonitor
+  - function __construct
+  - function attach
+  - function detach
+  - function track_current_action
+  - function untrack_action
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_InvalidActionException.php`
+  - class ActionScheduler_InvalidActionException
+  - function from_schedule
+  - function from_decoding_args
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_ListTable.php`
+  - class ActionScheduler_ListTable
+  - function __construct
+  - function set_items_per_page_option
+  - function column_args
+  - function column_log_entries
+  - function display_admin_notices
+  - _...2 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_LogEntry.php`
+  - class ActionScheduler_LogEntry
+  - function __construct
+  - function get_date
+  - function get_action_id
+  - function get_message
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_NullLogEntry.php` — class ActionScheduler_NullLogEntry, function __construct
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_OptionLock.php`
+  - class ActionScheduler_OptionLock
+  - function set
+  - function get_expiration
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueCleaner.php`
+  - class ActionScheduler_QueueCleaner
+  - function __construct
+  - function delete_old_actions
+  - function clean_actions
+  - function reset_timeouts
+  - function mark_failures
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_QueueRunner.php`
+  - class ActionScheduler_QueueRunner
+  - function instance
+  - function __construct
+  - function init
+  - function hook_dispatch_async_request
+  - function unhook_dispatch_async_request
+  - _...3 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_RecurringActionScheduler.php`
+  - class ActionScheduler_RecurringActionScheduler
+  - function init
+  - function schedule_recurring_scheduler_hook
+  - function run_recurring_scheduler_hook
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_SystemInformation.php`
+  - class ActionScheduler_SystemInformation
+  - function active_source
+  - function active_source_path
+  - function get_sources
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_Versions.php`
+  - class ActionScheduler_Versions
+  - function register
+  - function get_versions
+  - function get_sources
+  - function latest_version
+  - function latest_version_callback
+  - _...4 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_WPCommentCleaner.php`
+  - class ActionScheduler_WPCommentCleaner
+  - function init
+  - function has_logs
+  - function maybe_schedule_cleanup
+  - function delete_all_action_comments
+  - function register_admin_notice
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/ActionScheduler_wcSystemStatus.php`
+  - class ActionScheduler_wcSystemStatus
+  - function __construct
+  - function render
+  - function __call
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/WP_CLI/Action/Cancel_Command.php` — class Cancel_Command, function execute
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/WP_CLI/Action/Create_Command.php` — class Create_Command, function execute
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/WP_CLI/Action/Delete_Command.php`
+  - class Delete_Command
+  - function __construct
+  - function execute
+  - function on_action_deleted
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/WP_CLI/Action/Generate_Command.php` — class Generate_Command, function execute
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/WP_CLI/Action/Get_Command.php` — class Get_Command, function execute
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/WP_CLI/Action/List_Command.php` — class List_Command, function execute
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/WP_CLI/Action/Next_Command.php` — class Next_Command, function execute
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/WP_CLI/Action/Run_Command.php`
+  - class Run_Command
+  - function __construct
+  - function execute
+  - function on_action_ignored
+  - function on_action_executed
+  - function on_action_failed
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Clean_Command.php` — class ActionScheduler_WPCLI_Clean_Command, function clean
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php`
+  - class ActionScheduler_WPCLI_QueueRunner
+  - function __construct
+  - function setup
+  - function run
+  - function before_execute
+  - function after_execute
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Scheduler_command.php`
+  - class ActionScheduler_WPCLI_Scheduler_command
+  - function fix_schema
+  - function run
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/WP_CLI/Action_Command.php`
+  - class Action_Command
+  - function cancel
+  - function create
+  - function delete
+  - function generate
+  - function get
+  - _...4 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/WP_CLI/Migration_Command.php`
+  - class Migration_Command
+  - function register
+  - function migrate
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/WP_CLI/ProgressBar.php`
+  - class ProgressBar
+  - function __construct
+  - function tick
+  - function current
+  - function finish
+  - function set_message
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/WP_CLI/System_Command.php`
+  - class System_Command
+  - function __construct
+  - function datastore
+  - function runner
+  - function status
+  - function version
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/abstracts/ActionScheduler.php`
+  - class ActionScheduler
+  - function factory
+  - function store
+  - function lock
+  - function logger
+  - function runner
+  - _...10 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/abstracts/ActionScheduler_Abstract_ListTable.php`
+  - class ActionScheduler_Abstract_ListTable
+  - function get_sortable_columns
+  - function get_columns
+  - function prepare_items
+  - function extra_tablenav
+  - function column_cb
+  - _...3 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/abstracts/ActionScheduler_Abstract_QueueRunner.php`
+  - class ActionScheduler_Abstract_QueueRunner
+  - function __construct
+  - function process_action
+  - function get_allowed_concurrent_batches
+  - function has_maximum_concurrent_batches
+  - function run
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/abstracts/ActionScheduler_Abstract_RecurringSchedule.php`
+  - class ActionScheduler_Abstract_RecurringSchedule
+  - function __construct
+  - function is_recurring
+  - function get_first_date
+  - function get_recurrence
+  - function __sleep
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/abstracts/ActionScheduler_Abstract_Schedule.php`
+  - class ActionScheduler_Abstract_Schedule
+  - function __construct
+  - function is_recurring
+  - function get_next
+  - function get_date
+  - function __sleep
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/abstracts/ActionScheduler_Abstract_Schema.php`
+  - class ActionScheduler_Abstract_Schema
+  - function init
+  - function register_tables
+  - function tables_exist
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/abstracts/ActionScheduler_Lock.php`
+  - class ActionScheduler_Lock
+  - function is_locked
+  - function set
+  - function get_expiration
+  - function instance
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/abstracts/ActionScheduler_Logger.php`
+  - class ActionScheduler_Logger
+  - function instance
+  - function log
+  - function get_entry
+  - function get_logs
+  - function init
+  - _...14 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/abstracts/ActionScheduler_Store.php`
+  - class ActionScheduler_Store
+  - function save_action
+  - function fetch_action
+  - function find_action
+  - function query_actions
+  - function query_action
+  - _...22 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/abstracts/ActionScheduler_TimezoneHelper.php`
+  - class ActionScheduler_TimezoneHelper
+  - function set_local_timezone
+  - function get_local_timezone
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/abstracts/ActionScheduler_WPCLI_Command.php`
+  - class ActionScheduler_WPCLI_Command
+  - function __construct
+  - function execute
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/actions/ActionScheduler_Action.php`
+  - class ActionScheduler_Action
+  - function __construct
+  - function execute
+  - function get_hook
+  - function get_schedule
+  - function get_args
+  - _...4 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/actions/ActionScheduler_CanceledAction.php` — class ActionScheduler_CanceledAction, function __construct
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/actions/ActionScheduler_FinishedAction.php`
+  - class ActionScheduler_FinishedAction
+  - function execute
+  - function is_finished
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/actions/ActionScheduler_NullAction.php`
+  - class ActionScheduler_NullAction
+  - function __construct
+  - function execute
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBLogger.php`
+  - class ActionScheduler_DBLogger
+  - function log
+  - function get_entry
+  - function get_logs
+  - function init
+  - function clear_deleted_action_logs
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php`
+  - class ActionScheduler_DBStore
+  - function init
+  - function save_unique_action
+  - function save_action
+  - function fetch_action
+  - function query_actions
+  - _...18 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_HybridStore.php`
+  - class ActionScheduler_HybridStore
+  - function __construct
+  - function init
+  - function set_autoincrement
+  - function find_action
+  - function query_actions
+  - _...16 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_wpCommentLogger.php`
+  - class ActionScheduler_wpCommentLogger
+  - function log
+  - function get_entry
+  - function get_logs
+  - function filter_comment_queries
+  - function filter_comment_query_clauses
+  - _...6 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php`
+  - class ActionScheduler_wpPostStore
+  - function save_action
+  - function filter_insert_post_data
+  - function set_unique_post_slug
+  - function fetch_action
+  - function query_actions
+  - _...18 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostStatusRegistrar.php` — class ActionScheduler_wpPostStore_PostStatusRegistrar, function register
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_PostTypeRegistrar.php` — class ActionScheduler_wpPostStore_PostTypeRegistrar, function register
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore_TaxonomyRegistrar.php` — class ActionScheduler_wpPostStore_TaxonomyRegistrar, function register
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/migration/ActionMigrator.php`
+  - class ActionMigrator
+  - function __construct
+  - function migrate
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/migration/ActionScheduler_DBStoreMigrator.php` — class ActionScheduler_DBStoreMigrator, function save_action
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/migration/BatchFetcher.php`
+  - class BatchFetcher
+  - function __construct
+  - function fetch
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/migration/Config.php`
+  - class Config
+  - function __construct
+  - function get_source_store
+  - function set_source_store
+  - function get_source_logger
+  - function set_source_logger
+  - _...8 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/migration/Controller.php`
+  - class Controller
+  - function get_store_class
+  - function get_logger_class
+  - function has_custom_datastore
+  - function schedule_migration
+  - function get_migration_config_object
+  - _...6 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/migration/DryRun_ActionMigrator.php` — class DryRun_ActionMigrator, function migrate
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/migration/DryRun_LogMigrator.php` — class DryRun_LogMigrator, function migrate
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/migration/LogMigrator.php`
+  - class LogMigrator
+  - function __construct
+  - function migrate
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/migration/Runner.php`
+  - class Runner
+  - function __construct
+  - function run
+  - function migrate_actions
+  - function init_destination
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/migration/Scheduler.php`
+  - class Scheduler
+  - function hook
+  - function unhook
+  - function run_migration
+  - function mark_complete
+  - function is_migration_scheduled
+  - _...2 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/schedules/ActionScheduler_CanceledSchedule.php`
+  - class ActionScheduler_CanceledSchedule
+  - function calculate_next
+  - function get_next
+  - function is_recurring
+  - function __wakeup
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/schedules/ActionScheduler_CronSchedule.php`
+  - class ActionScheduler_CronSchedule
+  - function __construct
+  - function get_recurrence
+  - function __sleep
+  - function __wakeup
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/schedules/ActionScheduler_IntervalSchedule.php`
+  - class ActionScheduler_IntervalSchedule
+  - function interval_in_seconds
+  - function __sleep
+  - function __wakeup
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/schedules/ActionScheduler_NullSchedule.php`
+  - class ActionScheduler_NullSchedule
+  - function __construct
+  - function __sleep
+  - function __wakeup
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/schedules/ActionScheduler_Schedule.php`
+  - interface ActionScheduler_Schedule
+  - function next
+  - function is_recurring
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/schedules/ActionScheduler_SimpleSchedule.php`
+  - class ActionScheduler_SimpleSchedule
+  - function calculate_next
+  - function is_recurring
+  - function __sleep
+  - function __wakeup
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/schema/ActionScheduler_LoggerSchema.php`
+  - class ActionScheduler_LoggerSchema
+  - function __construct
+  - function init
+  - function update_schema_3_0
+- `wp-content/plugins/woocommerce/packages/action-scheduler/classes/schema/ActionScheduler_StoreSchema.php`
+  - class ActionScheduler_StoreSchema
+  - function __construct
+  - function init
+  - function update_schema_5_0
+- `wp-content/plugins/woocommerce/packages/action-scheduler/deprecated/ActionScheduler_Abstract_QueueRunner_Deprecated.php` — class ActionScheduler_Abstract_QueueRunner_Deprecated
+- `wp-content/plugins/woocommerce/packages/action-scheduler/deprecated/ActionScheduler_AdminView_Deprecated.php`
+  - class ActionScheduler_AdminView_Deprecated
+  - function action_scheduler_post_type_args
+  - function list_table_views
+  - function bulk_actions
+  - function list_table_columns
+  - function list_table_sortable_columns
+  - _...7 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/deprecated/ActionScheduler_Schedule_Deprecated.php` — class ActionScheduler_Schedule_Deprecated, function next
+- `wp-content/plugins/woocommerce/packages/action-scheduler/deprecated/ActionScheduler_Store_Deprecated.php` — class ActionScheduler_Store_Deprecated, function mark_failed_fetch_action
+- `wp-content/plugins/woocommerce/packages/action-scheduler/lib/WP_Async_Request.php`
+  - class WP_Async_Request
+  - function __construct
+  - function data
+  - function dispatch
+  - function maybe_handle
+- `wp-content/plugins/woocommerce/packages/action-scheduler/lib/cron-expression/CronExpression.php`
+  - class CronExpression
+  - function factory
+  - function __construct
+  - function setExpression
+  - function setPart
+  - function getNextRunDate
+  - _...5 more_
+- `wp-content/plugins/woocommerce/packages/action-scheduler/lib/cron-expression/CronExpression_AbstractField.php`
+  - class CronExpression_AbstractField
+  - function isSatisfied
+  - function isRange
+  - function isIncrementsOfRanges
+  - function isInRange
+  - function isInIncrementsOfRanges
+- `wp-content/plugins/woocommerce/packages/action-scheduler/lib/cron-expression/CronExpression_DayOfMonthField.php`
+  - class CronExpression_DayOfMonthField
+  - function isSatisfiedBy
+  - function increment
+  - function validate
+- `wp-content/plugins/woocommerce/packages/action-scheduler/lib/cron-expression/CronExpression_DayOfWeekField.php`
+  - class CronExpression_DayOfWeekField
+  - function isSatisfiedBy
+  - function increment
+  - function validate
+- `wp-content/plugins/woocommerce/packages/action-scheduler/lib/cron-expression/CronExpression_FieldFactory.php` — class CronExpression_FieldFactory, function getField
+- `wp-content/plugins/woocommerce/packages/action-scheduler/lib/cron-expression/CronExpression_FieldInterface.php`
+  - interface CronExpression_FieldInterface
+  - function isSatisfiedBy
+  - function increment
+  - function validate
+- `wp-content/plugins/woocommerce/packages/action-scheduler/lib/cron-expression/CronExpression_HoursField.php`
+  - class CronExpression_HoursField
+  - function isSatisfiedBy
+  - function increment
+  - function validate
+- `wp-content/plugins/woocommerce/packages/action-scheduler/lib/cron-expression/CronExpression_MinutesField.php`
+  - class CronExpression_MinutesField
+  - function isSatisfiedBy
+  - function increment
+  - function validate
+- `wp-content/plugins/woocommerce/packages/action-scheduler/lib/cron-expression/CronExpression_MonthField.php`
+  - class CronExpression_MonthField
+  - function isSatisfiedBy
+  - function increment
+  - function validate
+- `wp-content/plugins/woocommerce/packages/action-scheduler/lib/cron-expression/CronExpression_YearField.php`
+  - class CronExpression_YearField
+  - function isSatisfiedBy
+  - function increment
+  - function validate
+- `wp-content/plugins/woocommerce/packages/blueprint/src/BuiltInExporters.php` — class BuiltInExporters, function get_all
+- `wp-content/plugins/woocommerce/packages/blueprint/src/BuiltInStepProcessors.php`
+  - class BuiltInStepProcessors
+  - function __construct
+  - function get_all
+- `wp-content/plugins/woocommerce/packages/blueprint/src/ClassExtractor.php`
+  - class ClassExtractor
+  - function __construct
+  - function with_wp_load
+  - function replace_class_variable
+  - function replace_method_variable
+  - function get_code
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Cli/ExportCli.php`
+  - class ExportCli
+  - function __construct
+  - function run
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Cli/ImportCli.php`
+  - class ImportCli
+  - function __construct
+  - function run
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Cli.php` — class Cli, function register_commands
+- `wp-content/plugins/woocommerce/packages/blueprint/src/ExportSchema.php`
+  - class ExportSchema
+  - function __construct
+  - function export
+  - function on_before_export
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Exporters/ExportInstallPluginSteps.php`
+  - class ExportInstallPluginSteps
+  - function include_private_plugins
+  - function filter
+  - function export
+  - function sort_plugins_by_dep
+  - function get_step_name
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Exporters/ExportInstallThemeSteps.php`
+  - class ExportInstallThemeSteps
+  - function filter
+  - function export
+  - function get_step_name
+  - function check_step_capabilities
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Exporters/HasAlias.php` — interface HasAlias, function get_alias
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Exporters/StepExporter.php`
+  - interface StepExporter
+  - function export
+  - function get_step_name
+  - function check_step_capabilities
+- `wp-content/plugins/woocommerce/packages/blueprint/src/ImportSchema.php`
+  - class ImportSchema
+  - function __construct
+  - function get_schema
+  - function create_from_file
+  - function create_from_json
+  - function import
+- `wp-content/plugins/woocommerce/packages/blueprint/src/ImportStep.php`
+  - class ImportStep
+  - function __construct
+  - function import
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Importers/ImportActivatePlugin.php`
+  - class ImportActivatePlugin
+  - function process
+  - function get_step_class
+  - function check_step_capabilities
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Importers/ImportActivateTheme.php`
+  - class ImportActivateTheme
+  - function process
+  - function get_step_class
+  - function check_step_capabilities
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Importers/ImportInstallPlugin.php`
+  - class ImportInstallPlugin
+  - function __construct
+  - function process
+  - function get_step_class
+  - function check_step_capabilities
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Importers/ImportInstallTheme.php`
+  - class ImportInstallTheme
+  - function __construct
+  - function process
+  - function get_step_class
+  - function check_step_capabilities
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Importers/ImportRunSql.php`
+  - class ImportRunSql
+  - function process
+  - function get_step_class
+  - function check_step_capabilities
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Importers/ImportSetSiteOptions.php`
+  - class ImportSetSiteOptions
+  - function process
+  - function get_step_class
+  - function check_step_capabilities
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Logger.php`
+  - class Logger
+  - function __construct
+  - function log
+  - function start_export
+  - function complete_export
+  - function export_step_failed
+  - _...3 more_
+- `wp-content/plugins/woocommerce/packages/blueprint/src/ResourceStorages/LocalPluginResourceStorage.php`
+  - class LocalPluginResourceStorage
+  - function __construct
+  - function download
+  - function get_supported_resource
+- `wp-content/plugins/woocommerce/packages/blueprint/src/ResourceStorages/LocalThemeResourceStorage.php` — class LocalThemeResourceStorage, function get_supported_resource
+- `wp-content/plugins/woocommerce/packages/blueprint/src/ResourceStorages/OrgPluginResourceStorage.php`
+  - class OrgPluginResourceStorage
+  - function download
+  - function get_supported_resource
+- `wp-content/plugins/woocommerce/packages/blueprint/src/ResourceStorages/OrgThemeResourceStorage.php` — class OrgThemeResourceStorage, function get_supported_resource
+- `wp-content/plugins/woocommerce/packages/blueprint/src/ResourceStorages/ResourceStorage.php`
+  - interface ResourceStorage
+  - function get_supported_resource
+  - function download
+- `wp-content/plugins/woocommerce/packages/blueprint/src/ResourceStorages.php`
+  - class ResourceStorages
+  - function add_storage
+  - function is_supported_resource
+  - function download
+- `wp-content/plugins/woocommerce/packages/blueprint/src/ResultFormatters/CliResultFormatter.php`
+  - class CliResultFormatter
+  - function __construct
+  - function format
+  - function is_success
+- `wp-content/plugins/woocommerce/packages/blueprint/src/ResultFormatters/JsonResultFormatter.php`
+  - class JsonResultFormatter
+  - function __construct
+  - function format
+  - function is_success
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Schemas/JsonSchema.php`
+  - class JsonSchema
+  - function __construct
+  - function get_steps
+  - function get_step
+  - function validate
+- `wp-content/plugins/woocommerce/packages/blueprint/src/StepProcessor.php`
+  - interface StepProcessor
+  - function process
+  - function get_step_class
+  - function check_step_capabilities
+- `wp-content/plugins/woocommerce/packages/blueprint/src/StepProcessorResult.php`
+  - class StepProcessorResult
+  - function __construct
+  - function set_step_name
+  - function success
+  - function add_message
+  - function merge_messages
+  - _...7 more_
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Steps/ActivatePlugin.php`
+  - class ActivatePlugin
+  - function __construct
+  - function get_step_name
+  - function get_schema
+  - function prepare_json_array
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Steps/ActivateTheme.php`
+  - class ActivateTheme
+  - function __construct
+  - function get_step_name
+  - function get_schema
+  - function prepare_json_array
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Steps/InstallPlugin.php`
+  - class InstallPlugin
+  - function __construct
+  - function prepare_json_array
+  - function get_schema
+  - function get_step_name
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Steps/InstallTheme.php`
+  - class InstallTheme
+  - function __construct
+  - function prepare_json_array
+  - function get_schema
+  - function get_step_name
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Steps/RunSql.php`
+  - class RunSql
+  - function __construct
+  - function get_step_name
+  - function get_schema
+  - function prepare_json_array
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Steps/SetSiteOptions.php`
+  - class SetSiteOptions
+  - function __construct
+  - function get_step_name
+  - function get_schema
+  - function prepare_json_array
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Steps/Step.php`
+  - class Step
+  - function get_step_name
+  - function get_schema
+  - function prepare_json_array
+  - function set_meta_values
+  - function get_json_array
+- `wp-content/plugins/woocommerce/packages/blueprint/src/UsePluginHelpers.php`
+  - class UsePluginHelpers
+  - function activate_plugin_by_slug
+  - function is_plugin_dir
+  - function delete_plugin_by_slug
+  - function deactivate_plugin_by_slug
+- `wp-content/plugins/woocommerce/packages/blueprint/src/UsePubSub.php`
+  - class UsePubSub
+  - function subscribe
+  - function publish
+  - function unsubscribe
+- `wp-content/plugins/woocommerce/packages/blueprint/src/UseWPFunctions.php`
+  - class UseWPFunctions
+  - function wp_add_filter
+  - function wp_add_action
+  - function wp_apply_filters
+  - function wp_do_action
+  - function wp_is_plugin_active
+  - _...19 more_
+- `wp-content/plugins/woocommerce/packages/blueprint/src/Util.php`
+  - class Util
+  - function ensure_wp_content_path
+  - function array_to_insert_sql
+  - function snake_to_camel
+  - function array_flatten
+  - function camel_to_snake
+  - _...3 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Logger/class-default-email-editor-logger.php`
+  - class Default_Email_Editor_Logger
+  - function __construct
+  - function emergency
+  - function alert
+  - function critical
+  - function error
+  - _...5 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Logger/class-email-editor-logger-interface.php`
+  - interface Email_Editor_Logger_Interface
+  - function emergency
+  - function alert
+  - function critical
+  - function error
+  - function warning
+  - _...4 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Logger/class-email-editor-logger.php`
+  - class Email_Editor_Logger
+  - function __construct
+  - function set_logger
+  - function emergency
+  - function alert
+  - function critical
+  - _...6 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Patterns/class-abstract-pattern.php`
+  - class Abstract_Pattern
+  - function get_name
+  - function get_namespace
+  - function get_properties
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Patterns/class-patterns.php` — class Patterns, function initialize
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/PersonalizationTags/class-html-tag-processor.php`
+  - class HTML_Tag_Processor
+  - function replace_token
+  - function flush_updates
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/PersonalizationTags/class-personalization-tag.php`
+  - class Personalization_Tag
+  - function __construct
+  - function __unserialize
+  - function get_name
+  - function get_token
+  - function get_category
+  - _...5 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/PersonalizationTags/class-personalization-tags-registry.php`
+  - class Personalization_Tags_Registry
+  - function __construct
+  - function initialize
+  - function register
+  - function unregister
+  - function get_by_token
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/ContentRenderer/Layout/class-flex-layout-renderer.php` — class Flex_Layout_Renderer, function render_inner_blocks_in_layout
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/ContentRenderer/Postprocessors/class-border-style-postprocessor.php` — class Border_Style_Postprocessor, function postprocess
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/ContentRenderer/Postprocessors/class-highlighting-postprocessor.php` — class Highlighting_Postprocessor, function postprocess
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/ContentRenderer/Postprocessors/class-variables-postprocessor.php`
+  - class Variables_Postprocessor
+  - function __construct
+  - function postprocess
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/ContentRenderer/Postprocessors/interface-postprocessor.php` — interface Postprocessor, function postprocess
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/ContentRenderer/Preprocessors/class-blocks-width-preprocessor.php` — class Blocks_Width_Preprocessor, function preprocess
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/ContentRenderer/Preprocessors/class-cleanup-preprocessor.php` — class Cleanup_Preprocessor, function preprocess
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/ContentRenderer/Preprocessors/class-quote-preprocessor.php` — class Quote_Preprocessor, function preprocess
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/ContentRenderer/Preprocessors/class-spacing-preprocessor.php` — class Spacing_Preprocessor, function preprocess
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/ContentRenderer/Preprocessors/class-typography-preprocessor.php`
+  - class Typography_Preprocessor
+  - function __construct
+  - function preprocess
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/ContentRenderer/Preprocessors/interface-preprocessor.php` — interface Preprocessor, function preprocess
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/ContentRenderer/class-block-renderer.php` — interface Block_Renderer, function render
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/ContentRenderer/class-blocks-parser.php` — class Blocks_Parser, function parse
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/ContentRenderer/class-content-renderer.php`
+  - class Content_Renderer
+  - function __construct
+  - function render
+  - function block_parser
+  - function preprocess_parsed_blocks
+  - function render_block
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/ContentRenderer/class-process-manager.php`
+  - class Process_Manager
+  - function __construct
+  - function preprocess
+  - function postprocess
+  - function register_preprocessor
+  - function register_postprocessor
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/ContentRenderer/class-rendering-context.php`
+  - class Rendering_Context
+  - function __construct
+  - function get_theme_json
+  - function get_theme_styles
+  - function get_theme_settings
+  - function get_layout_width_without_padding
+  - _...5 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/class-html2text-exception.php`
+  - class Html2Text_Exception
+  - function __construct
+  - function get_more_info
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/class-html2text.php`
+  - class Html2Text
+  - function default_options
+  - function convert
+  - function fix_newlines
+  - function nbsp_codes
+  - function zwnj_codes
+  - _...3 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/class-renderer.php`
+  - class Renderer
+  - function __construct
+  - function render
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Renderer/interface-css-inliner.php`
+  - interface Css_Inliner
+  - function from_html
+  - function inline_css
+  - function render
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Templates/class-template.php`
+  - class Template
+  - function __construct
+  - function get_pluginuri
+  - function get_slug
+  - function get_name
+  - function get_title
+  - _...3 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Templates/class-templates-registry.php`
+  - class Templates_Registry
+  - function initialize
+  - function register
+  - function get_by_name
+  - function get_by_slug
+  - function get_all
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/Templates/class-templates.php`
+  - class Templates
+  - function __construct
+  - function initialize
+  - function get_block_template
+  - function register_templates
+  - function register_post_types_to_api
+  - _...2 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/class-assets-manager.php`
+  - class Assets_Manager
+  - function __construct
+  - function set_assets_path
+  - function set_assets_url
+  - function initialize
+  - function enqueue_admin_styles
+  - _...2 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/class-dependency-check.php` — class Dependency_Check, function are_dependencies_met
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/class-email-api-controller.php`
+  - class Email_Api_Controller
+  - function __construct
+  - function get_email_data
+  - function save_email_data
+  - function send_preview_email_data
+  - function get_personalization_tags
+  - _...2 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/class-email-editor.php`
+  - class Email_Editor
+  - function __construct
+  - function initialize
+  - function extend_email_post_api
+  - function register_email_editor_api_routes
+  - function extend_email_theme_styles
+  - _...3 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/class-email-styles-schema.php` — class Email_Styles_Schema, function get_schema
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/class-personalizer.php`
+  - class Personalizer
+  - function __construct
+  - function set_context
+  - function get_context
+  - function personalize_content
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/class-send-preview-email.php`
+  - class Send_Preview_Email
+  - function __construct
+  - function send_preview_email
+  - function render_html
+  - function add_preview_context
+  - function set_personalize_content
+  - _...2 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/class-settings-controller.php`
+  - class Settings_Controller
+  - function __construct
+  - function get_settings
+  - function get_layout
+  - function get_email_styles
+  - function get_layout_width_without_padding
+  - _...5 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/class-site-style-sync-controller.php`
+  - class Site_Style_Sync_Controller
+  - function __construct
+  - function initialize
+  - function sync_site_styles
+  - function get_theme
+  - function is_sync_enabled
+  - _...2 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/class-theme-controller.php`
+  - class Theme_Controller
+  - function __construct
+  - function get_theme
+  - function get_base_theme
+  - function get_styles
+  - function get_settings
+  - _...6 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Engine/class-user-theme.php`
+  - class User_Theme
+  - function get_theme
+  - function get_user_theme_post
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-abstract-block-renderer.php` — class Abstract_Block_Renderer, function render
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-audio.php` — class Audio, function render
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-button.php` — class Button, function render
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-buttons.php` — class Buttons, function __construct
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-column.php` — class Column
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-columns.php` — class Columns
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-cover.php` — class Cover
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-embed.php` — class Embed, function render
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-fallback.php` — class Fallback
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-gallery.php` — class Gallery
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-group.php` — class Group
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-image.php` — class Image
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-list-block.php` — class List_Block
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-list-item.php` — class List_Item
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-media-text.php` — class Media_Text
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-post-content.php` — class Post_Content, function render_stateless
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-quote.php` — class Quote
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-social-link.php` — class Social_Link
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-social-links.php`
+  - class Social_Links
+  - function get_service_icon_url
+  - function get_service_png_url
+  - function get_service_png_path
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-table.php` — class Table
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-text.php` — class Text
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/Renderer/Blocks/class-video.php` — class Video
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Core/class-initializer.php`
+  - class Initializer
+  - function initialize
+  - function adjust_theme_json
+  - function allow_styles
+  - function update_block_settings
+  - function render_block
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Utils/class-dom-document-helper.php`
+  - class Dom_Document_Helper
+  - function __construct
+  - function find_element
+  - function get_attribute_value
+  - function get_attribute_value_by_tag_name
+  - function get_outer_html
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Utils/class-html-processing-helper.php`
+  - class Html_Processing_Helper
+  - function clean_css_classes
+  - function sanitize_css_value
+  - function sanitize_dimension_value
+  - function sanitize_color
+  - function validate_caption_attribute
+  - _...6 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Utils/class-social-links-helper.php`
+  - class Social_Links_Helper
+  - function detect_whiteish_color
+  - function get_service_brand_color
+  - function get_default_social_link_size
+  - function get_social_link_size_option_value
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Utils/class-styles-helper.php`
+  - class Styles_Helper
+  - function parse_value
+  - function parse_styles_to_array
+  - function get_normalized_block_styles
+  - function get_styles_from_block
+  - function extend_block_styles
+  - _...4 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/Utils/class-table-wrapper-helper.php`
+  - class Table_Wrapper_Helper
+  - function render_table_cell
+  - function render_outlook_table_cell
+  - function render_table_wrapper
+  - function render_outlook_table_wrapper
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/WooCommerce/Renderer/Blocks/class-abstract-product-block-renderer.php` — class Abstract_Product_Block_Renderer
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/WooCommerce/Renderer/Blocks/class-product-button.php` — class Product_Button
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/WooCommerce/Renderer/Blocks/class-product-collection.php` — class Product_Collection
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/WooCommerce/Renderer/Blocks/class-product-image.php` — class Product_Image
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/WooCommerce/Renderer/Blocks/class-product-price.php` — class Product_Price
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/WooCommerce/Renderer/Blocks/class-product-sale-badge.php` — class Product_Sale_Badge
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Integrations/WooCommerce/class-initializer.php`
+  - class Initializer
+  - function update_block_settings
+  - function render_block
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Validator/Schema/class-any-of-schema.php`
+  - class Any_Of_Schema
+  - function __construct
+  - function nullable
+  - function non_nullable
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Validator/Schema/class-array-schema.php`
+  - class Array_Schema
+  - function items
+  - function minItems
+  - function maxItems
+  - function uniqueItems
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Validator/Schema/class-boolean-schema.php` — class Boolean_Schema
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Validator/Schema/class-integer-schema.php`
+  - class Integer_Schema
+  - function minimum
+  - function exclusiveMinimum
+  - function maximum
+  - function exclusiveMaximum
+  - function multipleOf
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Validator/Schema/class-null-schema.php` — class Null_Schema
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Validator/Schema/class-number-schema.php`
+  - class Number_Schema
+  - function minimum
+  - function exclusiveMinimum
+  - function maximum
+  - function exclusiveMaximum
+  - function multipleOf
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Validator/Schema/class-object-schema.php`
+  - class Object_Schema
+  - function properties
+  - function additionalProperties
+  - function disableAdditionalProperties
+  - function patternProperties
+  - function minProperties
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Validator/Schema/class-one-of-schema.php`
+  - class One_Of_Schema
+  - function __construct
+  - function nullable
+  - function non_nullable
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Validator/Schema/class-string-schema.php`
+  - class String_Schema
+  - function minLength
+  - function maxLength
+  - function pattern
+  - function formatDateTime
+  - function formatEmail
+  - _...4 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Validator/class-builder.php`
+  - class Builder
+  - function string
+  - function number
+  - function integer
+  - function boolean
+  - function null
+  - _...4 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Validator/class-schema.php`
+  - class Schema
+  - function nullable
+  - function non_nullable
+  - function required
+  - function optional
+  - function title
+  - _...5 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Validator/class-validation-exception.php`
+  - class Validation_Exception
+  - function create_from_wp_error
+  - function get_wp_error
+- `wp-content/plugins/woocommerce/packages/email-editor/src/Validator/class-validator.php`
+  - class Validator
+  - function validate
+  - function validate_schema_array
+- `wp-content/plugins/woocommerce/packages/email-editor/src/class-bootstrap.php`
+  - class Bootstrap
+  - function __construct
+  - function init
+  - function initialize
+  - function setup_email_editor_integrations
+- `wp-content/plugins/woocommerce/packages/email-editor/src/class-container.php`
+  - class Container
+  - function __unserialize
+  - function set
+  - function get
+- `wp-content/plugins/woocommerce/packages/email-editor/src/class-email-css-inliner.php`
+  - class Email_Css_Inliner
+  - function from_html
+  - function inline_css
+  - function render
+- `wp-content/plugins/woocommerce/packages/email-editor/src/class-email-editor-container.php`
+  - class Email_Editor_Container
+  - function init
+  - function container
+- `wp-content/plugins/woocommerce/packages/email-editor/src/class-package.php`
+  - class Package
+  - function init
+  - function get_version
+  - function get_path
+- `wp-content/plugins/woocommerce/packages/email-editor/src/exceptions.php`
+  - interface HttpAwareException
+  - class Exception
+  - class RuntimeException
+  - class UnexpectedValueException
+  - class AccessDeniedException
+  - class NotFoundException
+  - _...11 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Pelago/Emogrifier/Caching/SimpleStringCache.php`
+  - class SimpleStringCache
+  - function has
+  - function get
+  - function set
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Pelago/Emogrifier/Css/CssDocument.php`
+  - class CssDocument
+  - function __construct
+  - function getStyleRulesData
+  - function renderNonConditionalAtRules
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Pelago/Emogrifier/Css/StyleRule.php`
+  - class StyleRule
+  - function __construct
+  - function getSelectors
+  - function getDeclarationAsText
+  - function hasAtLeastOneDeclaration
+  - function getContainingAtRule
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Pelago/Emogrifier/CssInliner.php`
+  - class CssInliner
+  - function inlineCss
+  - function disableInlineStyleAttributesParsing
+  - function disableStyleBlocksParsing
+  - function addAllowedMediaType
+  - function removeAllowedMediaType
+  - _...6 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Pelago/Emogrifier/HtmlProcessor/AbstractHtmlProcessor.php`
+  - class AbstractHtmlProcessor
+  - function fromHtml
+  - function fromDomDocument
+  - function getDomDocument
+  - function render
+  - function renderBodyContent
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Pelago/Emogrifier/HtmlProcessor/CssToAttributeConverter.php` — class CssToAttributeConverter, function convertCssToVisualAttributes
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Pelago/Emogrifier/HtmlProcessor/CssVariableEvaluator.php` — class CssVariableEvaluator, function evaluateVariables
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Pelago/Emogrifier/HtmlProcessor/HtmlNormalizer.php` — class HtmlNormalizer
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Pelago/Emogrifier/HtmlProcessor/HtmlPruner.php`
+  - class HtmlPruner
+  - function removeElementsWithDisplayNone
+  - function removeRedundantClasses
+  - function removeRedundantClassesAfterCssInlined
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Pelago/Emogrifier/Utilities/ArrayIntersector.php`
+  - class ArrayIntersector
+  - function __construct
+  - function intersectWith
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Pelago/Emogrifier/Utilities/CssConcatenator.php`
+  - class CssConcatenator
+  - function append
+  - function getCss
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Pelago/Emogrifier/Utilities/DeclarationBlockParser.php`
+  - class DeclarationBlockParser
+  - function normalizePropertyName
+  - function parse
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Pelago/Emogrifier/Utilities/Preg.php`
+  - class Preg
+  - function throwExceptions
+  - function replace
+  - function replaceCallback
+  - function split
+  - function match
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/CSSList/AtRuleBlockList.php`
+  - class AtRuleBlockList
+  - function __construct
+  - function atRuleName
+  - function atRuleArgs
+  - function __toString
+  - function render
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/CSSList/CSSBlockList.php`
+  - class CSSBlockList
+  - function __construct
+  - function getAllValues
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/CSSList/CSSList.php`
+  - class CSSList
+  - function __construct
+  - function parseList
+  - function prepend
+  - function append
+  - function splice
+  - _...11 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/CSSList/Document.php`
+  - class Document
+  - function __construct
+  - function parse
+  - function getAllDeclarationBlocks
+  - function getAllSelectors
+  - function getAllRuleSets
+  - _...5 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/CSSList/KeyFrame.php`
+  - class KeyFrame
+  - function __construct
+  - function setVendorKeyFrame
+  - function getVendorKeyFrame
+  - function setAnimationName
+  - function getAnimationName
+  - _...5 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Comment/Comment.php`
+  - class Comment
+  - function __construct
+  - function getComment
+  - function setComment
+  - function __toString
+  - function render
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Comment/Commentable.php`
+  - interface Commentable
+  - function addComments
+  - function getComments
+  - function setComments
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/OutputFormat.php`
+  - class OutputFormat
+  - function __construct
+  - function get
+  - function set
+  - function __call
+  - function indentWithTabs
+  - _...8 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/OutputFormatter.php`
+  - class OutputFormatter
+  - function __construct
+  - function space
+  - function spaceAfterRuleName
+  - function spaceBeforeRules
+  - function spaceAfterRules
+  - _...13 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Parser.php`
+  - class Parser
+  - function __construct
+  - function setCharset
+  - function getCharset
+  - function parse
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Parsing/Anchor.php`
+  - class Anchor
+  - function __construct
+  - function backtrack
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Parsing/OutputException.php` — class OutputException, function __construct
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Parsing/ParserState.php`
+  - class ParserState
+  - function __construct
+  - function setCharset
+  - function getCharset
+  - function currentLine
+  - function currentColumn
+  - _...16 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Parsing/SourceException.php` — class SourceException, function __construct
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Parsing/UnexpectedEOFException.php` — class UnexpectedEOFException
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Parsing/UnexpectedTokenException.php` — class UnexpectedTokenException, function __construct
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Position/Position.php`
+  - class Position
+  - function getLineNumber
+  - function getLineNo
+  - function getColumnNumber
+  - function getColNo
+  - function setPosition
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Position/Positionable.php`
+  - interface Positionable
+  - function getLineNumber
+  - function getLineNo
+  - function getColumnNumber
+  - function getColNo
+  - function setPosition
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Property/AtRule.php`
+  - interface AtRule
+  - function atRuleName
+  - function atRuleArgs
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Property/CSSNamespace.php`
+  - class CSSNamespace
+  - function __construct
+  - function __toString
+  - function render
+  - function getUrl
+  - function getPrefix
+  - _...7 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Property/Charset.php`
+  - class Charset
+  - function __construct
+  - function setCharset
+  - function getCharset
+  - function __toString
+  - function render
+  - _...5 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Property/Import.php`
+  - class Import
+  - function __construct
+  - function setLocation
+  - function getLocation
+  - function __toString
+  - function render
+  - _...6 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Property/KeyframeSelector.php` — class KeyframeSelector
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Property/Selector.php`
+  - class Selector
+  - function isValid
+  - function __construct
+  - function getSelector
+  - function setSelector
+  - function __toString
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Renderable.php`
+  - interface Renderable
+  - function __toString
+  - function render
+  - function getLineNo
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Rule/Rule.php`
+  - class Rule
+  - function __construct
+  - function parse
+  - function setRule
+  - function getRule
+  - function getValue
+  - _...14 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/RuleSet/AtRuleSet.php`
+  - class AtRuleSet
+  - function __construct
+  - function atRuleName
+  - function atRuleArgs
+  - function __toString
+  - function render
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/RuleSet/DeclarationBlock.php`
+  - class DeclarationBlock
+  - function __construct
+  - function parse
+  - function setSelectors
+  - function removeSelector
+  - function getSelector
+  - _...17 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/RuleSet/RuleSet.php`
+  - class RuleSet
+  - function __construct
+  - function parseRuleSet
+  - function addRule
+  - function getRules
+  - function setRules
+  - _...8 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Settings.php`
+  - class Settings
+  - function create
+  - function withMultibyteSupport
+  - function withDefaultCharset
+  - function withLenientParsing
+  - function beStrict
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Value/CSSFunction.php`
+  - class CSSFunction
+  - function __construct
+  - function parse
+  - function getName
+  - function setName
+  - function getArguments
+  - _...2 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Value/CSSString.php`
+  - class CSSString
+  - function __construct
+  - function parse
+  - function setString
+  - function getString
+  - function __toString
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Value/CalcFunction.php` — class CalcFunction, function parse
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Value/CalcRuleValueList.php`
+  - class CalcRuleValueList
+  - function __construct
+  - function render
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Value/Color.php`
+  - class Color
+  - function __construct
+  - function parse
+  - function getColor
+  - function setColor
+  - function getColorDescription
+  - _...2 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Value/LineName.php`
+  - class LineName
+  - function __construct
+  - function parse
+  - function __toString
+  - function render
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Value/PrimitiveValue.php` — class PrimitiveValue, function __construct
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Value/RuleValueList.php` — class RuleValueList, function __construct
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Value/Size.php`
+  - class Size
+  - function __construct
+  - function parse
+  - function setUnit
+  - function getUnit
+  - function setSize
+  - _...6 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Value/URL.php`
+  - class URL
+  - function __construct
+  - function parse
+  - function setURL
+  - function getURL
+  - function __toString
+  - _...1 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Value/Value.php`
+  - class Value
+  - function __construct
+  - function parseValue
+  - function parseIdentifierOrFunction
+  - function parsePrimitiveValue
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Sabberworm/CSS/Value/ValueList.php`
+  - class ValueList
+  - function __construct
+  - function addListComponent
+  - function getListComponents
+  - function setListComponents
+  - function getListSeparator
+  - _...3 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Symfony/Component/CssSelector/CssSelectorConverter.php`
+  - class CssSelectorConverter
+  - function __construct
+  - function toXPath
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Symfony/Polyfill/Php80/Php80.php`
+  - class Php80
+  - function fdiv
+  - function get_debug_type
+  - function get_resource_id
+  - function preg_last_error_msg
+  - function str_contains
+  - _...2 more_
+- `wp-content/plugins/woocommerce/packages/email-editor/vendor-prefixed/packages/Symfony/Polyfill/Php80/PhpToken.php`
+  - class PhpToken
+  - function __construct
+  - function getTokenName
+  - function is
+  - function isIgnorable
+  - function __toString
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/AI/BusinessDescription.php` — class BusinessDescription
+- `wp-content/plugins/woocommerce/src/Admin/API/AI/Images.php` — class Images
+- `wp-content/plugins/woocommerce/src/Admin/API/AI/Middleware.php` — class Middleware
+- `wp-content/plugins/woocommerce/src/Admin/API/AI/Patterns.php` — class Patterns
+- `wp-content/plugins/woocommerce/src/Admin/API/AI/Product.php` — class Product
+- `wp-content/plugins/woocommerce/src/Admin/API/AI/StoreInfo.php` — class StoreInfo
+- `wp-content/plugins/woocommerce/src/Admin/API/AI/StoreTitle.php` — class StoreTitle
+- `wp-content/plugins/woocommerce/src/Admin/API/AnalyticsImports.php`
+  - class AnalyticsImports
+  - function register_routes
+  - function permissions_check
+  - function get_status
+  - function trigger_import
+  - function get_status_schema
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Coupons.php`
+  - class Coupons
+  - function get_collection_params
+  - function get_items
+  - function add_wp_query_search_code_filter
+- `wp-content/plugins/woocommerce/src/Admin/API/CustomAttributeTraits.php` — class CustomAttributeTraits, function get_custom_attribute_by_slug
+- `wp-content/plugins/woocommerce/src/Admin/API/Customers.php`
+  - class Customers
+  - function register_routes
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/src/Admin/API/Data.php` — class Data, function get_items
+- `wp-content/plugins/woocommerce/src/Admin/API/DataCountries.php`
+  - class DataCountries
+  - function register_routes
+  - function get_locales
+- `wp-content/plugins/woocommerce/src/Admin/API/DataDownloadIPs.php`
+  - class DataDownloadIPs
+  - function register_routes
+  - function get_items
+  - function prepare_item_for_response
+  - function get_collection_params
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/src/Admin/API/Experiments.php`
+  - class Experiments
+  - function register_routes
+  - function get_assignment
+- `wp-content/plugins/woocommerce/src/Admin/API/Features.php`
+  - class Features
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_features
+- `wp-content/plugins/woocommerce/src/Admin/API/Init.php`
+  - class Init
+  - function instance
+  - function __construct
+  - function rest_api_init
+  - function rest_api_init_wc_admin
+  - function rest_api_init_wc_analytics
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/LaunchYourStore.php`
+  - class LaunchYourStore
+  - function register_routes
+  - function must_be_shop_manager_or_admin
+  - function initialize_coming_soon
+  - function get_woopay_test_orders_count
+  - function delete_woopay_test_orders
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Leaderboards.php`
+  - class Leaderboards
+  - function register_routes
+  - function get_leaderboards
+  - function get_items
+  - function get_allowed_items
+  - function prepare_item_for_response
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Marketing.php`
+  - class Marketing
+  - function register_routes
+  - function get_recommended_plugins_permissions_check
+  - function get_recommended_plugins
+  - function get_knowledge_base_posts
+  - function get_misc_recommendations
+- `wp-content/plugins/woocommerce/src/Admin/API/MarketingCampaignTypes.php`
+  - class MarketingCampaignTypes
+  - function register_routes
+  - function get_collection_params
+  - function get_items_permissions_check
+  - function get_items
+  - function prepare_item_for_response
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/MarketingCampaigns.php`
+  - class MarketingCampaigns
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function prepare_item_for_response
+  - function get_item_schema
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/MarketingChannels.php`
+  - class MarketingChannels
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/src/Admin/API/MarketingOverview.php`
+  - class MarketingOverview
+  - function register_routes
+  - function activate_plugin
+  - function install_plugins_permissions_check
+  - function get_installed_plugins
+- `wp-content/plugins/woocommerce/src/Admin/API/MarketingRecommendations.php`
+  - class MarketingRecommendations
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function prepare_item_for_response
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/src/Admin/API/MobileAppMagicLink.php`
+  - class MobileAppMagicLink
+  - function register_routes
+  - function send_magic_link
+- `wp-content/plugins/woocommerce/src/Admin/API/NoteActions.php`
+  - class NoteActions
+  - function register_routes
+  - function trigger_note_action
+- `wp-content/plugins/woocommerce/src/Admin/API/Notes.php`
+  - class Notes
+  - function register_routes
+  - function get_item
+  - function get_items
+  - function get_item_permissions_check
+  - function get_items_permissions_check
+  - _...12 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Notice.php`
+  - class Notice
+  - function register_routes
+  - function dissmiss_notice
+  - function get_permission
+- `wp-content/plugins/woocommerce/src/Admin/API/OnboardingFreeExtensions.php`
+  - class OnboardingFreeExtensions
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_available_extensions
+- `wp-content/plugins/woocommerce/src/Admin/API/OnboardingPlugins.php`
+  - class OnboardingPlugins
+  - function register_routes
+  - function install_and_activate
+  - function install_and_activate_async
+  - function get_scheduled_installs
+  - function get_jetpack_authorization_url
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/OnboardingProductTypes.php`
+  - class OnboardingProductTypes
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_product_types
+- `wp-content/plugins/woocommerce/src/Admin/API/OnboardingProducts.php`
+  - class OnboardingProducts
+  - function register_routes
+  - function create_products
+  - function update_item_permissions_check
+- `wp-content/plugins/woocommerce/src/Admin/API/OnboardingProfile.php`
+  - class OnboardingProfile
+  - function register_routes
+  - function get_items_permissions_check
+  - function update_items_permissions_check
+  - function get_items
+  - function update_items
+  - _...9 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/OnboardingTasks.php`
+  - class OnboardingTasks
+  - function register_routes
+  - function create_products_permission_check
+  - function create_pages_permission_check
+  - function get_tasks_permission_check
+  - function hide_task_list_permission_check
+  - _...16 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/OnboardingThemes.php`
+  - class OnboardingThemes
+  - function register_routes
+  - function update_item_permissions_check
+  - function install_theme
+  - function activate_theme
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/src/Admin/API/Options.php`
+  - class Options
+  - function register_routes
+  - function get_item_permissions_check
+  - function user_has_permission
+  - function update_item_permissions_check
+  - function get_option_permissions
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Orders.php` — class Orders, function get_collection_params
+- `wp-content/plugins/woocommerce/src/Admin/API/PaymentGatewaySuggestions.php`
+  - class PaymentGatewaySuggestions
+  - function register_routes
+  - function get_permission_check
+  - function user_can_manage_woocommerce
+  - function get_suggestions
+  - function dismiss_payment_gateway_suggestion
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Plugins.php`
+  - class Plugins
+  - function register_routes
+  - function update_item_permissions_check
+  - function install_plugin
+  - function install_plugins
+  - function get_installation_status
+  - _...14 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/ProductAttributeTerms.php`
+  - class ProductAttributeTerms
+  - function register_routes
+  - function get_custom_attribute_permissions_check
+  - function get_item_schema
+  - function get_item_by_slug
+- `wp-content/plugins/woocommerce/src/Admin/API/ProductAttributes.php`
+  - class ProductAttributes
+  - function register_routes
+  - function get_collection_params
+  - function get_item_schema
+  - function get_item_by_slug
+  - function get_items
+- `wp-content/plugins/woocommerce/src/Admin/API/ProductCategories.php` — class ProductCategories
+- `wp-content/plugins/woocommerce/src/Admin/API/ProductForm.php`
+  - class ProductForm
+  - function register_routes
+  - function get_product_form_permission_check
+  - function get_fields
+  - function get_form_config
+- `wp-content/plugins/woocommerce/src/Admin/API/ProductReviews.php` — class ProductReviews
+- `wp-content/plugins/woocommerce/src/Admin/API/ProductVariations.php`
+  - class ProductVariations
+  - function register_routes
+  - function get_collection_params
+  - function add_wp_query_filter
+  - function add_wp_query_join
+  - function get_items
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Products.php`
+  - class Products
+  - function get_item_schema
+  - function get_collection_params
+  - function get_items
+  - function get_object
+  - function prepare_object_for_response
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/ProductsLowInStock.php`
+  - class ProductsLowInStock
+  - function register_routes
+  - function get_low_in_stock_count
+  - function get_items
+  - function get_collection_params
+  - function get_low_in_stock_count_params
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Cache.php`
+  - class Cache
+  - function invalidate
+  - function get_version
+  - function get
+  - function set
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Categories/Controller.php`
+  - class Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function get_collection_params
+  - function get_export_columns
+  - function prepare_item_for_export
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Categories/DataStore.php`
+  - class DataStore
+  - function get_default_query_vars
+  - function get_noncached_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Categories/Query.php` — class Query, function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Controller.php`
+  - class Controller
+  - function get_items
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Coupons/Controller.php`
+  - class Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function get_collection_params
+  - function get_export_columns
+  - function prepare_item_for_export
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Coupons/DataStore.php`
+  - class DataStore
+  - function init
+  - function get_coupon_id
+  - function get_default_query_vars
+  - function get_noncached_data
+  - function sync_order_coupons
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Coupons/Query.php` — class Query, function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Coupons/Stats/Controller.php`
+  - class Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Coupons/Stats/DataStore.php`
+  - class DataStore
+  - function get_default_query_vars
+  - function get_noncached_stats_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Coupons/Stats/Query.php` — class Query, function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Coupons/Stats/Segmenter.php` — class Segmenter
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Customers/Controller.php`
+  - class Controller
+  - function get_item
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function get_collection_params
+  - function get_export_columns
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Customers/DataStore.php`
+  - class DataStore
+  - function init
+  - function sync_on_order_delete
+  - function sync_order_customer
+  - function get_default_query_vars
+  - function get_existing_customer_id_from_order
+  - _...14 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Customers/Query.php` — class Query
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Customers/Stats/Controller.php`
+  - class Controller
+  - function get_items
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Customers/Stats/DataStore.php`
+  - class DataStore
+  - function get_default_query_vars
+  - function get_noncached_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Customers/Stats/Query.php` — class Query, function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/DataStore.php`
+  - class DataStore
+  - function get_noncached_data
+  - function __construct
+  - function get_data
+  - function get_default_query_vars
+  - function get_db_table_name
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/DataStoreInterface.php` — interface DataStoreInterface, function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Downloads/Controller.php`
+  - class Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function get_collection_params
+  - function get_export_columns
+  - function prepare_item_for_export
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Downloads/DataStore.php`
+  - class DataStore
+  - function get_default_query_vars
+  - function get_noncached_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Downloads/Files/Controller.php` — class Controller
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Downloads/Query.php` — class Query, function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Downloads/Stats/Controller.php`
+  - class Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Downloads/Stats/DataStore.php`
+  - class DataStore
+  - function get_default_query_vars
+  - function get_noncached_stats_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Downloads/Stats/Query.php` — class Query, function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Export/Controller.php`
+  - class Controller
+  - function register_routes
+  - function get_export_public_schema
+  - function get_export_status_public_schema
+  - function export_items
+  - function export_status
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/ExportableInterface.php`
+  - interface ExportableInterface
+  - function get_export_columns
+  - function prepare_item_for_export
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/ExportableTraits.php` — class ExportableTraits, function csv_number_format
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/FilteredGetDataTrait.php` — class FilteredGetDataTrait, function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/GenericController.php`
+  - class GenericController
+  - function get_item_schema
+  - function add_pagination_headers
+  - function get_collection_params
+  - function get_items
+  - function prepare_item_for_response
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/GenericQuery.php`
+  - class GenericQuery
+  - function __construct
+  - function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/GenericStatsController.php`
+  - class GenericStatsController
+  - function get_item_schema
+  - function get_collection_params
+  - function get_items
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Import/Controller.php`
+  - class Controller
+  - function register_routes
+  - function import_permissions_check
+  - function import_items
+  - function prepare_item_for_response
+  - function get_import_collection_params
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/OrderAwareControllerTrait.php`
+  - class OrderAwareControllerTrait
+  - function get_order_statuses
+  - function get_order_status_labels
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Orders/Controller.php`
+  - class Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function get_collection_params
+  - function get_export_columns
+  - function prepare_item_for_export
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Orders/DataStore.php`
+  - class DataStore
+  - function __construct
+  - function init
+  - function get_default_query_vars
+  - function get_noncached_data
+  - function get_all_statuses
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Orders/Query.php` — class Query
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Orders/Stats/Controller.php`
+  - class Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Orders/Stats/DataStore.php`
+  - class DataStore
+  - function __construct
+  - function init
+  - function get_default_query_vars
+  - function get_noncached_stats_data
+  - function get_unique_product_count
+  - _...7 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Orders/Stats/Query.php` — class Query
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Orders/Stats/Segmenter.php` — class Segmenter
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/ParameterException.php` — class ParameterException
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/PerformanceIndicators/Controller.php`
+  - class Controller
+  - function __construct
+  - function register_routes
+  - function set_active_jetpack_modules
+  - function get_allowed_items
+  - function sort
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Products/Controller.php`
+  - class Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function get_collection_params
+  - function get_export_columns
+  - function prepare_item_for_export
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Products/DataStore.php`
+  - class DataStore
+  - function init
+  - function add_partial_refund_type_meta
+  - function add_full_refund_type_meta
+  - function add_refund_type_meta
+  - function get_data
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Products/Query.php` — class Query, function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Products/Stats/Controller.php`
+  - class Controller
+  - function __construct
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function set_default_report_data
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Products/Stats/DataStore.php`
+  - class DataStore
+  - function get_default_query_vars
+  - function get_data
+  - function get_noncached_stats_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Products/Stats/Query.php` — class Query, function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Products/Stats/Segmenter.php` — class Segmenter
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Query.php`
+  - class Query
+  - function __construct
+  - function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Revenue/Query.php` — class Query, function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Revenue/Stats/Controller.php`
+  - class Controller
+  - function get_export_items
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function get_collection_params
+  - function get_export_columns
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Segmenter.php`
+  - class Segmenter
+  - function __construct
+  - function get_totals_segments
+  - function add_intervals_segments
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/SqlQuery.php`
+  - class SqlQuery
+  - function __construct
+  - function add_sql_clause
+  - function get_query_statement
+  - function clear_all_clauses
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/StatsDataStoreTrait.php`
+  - class StatsDataStoreTrait
+  - function get_noncached_stats_data
+  - function get_noncached_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Stock/Controller.php`
+  - class Controller
+  - function __construct
+  - function get_items
+  - function add_wp_query_filter
+  - function add_wp_query_join
+  - function add_wp_query_group_by
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Stock/Stats/Controller.php`
+  - class Controller
+  - function get_items
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Stock/Stats/DataStore.php` — class DataStore, function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Stock/Stats/Query.php` — class Query, function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Taxes/Controller.php`
+  - class Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function get_collection_params
+  - function get_export_columns
+  - function prepare_item_for_export
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Taxes/DataStore.php`
+  - class DataStore
+  - function init
+  - function get_default_query_vars
+  - function get_noncached_data
+  - function sync_order_taxes
+  - function sync_on_order_delete
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Taxes/Query.php` — class Query, function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Taxes/Stats/Controller.php`
+  - class Controller
+  - function __construct
+  - function set_default_report_data
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Taxes/Stats/DataStore.php`
+  - class DataStore
+  - function get_taxes
+  - function get_default_query_vars
+  - function get_noncached_stats_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Taxes/Stats/Query.php` — class Query, function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Taxes/Stats/Segmenter.php` — class Segmenter
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/TimeInterval.php`
+  - class TimeInterval
+  - function convert_local_datetime_to_gmt
+  - function default_before
+  - function default_after
+  - function db_datetime_format
+  - function quarter
+  - _...17 more_
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Variations/Controller.php`
+  - class Controller
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function get_collection_params
+  - function get_export_columns
+  - function prepare_item_for_export
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Variations/DataStore.php`
+  - class DataStore
+  - function get_default_query_vars
+  - function get_noncached_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Variations/Query.php` — class Query, function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Variations/Stats/Controller.php`
+  - class Controller
+  - function __construct
+  - function prepare_item_for_response
+  - function get_item_schema
+  - function set_default_report_data
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Variations/Stats/DataStore.php`
+  - class DataStore
+  - function get_default_query_vars
+  - function get_noncached_stats_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Variations/Stats/Query.php` — class Query, function get_data
+- `wp-content/plugins/woocommerce/src/Admin/API/Reports/Variations/Stats/Segmenter.php` — class Segmenter
+- `wp-content/plugins/woocommerce/src/Admin/API/SettingOptions.php` — class SettingOptions, function batch_items
+- `wp-content/plugins/woocommerce/src/Admin/API/Settings.php`
+  - class Settings
+  - function register_routes
+  - function save_items_permissions_check
+  - function save_settings
+  - function save_items_schema
+- `wp-content/plugins/woocommerce/src/Admin/API/ShippingPartnerSuggestions.php`
+  - class ShippingPartnerSuggestions
+  - function register_routes
+  - function get_permission_check
+  - function get_suggestions
+  - function get_suggestions_schema
+- `wp-content/plugins/woocommerce/src/Admin/API/Taxes.php`
+  - class Taxes
+  - function get_collection_params
+  - function get_items
+- `wp-content/plugins/woocommerce/src/Admin/API/Themes.php`
+  - class Themes
+  - function register_routes
+  - function upload_theme_permissions_check
+  - function upload_theme
+  - function prepare_item_for_response
+  - function get_item_schema
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/BlockTemplates/BlockInterface.php`
+  - interface BlockInterface
+  - function get_name
+  - function get_id
+  - function get_order
+  - function set_order
+  - function get_attributes
+  - _...11 more_
+- `wp-content/plugins/woocommerce/src/Admin/BlockTemplates/BlockTemplateInterface.php`
+  - interface BlockTemplateInterface
+  - function get_id
+  - function get_title
+  - function get_description
+  - function get_area
+  - function generate_block_id
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/BlockTemplates/ContainerInterface.php`
+  - interface ContainerInterface
+  - function get_formatted_template
+  - function get_block
+  - function remove_block
+  - function remove_blocks
+- `wp-content/plugins/woocommerce/src/Admin/Composer/Package.php`
+  - class Package
+  - function init
+  - function get_version
+  - function get_active_version
+  - function is_package_active
+  - function get_path
+- `wp-content/plugins/woocommerce/src/Admin/DataSourcePoller.php`
+  - class DataSourcePoller
+  - function __construct
+  - function get_specs_from_data_sources
+  - function read_specs_from_data_sources
+  - function delete_specs_transient
+  - function set_specs_transient
+- `wp-content/plugins/woocommerce/src/Admin/DateTimeProvider/CurrentDateTimeProvider.php` — class CurrentDateTimeProvider, function get_now
+- `wp-content/plugins/woocommerce/src/Admin/DateTimeProvider/DateTimeProviderInterface.php` — interface DateTimeProviderInterface, function get_now
+- `wp-content/plugins/woocommerce/src/Admin/DeprecatedClassFacade.php`
+  - class DeprecatedClassFacade
+  - function __construct
+  - function __call
+  - function __callStatic
+- `wp-content/plugins/woocommerce/src/Admin/FeaturePlugin.php`
+  - class FeaturePlugin
+  - function instance
+  - function init
+- `wp-content/plugins/woocommerce/src/Admin/Features/AsyncProductEditorCategoryField/Init.php`
+  - class Init
+  - function __construct
+  - function add_metabox_args
+  - function enqueue_scripts
+  - function enqueue_styles
+- `wp-content/plugins/woocommerce/src/Admin/Features/Blueprint/Exporters/ExportWCCoreProfilerOptions.php`
+  - class ExportWCCoreProfilerOptions
+  - function export
+  - function get_step_name
+  - function get_alias
+  - function get_label
+  - function get_description
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/Blueprint/Exporters/ExportWCPaymentGateways.php`
+  - class ExportWCPaymentGateways
+  - function export
+  - function get_wc_payment_gateways
+  - function get_step_name
+  - function get_label
+  - function get_description
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/Blueprint/Exporters/ExportWCSettings.php`
+  - class ExportWCSettings
+  - function __construct
+  - function export
+  - function get_step_name
+  - function get_alias
+  - function get_label
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/Blueprint/Exporters/ExportWCSettingsAccount.php`
+  - class ExportWCSettingsAccount
+  - function get_alias
+  - function get_label
+  - function get_description
+- `wp-content/plugins/woocommerce/src/Admin/Features/Blueprint/Exporters/ExportWCSettingsAdvanced.php`
+  - class ExportWCSettingsAdvanced
+  - function get_alias
+  - function get_label
+  - function get_description
+- `wp-content/plugins/woocommerce/src/Admin/Features/Blueprint/Exporters/ExportWCSettingsEmails.php`
+  - class ExportWCSettingsEmails
+  - function get_alias
+  - function export
+  - function get_label
+  - function get_description
+- `wp-content/plugins/woocommerce/src/Admin/Features/Blueprint/Exporters/ExportWCSettingsGeneral.php`
+  - class ExportWCSettingsGeneral
+  - function get_alias
+  - function get_label
+  - function get_description
+- `wp-content/plugins/woocommerce/src/Admin/Features/Blueprint/Exporters/ExportWCSettingsIntegrations.php`
+  - class ExportWCSettingsIntegrations
+  - function get_alias
+  - function get_label
+  - function export
+  - function get_description
+- `wp-content/plugins/woocommerce/src/Admin/Features/Blueprint/Exporters/ExportWCSettingsProducts.php`
+  - class ExportWCSettingsProducts
+  - function get_alias
+  - function get_label
+  - function get_description
+- `wp-content/plugins/woocommerce/src/Admin/Features/Blueprint/Exporters/ExportWCSettingsShipping.php`
+  - class ExportWCSettingsShipping
+  - function export
+  - function get_step_name
+  - function get_label
+  - function get_description
+  - function get_alias
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/Blueprint/Exporters/ExportWCSettingsSiteVisibility.php`
+  - class ExportWCSettingsSiteVisibility
+  - function export
+  - function get_alias
+  - function get_label
+  - function get_description
+  - function get_step_name
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/Blueprint/Exporters/ExportWCSettingsTax.php`
+  - class ExportWCSettingsTax
+  - function __construct
+  - function get_alias
+  - function export
+  - function get_label
+  - function get_description
+- `wp-content/plugins/woocommerce/src/Admin/Features/Blueprint/Exporters/ExportWCTaskOptions.php`
+  - class ExportWCTaskOptions
+  - function export
+  - function get_step_name
+  - function get_alias
+  - function get_label
+  - function get_description
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/Blueprint/Init.php`
+  - class Init
+  - function __construct
+  - function init_rest_api
+  - function get_woo_exporters
+  - function add_woo_exporters
+  - function get_plugins_for_export_group
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/Blueprint/RestApi.php`
+  - class RestApi
+  - function __construct
+  - function register_routes
+  - function check_export_permission
+  - function check_import_permission
+  - function export
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/Blueprint/SettingOptions.php`
+  - class SettingOptions
+  - function __construct
+  - function get_page_options
+- `wp-content/plugins/woocommerce/src/Admin/Features/Features.php`
+  - class Features
+  - function get_instance
+  - function __construct
+  - function get_features
+  - function get_optional_feature_options
+  - function exists
+  - _...12 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/LaunchYourStore.php`
+  - class LaunchYourStore
+  - function __construct
+  - function save_site_visibility_options
+  - function append_coming_soon_global_tracks
+  - function preload_settings
+  - function maybe_add_coming_soon_banner_on_frontend
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/MarketingRecommendations/DefaultMarketingRecommendations.php` — class DefaultMarketingRecommendations, function get_all
+- `wp-content/plugins/woocommerce/src/Admin/Features/MarketingRecommendations/Init.php`
+  - class Init
+  - function __construct
+  - function delete_specs_transient
+  - function get_specs
+  - function get_misc_recommendations_specs
+  - function get_recommended_plugins
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/MarketingRecommendations/MarketingRecommendationsDataSourcePoller.php`
+  - class MarketingRecommendationsDataSourcePoller
+  - function get_instance
+  - function get_data_sources
+- `wp-content/plugins/woocommerce/src/Admin/Features/MarketingRecommendations/MiscRecommendationsDataSourcePoller.php`
+  - class MiscRecommendationsDataSourcePoller
+  - function get_instance
+  - function get_data_sources
+- `wp-content/plugins/woocommerce/src/Admin/Features/Navigation/RemovedDeprecated.php`
+  - class RemovedDeprecated
+  - function __call
+  - function __callStatic
+- `wp-content/plugins/woocommerce/src/Admin/Features/Onboarding.php`
+  - class Onboarding
+  - function __construct
+  - function get_allowed_industries
+  - function get_allowed_product_types
+  - function get_themes
+  - function get_theme_data
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/DeprecatedExtendedTask.php`
+  - class DeprecatedExtendedTask
+  - function __construct
+  - function get_id
+  - function get_additional_info
+  - function get_content
+  - function get_level
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/DeprecatedOptions.php`
+  - class DeprecatedOptions
+  - function init
+  - function get_deprecated_options
+  - function update_deprecated_options
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Init.php`
+  - class Init
+  - function get_instance
+  - function __construct
+  - function get_settings
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Task.php`
+  - class Task
+  - function __construct
+  - function get_id
+  - function get_title
+  - function get_content
+  - function get_time
+  - _...37 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/TaskList.php`
+  - class TaskList
+  - function __construct
+  - function is_hidden
+  - function is_visible
+  - function hide
+  - function maybe_set_default_layout
+  - _...13 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/TaskListSection.php`
+  - class TaskListSection
+  - function __construct
+  - function get_json
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/TaskLists.php`
+  - class TaskLists
+  - function instance
+  - function init
+  - function is_experiment_treatment
+  - function init_default_lists
+  - function init_tasks
+  - _...15 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/TaskTraits.php`
+  - class TaskTraits
+  - function record_tracks_event
+  - function get_list_id
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Tasks/AdditionalPayments.php`
+  - class AdditionalPayments
+  - function get_id
+  - function get_title
+  - function get_content
+  - function get_time
+  - function is_complete
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Tasks/Appearance.php`
+  - class Appearance
+  - function __construct
+  - function get_id
+  - function get_title
+  - function get_content
+  - function get_time
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Tasks/CustomizeStore.php`
+  - class CustomizeStore
+  - function __construct
+  - function mark_task_as_complete_block_theme
+  - function mark_task_as_complete_classic_theme
+  - function get_id
+  - function get_title
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Tasks/ExperimentalShippingRecommendation.php`
+  - class ExperimentalShippingRecommendation
+  - function get_id
+  - function get_title
+  - function get_content
+  - function get_time
+  - function is_complete
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Tasks/ExtendStore.php`
+  - class ExtendStore
+  - function get_id
+  - function get_title
+  - function get_content
+  - function get_additional_info
+  - function get_time
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Tasks/GetMobileApp.php`
+  - class GetMobileApp
+  - function get_id
+  - function get_title
+  - function get_content
+  - function get_time
+  - function is_complete
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Tasks/LaunchYourStore.php`
+  - class LaunchYourStore
+  - function __construct
+  - function get_id
+  - function get_title
+  - function get_content
+  - function get_time
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Tasks/Marketing.php`
+  - class Marketing
+  - function __construct
+  - function on_activated_plugin
+  - function get_id
+  - function get_title
+  - function get_content
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Tasks/Payments.php`
+  - class Payments
+  - function get_id
+  - function get_title
+  - function get_content
+  - function get_time
+  - function is_complete
+  - _...7 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Tasks/Products.php`
+  - class Products
+  - function __construct
+  - function get_id
+  - function get_title
+  - function get_content
+  - function get_time
+  - _...12 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Tasks/ReviewShippingOptions.php`
+  - class ReviewShippingOptions
+  - function get_id
+  - function get_title
+  - function get_content
+  - function get_time
+  - function is_complete
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Tasks/Shipping.php`
+  - class Shipping
+  - function __construct
+  - function get_id
+  - function get_title
+  - function get_content
+  - function get_time
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Tasks/StoreCreation.php`
+  - class StoreCreation
+  - function get_id
+  - function get_title
+  - function get_content
+  - function get_time
+  - function get_action_url
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Tasks/StoreDetails.php`
+  - class StoreDetails
+  - function get_id
+  - function get_title
+  - function get_content
+  - function get_time
+  - function get_action_url
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Tasks/Tax.php`
+  - class Tax
+  - function __construct
+  - function possibly_add_return_notice_script
+  - function get_id
+  - function get_title
+  - function get_content
+  - _...8 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Tasks/TourInAppMarketplace.php`
+  - class TourInAppMarketplace
+  - function get_id
+  - function get_title
+  - function get_content
+  - function get_time
+  - function is_complete
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/OnboardingTasks/Tasks/WooCommercePayments.php`
+  - class WooCommercePayments
+  - function get_id
+  - function get_title
+  - function get_badge
+  - function get_content
+  - function get_additional_data
+  - _...13 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/PaymentGatewaySuggestions/DefaultPaymentGateways.php`
+  - class DefaultPaymentGateways
+  - function get_all
+  - function get_wcpay_countries
+  - function get_rules_for_countries
+  - function get_rules_for_selling_venues
+  - function get_rules_selling_offline
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/PaymentGatewaySuggestions/EvaluateSuggestion.php`
+  - class EvaluateSuggestion
+  - function evaluate
+  - function evaluate_specs
+  - function reset_memo
+- `wp-content/plugins/woocommerce/src/Admin/Features/PaymentGatewaySuggestions/Init.php`
+  - class Init
+  - function __construct
+  - function get_suggestions
+  - function get_cached_or_default_suggestions
+  - function delete_specs_transient
+  - function get_specs
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/PaymentGatewaySuggestions/PaymentGatewaySuggestionsDataSourcePoller.php`
+  - class PaymentGatewaySuggestionsDataSourcePoller
+  - function get_instance
+  - function get_data_sources
+- `wp-content/plugins/woocommerce/src/Admin/Features/PaymentGatewaySuggestions/PaymentGatewaysController.php`
+  - class PaymentGatewaysController
+  - function init
+  - function extend_response
+  - function get_post_install_scripts
+  - function possibly_do_connection_return_action
+  - function handle_successfull_connection
+- `wp-content/plugins/woocommerce/src/Admin/Features/ProductBlockEditor/BlockRegistry.php`
+  - class BlockRegistry
+  - function get_instance
+  - function register_categories
+  - function is_registered
+  - function unregister
+  - function register_block_type_from_metadata
+- `wp-content/plugins/woocommerce/src/Admin/Features/ProductBlockEditor/BlockTemplateUtils.php`
+  - class BlockTemplateUtils
+  - function get_block_template_path
+  - function get_template_file_data
+  - function get_template_content
+- `wp-content/plugins/woocommerce/src/Admin/Features/ProductBlockEditor/Init.php`
+  - class Init
+  - function __construct
+  - function possibly_add_template_id
+  - function enqueue_scripts
+  - function enqueue_styles
+  - function dequeue_conflicting_styles
+  - _...9 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/ProductBlockEditor/ProductFormsController.php`
+  - class ProductFormsController
+  - function init
+  - function migrate_templates_when_plugin_updated
+  - function migrate_product_form_posts
+- `wp-content/plugins/woocommerce/src/Admin/Features/ProductBlockEditor/ProductTemplate.php`
+  - class ProductTemplate
+  - function __construct
+  - function get_id
+  - function get_title
+  - function get_layout_template_id
+  - function set_layout_template_id
+  - _...9 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/ProductBlockEditor/ProductTemplates/GroupInterface.php`
+  - interface GroupInterface
+  - function add_section
+  - function add_block
+- `wp-content/plugins/woocommerce/src/Admin/Features/ProductBlockEditor/ProductTemplates/ProductFormTemplateInterface.php`
+  - interface ProductFormTemplateInterface
+  - function add_group
+  - function get_group_by_id
+  - function get_section_by_id
+  - function get_subsection_by_id
+  - function get_block_by_id
+- `wp-content/plugins/woocommerce/src/Admin/Features/ProductBlockEditor/ProductTemplates/SectionInterface.php`
+  - interface SectionInterface
+  - function add_subsection
+  - function add_block
+  - function add_section
+- `wp-content/plugins/woocommerce/src/Admin/Features/ProductBlockEditor/ProductTemplates/SubsectionInterface.php` — interface SubsectionInterface, function add_block
+- `wp-content/plugins/woocommerce/src/Admin/Features/ProductBlockEditor/RedirectionController.php`
+  - class RedirectionController
+  - function __construct
+  - function set_product_templates
+  - function maybe_redirect_to_new_editor
+  - function maybe_redirect_to_old_editor
+  - function redirect_non_supported_product_types
+- `wp-content/plugins/woocommerce/src/Admin/Features/ProductBlockEditor/Tracks.php`
+  - class Tracks
+  - function init
+  - function add_product_source
+- `wp-content/plugins/woocommerce/src/Admin/Features/ProductDataViews/Init.php`
+  - class Init
+  - function __construct
+  - function is_product_data_view_page
+  - function enqueue_styles
+  - function enqueue_scripts
+  - function woocommerce_add_new_products_dashboard
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/Settings/Init.php`
+  - class Init
+  - function get_instance
+  - function __construct
+  - function is_settings_page
+  - function enqueue_settings_editor_styles
+  - function enqueue_settings_editor_scripts
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/Features/Settings/Transformer.php`
+  - class Transformer
+  - function transform
+  - function reset_state
+- `wp-content/plugins/woocommerce/src/Admin/Features/ShippingPartnerSuggestions/DefaultShippingPartners.php`
+  - class DefaultShippingPartners
+  - function get_all
+  - function get_rules_for_countries
+- `wp-content/plugins/woocommerce/src/Admin/Features/ShippingPartnerSuggestions/ShippingPartnerSuggestions.php`
+  - class ShippingPartnerSuggestions
+  - function get_suggestions
+  - function get_specs
+- `wp-content/plugins/woocommerce/src/Admin/Features/ShippingPartnerSuggestions/ShippingPartnerSuggestionsDataSourcePoller.php`
+  - class ShippingPartnerSuggestionsDataSourcePoller
+  - function get_instance
+  - function get_data_sources
+- `wp-content/plugins/woocommerce/src/Admin/Features/TransientNotices.php`
+  - class TransientNotices
+  - function __construct
+  - function get_queue
+  - function get_queue_by_user
+  - function get
+  - function add
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/Loader.php`
+  - class Loader
+  - function is_feature_enabled
+  - function is_admin_or_embed_page
+  - function is_admin_page
+  - function is_embed_page
+  - function should_use_minified_js_file
+- `wp-content/plugins/woocommerce/src/Admin/Marketing/InstalledExtensions.php`
+  - class InstalledExtensions
+  - function get_data
+  - function get_allowed_plugins
+- `wp-content/plugins/woocommerce/src/Admin/Marketing/MarketingCampaign.php`
+  - class MarketingCampaign
+  - function __construct
+  - function get_id
+  - function get_type
+  - function get_title
+  - function get_manage_url
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/Marketing/MarketingCampaignType.php`
+  - class MarketingCampaignType
+  - function __construct
+  - function get_id
+  - function get_channel
+  - function get_name
+  - function get_description
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/Marketing/MarketingChannelInterface.php`
+  - interface MarketingChannelInterface
+  - function get_slug
+  - function get_name
+  - function get_description
+  - function get_icon_url
+  - function is_setup_completed
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Admin/Marketing/MarketingChannels.php`
+  - class MarketingChannels
+  - function register
+  - function unregister_all
+  - function get_registered_channels
+- `wp-content/plugins/woocommerce/src/Admin/Marketing/Price.php`
+  - class Price
+  - function __construct
+  - function get_value
+  - function get_currency
+- `wp-content/plugins/woocommerce/src/Admin/Notes/DataStore.php`
+  - class DataStore
+  - function create
+  - function read
+  - function update
+  - function delete
+  - function get_notes
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Admin/Notes/DeprecatedNotes.php`
+  - class WC_Admin_Note
+  - class WC_Admin_Notes
+  - class WC_Admin_Notes_Customize_Store_With_Blocks
+  - class WC_Admin_Notes_Edit_Products_On_The_Move
+  - class WC_Admin_Notes_EU_VAT_Number
+  - class WC_Admin_Notes_Facebook_Marketing_Expert
+  - _...20 more_
+- `wp-content/plugins/woocommerce/src/Admin/Notes/Note.php`
+  - class Note
+  - function __construct
+  - function apply_changes
+  - function get_deprecated_types
+  - function get_allowed_types
+  - function get_allowed_statuses
+  - _...38 more_
+- `wp-content/plugins/woocommerce/src/Admin/Notes/NoteTraits.php`
+  - class NoteTraits
+  - function note_exists
+  - function can_be_added
+  - function possibly_add_note
+  - function add_note
+  - function is_applicable
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Admin/Notes/Notes.php`
+  - class Notes
+  - function init
+  - function get_notes
+  - function get_note
+  - function get_note_by_name
+  - function get_notes_count
+  - _...15 more_
+- `wp-content/plugins/woocommerce/src/Admin/Notes/NotesUnavailableException.php` — class NotesUnavailableException
+- `wp-content/plugins/woocommerce/src/Admin/Overrides/Order.php`
+  - class Order
+  - function get_data_without_line_items
+  - function get_line_item_data
+  - function add_filters
+  - function order_class_name
+  - function get_report_customer_id
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Admin/Overrides/OrderRefund.php`
+  - class OrderRefund
+  - function add_filters
+  - function order_class_name
+  - function get_report_customer_id
+  - function is_returning_customer
+- `wp-content/plugins/woocommerce/src/Admin/Overrides/OrderTraits.php`
+  - class OrderTraits
+  - function get_item_shipping_amount
+  - function get_item_shipping_tax_amount
+  - function get_item_coupon_amount
+  - function get_item_cart_tax_amount
+- `wp-content/plugins/woocommerce/src/Admin/Overrides/ThemeUpgrader.php` — class ThemeUpgrader, function install
+- `wp-content/plugins/woocommerce/src/Admin/Overrides/ThemeUpgraderSkin.php`
+  - class ThemeUpgraderSkin
+  - function header
+  - function footer
+  - function feedback
+  - function after
+- `wp-content/plugins/woocommerce/src/Admin/PageController.php`
+  - class PageController
+  - function get_instance
+  - function __construct
+  - function connect_page
+  - function determine_current_page
+  - function get_breadcrumbs
+  - _...17 more_
+- `wp-content/plugins/woocommerce/src/Admin/PluginsHelper.php`
+  - class PluginsHelper
+  - function init
+  - function get_plugin_path_from_slug
+  - function get_installed_plugin_slugs
+  - function get_installed_plugins_paths
+  - function get_active_plugin_slugs
+  - _...25 more_
+- `wp-content/plugins/woocommerce/src/Admin/PluginsInstallLoggers/AsyncPluginsInstallLogger.php`
+  - class AsyncPluginsInstallLogger
+  - function __construct
+  - function install_requested
+  - function installed
+  - function activated
+  - function add_error
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/PluginsInstallLoggers/PluginsInstallLogger.php`
+  - interface PluginsInstallLogger
+  - function install_requested
+  - function installed
+  - function activated
+  - function add_error
+  - function complete
+- `wp-content/plugins/woocommerce/src/Admin/PluginsInstaller.php`
+  - class PluginsInstaller
+  - function init
+  - function possibly_install_activate_plugins
+  - function cache_results
+  - function redirect_to_referer
+- `wp-content/plugins/woocommerce/src/Admin/PluginsProvider/PluginsProvider.php`
+  - class PluginsProvider
+  - function get_active_plugin_slugs
+  - function set_deactivated_plugin
+  - function get_plugin_data
+  - function get_plugin_path_from_slug
+- `wp-content/plugins/woocommerce/src/Admin/PluginsProvider/PluginsProviderInterface.php`
+  - interface PluginsProviderInterface
+  - function get_active_plugin_slugs
+  - function get_plugin_data
+  - function get_plugin_path_from_slug
+- `wp-content/plugins/woocommerce/src/Admin/RemoteInboxNotifications/RemoteInboxNotificationsDataSourcePoller.php`
+  - class RemoteInboxNotificationsDataSourcePoller
+  - function get_instance
+  - function get_data_sources
+- `wp-content/plugins/woocommerce/src/Admin/RemoteInboxNotifications/RemoteInboxNotificationsEngine.php`
+  - class RemoteInboxNotificationsEngine
+  - function init
+  - function update_profile_option
+  - function on_admin_init
+  - function on_init
+  - function run
+  - _...7 more_
+- `wp-content/plugins/woocommerce/src/Admin/RemoteInboxNotifications/RuleProcessorInterface.php`
+  - interface RuleProcessorInterface
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteInboxNotifications/SpecRunner.php`
+  - class SpecRunner
+  - function run_spec
+  - function get_locale
+  - function get_action_locale
+  - function get_actions
+- `wp-content/plugins/woocommerce/src/Admin/RemoteInboxNotifications/TransformerInterface.php`
+  - interface TransformerInterface
+  - function transform
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/DataSourcePoller.php`
+  - class DataSourcePoller
+  - function get_instance
+  - function __construct
+  - function get_specs_from_data_sources
+  - function get_cached_specs
+  - function read_specs_from_data_sources
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RemoteSpecsEngine.php` — class RemoteSpecsEngine, function log_errors
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/BaseLocationCountryRuleProcessor.php`
+  - class BaseLocationCountryRuleProcessor
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/BaseLocationStateRuleProcessor.php`
+  - class BaseLocationStateRuleProcessor
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/ComparisonOperation.php` — class ComparisonOperation, function compare
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/ContextPluginsRuleProcessor.php`
+  - class ContextPluginsRuleProcessor
+  - function __construct
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/EvaluateAndGetStatus.php` — class EvaluateAndGetStatus, function evaluate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/EvaluateOverrides.php`
+  - class EvaluateOverrides
+  - function evaluate
+  - function set_value_with_dot_notation
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/EvaluationLogger.php`
+  - class EvaluationLogger
+  - function __construct
+  - function add_result
+  - function log
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/FailRuleProcessor.php`
+  - class FailRuleProcessor
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/GetRuleProcessor.php` — class GetRuleProcessor, function get_processor
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/GetRuleProcessorForContext.php`
+  - class GetRuleProcessorForContext
+  - function __construct
+  - function get_processor
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/IsEcommerceRuleProcessor.php`
+  - class IsEcommerceRuleProcessor
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/IsWooExpressRuleProcessor.php`
+  - class IsWooExpressRuleProcessor
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/NotRuleProcessor.php`
+  - class NotRuleProcessor
+  - function __construct
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/NoteStatusRuleProcessor.php`
+  - class NoteStatusRuleProcessor
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/OnboardingProfileRuleProcessor.php`
+  - class OnboardingProfileRuleProcessor
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/OptionRuleProcessor.php`
+  - class OptionRuleProcessor
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/OrRuleProcessor.php`
+  - class OrRuleProcessor
+  - function __construct
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/OrderCountRuleProcessor.php`
+  - class OrderCountRuleProcessor
+  - function __construct
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/OrdersProvider.php` — class OrdersProvider, function get_order_count
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/PassRuleProcessor.php`
+  - class PassRuleProcessor
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/PluginVersionRuleProcessor.php`
+  - class PluginVersionRuleProcessor
+  - function __construct
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/PluginsActivatedRuleProcessor.php`
+  - class PluginsActivatedRuleProcessor
+  - function __construct
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/ProductCountRuleProcessor.php`
+  - class ProductCountRuleProcessor
+  - function __construct
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/PublishAfterTimeRuleProcessor.php`
+  - class PublishAfterTimeRuleProcessor
+  - function __construct
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/PublishBeforeTimeRuleProcessor.php`
+  - class PublishBeforeTimeRuleProcessor
+  - function __construct
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/RuleEvaluator.php`
+  - class RuleEvaluator
+  - function __construct
+  - function evaluate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/RuleProcessorInterface.php`
+  - interface RuleProcessorInterface
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/StoredStateRuleProcessor.php`
+  - class StoredStateRuleProcessor
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/StoredStateSetupForProducts.php`
+  - class StoredStateSetupForProducts
+  - function admin_init
+  - function init
+  - function run_remote_notifications
+  - function init_stored_state
+  - function run_on_product_importer
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/TotalPaymentsVolumeProcessor.php`
+  - class TotalPaymentsVolumeProcessor
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/Transformers/ArrayColumn.php`
+  - class ArrayColumn
+  - function transform
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/Transformers/ArrayFlatten.php`
+  - class ArrayFlatten
+  - function transform
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/Transformers/ArrayKeys.php`
+  - class ArrayKeys
+  - function transform
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/Transformers/ArraySearch.php`
+  - class ArraySearch
+  - function transform
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/Transformers/ArrayValues.php`
+  - class ArrayValues
+  - function transform
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/Transformers/Count.php`
+  - class Count
+  - function transform
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/Transformers/DotNotation.php`
+  - class DotNotation
+  - function transform
+  - function get
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/Transformers/PrepareUrl.php`
+  - class PrepareUrl
+  - function transform
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/Transformers/TransformerInterface.php`
+  - interface TransformerInterface
+  - function transform
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/Transformers/TransformerService.php`
+  - class TransformerService
+  - function create_transformer
+  - function apply
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/WCAdminActiveForProvider.php` — class WCAdminActiveForProvider, function get_wcadmin_active_for_in_seconds
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/WCAdminActiveForRuleProcessor.php`
+  - class WCAdminActiveForRuleProcessor
+  - function __construct
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/RemoteSpecs/RuleProcessors/WooCommerceAdminUpdatedRuleProcessor.php`
+  - class WooCommerceAdminUpdatedRuleProcessor
+  - function process
+  - function validate
+- `wp-content/plugins/woocommerce/src/Admin/ReportCSVEmail.php`
+  - class ReportCSVEmail
+  - function __construct
+  - function init_form_fields
+  - function init_settings
+  - function get_email_type
+  - function get_default_heading
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Admin/ReportCSVExporter.php`
+  - class ReportCSVExporter
+  - function __construct
+  - function maybe_create_directory
+  - function get_reports_directory
+  - function set_report_type
+  - function set_report_args
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Admin/ReportExporter.php`
+  - class ReportExporter
+  - function get_scheduler_actions
+  - function get_dependencies
+  - function init
+  - function queue_report_export
+  - function export_report
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Admin/ReportsSync.php`
+  - class ReportsSync
+  - function init
+  - function get_schedulers
+  - function is_importing
+  - function regenerate_report_data
+  - function reset_import_stats
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Admin/Schedulers/SchedulerTraits.php`
+  - class SchedulerTraits
+  - function init
+  - function queue
+  - function set_queue
+  - function get_default_scheduler_actions
+  - function get_scheduler_actions
+  - _...14 more_
+- `wp-content/plugins/woocommerce/src/Admin/WCAdminHelper.php`
+  - class WCAdminHelper
+  - function get_wcadmin_active_for_in_seconds
+  - function is_wc_admin_active_for
+  - function is_wc_admin_active_in_date_range
+  - function is_site_fresh
+  - function is_current_page_store_page
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Autoloader.php` — class Autoloader, function init
+- `wp-content/plugins/woocommerce/src/Blocks/AI/Configuration.php` — class Configuration
+- `wp-content/plugins/woocommerce/src/Blocks/AI/Connection.php` — class Connection
+- `wp-content/plugins/woocommerce/src/Blocks/AIContent/ContentProcessor.php` — class ContentProcessor
+- `wp-content/plugins/woocommerce/src/Blocks/AIContent/PatternsDictionary.php` — class PatternsDictionary
+- `wp-content/plugins/woocommerce/src/Blocks/AIContent/PatternsHelper.php` — class PatternsHelper
+- `wp-content/plugins/woocommerce/src/Blocks/AIContent/UpdatePatterns.php` — class UpdatePatterns
+- `wp-content/plugins/woocommerce/src/Blocks/AIContent/UpdateProducts.php`
+  - class UpdateProducts
+  - function fetch_dummy_products_to_update
+  - function should_update_dummy_product
+  - function create_new_product
+  - function fetch_product_ids
+- `wp-content/plugins/woocommerce/src/Blocks/Assets/Api.php`
+  - class Api
+  - function __construct
+  - function get_block_metadata_path
+  - function update_script_data_cache
+  - function get_asset_data
+  - function get_script_data
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Assets/AssetDataRegistry.php`
+  - class AssetDataRegistry
+  - function __construct
+  - function exists
+  - function add
+  - function hydrate_api_request
+  - function hydrate_data_from_api_request
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Assets.php`
+  - class Assets
+  - function init
+  - function register_assets
+  - function enqueue_scripts
+  - function add_theme_body_class
+  - function add_theme_admin_body_class
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Blocks/AssetsController.php`
+  - class AssetsController
+  - function __construct
+  - function reregister_core_iapi_runtime
+  - function register_script_modules
+  - function register_assets
+  - function register_and_enqueue_site_editor_assets
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Blocks/BlockPatterns.php`
+  - class BlockPatterns
+  - function __construct
+  - function register_block_patterns
+  - function register_ptk_patterns
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTemplatesController.php`
+  - class BlockTemplatesController
+  - function init
+  - function dequeue_legacy_scripts
+  - function render_woocommerce_template_part
+  - function add_plugin_templates_parts_support
+  - function prevent_shortcodes_html_breakage
+  - _...9 more_
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTemplatesRegistry.php`
+  - class BlockTemplatesRegistry
+  - function init
+  - function register_add_to_cart_with_options_template_part_area
+  - function get_template
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AbstractBlock.php`
+  - class AbstractBlock
+  - function __construct
+  - function render_callback
+  - function enqueue_editor_assets
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AbstractDynamicBlock.php` — class AbstractDynamicBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AbstractInnerBlock.php` — class AbstractInnerBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AbstractProductGrid.php` — class AbstractProductGrid
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Accordion/AccordionGroup.php` — class AccordionGroup
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Accordion/AccordionHeader.php` — class AccordionHeader
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Accordion/AccordionItem.php` — class AccordionItem
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Accordion/AccordionPanel.php` — class AccordionPanel
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ActiveFilters.php` — class ActiveFilters
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AddToCartForm.php` — class AddToCartForm, function add_to_cart_form_action
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AddToCartWithOptions/AddToCartWithOptions.php`
+  - class AddToCartWithOptions
+  - function set_is_descendant_of_add_to_cart_with_options_context
+  - function has_form_elements
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AddToCartWithOptions/GroupedProductItem.php` — class GroupedProductItem, function set_is_descendant_of_grouped_product_selector_context
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AddToCartWithOptions/GroupedProductItemLabel.php` — class GroupedProductItemLabel
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AddToCartWithOptions/GroupedProductItemSelector.php` — class GroupedProductItemSelector, function set_quantity_input_type
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AddToCartWithOptions/GroupedProductSelector.php` — class GroupedProductSelector
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AddToCartWithOptions/QuantitySelector.php` — class QuantitySelector
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AddToCartWithOptions/Utils.php`
+  - class Utils
+  - function has_visible_quantity_input
+  - function add_quantity_steppers
+  - function add_quantity_stepper_classes
+  - function make_quantity_input_interactive
+  - function get_product_from_context
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AddToCartWithOptions/VariationDescription.php` — class VariationDescription
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AddToCartWithOptions/VariationSelector.php` — class VariationSelector
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AddToCartWithOptions/VariationSelectorAttribute.php` — class VariationSelectorAttribute
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AddToCartWithOptions/VariationSelectorAttributeName.php` — class VariationSelectorAttributeName
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AddToCartWithOptions/VariationSelectorAttributeOptions.php` — class VariationSelectorAttributeOptions, function get_normalized_attributes
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AllProducts.php` — class AllProducts
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AllReviews.php` — class AllReviews
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AtomicBlock.php` — class AtomicBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/AttributeFilter.php` — class AttributeFilter
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Breadcrumbs.php` — class Breadcrumbs
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Cart.php`
+  - class Cart
+  - function dequeue_woocommerce_core_scripts
+  - function register_patterns
+  - function get_cart_block_types
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CartAcceptedPaymentMethodsBlock.php` — class CartAcceptedPaymentMethodsBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CartCrossSellsBlock.php` — class CartCrossSellsBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CartCrossSellsProductsBlock.php` — class CartCrossSellsProductsBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CartExpressPaymentBlock.php` — class CartExpressPaymentBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CartItemsBlock.php` — class CartItemsBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CartLineItemsBlock.php` — class CartLineItemsBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CartLink.php` — class CartLink
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CartOrderSummaryBlock.php` — class CartOrderSummaryBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CartOrderSummaryCouponFormBlock.php` — class CartOrderSummaryCouponFormBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CartOrderSummaryDiscountBlock.php` — class CartOrderSummaryDiscountBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CartOrderSummaryFeeBlock.php` — class CartOrderSummaryFeeBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CartOrderSummaryHeadingBlock.php` — class CartOrderSummaryHeadingBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CartOrderSummaryShippingBlock.php` — class CartOrderSummaryShippingBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CartOrderSummarySubtotalBlock.php` — class CartOrderSummarySubtotalBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CartOrderSummaryTaxesBlock.php` — class CartOrderSummaryTaxesBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CartOrderSummaryTotalsBlock.php` — class CartOrderSummaryTotalsBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CartTotalsBlock.php` — class CartTotalsBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CatalogSorting.php` — class CatalogSorting
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CategoryDescription.php` — class CategoryDescription
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CategoryTitle.php` — class CategoryTitle
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Checkout.php`
+  - class Checkout
+  - function dequeue_woocommerce_core_scripts
+  - function register_settings
+  - function register_patterns
+  - function update_local_pickup_title
+  - function get_checkout_block_types
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutActionsBlock.php` — class CheckoutActionsBlock, function register_style_variations
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutAdditionalInformationBlock.php` — class CheckoutAdditionalInformationBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutBillingAddressBlock.php` — class CheckoutBillingAddressBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutContactInformationBlock.php` — class CheckoutContactInformationBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutExpressPaymentBlock.php` — class CheckoutExpressPaymentBlock, function sync_express_payment_attrs
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutFieldsBlock.php` — class CheckoutFieldsBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutOrderNoteBlock.php` — class CheckoutOrderNoteBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutOrderSummaryBlock.php` — class CheckoutOrderSummaryBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutOrderSummaryCartItemsBlock.php` — class CheckoutOrderSummaryCartItemsBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutOrderSummaryCouponFormBlock.php` — class CheckoutOrderSummaryCouponFormBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutOrderSummaryDiscountBlock.php` — class CheckoutOrderSummaryDiscountBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutOrderSummaryFeeBlock.php` — class CheckoutOrderSummaryFeeBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutOrderSummaryShippingBlock.php` — class CheckoutOrderSummaryShippingBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutOrderSummarySubtotalBlock.php` — class CheckoutOrderSummarySubtotalBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutOrderSummaryTaxesBlock.php` — class CheckoutOrderSummaryTaxesBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutOrderSummaryTotalsBlock.php` — class CheckoutOrderSummaryTotalsBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutPaymentBlock.php` — class CheckoutPaymentBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutPickupOptionsBlock.php` — class CheckoutPickupOptionsBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutShippingAddressBlock.php` — class CheckoutShippingAddressBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutShippingMethodBlock.php` — class CheckoutShippingMethodBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutShippingMethodsBlock.php` — class CheckoutShippingMethodsBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutTermsBlock.php` — class CheckoutTermsBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CheckoutTotalsBlock.php` — class CheckoutTotalsBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ClassicShortcode.php` — class ClassicShortcode
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ClassicTemplate.php`
+  - class ClassicTemplate
+  - function enqueue_block_assets
+  - function enqueue_legacy_assets
+  - function add_alignment_class_to_wrapper
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ComingSoon.php`
+  - class ComingSoon
+  - function initialize
+  - function enqueue_block_assets
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CouponCode.php` — class CouponCode
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/CustomerAccount.php` — class CustomerAccount, function modify_hooked_block_attributes
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/EmailContent.php` — class EmailContent
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/EmptyCartBlock.php` — class EmptyCartBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/EmptyMiniCartContentsBlock.php` — class EmptyMiniCartContentsBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/EnableBlockJsonAssetsTrait.php` — class EnableBlockJsonAssetsTrait
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/FeaturedCategory.php` — class FeaturedCategory
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/FeaturedItem.php`
+  - class FeaturedItem
+  - function update_context
+  - function restore_global_post
+  - function get_bg_styles
+  - function get_styles
+  - function get_classes
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/FeaturedProduct.php` — class FeaturedProduct
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/FilledCartBlock.php` — class FilledCartBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/FilledMiniCartContentsBlock.php` — class FilledMiniCartContentsBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/FilterWrapper.php` — class FilterWrapper
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/HandpickedProducts.php` — class HandpickedProducts
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/MiniCart.php`
+  - class MiniCart
+  - function __construct
+  - function enable_interactivity_support
+  - function modify_hooked_block_attributes
+  - function print_lazy_load_scripts
+  - function render_experimental_iapi_mini_cart_overlay
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/MiniCartCartButtonBlock.php` — class MiniCartCartButtonBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/MiniCartCheckoutButtonBlock.php` — class MiniCartCheckoutButtonBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/MiniCartContents.php` — class MiniCartContents, function get_mini_cart_block_types
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/MiniCartFooterBlock.php` — class MiniCartFooterBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/MiniCartItemsBlock.php` — class MiniCartItemsBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/MiniCartProductsTableBlock.php` — class MiniCartProductsTableBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/MiniCartShoppingButtonBlock.php` — class MiniCartShoppingButtonBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/MiniCartTitleBlock.php` — class MiniCartTitleBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/MiniCartTitleItemsCounterBlock.php` — class MiniCartTitleItemsCounterBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/MiniCartTitleLabelBlock.php` — class MiniCartTitleLabelBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/NextPreviousButtons.php` — class NextPreviousButtons
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/OrderConfirmation/AbstractOrderConfirmationBlock.php` — class AbstractOrderConfirmationBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/OrderConfirmation/AdditionalFields.php` — class AdditionalFields
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/OrderConfirmation/AdditionalFieldsWrapper.php` — class AdditionalFieldsWrapper
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/OrderConfirmation/AdditionalInformation.php` — class AdditionalInformation
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/OrderConfirmation/BillingAddress.php` — class BillingAddress
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/OrderConfirmation/BillingWrapper.php` — class BillingWrapper
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/OrderConfirmation/CreateAccount.php` — class CreateAccount
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/OrderConfirmation/Downloads.php` — class Downloads
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/OrderConfirmation/DownloadsWrapper.php` — class DownloadsWrapper
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/OrderConfirmation/ShippingAddress.php` — class ShippingAddress
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/OrderConfirmation/ShippingWrapper.php` — class ShippingWrapper
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/OrderConfirmation/Status.php` — class Status
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/OrderConfirmation/Summary.php` — class Summary
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/OrderConfirmation/Totals.php` — class Totals
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/OrderConfirmation/TotalsWrapper.php` — class TotalsWrapper
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/PageContentWrapper.php` — class PageContentWrapper
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/PaymentMethodIcons.php` — class PaymentMethodIcons
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/PriceFilter.php` — class PriceFilter
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProceedToCheckoutBlock.php` — class ProceedToCheckoutBlock
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductAverageRating.php` — class ProductAverageRating
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductBestSellers.php` — class ProductBestSellers
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductButton.php` — class ProductButton, function dequeue_add_to_cart_scripts
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductCategories.php` — class ProductCategories, function get_image_html
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductCategory.php` — class ProductCategory
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductCollection/Controller.php`
+  - class Controller
+  - function add_product_title_click_event_directives
+  - function disable_enhanced_pagination
+  - function register_settings
+  - function update_rest_query_in_editor
+  - function add_support_for_filter_blocks
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductCollection/HandlerRegistry.php`
+  - class HandlerRegistry
+  - function register_collection_handlers
+  - function register_core_collections
+  - function get_collection_handler
+  - function unregister_collection_handlers
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductCollection/NoResults.php` — class NoResults
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductCollection/QueryBuilder.php`
+  - class QueryBuilder
+  - function __construct
+  - function set_collection_handler_store
+  - function set_collection_handler
+  - function set_attributes_filter_query_args
+  - function get_custom_order_opts
+  - _...8 more_
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductCollection/Renderer.php`
+  - class Renderer
+  - function __construct
+  - function set_parsed_block
+  - function handle_rendering
+  - function enhance_product_collection_with_interactivity
+  - function add_navigation_link_directives
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductCollection/Utils.php`
+  - class Utils
+  - function prepare_and_execute_query
+  - function get_query_vars
+  - function remove_query_array
+  - function parse_frontend_location_context
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductDescription.php` — class ProductDescription
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductDetails.php` — class ProductDetails, function enqueue_legacy_assets
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductFilterActive.php` — class ProductFilterActive
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductFilterAttribute.php`
+  - class ProductFilterAttribute
+  - function delete_default_attribute_id_transient
+  - function prepare_selected_filters
+  - function register_block_patterns
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductFilterCheckboxList.php` — class ProductFilterCheckboxList
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductFilterChips.php` — class ProductFilterChips
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductFilterClearButton.php` — class ProductFilterClearButton
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductFilterPrice.php` — class ProductFilterPrice, function prepare_selected_filters
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductFilterPriceSlider.php` — class ProductFilterPriceSlider
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductFilterRating.php` — class ProductFilterRating, function prepare_selected_filters
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductFilterRemovableChips.php` — class ProductFilterRemovableChips
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductFilterStatus.php` — class ProductFilterStatus, function prepare_selected_filters
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductFilterTaxonomy.php` — class ProductFilterTaxonomy, function prepare_selected_filters
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductFilters.php` — class ProductFilters
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductGallery.php` — class ProductGallery
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductGalleryLargeImage.php` — class ProductGalleryLargeImage, function add_block_type_metadata_settings
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductGalleryThumbnails.php` — class ProductGalleryThumbnails
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductImage.php` — class ProductImage
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductImageGallery.php` — class ProductImageGallery, function enqueue_legacy_assets
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductMeta.php` — class ProductMeta
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductNew.php` — class ProductNew
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductOnSale.php` — class ProductOnSale
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductPrice.php` — class ProductPrice
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductQuery.php`
+  - class ProductQuery
+  - function is_woocommerce_variation
+  - function enqueue_styles
+  - function update_query
+  - function update_rest_query
+  - function build_query
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductRating.php` — class ProductRating
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductRatingCounter.php` — class ProductRatingCounter
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductRatingStars.php` — class ProductRatingStars
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductResultsCount.php` — class ProductResultsCount
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductSKU.php` — class ProductSKU
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductSaleBadge.php` — class ProductSaleBadge
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductSearch.php` — class ProductSearch
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductSpecifications.php` — class ProductSpecifications
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductStockIndicator.php` — class ProductStockIndicator
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductSummary.php` — class ProductSummary
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductTag.php` — class ProductTag
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductTemplate.php` — class ProductTemplate, function add_block_type_metadata_settings
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductTitle.php` — class ProductTitle
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductTopRated.php` — class ProductTopRated
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ProductsByAttribute.php` — class ProductsByAttribute
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/RatingFilter.php` — class RatingFilter
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/RelatedProducts.php`
+  - class RelatedProducts
+  - function update_query
+  - function build_query
+  - function render_block
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Reviews/ProductReviewAuthorName.php` — class ProductReviewAuthorName
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Reviews/ProductReviewContent.php` — class ProductReviewContent
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Reviews/ProductReviewDate.php` — class ProductReviewDate
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Reviews/ProductReviewForm.php` — class ProductReviewForm
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Reviews/ProductReviewRating.php` — class ProductReviewRating
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Reviews/ProductReviewTemplate.php` — class ProductReviewTemplate
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Reviews/ProductReviews.php` — class ProductReviews
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Reviews/ProductReviewsPagination.php` — class ProductReviewsPagination
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Reviews/ProductReviewsPaginationNext.php` — class ProductReviewsPaginationNext
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Reviews/ProductReviewsPaginationNumbers.php` — class ProductReviewsPaginationNumbers
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Reviews/ProductReviewsPaginationPrevious.php` — class ProductReviewsPaginationPrevious
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/Reviews/ProductReviewsTitle.php` — class ProductReviewsTitle
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ReviewsByCategory.php` — class ReviewsByCategory
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/ReviewsByProduct.php` — class ReviewsByProduct
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/SingleProduct.php`
+  - class SingleProduct
+  - function restore_global_post
+  - function update_context
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/StockFilter.php` — class StockFilter, function get_stock_status_query_var_values
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypes/StoreNotices.php` — class StoreNotices
+- `wp-content/plugins/woocommerce/src/Blocks/BlockTypesController.php`
+  - class BlockTypesController
+  - function __construct
+  - function get_registered_blocks_with_woocommerce_parent
+  - function register_blocks
+  - function register_block_metadata
+  - function bypass_block_metadata_doing_it_wrong
+  - _...10 more_
+- `wp-content/plugins/woocommerce/src/Blocks/DependencyDetection.php`
+  - class DependencyDetection
+  - function __construct
+  - function init
+  - function output_early_proxy_setup
+  - function output_script_registry
+- `wp-content/plugins/woocommerce/src/Blocks/Domain/Bootstrap.php` — class Bootstrap, function __construct
+- `wp-content/plugins/woocommerce/src/Blocks/Domain/Package.php`
+  - class Package
+  - function __construct
+  - function get_version
+  - function get_version_stored_on_db
+  - function set_version_stored_on_db
+  - function get_path
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Domain/Services/CheckoutFields.php`
+  - class CheckoutFields
+  - function __construct
+  - function init
+  - function add_fields_data
+  - function add_session_meta_keys
+  - function default_sanitize_callback
+  - _...38 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Domain/Services/CheckoutFieldsAdmin.php`
+  - class CheckoutFieldsAdmin
+  - function __construct
+  - function init
+  - function update_callback
+  - function admin_address_fields
+  - function admin_contact_fields
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Domain/Services/CheckoutFieldsFrontend.php`
+  - class CheckoutFieldsFrontend
+  - function __construct
+  - function init
+  - function render_order_address_fields
+  - function render_order_other_fields
+  - function render_address_fields
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Domain/Services/CheckoutFieldsSchema/DocumentObject.php`
+  - class DocumentObject
+  - function __construct
+  - function set_context
+  - function set_customer
+  - function set_cart
+  - function get_data
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Domain/Services/CheckoutFieldsSchema/Validation.php`
+  - class Validation
+  - function get_field_schema_with_context
+  - function validate_document_object
+  - function has_field_schema
+  - function is_valid_schema
+- `wp-content/plugins/woocommerce/src/Blocks/Domain/Services/CheckoutLink.php`
+  - class CheckoutLink
+  - function init
+  - function add_checkout_link_endpoint
+  - function add_query_vars
+  - function handle_checkout_link_endpoint
+- `wp-content/plugins/woocommerce/src/Blocks/Domain/Services/CreateAccount.php`
+  - class CreateAccount
+  - function __construct
+  - function init
+  - function customer_new_account
+- `wp-content/plugins/woocommerce/src/Blocks/Domain/Services/DraftOrders.php`
+  - class DraftOrders
+  - function __construct
+  - function init
+  - function install
+  - function unschedule_cronjobs
+  - function register_draft_order_status
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Domain/Services/Email/CustomerNewAccount.php` — class CustomerNewAccount, function __construct
+- `wp-content/plugins/woocommerce/src/Blocks/Domain/Services/FeatureGating.php` — class FeatureGating, function __construct
+- `wp-content/plugins/woocommerce/src/Blocks/Domain/Services/GoogleAnalytics.php`
+  - class GoogleAnalytics
+  - function __construct
+  - function init
+  - function register_assets
+  - function enqueue_scripts
+  - function async_script_loader_tags
+- `wp-content/plugins/woocommerce/src/Blocks/Domain/Services/Hydration.php`
+  - class Hydration
+  - function __construct
+  - function get_rest_api_response_data
+  - function disable_nonce_check_callback
+- `wp-content/plugins/woocommerce/src/Blocks/Domain/Services/Notices.php`
+  - class Notices
+  - function __construct
+  - function init
+  - function add_kses_notice_allowed_tags
+  - function get_notices_template
+  - function enqueue_notice_styles
+- `wp-content/plugins/woocommerce/src/Blocks/Images/Pexels.php` — class Pexels
+- `wp-content/plugins/woocommerce/src/Blocks/InboxNotifications.php` — class InboxNotifications, function delete_surface_cart_checkout_blocks_notification
+- `wp-content/plugins/woocommerce/src/Blocks/Installer.php`
+  - class Installer
+  - function init
+  - function install
+  - function create_pages
+  - function maybe_create_tables
+- `wp-content/plugins/woocommerce/src/Blocks/Integrations/IntegrationInterface.php`
+  - interface IntegrationInterface
+  - function get_name
+  - function initialize
+  - function get_script_handles
+  - function get_editor_script_handles
+  - function get_script_data
+- `wp-content/plugins/woocommerce/src/Blocks/Integrations/IntegrationRegistry.php`
+  - class IntegrationRegistry
+  - function initialize
+  - function register
+  - function is_registered
+  - function unregister
+  - function get_registered
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Library.php`
+  - class Library
+  - function init
+  - function define_tables
+  - function register_blocks
+- `wp-content/plugins/woocommerce/src/Blocks/Options.php` — class Options
+- `wp-content/plugins/woocommerce/src/Blocks/Package.php`
+  - class Package
+  - function init
+  - function get_version
+  - function get_path
+  - function feature
+  - function container
+- `wp-content/plugins/woocommerce/src/Blocks/Patterns/AIPatterns.php` — class AIPatterns
+- `wp-content/plugins/woocommerce/src/Blocks/Patterns/PTKClient.php`
+  - class PTKClient
+  - function __construct
+  - function fetch_patterns
+  - function is_valid_schema
+- `wp-content/plugins/woocommerce/src/Blocks/Patterns/PTKPatternsStore.php`
+  - class PTKPatternsStore
+  - function __construct
+  - function flush_or_fetch_patterns
+  - function ensure_recurring_fetch_patterns_if_enabled
+  - function get_patterns
+  - function fetch_patterns_on_plugin_update
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Patterns/PatternRegistry.php` — class PatternRegistry, function register_block_pattern
+- `wp-content/plugins/woocommerce/src/Blocks/Payments/Api.php`
+  - class Api
+  - function __construct
+  - function init
+  - function add_payment_method_script_dependencies
+  - function add_payment_method_script_data
+  - function register_payment_method_integrations
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Payments/Integrations/AbstractPaymentMethodType.php`
+  - class AbstractPaymentMethodType
+  - function get_name
+  - function is_active
+  - function get_payment_method_script_handles
+  - function get_payment_method_script_handles_for_admin
+  - function get_supported_features
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Payments/Integrations/BankTransfer.php`
+  - class BankTransfer
+  - function __construct
+  - function initialize
+  - function is_active
+  - function get_payment_method_script_handles
+  - function get_payment_method_data
+- `wp-content/plugins/woocommerce/src/Blocks/Payments/Integrations/CashOnDelivery.php`
+  - class CashOnDelivery
+  - function __construct
+  - function initialize
+  - function is_active
+  - function get_payment_method_script_handles
+  - function get_payment_method_data
+- `wp-content/plugins/woocommerce/src/Blocks/Payments/Integrations/Cheque.php`
+  - class Cheque
+  - function __construct
+  - function initialize
+  - function is_active
+  - function get_payment_method_script_handles
+  - function get_payment_method_data
+- `wp-content/plugins/woocommerce/src/Blocks/Payments/Integrations/PayPal.php`
+  - class PayPal
+  - function __construct
+  - function initialize
+  - function is_active
+  - function get_payment_method_script_handles
+  - function get_payment_method_data
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Payments/PaymentMethodRegistry.php`
+  - class PaymentMethodRegistry
+  - function get_all_active_registered
+  - function get_all_active_payment_method_script_dependencies
+  - function get_all_registered_script_data
+- `wp-content/plugins/woocommerce/src/Blocks/Payments/PaymentMethodTypeInterface.php`
+  - interface PaymentMethodTypeInterface
+  - function is_active
+  - function get_payment_method_script_handles
+  - function get_payment_method_script_handles_for_admin
+  - function get_payment_method_data
+  - function get_supported_features
+- `wp-content/plugins/woocommerce/src/Blocks/QueryFilters.php`
+  - class QueryFilters
+  - function init
+  - function main_query_filter
+  - function add_query_clauses
+  - function get_filtered_price
+  - function get_stock_status_counts
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Registry/AbstractDependencyType.php`
+  - class AbstractDependencyType
+  - function __construct
+  - function get
+- `wp-content/plugins/woocommerce/src/Blocks/Registry/Container.php`
+  - class Container
+  - function factory
+  - function register
+  - function get
+- `wp-content/plugins/woocommerce/src/Blocks/Registry/FactoryType.php` — class FactoryType, function get
+- `wp-content/plugins/woocommerce/src/Blocks/Registry/SharedType.php` — class SharedType, function get
+- `wp-content/plugins/woocommerce/src/Blocks/SharedStores/ProductsStore.php`
+  - class ProductsStore
+  - function load_product
+  - function load_purchasable_child_products
+  - function load_variations
+- `wp-content/plugins/woocommerce/src/Blocks/Shipping/PickupLocation.php`
+  - class PickupLocation
+  - function __construct
+  - function init
+  - function calculate_shipping
+  - function is_available
+  - function translate_meta_data
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Shipping/ShippingController.php`
+  - class ShippingController
+  - function __construct
+  - function init
+  - function show_local_pickup_details
+  - function remove_shipping_settings
+  - function register_settings
+  - _...11 more_
+- `wp-content/plugins/woocommerce/src/Blocks/TemplateOptions.php`
+  - class TemplateOptions
+  - function init
+  - function check_should_use_blockified_product_grid_templates
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/AbstractPageTemplate.php`
+  - class AbstractPageTemplate
+  - function init
+  - function page_template_hierarchy
+  - function page_template_title
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/AbstractTemplate.php`
+  - class AbstractTemplate
+  - function init
+  - function get_template_title
+  - function get_template_description
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/AbstractTemplateCompatibility.php`
+  - class AbstractTemplateCompatibility
+  - function init
+  - function update_render_block_data
+  - function inject_hooks
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/AbstractTemplatePart.php` — class AbstractTemplatePart
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/AbstractTemplateWithFallback.php`
+  - class AbstractTemplateWithFallback
+  - function init
+  - function template_hierarchy
+  - function render_block_template
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/ArchiveProductTemplatesCompatibility.php`
+  - class ArchiveProductTemplatesCompatibility
+  - function update_render_block_data
+  - function inject_hooks
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/CartTemplate.php`
+  - class CartTemplate
+  - function get_template_title
+  - function get_template_description
+  - function page_template_hierarchy
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/CheckoutHeaderTemplate.php`
+  - class CheckoutHeaderTemplate
+  - function init
+  - function get_template_title
+  - function get_template_description
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/CheckoutTemplate.php`
+  - class CheckoutTemplate
+  - function get_template_title
+  - function get_template_description
+  - function page_template_hierarchy
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/ClassicTemplatesCompatibility.php`
+  - class ClassicTemplatesCompatibility
+  - function __construct
+  - function set_classic_template_data
+  - function set_filterable_product_data
+  - function set_php_template_data
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/ComingSoonSocialLinksTemplate.php`
+  - class ComingSoonSocialLinksTemplate
+  - function init
+  - function get_template_title
+  - function get_template_description
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/ComingSoonTemplate.php`
+  - class ComingSoonTemplate
+  - function get_template_title
+  - function get_template_description
+  - function get_font_families
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/ExternalProductAddToCartWithOptionsTemplate.php`
+  - class ExternalProductAddToCartWithOptionsTemplate
+  - function init
+  - function get_template_title
+  - function get_template_description
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/GroupedProductAddToCartWithOptionsTemplate.php`
+  - class GroupedProductAddToCartWithOptionsTemplate
+  - function init
+  - function get_template_title
+  - function get_template_description
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/MiniCartTemplate.php`
+  - class MiniCartTemplate
+  - function init
+  - function get_template_title
+  - function get_template_description
+  - function register_mini_cart_template_part_area
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/OrderConfirmationTemplate.php`
+  - class OrderConfirmationTemplate
+  - function init
+  - function get_template_title
+  - function get_template_description
+  - function remove_edit_page_link
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/ProductAttributeTemplate.php`
+  - class ProductAttributeTemplate
+  - function get_template_title
+  - function get_template_description
+  - function render_block_template
+  - function template_hierarchy
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/ProductBrandTemplate.php`
+  - class ProductBrandTemplate
+  - function get_template_title
+  - function get_template_description
+  - function render_block_template
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/ProductCatalogTemplate.php`
+  - class ProductCatalogTemplate
+  - function init
+  - function get_template_title
+  - function get_template_description
+  - function render_block_template
+  - function remove_block_template_support_for_shop_page
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/ProductCategoryTemplate.php`
+  - class ProductCategoryTemplate
+  - function get_template_title
+  - function get_template_description
+  - function render_block_template
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/ProductSearchResultsTemplate.php`
+  - class ProductSearchResultsTemplate
+  - function init
+  - function get_template_title
+  - function get_template_description
+  - function render_block_template
+  - function update_search_template_hierarchy
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/ProductTagTemplate.php`
+  - class ProductTagTemplate
+  - function get_template_title
+  - function get_template_description
+  - function render_block_template
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/SimpleProductAddToCartWithOptionsTemplate.php`
+  - class SimpleProductAddToCartWithOptionsTemplate
+  - function init
+  - function get_template_title
+  - function get_template_description
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/SingleProductTemplate.php`
+  - class SingleProductTemplate
+  - function init
+  - function get_template_title
+  - function get_template_description
+  - function render_block_template
+  - function update_single_product_content
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/SingleProductTemplateCompatibility.php`
+  - class SingleProductTemplateCompatibility
+  - function inject_hooks
+  - function update_render_block_data
+  - function add_compatibility_layer
+- `wp-content/plugins/woocommerce/src/Blocks/Templates/VariableProductAddToCartWithOptionsTemplate.php`
+  - class VariableProductAddToCartWithOptionsTemplate
+  - function init
+  - function get_template_title
+  - function get_template_description
+- `wp-content/plugins/woocommerce/src/Blocks/Utils/BlockHooksTrait.php` — class BlockHooksTrait, function register_hooked_block
+- `wp-content/plugins/woocommerce/src/Blocks/Utils/BlockTemplateUtils.php`
+  - class BlockTemplateUtils
+  - function get_template
+  - function flatten_blocks
+  - function inject_theme_attribute_in_content
+  - function build_template_result_from_post
+  - function build_template_result_from_file
+  - _...20 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Utils/BlocksSharedState.php`
+  - class BlocksSharedState
+  - function load_store_config
+  - function load_cart_state
+  - function load_placeholder_image
+  - function get_cart_error_notices
+- `wp-content/plugins/woocommerce/src/Blocks/Utils/BlocksWpQuery.php`
+  - class BlocksWpQuery
+  - function __construct
+  - function get_cached_posts
+- `wp-content/plugins/woocommerce/src/Blocks/Utils/CartCheckoutUtils.php`
+  - class CartCheckoutUtils
+  - function is_cart_page
+  - function is_checkout_page
+  - function shipping_methods_exist
+  - function has_block_variation
+  - function is_cart_block_default
+  - _...12 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Utils/MiniCartUtils.php`
+  - class MiniCartUtils
+  - function migrate_attributes_to_color_panel
+  - function get_svg_icon
+- `wp-content/plugins/woocommerce/src/Blocks/Utils/ProductAvailabilityUtils.php` — class ProductAvailabilityUtils, function get_product_availability
+- `wp-content/plugins/woocommerce/src/Blocks/Utils/ProductDataUtils.php` — class ProductDataUtils, function get_product_data
+- `wp-content/plugins/woocommerce/src/Blocks/Utils/ProductGalleryUtils.php`
+  - class ProductGalleryUtils
+  - function get_all_image_ids
+  - function get_product_gallery_image_data
+  - function get_product_gallery_image_count
+  - function get_image_src_data
+  - function get_product_variation_image_ids
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Utils/StyleAttributesUtils.php`
+  - class StyleAttributesUtils
+  - function get_color_value
+  - function get_preset_value
+  - function get_shadow_value
+  - function get_spacing_value
+  - function get_align_class_and_style
+  - _...24 more_
+- `wp-content/plugins/woocommerce/src/Blocks/Utils/Utils.php` — class Utils, function wp_version_compare
+- `wp-content/plugins/woocommerce/src/Caches/OrderCache.php` — class OrderCache, function get_object_type
+- `wp-content/plugins/woocommerce/src/Caches/OrderCacheController.php`
+  - class OrderCacheController
+  - function init
+  - function orders_cache_usage_is_enabled
+  - function temporarily_disable_orders_cache_usage
+  - function orders_cache_usage_is_temporarly_disabled
+  - function maybe_restore_orders_cache_usage
+- `wp-content/plugins/woocommerce/src/Caches/OrderCountCache.php`
+  - class OrderCountCache
+  - function get_default_statuses
+  - function is_cached
+  - function set
+  - function set_multiple
+  - function get
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Caches/OrderCountCacheService.php`
+  - class OrderCountCacheService
+  - function init
+  - function refresh_cache
+  - function schedule_background_actions
+  - function unschedule_background_actions
+  - function update_on_new_order
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Caching/CacheEngine.php`
+  - interface CacheEngine
+  - function get_cached_object
+  - function cache_object
+  - function delete_cached_object
+  - function is_cached
+  - function delete_cache_group
+- `wp-content/plugins/woocommerce/src/Caching/CacheException.php`
+  - class CacheException
+  - function __construct
+  - function __toString
+  - function get_errors
+  - function get_thrower
+  - function get_cached_id
+- `wp-content/plugins/woocommerce/src/Caching/CacheNameSpaceTrait.php`
+  - class CacheNameSpaceTrait
+  - function get_cache_prefix
+  - function incr_cache_prefix
+  - function invalidate_cache_group
+  - function get_prefixed_key
+- `wp-content/plugins/woocommerce/src/Caching/ObjectCache.php`
+  - class ObjectCache
+  - function get_object_type
+  - function __construct
+  - function get_default_expiration_value
+  - function set
+  - function update_if_cached
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Caching/WPCacheEngine.php`
+  - class WPCacheEngine
+  - function get_cached_object
+  - function get_cached_objects
+  - function cache_object
+  - function cache_objects
+  - function delete_cached_object
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Checkout/Helpers/ReserveStock.php`
+  - class ReserveStock
+  - function __construct
+  - function get_reserved_stock
+  - function reserve_stock_for_order
+  - function release_stock_for_order
+- `wp-content/plugins/woocommerce/src/Checkout/Helpers/ReserveStockException.php`
+  - class ReserveStockException
+  - function __construct
+  - function getErrorCode
+  - function getErrorData
+- `wp-content/plugins/woocommerce/src/Container.php`
+  - class Container
+  - function __construct
+  - function get
+  - function has
+- `wp-content/plugins/woocommerce/src/Database/Migrations/CustomOrderTable/CLIRunner.php`
+  - class CLIRunner
+  - function init
+  - function register_commands
+  - function count_unmigrated
+  - function sync
+  - function migrate
+  - _...10 more_
+- `wp-content/plugins/woocommerce/src/Database/Migrations/CustomOrderTable/PostMetaToOrderMetaMigrator.php` — class PostMetaToOrderMetaMigrator, function __construct
+- `wp-content/plugins/woocommerce/src/Database/Migrations/CustomOrderTable/PostToOrderAddressTableMigrator.php`
+  - class PostToOrderAddressTableMigrator
+  - function __construct
+  - function get_meta_column_config
+- `wp-content/plugins/woocommerce/src/Database/Migrations/CustomOrderTable/PostToOrderOpTableMigrator.php` — class PostToOrderOpTableMigrator, function get_meta_column_config
+- `wp-content/plugins/woocommerce/src/Database/Migrations/CustomOrderTable/PostToOrderTableMigrator.php` — class PostToOrderTableMigrator, function get_meta_column_config
+- `wp-content/plugins/woocommerce/src/Database/Migrations/CustomOrderTable/PostsToOrdersMigrationController.php`
+  - class PostsToOrdersMigrationController
+  - function __construct
+  - function get_migrated_meta_keys
+  - function migrate_orders
+  - function verify_migrated_orders
+  - function migrate_order
+- `wp-content/plugins/woocommerce/src/Database/Migrations/MetaToCustomTableMigrator.php`
+  - class MetaToCustomTableMigrator
+  - function __construct
+  - function fetch_sanitized_migration_data
+  - function process_migration_data
+  - function verify_migrated_data
+- `wp-content/plugins/woocommerce/src/Database/Migrations/MetaToMetaTableMigrator.php`
+  - class MetaToMetaTableMigrator
+  - function __construct
+  - function fetch_sanitized_migration_data
+  - function process_migration_data
+  - function fetch_data_for_migration_for_ids
+- `wp-content/plugins/woocommerce/src/Database/Migrations/MigrationHelper.php`
+  - class MigrationHelper
+  - function escape_schema_for_backtick
+  - function escape_and_add_backtick
+  - function get_wpdb_placeholder_for_type
+  - function generate_on_duplicate_statement_clause
+  - function migrate_country_states
+- `wp-content/plugins/woocommerce/src/Database/Migrations/TableMigrator.php`
+  - class TableMigrator
+  - function process_migration_batch_for_ids
+  - function fetch_sanitized_migration_data
+  - function process_migration_data
+- `wp-content/plugins/woocommerce/src/Enums/CatalogVisibility.php` — class CatalogVisibility
+- `wp-content/plugins/woocommerce/src/Enums/FeaturePluginCompatibility.php` — class FeaturePluginCompatibility
+- `wp-content/plugins/woocommerce/src/Enums/OrderInternalStatus.php` — class OrderInternalStatus
+- `wp-content/plugins/woocommerce/src/Enums/OrderStatus.php` — class OrderStatus
+- `wp-content/plugins/woocommerce/src/Enums/PaymentGatewayFeature.php` — class PaymentGatewayFeature
+- `wp-content/plugins/woocommerce/src/Enums/ProductStatus.php` — class ProductStatus
+- `wp-content/plugins/woocommerce/src/Enums/ProductStockStatus.php` — class ProductStockStatus
+- `wp-content/plugins/woocommerce/src/Enums/ProductTaxStatus.php` — class ProductTaxStatus
+- `wp-content/plugins/woocommerce/src/Enums/ProductType.php` — class ProductType
+- `wp-content/plugins/woocommerce/src/Gateways/PayPal/AddressRequirements.php`
+  - class AddressRequirements
+  - function instance
+  - function country_requires_city
+  - function country_requires_postal_code
+- `wp-content/plugins/woocommerce/src/Gateways/PayPal/Buttons.php`
+  - class Buttons
+  - function __construct
+  - function get_options
+  - function get_common_options
+  - function get_client_id
+  - function get_page_type
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Gateways/PayPal/Constants.php` — class Constants
+- `wp-content/plugins/woocommerce/src/Gateways/PayPal/Helper.php`
+  - class Helper
+  - function is_country_supported_by_paypal
+  - function is_paypal_gateway_available
+  - function is_orders_v2_migration_eligible
+  - function get_wc_order_from_paypal_custom_id
+  - function redact_data
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Gateways/PayPal/Notices.php`
+  - class Notices
+  - function __construct
+  - function add_paypal_notices
+  - function add_paypal_notices_on_payments_settings_page
+  - function add_paypal_migration_notice
+  - function set_account_restriction_flag
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Gateways/PayPal/Request.php`
+  - class Request
+  - function __construct
+  - function create_paypal_order
+  - function get_paypal_order_details
+  - function authorize_or_capture_payment
+  - function capture_authorized_payment
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Gateways/PayPal/TransactAccountManager.php`
+  - class TransactAccountManager
+  - function __construct
+  - function do_onboarding
+  - function get_transact_account_data
+- `wp-content/plugins/woocommerce/src/Gateways/PayPal/WebhookHandler.php` — class WebhookHandler, function process_webhook
+- `wp-content/plugins/woocommerce/src/Internal/Abilities/AbilitiesCategories.php`
+  - class AbilitiesCategories
+  - function init
+  - function register_categories
+- `wp-content/plugins/woocommerce/src/Internal/Abilities/AbilitiesRegistry.php`
+  - class AbilitiesRegistry
+  - function __construct
+  - function get_abilities_ids
+- `wp-content/plugins/woocommerce/src/Internal/Abilities/AbilitiesRestBridge.php`
+  - class AbilitiesRestBridge
+  - function init
+  - function register_abilities
+- `wp-content/plugins/woocommerce/src/Internal/Abilities/REST/RestAbility.php` — class RestAbility
+- `wp-content/plugins/woocommerce/src/Internal/Abilities/REST/RestAbilityFactory.php` — class RestAbilityFactory, function register_controller_abilities
+- `wp-content/plugins/woocommerce/src/Internal/AbilitiesApi/AbilitiesClient.php`
+  - class AbilitiesClient
+  - function enable
+  - function enqueue_for_admin
+- `wp-content/plugins/woocommerce/src/Internal/AddressProvider/AbstractAutomatticAddressProvider.php`
+  - class AbstractAutomatticAddressProvider
+  - function __construct
+  - function get_address_service_jwt
+  - function can_telemetry
+  - function load_jwt
+  - function get_jwt
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/AddressProvider/AddressProviderController.php`
+  - class AddressProviderController
+  - function __construct
+  - function init
+  - function get_providers
+  - function is_provider_available
+  - function get_preferred_provider
+- `wp-content/plugins/woocommerce/src/Internal/Admin/ActivityPanels.php`
+  - class ActivityPanels
+  - function get_instance
+  - function __construct
+  - function add_user_data_fields
+  - function component_settings
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Agentic/AgenticController.php`
+  - class AgenticController
+  - function register
+  - function on_init
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Agentic/AgenticWebhookManager.php`
+  - class AgenticWebhookManager
+  - function init
+  - function register
+  - function register_webhook_topic_names
+  - function handle_order_created
+  - function handle_order_status_changed
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Agentic/AgenticWebhookPayloadBuilder.php`
+  - class AgenticWebhookPayloadBuilder
+  - function init
+  - function build_payload
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Analytics.php`
+  - class Analytics
+  - function get_instance
+  - function __construct
+  - function add_feature_toggle
+  - function reload_page_on_toggle
+  - function maybe_reload_page
+  - _...8 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/BlockTemplates/AbstractBlock.php`
+  - class AbstractBlock
+  - function __construct
+  - function get_name
+  - function get_id
+  - function get_order
+  - function set_order
+  - _...11 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/BlockTemplates/AbstractBlockTemplate.php`
+  - class AbstractBlockTemplate
+  - function get_id
+  - function get_title
+  - function get_description
+  - function get_area
+  - function get_block
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/BlockTemplates/Block.php` — class Block
+- `wp-content/plugins/woocommerce/src/Internal/Admin/BlockTemplates/BlockContainerTrait.php`
+  - class BlockContainerTrait
+  - function get_block
+  - function remove_block
+  - function remove_blocks
+  - function remove_inner_block
+  - function get_formatted_template
+- `wp-content/plugins/woocommerce/src/Internal/Admin/BlockTemplates/BlockFormattedTemplateTrait.php` — class BlockFormattedTemplateTrait, function get_formatted_template
+- `wp-content/plugins/woocommerce/src/Internal/Admin/BlockTemplates/BlockTemplate.php`
+  - class BlockTemplate
+  - function get_id
+  - function add_block
+- `wp-content/plugins/woocommerce/src/Internal/Admin/BlockTemplates/BlockTemplateLogger.php`
+  - class BlockTemplateLogger
+  - function get_instance
+  - function template_events_to_json
+  - function log_template_events_to_file
+- `wp-content/plugins/woocommerce/src/Internal/Admin/CategoryLookup.php`
+  - class CategoryLookup
+  - function instance
+  - function init
+  - function regenerate
+  - function before_edit
+  - function on_edit
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Coupons.php`
+  - class Coupons
+  - function get_instance
+  - function __construct
+  - function maybe_add_coupon_menu_redirect
+  - function coupon_menu_moved
+  - function move_coupons
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/CouponsMovedTrait.php` — class CouponsMovedTrait
+- `wp-content/plugins/woocommerce/src/Internal/Admin/CustomerEffortScoreTracks.php`
+  - class CustomerEffortScoreTracks
+  - function __construct
+  - function enqueue_ces_survey_for_search
+  - function run_on_transition_post_status
+  - function maybe_clear_ces_tracks_queue
+  - function add_script_track_product_categories
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/EmailImprovements/EmailImprovements.php`
+  - class EmailImprovements
+  - function __construct
+  - function has_email_templates_overridden
+  - function is_email_customizer_enabled
+  - function is_email_improvements_enabled_for_existing_stores
+  - function should_enable_email_improvements_for_existing_stores
+  - _...7 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/EmailPreview/EmailPreview.php`
+  - class EmailPreview
+  - function instance
+  - function get_all_email_setting_ids
+  - function get_email_style_setting_ids
+  - function get_email_content_setting_ids
+  - function set_email_type
+  - _...14 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/EmailPreview/EmailPreviewRestController.php`
+  - class EmailPreviewRestController
+  - function __construct
+  - function register_routes
+  - function send_email_preview
+  - function save_transient
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Emails/EmailListingRestController.php`
+  - class EmailListingRestController
+  - function __construct
+  - function initialize_template_generator
+  - function register_routes
+  - function recreate_email_post
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Events.php`
+  - class Events
+  - function instance
+  - function init
+  - function do_wc_admin_daily
+  - function get_note_from_db
+- `wp-content/plugins/woocommerce/src/Internal/Admin/FeaturePlugin.php`
+  - class FeaturePlugin
+  - function instance
+  - function init
+  - function on_plugins_loaded
+  - function includes
+  - function replace_supported_features
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Homescreen.php`
+  - class Homescreen
+  - function get_instance
+  - function __construct
+  - function maybe_set_default_shipping_options_on_home
+  - function add_user_data_fields
+  - function register_page
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/ImportExport/CSVUploadHelper.php`
+  - class CSVUploadHelper
+  - function get_import_dir
+  - function handle_csv_upload
+  - function override_upload_dir
+  - function override_unique_filename
+  - function remove_txt_from_uploaded_file
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Loader.php`
+  - class Loader
+  - function get_instance
+  - function __construct
+  - function embed_page_header
+  - function add_admin_body_classes
+  - function smart_app_banner
+  - _...14 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Logging/FileV2/File.php`
+  - class File
+  - function __construct
+  - function __destruct
+  - function parse_path
+  - function generate_file_id
+  - function generate_hash
+  - _...18 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Logging/FileV2/FileController.php`
+  - class FileController
+  - function write_to_file
+  - function get_files
+  - function get_files_by_id
+  - function get_file_by_id
+  - function get_file_rotations
+  - _...7 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Logging/FileV2/FileExporter.php`
+  - class FileExporter
+  - function __construct
+  - function emit_file
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Logging/FileV2/FileListTable.php`
+  - class FileListTable
+  - function __construct
+  - function no_items
+  - function prepare_column_headers
+  - function prepare_items
+  - function get_columns
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Logging/FileV2/SearchListTable.php`
+  - class SearchListTable
+  - function __construct
+  - function no_items
+  - function prepare_column_headers
+  - function prepare_items
+  - function get_columns
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Logging/LogHandlerFileV2.php`
+  - class LogHandlerFileV2
+  - function __construct
+  - function handle
+  - function clear
+  - function delete_logs_before_timestamp
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Logging/PageController.php`
+  - class PageController
+  - function init
+  - function maybe_do_logs_tab_action
+  - function notices
+  - function get_logs_tab_url
+  - function render
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Logging/Settings.php`
+  - class Settings
+  - function __construct
+  - function get_log_directory
+  - function save_settings
+  - function render_form
+  - function logging_is_enabled
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Marketing/MarketingSpecs.php` — class MarketingSpecs, function get_knowledge_base_posts
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Marketing.php`
+  - class Marketing
+  - function get_instance
+  - function __construct
+  - function add_parent_menu_item
+  - function register_pages
+  - function reorder_marketing_submenu
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Marketplace.php`
+  - class Marketplace
+  - function init
+  - function on_init
+  - function register_pages
+  - function get_marketplace_pages
+  - function enqueue_scripts
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/MobileAppBanner.php`
+  - class MobileAppBanner
+  - function get_instance
+  - function __construct
+  - function add_user_data_fields
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/CustomizeStoreWithBlocks.php` — class CustomizeStoreWithBlocks, function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/CustomizingProductCatalog.php` — class CustomizingProductCatalog, function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/EUVATNumber.php` — class EUVATNumber, function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/EditProductsOnTheMove.php` — class EditProductsOnTheMove, function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/EmailImprovements.php` — class EmailImprovements, function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/FirstProduct.php` — class FirstProduct, function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/GivingFeedbackNotes.php` — class GivingFeedbackNotes, function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/InstallJPAndWCSPlugins.php`
+  - class InstallJPAndWCSPlugins
+  - function __construct
+  - function get_note
+  - function action_note
+  - function install_jp_and_wcs_plugins
+  - function on_install_error
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/LaunchChecklist.php` — class LaunchChecklist, function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/MagentoMigration.php`
+  - class MagentoMigration
+  - function __construct
+  - function possibly_add_note
+  - function save_note
+  - function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/ManageOrdersOnTheGo.php` — class ManageOrdersOnTheGo, function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/MarketingJetpack.php`
+  - class MarketingJetpack
+  - function possibly_add_note
+  - function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/MigrateFromShopify.php` — class MigrateFromShopify, function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/MobileApp.php` — class MobileApp, function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/NewSalesRecord.php`
+  - class NewSalesRecord
+  - function sum_sales_for_date
+  - function possibly_add_note
+  - function get_note_with_record_data
+  - function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/OnboardingPayments.php` — class OnboardingPayments, function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/OnlineClothingStore.php` — class OnlineClothingStore, function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/OrderMilestones.php`
+  - class OrderMilestones
+  - function __construct
+  - function init
+  - function clear_scheduled_event
+  - function get_orders_count
+  - function backfill_last_milestone
+  - _...11 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/PaymentsMoreInfoNeeded.php`
+  - class PaymentsMoreInfoNeeded
+  - function is_applicable
+  - function should_display_note
+  - function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/PaymentsRemindMeLater.php`
+  - class PaymentsRemindMeLater
+  - function is_applicable
+  - function should_display_note
+  - function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/PerformanceOnMobile.php` — class PerformanceOnMobile, function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/PersonalizeStore.php` — class PersonalizeStore, function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/RealTimeOrderAlerts.php` — class RealTimeOrderAlerts, function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/ScheduledUpdatesPromotion.php`
+  - class ScheduledUpdatesPromotion
+  - function __construct
+  - function is_applicable
+  - function get_note
+  - function enable_scheduled_updates
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/SellingOnlineCourses.php`
+  - class SellingOnlineCourses
+  - function __construct
+  - function check_onboarding_profile
+  - function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/TrackingOptIn.php`
+  - class TrackingOptIn
+  - function __construct
+  - function get_note
+  - function opt_in_to_tracking
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/UnsecuredReportFiles.php`
+  - class UnsecuredReportFiles
+  - function get_note
+  - function possibly_add_note
+  - function note_exists
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/WooCommercePayments.php`
+  - class WooCommercePayments
+  - function __construct
+  - function possibly_add_note
+  - function get_note
+  - function install_on_action
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/WooCommerceSubscriptions.php` — class WooCommerceSubscriptions, function get_note
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Notes/WooSubscriptionsNotes.php`
+  - class WooSubscriptionsNotes
+  - function __construct
+  - function update_option_woocommerce_helper_data
+  - function admin_head
+  - function check_connection
+  - function is_connected
+  - _...10 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Onboarding/Onboarding.php` — class Onboarding, function init
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Onboarding/OnboardingHelper.php`
+  - class OnboardingHelper
+  - function instance
+  - function init
+  - function add_help_tab
+  - function reset_task_list
+  - function reset_extended_task_list
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Onboarding/OnboardingIndustries.php`
+  - class OnboardingIndustries
+  - function init
+  - function get_allowed_industries
+  - function preload_data
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Onboarding/OnboardingJetpack.php`
+  - class OnboardingJetpack
+  - function instance
+  - function init
+  - function set_woocommerce_setup_jetpack_opted_in
+  - function activate_and_install_jetpack_ahead_of_wcpay
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Onboarding/OnboardingMailchimp.php`
+  - class OnboardingMailchimp
+  - function instance
+  - function init
+  - function on_profile_data_updated
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Onboarding/OnboardingProducts.php`
+  - class OnboardingProducts
+  - function get_allowed_product_types
+  - function get_product_data
+  - function get_product_types_with_data
+  - function get_relevant_products
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Onboarding/OnboardingProfile.php`
+  - class OnboardingProfile
+  - function init
+  - function trigger_complete
+  - function needs_completion
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Onboarding/OnboardingSetupWizard.php`
+  - class OnboardingSetupWizard
+  - function instance
+  - function init
+  - function do_admin_redirects
+  - function trigger_profile_completed_action
+  - function redirect_to_profiler
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Onboarding/OnboardingSync.php`
+  - class OnboardingSync
+  - function instance
+  - function init
+  - function send_profile_data_on_update
+  - function send_profile_data_on_connect
+  - function redirect_wccom_install
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Orders/COTRedirectionController.php`
+  - class COTRedirectionController
+  - function setup
+  - function handle_hpos_admin_requests
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Orders/Edit.php`
+  - class Edit
+  - function add_order_meta_boxes
+  - function add_save_meta_boxes
+  - function setup
+  - function set_current_action
+  - function handle_order_update
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Orders/EditLock.php`
+  - class EditLock
+  - function get_lock
+  - function is_locked_by_another_user
+  - function is_locked
+  - function lock
+  - function refresh_lock_ajax
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Orders/ListTable.php`
+  - class ListTable
+  - function __construct
+  - function init
+  - function setup
+  - function single_row
+  - function render_column
+  - _...25 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Orders/MetaBoxes/CustomMetaBox.php`
+  - class CustomMetaBox
+  - function output
+  - function order_meta_keys_autofill
+  - function render_meta_form
+  - function search_metakeys_ajax
+  - function add_meta_ajax
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Orders/MetaBoxes/CustomerHistory.php` — class CustomerHistory, function output
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Orders/MetaBoxes/OrderAttribution.php`
+  - class OrderAttribution
+  - function __construct
+  - function format_meta_data
+  - function output
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Orders/MetaBoxes/TaxonomiesMetaBox.php`
+  - class TaxonomiesMetaBox
+  - function init
+  - function add_taxonomies_meta_boxes
+  - function save_taxonomies
+  - function order_categories_meta_box
+  - function order_tags_meta_box
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Orders/PageController.php`
+  - class PageController
+  - function setup
+  - function handle_load_page_action
+  - function set_page_title
+  - function register_menu
+  - function output
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Orders/PostsRedirectionController.php` — class PostsRedirectionController, function __construct
+- `wp-content/plugins/woocommerce/src/Internal/Admin/ProductForm/Component.php`
+  - class Component
+  - function __construct
+  - function get_additional_args
+  - function get_additional_argument
+  - function get_json
+  - function sort
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/ProductForm/ComponentTrait.php`
+  - class ComponentTrait
+  - function get_id
+  - function get_plugin_id
+- `wp-content/plugins/woocommerce/src/Internal/Admin/ProductForm/Field.php` — class Field, function __construct
+- `wp-content/plugins/woocommerce/src/Internal/Admin/ProductForm/FormFactory.php`
+  - class FormFactory
+  - function instance
+  - function init
+  - function add_field
+  - function add_subsection
+  - function add_section
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/ProductForm/Section.php` — class Section, function __construct
+- `wp-content/plugins/woocommerce/src/Internal/Admin/ProductForm/Subsection.php` — class Subsection
+- `wp-content/plugins/woocommerce/src/Internal/Admin/ProductForm/Tab.php` — class Tab, function __construct
+- `wp-content/plugins/woocommerce/src/Internal/Admin/ProductReviews/Reviews.php`
+  - class Reviews
+  - function __construct
+  - function get_capability
+  - function add_reviews_page
+  - function get_reviews_page_url
+  - function is_reviews_page
+  - _...7 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/ProductReviews/ReviewsCommentsOverrides.php`
+  - class ReviewsCommentsOverrides
+  - function __construct
+  - function display_notices
+  - function get_dismiss_capability
+  - function exclude_reviews_from_comments
+- `wp-content/plugins/woocommerce/src/Internal/Admin/ProductReviews/ReviewsListTable.php`
+  - class ReviewsListTable
+  - function __construct
+  - function prepare_items
+  - function get_filter_product_arguments
+  - function display
+  - function single_row
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/ProductReviews/ReviewsUtil.php`
+  - class ReviewsUtil
+  - function modify_product_review_moderation_urls
+  - function comments_clauses_without_product_reviews
+- `wp-content/plugins/woocommerce/src/Internal/Admin/RemoteFreeExtensions/DefaultFreeExtensions.php`
+  - class DefaultFreeExtensions
+  - function get_all
+  - function get_plugin
+  - function with_core_profiler_fields
+- `wp-content/plugins/woocommerce/src/Internal/Admin/RemoteFreeExtensions/EvaluateExtension.php` — class EvaluateExtension, function evaluate_bundles
+- `wp-content/plugins/woocommerce/src/Internal/Admin/RemoteFreeExtensions/Init.php`
+  - class Init
+  - function __construct
+  - function get_extensions
+  - function delete_specs_transient
+  - function get_specs
+- `wp-content/plugins/woocommerce/src/Internal/Admin/RemoteFreeExtensions/ProcessCoreProfilerPluginInstallOptions.php`
+  - class ProcessCoreProfilerPluginInstallOptions
+  - function __construct
+  - function get_install_options
+  - function process_install_options
+- `wp-content/plugins/woocommerce/src/Internal/Admin/RemoteFreeExtensions/RemoteFreeExtensionsDataSourcePoller.php`
+  - class RemoteFreeExtensionsDataSourcePoller
+  - function get_instance
+  - function get_data_sources
+- `wp-content/plugins/woocommerce/src/Internal/Admin/RemoteInboxNotifications.php`
+  - class RemoteInboxNotifications
+  - function get_instance
+  - function __construct
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Schedulers/CustomersScheduler.php`
+  - class CustomersScheduler
+  - function init
+  - function get_dependencies
+  - function get_items
+  - function exclude_existing_customers_from_query
+  - function get_total_imported
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Schedulers/ImportInterface.php`
+  - interface ImportInterface
+  - function get_items
+  - function get_total_imported
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Schedulers/ImportScheduler.php`
+  - class ImportScheduler
+  - function is_importing
+  - function get_batch_sizes
+  - function get_scheduler_actions
+  - function import_batch_init
+  - function import_batch
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Schedulers/MailchimpScheduler.php`
+  - class MailchimpScheduler
+  - function __construct
+  - function run
+  - function make_request
+  - function reset
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Schedulers/OrdersScheduler.php`
+  - class OrdersScheduler
+  - function init
+  - function get_dependencies
+  - function get_scheduler_actions
+  - function get_batch_sizes
+  - function get_items
+  - _...10 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/Exceptions/ApiArgumentException.php` — class ApiArgumentException
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/Exceptions/ApiException.php`
+  - class ApiException
+  - function __construct
+  - function getErrorCode
+  - function getAdditionalData
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/Payments.php`
+  - class Payments
+  - function init
+  - function get_payment_providers
+  - function get_payment_extension_suggestions
+  - function get_payment_extension_suggestion_categories
+  - function get_country
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsController.php`
+  - class PaymentsController
+  - function register
+  - function init
+  - function add_menu
+  - function add_body_classes
+  - function preload_settings
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/Affirm.php` — class Affirm, function needs_setup
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/AfterpayClearpay.php`
+  - class AfterpayClearpay
+  - function is_account_connected
+  - function is_in_test_mode
+  - function is_in_dev_mode
+  - function is_in_test_mode_onboarding
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/Airwallex.php`
+  - class Airwallex
+  - function is_in_test_mode
+  - function is_account_connected
+  - function is_in_test_mode_onboarding
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/AmazonPay.php`
+  - class AmazonPay
+  - function is_in_test_mode
+  - function is_in_dev_mode
+  - function is_account_connected
+  - function is_onboarding_completed
+  - function is_in_test_mode_onboarding
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/Antom.php`
+  - class Antom
+  - function is_account_connected
+  - function is_in_test_mode
+  - function is_in_dev_mode
+  - function is_in_test_mode_onboarding
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/Eway.php`
+  - class Eway
+  - function is_account_connected
+  - function is_in_test_mode
+  - function is_in_dev_mode
+  - function is_in_test_mode_onboarding
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/GoCardless.php`
+  - class GoCardless
+  - function is_account_connected
+  - function is_in_test_mode_onboarding
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/HelioPay.php`
+  - class HelioPay
+  - function is_in_test_mode
+  - function is_account_connected
+  - function is_in_test_mode_onboarding
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/Klarna.php` — class Klarna, function needs_setup
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/KlarnaCheckout.php`
+  - class KlarnaCheckout
+  - function needs_setup
+  - function is_account_connected
+  - function is_in_test_mode_onboarding
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/MercadoPago.php`
+  - class MercadoPago
+  - function needs_setup
+  - function is_in_test_mode
+  - function is_in_dev_mode
+  - function is_account_connected
+  - function is_onboarding_completed
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/Mollie.php`
+  - class Mollie
+  - function get_settings_url
+  - function is_account_connected
+  - function is_in_test_mode
+  - function is_in_test_mode_onboarding
+  - function is_gateway_registered
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/Monei.php`
+  - class Monei
+  - function is_account_connected
+  - function is_in_test_mode_onboarding
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/NexiCheckout.php`
+  - class NexiCheckout
+  - function is_account_connected
+  - function is_in_test_mode
+  - function is_in_dev_mode
+  - function is_in_test_mode_onboarding
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/PayPal.php`
+  - class PayPal
+  - function is_in_test_mode
+  - function is_in_dev_mode
+  - function is_account_connected
+  - function is_onboarding_completed
+  - function is_in_test_mode_onboarding
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/PayUIndia.php` — class PayUIndia, function is_account_connected
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/Payfast.php`
+  - class Payfast
+  - function is_account_connected
+  - function is_in_test_mode_onboarding
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/PaymentGateway.php`
+  - class PaymentGateway
+  - function __construct
+  - function get_details
+  - function enhance_extension_suggestion
+  - function get_title
+  - function get_description
+  - _...19 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/Paymob.php`
+  - class Paymob
+  - function needs_setup
+  - function is_in_test_mode
+  - function is_account_connected
+  - function is_in_test_mode_onboarding
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/Payoneer.php`
+  - class Payoneer
+  - function is_in_test_mode
+  - function is_account_connected
+  - function is_in_test_mode_onboarding
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/Paystack.php`
+  - class Paystack
+  - function needs_setup
+  - function is_account_connected
+  - function is_in_test_mode_onboarding
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/Paytrail.php`
+  - class Paytrail
+  - function is_in_test_mode
+  - function is_account_connected
+  - function is_in_test_mode_onboarding
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/PseudoWCPaymentGateway.php`
+  - class PseudoWCPaymentGateway
+  - function __construct
+  - function needs_setup
+  - function get_settings_url
+  - function get_connection_url
+  - function get_recommended_payment_methods
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/Razorpay.php`
+  - class Razorpay
+  - function is_account_connected
+  - function is_in_test_mode
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/Stripe.php`
+  - class Stripe
+  - function is_in_test_mode
+  - function is_in_dev_mode
+  - function is_account_connected
+  - function is_onboarding_started
+  - function is_onboarding_completed
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/Tilopay.php` — class Tilopay, function is_account_connected
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/Visa.php`
+  - class Visa
+  - function is_account_connected
+  - function is_in_test_mode
+  - function is_in_dev_mode
+  - function is_in_test_mode_onboarding
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/Vivacom.php`
+  - class Vivacom
+  - function is_account_connected
+  - function is_in_test_mode_onboarding
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/WCCore.php`
+  - class WCCore
+  - function get_icon
+  - function is_account_connected
+  - function is_in_test_mode_onboarding
+  - function get_plugin_details
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/WooPayments/WooPaymentsController.php`
+  - class WooPaymentsController
+  - function register
+  - function init
+  - function handle_returns_from_wpcom
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/WooPayments/WooPaymentsRestController.php`
+  - class WooPaymentsRestController
+  - function register_routes
+  - function get_rest_url_path
+  - function init
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/WooPayments/WooPaymentsService.php`
+  - class WooPaymentsService
+  - function init
+  - function get_onboarding_details
+  - function is_valid_onboarding_step_id
+  - function get_onboarding_step_status
+  - function mark_onboarding_step_started
+  - _...12 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders/WooPayments.php`
+  - class WooPayments
+  - function get_details
+  - function enhance_extension_suggestion
+  - function needs_setup
+  - function is_in_test_mode
+  - function is_in_dev_mode
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsProviders.php`
+  - class PaymentsProviders
+  - function init
+  - function get_payment_gateways
+  - function remove_shell_payment_gateways
+  - function get_payment_gateway_provider_instance
+  - function get_payment_extension_suggestion_provider_instance
+  - _...23 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/PaymentsRestController.php`
+  - class PaymentsRestController
+  - function register_routes
+  - function init
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings/Utils.php`
+  - class Utils
+  - function order_map_apply_mappings
+  - function order_map_move_at_order
+  - function order_map_place_at_order
+  - function order_map_add_at_order
+  - function order_map_normalize
+  - _...10 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Settings.php`
+  - class Settings
+  - function get_instance
+  - function __construct
+  - function get_order_statuses
+  - function get_currency_settings
+  - function add_component_settings
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/ShippingLabelBanner.php`
+  - class ShippingLabelBanner
+  - function __construct
+  - function add_meta_boxes
+  - function add_print_shipping_label_script
+  - function meta_box
+- `wp-content/plugins/woocommerce/src/Internal/Admin/ShippingLabelBannerDisplayRules.php`
+  - class ShippingLabelBannerDisplayRules
+  - function __construct
+  - function should_display_banner
+- `wp-content/plugins/woocommerce/src/Internal/Admin/SiteHealth.php`
+  - class SiteHealth
+  - function get_instance
+  - function __construct
+  - function should_suggest_persistent_object_cache
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Suggestions/Incentives/Incentive.php`
+  - class Incentive
+  - function __construct
+  - function get_all
+  - function get_by_promo_id
+  - function get_by_id
+  - function is_visible
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Suggestions/Incentives/WooPayments.php`
+  - class WooPayments
+  - function __construct
+  - function is_visible
+  - function clear_cache
+  - function reset_memo
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Suggestions/PaymentsExtensionSuggestionIncentives.php`
+  - class PaymentsExtensionSuggestionIncentives
+  - function get_incentive
+  - function get_incentives
+  - function is_incentive_visible
+  - function is_incentive_dismissed
+  - function get_incentive_dismissals
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Suggestions/PaymentsExtensionSuggestions.php`
+  - class PaymentsExtensionSuggestions
+  - function init
+  - function get_country_extensions
+  - function get_by_id
+  - function get_by_plugin_slug
+  - function dismiss_incentive
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Survey.php` — class Survey, function get_url
+- `wp-content/plugins/woocommerce/src/Internal/Admin/SystemStatusReport.php`
+  - class SystemStatusReport
+  - function get_instance
+  - function __construct
+  - function system_status_report
+  - function render_features
+  - function render_daily_cron
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/Translations.php`
+  - class Translations
+  - function get_instance
+  - function __construct
+  - function potentially_load_translation_script_file
+  - function load_script_translation_file
+  - function potentially_generate_translation_strings
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/WCAdminAssets.php`
+  - class WCAdminAssets
+  - function get_instance
+  - function __construct
+  - function get_path
+  - function should_use_minified_js_file
+  - function get_url
+  - _...7 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/WCAdminSharedSettings.php`
+  - class WCAdminSharedSettings
+  - function get_instance
+  - function on_woocommerce_blocks_loaded
+- `wp-content/plugins/woocommerce/src/Internal/Admin/WCAdminUser.php`
+  - class WCAdminUser
+  - function __construct
+  - function get_instance
+  - function register_user_data
+  - function get_user_data_values
+  - function update_user_data_values
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/WCPayPromotion/DefaultPromotions.php` — class DefaultPromotions, function get_all
+- `wp-content/plugins/woocommerce/src/Internal/Admin/WCPayPromotion/Init.php`
+  - class Init
+  - function possibly_register_pre_install_wc_pay_promotion_gateway
+  - function can_show_promotion
+  - function set_gateway_top_of_list
+  - function get_wc_pay_promotion_spec
+  - function get_promotions
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/Admin/WCPayPromotion/WCPayPromotionDataSourcePoller.php`
+  - class WCPayPromotionDataSourcePoller
+  - function get_instance
+  - function get_data_sources
+- `wp-content/plugins/woocommerce/src/Internal/Admin/WCPayPromotion/WCPaymentGatewayPreInstallWCPayPromotion.php`
+  - class WCPaymentGatewayPreInstallWCPayPromotion
+  - function __construct
+  - function init_form_fields
+  - function is_dismissed
+- `wp-content/plugins/woocommerce/src/Internal/Admin/WcPayWelcomePage.php`
+  - class WcPayWelcomePage
+  - function instance
+  - function __construct
+  - function has_incentive
+- `wp-content/plugins/woocommerce/src/Internal/Agentic/Enums/Specs/CheckoutSessionStatus.php` — class CheckoutSessionStatus
+- `wp-content/plugins/woocommerce/src/Internal/Agentic/Enums/Specs/ErrorCode.php` — class ErrorCode
+- `wp-content/plugins/woocommerce/src/Internal/Agentic/Enums/Specs/ErrorType.php` — class ErrorType
+- `wp-content/plugins/woocommerce/src/Internal/Agentic/Enums/Specs/FulfillmentType.php` — class FulfillmentType
+- `wp-content/plugins/woocommerce/src/Internal/Agentic/Enums/Specs/LinkType.php` — class LinkType
+- `wp-content/plugins/woocommerce/src/Internal/Agentic/Enums/Specs/MessageContentType.php` — class MessageContentType
+- `wp-content/plugins/woocommerce/src/Internal/Agentic/Enums/Specs/MessageType.php` — class MessageType
+- `wp-content/plugins/woocommerce/src/Internal/Agentic/Enums/Specs/OrderStatus.php`
+  - class OrderStatus
+  - function get_all
+  - function is_valid
+- `wp-content/plugins/woocommerce/src/Internal/Agentic/Enums/Specs/PaymentMethod.php` — class PaymentMethod
+- `wp-content/plugins/woocommerce/src/Internal/Agentic/Enums/Specs/PaymentProvider.php` — class PaymentProvider
+- `wp-content/plugins/woocommerce/src/Internal/Agentic/Enums/Specs/RefundType.php` — class RefundType
+- `wp-content/plugins/woocommerce/src/Internal/Agentic/Enums/Specs/TotalType.php` — class TotalType
+- `wp-content/plugins/woocommerce/src/Internal/AssignDefaultCategory.php`
+  - class AssignDefaultCategory
+  - function init
+  - function schedule_action
+  - function maybe_assign_default_product_cat
+- `wp-content/plugins/woocommerce/src/Internal/BatchProcessing/BatchProcessingController.php`
+  - class BatchProcessingController
+  - function __construct
+  - function enqueue_processor
+  - function is_scheduled
+  - function get_enqueued_processors
+  - function is_enqueued
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/BatchProcessing/BatchProcessorInterface.php`
+  - interface BatchProcessorInterface
+  - function get_name
+  - function get_description
+  - function get_total_pending_count
+  - function get_next_batch_to_process
+  - function process_batch
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/Brands.php`
+  - class Brands
+  - function init
+  - function is_enabled
+  - function prepare
+- `wp-content/plugins/woocommerce/src/Internal/CLI/Migrator/Commands/ListCommand.php`
+  - class ListCommand
+  - function init
+  - function __invoke
+- `wp-content/plugins/woocommerce/src/Internal/CLI/Migrator/Commands/ProductsCommand.php`
+  - class ProductsCommand
+  - function init
+  - function __invoke
+- `wp-content/plugins/woocommerce/src/Internal/CLI/Migrator/Commands/ResetCommand.php`
+  - class ResetCommand
+  - function init
+  - function __invoke
+- `wp-content/plugins/woocommerce/src/Internal/CLI/Migrator/Commands/SetupCommand.php`
+  - class SetupCommand
+  - function init
+  - function __invoke
+- `wp-content/plugins/woocommerce/src/Internal/CLI/Migrator/Core/CredentialManager.php`
+  - class CredentialManager
+  - function get_credentials
+  - function has_credentials
+  - function prompt_for_credentials
+  - function save_credentials
+  - function delete_credentials
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/CLI/Migrator/Core/MigratorTracker.php`
+  - class MigratorTracker
+  - function __construct
+  - function on_session_started
+  - function on_batch_processed
+  - function on_session_completed
+  - function get_data
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/CLI/Migrator/Core/PlatformRegistry.php`
+  - class PlatformRegistry
+  - function __construct
+  - function init
+  - function get_platforms
+  - function get_platform
+  - function get_fetcher
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Internal/CLI/Migrator/Core/ProductsController.php`
+  - class ProductsController
+  - function init
+  - function migrate_products
+  - function display_product_progress
+- `wp-content/plugins/woocommerce/src/Internal/CLI/Migrator/Core/WooCommerceProductImporter.php`
+  - class WooCommerceProductImporter
+  - function __construct
+  - function configure
+  - function set_progress_callback
+  - function import_product
+  - function import_batch
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/CLI/Migrator/Interfaces/PlatformFetcherInterface.php`
+  - interface PlatformFetcherInterface
+  - function __construct
+  - function fetch_batch
+  - function fetch_total_count
+- `wp-content/plugins/woocommerce/src/Internal/CLI/Migrator/Interfaces/PlatformMapperInterface.php` — interface PlatformMapperInterface, function map_product_data
+- `wp-content/plugins/woocommerce/src/Internal/CLI/Migrator/Lib/ImportSession.php`
+  - class ImportSession
+  - function create
+  - function by_id
+  - function get_active
+  - function __construct
+  - function get_id
+  - _...30 more_
+- `wp-content/plugins/woocommerce/src/Internal/CLI/Migrator/Platforms/Shopify/ShopifyClient.php`
+  - class ShopifyClient
+  - function __construct
+  - function rest_request
+  - function graphql_request
+- `wp-content/plugins/woocommerce/src/Internal/CLI/Migrator/Platforms/Shopify/ShopifyFetcher.php`
+  - class ShopifyFetcher
+  - function __construct
+  - function fetch_batch
+  - function fetch_total_count
+- `wp-content/plugins/woocommerce/src/Internal/CLI/Migrator/Platforms/Shopify/ShopifyMapper.php`
+  - class ShopifyMapper
+  - function __construct
+  - function map_product_data
+- `wp-content/plugins/woocommerce/src/Internal/CLI/Migrator/Platforms/Shopify/ShopifyPlatform.php`
+  - class ShopifyPlatform
+  - function init
+  - function register_platform
+- `wp-content/plugins/woocommerce/src/Internal/CLI/Migrator/Runner.php` — class Runner, function register_commands
+- `wp-content/plugins/woocommerce/src/Internal/Caches/OrdersVersionStringInvalidator.php`
+  - class OrdersVersionStringInvalidator
+  - function init
+  - function handle_before_order_save
+  - function handle_woocommerce_new_order
+  - function handle_woocommerce_update_order
+  - function handle_woocommerce_before_delete_order
+  - _...7 more_
+- `wp-content/plugins/woocommerce/src/Internal/Caches/ProductCache.php`
+  - class ProductCache
+  - function get_object_type
+  - function set
+  - function remove
+  - function get
+- `wp-content/plugins/woocommerce/src/Internal/Caches/ProductCacheController.php`
+  - class ProductCacheController
+  - function init
+  - function on_init
+  - function register_hooks
+  - function set_product_cache_group_as_non_persistent
+  - function invalidate_product_cache_on_clean
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/Caches/ProductVersionStringInvalidator.php`
+  - class ProductVersionStringInvalidator
+  - function init
+  - function handle_save_post_product
+  - function handle_delete_post
+  - function handle_trashed_post
+  - function handle_untrashed_post
+  - _...17 more_
+- `wp-content/plugins/woocommerce/src/Internal/Caches/TaxRateVersionStringInvalidator.php`
+  - class TaxRateVersionStringInvalidator
+  - function init
+  - function handle_woocommerce_tax_rate_added
+  - function handle_woocommerce_tax_rate_updated
+  - function handle_woocommerce_tax_rate_deleted
+  - function invalidate
+- `wp-content/plugins/woocommerce/src/Internal/Caches/VersionStringGenerator.php`
+  - class VersionStringGenerator
+  - function init
+  - function can_use
+  - function get_version
+  - function generate_version
+  - function delete_version
+- `wp-content/plugins/woocommerce/src/Internal/ComingSoon/ComingSoonAdminBarBadge.php`
+  - class ComingSoonAdminBarBadge
+  - function init
+  - function init_hooks
+  - function site_visibility_badge
+  - function output_css
+- `wp-content/plugins/woocommerce/src/Internal/ComingSoon/ComingSoonCacheInvalidator.php`
+  - class ComingSoonCacheInvalidator
+  - function init
+  - function invalidate_caches
+- `wp-content/plugins/woocommerce/src/Internal/ComingSoon/ComingSoonHelper.php`
+  - class ComingSoonHelper
+  - function is_site_live
+  - function is_site_coming_soon
+  - function is_store_coming_soon
+  - function is_current_page_coming_soon
+- `wp-content/plugins/woocommerce/src/Internal/ComingSoon/ComingSoonRequestHandler.php`
+  - class ComingSoonRequestHandler
+  - function init
+  - function possibly_init_block_templates
+  - function handle_template_include
+  - function experimental_filter_theme_json_theme
+  - function enqueue_styles
+- `wp-content/plugins/woocommerce/src/Internal/CostOfGoodsSold/CogsAwareRestControllerTrait.php` — class CogsAwareRestControllerTrait
+- `wp-content/plugins/woocommerce/src/Internal/CostOfGoodsSold/CogsAwareTrait.php` — class CogsAwareTrait
+- `wp-content/plugins/woocommerce/src/Internal/CostOfGoodsSold/CogsAwareUnitTestSuiteTrait.php` — class CogsAwareUnitTestSuiteTrait
+- `wp-content/plugins/woocommerce/src/Internal/CostOfGoodsSold/CostOfGoodsSoldController.php`
+  - class CostOfGoodsSoldController
+  - function register
+  - function init
+  - function feature_is_enabled
+  - function add_feature_definition
+  - function add_debug_tools_entry
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Internal/Customers/SearchService.php` — class SearchService, function find_user_ids_by_billing_email_for_coupons_usage_lookup
+- `wp-content/plugins/woocommerce/src/Internal/DataStores/CustomMetaDataStore.php`
+  - class CustomMetaDataStore
+  - function read_meta
+  - function delete_meta
+  - function add_meta
+  - function update_meta
+  - function get_metadata_by_id
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Internal/DataStores/Fulfillments/FulfillmentsDataStore.php`
+  - class FulfillmentsDataStore
+  - function create
+  - function read
+  - function update
+  - function delete
+  - function read_meta
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Internal/DataStores/Fulfillments/FulfillmentsDataStoreInterface.php` — interface FulfillmentsDataStoreInterface, function read_fulfillments
+- `wp-content/plugins/woocommerce/src/Internal/DataStores/Orders/CustomOrdersTableController.php`
+  - class CustomOrdersTableController
+  - function __construct
+  - function init
+  - function custom_orders_table_usage_is_enabled
+  - function hpos_data_caching_is_enabled
+  - function get_orders_data_store
+  - _...12 more_
+- `wp-content/plugins/woocommerce/src/Internal/DataStores/Orders/DataSynchronizer.php`
+  - class DataSynchronizer
+  - function __construct
+  - function init
+  - function check_orders_table_exists
+  - function get_table_exists
+  - function create_database_tables
+  - _...29 more_
+- `wp-content/plugins/woocommerce/src/Internal/DataStores/Orders/LegacyDataCleanup.php`
+  - class LegacyDataCleanup
+  - function init
+  - function get_name
+  - function get_description
+  - function get_total_pending_count
+  - function get_next_batch_to_process
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Internal/DataStores/Orders/LegacyDataHandler.php`
+  - class LegacyDataHandler
+  - function init
+  - function count_orders_for_cleanup
+  - function get_orders_for_cleanup
+  - function cleanup_post_data
+  - function get_diff_for_order
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/DataStores/Orders/OrdersTableDataStore.php`
+  - class OrdersTableDataStore
+  - function init
+  - function get_orders_table_name
+  - function get_addresses_table_name
+  - function get_operational_data_table_name
+  - function get_meta_table_name
+  - _...59 more_
+- `wp-content/plugins/woocommerce/src/Internal/DataStores/Orders/OrdersTableDataStoreMeta.php`
+  - class OrdersTableDataStoreMeta
+  - function delete_meta
+  - function add_meta
+  - function update_meta
+  - function get_meta_data_for_object_ids
+  - function clear_cached_data
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/DataStores/Orders/OrdersTableFieldQuery.php`
+  - class OrdersTableFieldQuery
+  - function __construct
+  - function get_sql_clauses
+- `wp-content/plugins/woocommerce/src/Internal/DataStores/Orders/OrdersTableMetaQuery.php`
+  - class OrdersTableMetaQuery
+  - function __construct
+  - function get_sql_clauses
+  - function get_orderby_keys
+  - function get_orderby_clause_for_key
+- `wp-content/plugins/woocommerce/src/Internal/DataStores/Orders/OrdersTableQuery.php`
+  - class OrdersTableQuery
+  - function __construct
+  - function get_core_mapping_alias
+  - function get_core_mapping_join
+  - function where
+  - function arg_isset
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/DataStores/Orders/OrdersTableRefundDataStore.php`
+  - class OrdersTableRefundDataStore
+  - function delete
+  - function create
+  - function update
+  - function update_order_meta
+- `wp-content/plugins/woocommerce/src/Internal/DataStores/Orders/OrdersTableSearchQuery.php`
+  - class OrdersTableSearchQuery
+  - function __construct
+  - function get_sql_clauses
+- `wp-content/plugins/woocommerce/src/Internal/DataStores/StockNotifications/StockNotificationsDataStore.php`
+  - class StockNotificationsDataStore
+  - function init
+  - function get_table_name
+  - function get_meta_table_name
+  - function get_database_schema
+  - function filter_raw_meta_data
+  - _...14 more_
+- `wp-content/plugins/woocommerce/src/Internal/DataStores/StockNotifications/StockNotificationsMetaDataStore.php`
+  - class StockNotificationsMetaDataStore
+  - function get_table_name
+  - function delete_by_notification_id
+- `wp-content/plugins/woocommerce/src/Internal/DependencyManagement/ContainerException.php` — class ContainerException, function __construct
+- `wp-content/plugins/woocommerce/src/Internal/DependencyManagement/RuntimeContainer.php`
+  - class RuntimeContainer
+  - function __construct
+  - function get
+  - function has
+- `wp-content/plugins/woocommerce/src/Internal/DownloadPermissionsAdjuster.php`
+  - class DownloadPermissionsAdjuster
+  - function init
+  - function maybe_schedule_adjust_download_permissions
+  - function adjust_download_permissions
+- `wp-content/plugins/woocommerce/src/Internal/Email/EmailColors.php`
+  - class EmailColors
+  - function get_default_colors
+  - function get_colors_from_global_styles
+- `wp-content/plugins/woocommerce/src/Internal/Email/EmailFont.php` — class EmailFont
+- `wp-content/plugins/woocommerce/src/Internal/Email/EmailStyleSync.php`
+  - class EmailStyleSync
+  - function register
+  - function maybe_sync_on_option_update
+  - function is_auto_sync_enabled
+  - function set_auto_sync
+  - function sync_email_styles_with_theme
+- `wp-content/plugins/woocommerce/src/Internal/Email/OrderPriceFormatter.php` — class OrderPriceFormatter, function get_formatted_item_subtotal
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/BlockEmailRenderer.php`
+  - class BlockEmailRenderer
+  - function __construct
+  - function init
+  - function maybe_render_block_email
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/EmailApiController.php`
+  - class EmailApiController
+  - function init
+  - function get_email_data
+  - function save_email_data
+  - function get_email_data_schema
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/EmailPatterns/PatternsController.php`
+  - class PatternsController
+  - function init
+  - function register_patterns
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/EmailPatterns/WooEmailContentPattern.php`
+  - class WooEmailContentPattern
+  - function get_content
+  - function get_title
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/EmailTemplates/TemplateApiController.php`
+  - class TemplateApiController
+  - function get_template_data
+  - function save_template_data
+  - function get_template_data_schema
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/EmailTemplates/TemplatesController.php`
+  - class TemplatesController
+  - function init
+  - function filter_email_templates
+  - function register_templates
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/EmailTemplates/WooEmailTemplate.php`
+  - class WooEmailTemplate
+  - function get_slug
+  - function get_title
+  - function get_description
+  - function get_content
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/Integration.php`
+  - class Integration
+  - function __construct
+  - function init
+  - function initialize
+  - function init_logger
+  - function init_hooks
+  - _...12 more_
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/Logger.php`
+  - class Logger
+  - function __construct
+  - function emergency
+  - function alert
+  - function critical
+  - function error
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/Package.php`
+  - class Package
+  - function init
+  - function get_version
+  - function get_path
+  - function initialize
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/PageRenderer.php`
+  - class PageRenderer
+  - function __construct
+  - function render
+  - function update_localized_data
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/PersonalizationTagManager.php`
+  - class PersonalizationTagManager
+  - function __construct
+  - function init
+  - function register_personalization_tags
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/PersonalizationTags/AbstractTagProvider.php` — class AbstractTagProvider, function register_tags
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/PersonalizationTags/CustomerTagsProvider.php` — class CustomerTagsProvider, function register_tags
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/PersonalizationTags/OrderTagsProvider.php` — class OrderTagsProvider, function register_tags
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/PersonalizationTags/SiteTagsProvider.php` — class SiteTagsProvider, function register_tags
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/PersonalizationTags/StoreTagsProvider.php` — class StoreTagsProvider, function register_tags
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/TransactionalEmailPersonalizer.php`
+  - class TransactionalEmailPersonalizer
+  - function __construct
+  - function personalize_transactional_content
+  - function configure_context_by_email
+  - function prepare_context_data
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/WCTransactionalEmails/WCTransactionalEmailPostsGenerator.php`
+  - class WCTransactionalEmailPostsGenerator
+  - function __construct
+  - function initialize
+  - function init_default_transactional_emails
+  - function get_email_template
+  - function generate_initial_email_templates
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/WCTransactionalEmails/WCTransactionalEmailPostsManager.php`
+  - class WCTransactionalEmailPostsManager
+  - function get_instance
+  - function get_email_post
+  - function get_email_type_from_post_id
+  - function template_exists
+  - function save_email_template_post_id
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/WCTransactionalEmails/WCTransactionalEmails.php`
+  - class WCTransactionalEmails
+  - function __construct
+  - function init
+  - function get_transactional_emails
+  - function init_email_templates
+- `wp-content/plugins/woocommerce/src/Internal/EmailEditor/WooContentProcessor.php`
+  - class WooContentProcessor
+  - function __construct
+  - function get_woo_content
+  - function prepare_css
+- `wp-content/plugins/woocommerce/src/Internal/Features/FeaturesController.php`
+  - class FeaturesController
+  - function __construct
+  - function add_feature_definition
+  - function register_additional_features
+  - function init
+  - function get_features
+  - _...28 more_
+- `wp-content/plugins/woocommerce/src/Internal/Features/ProductBlockEditor/ProductTemplates/AbstractProductFormTemplate.php`
+  - class AbstractProductFormTemplate
+  - function get_area
+  - function get_group_by_id
+  - function get_section_by_id
+  - function get_subsection_by_id
+  - function get_block_by_id
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/Features/ProductBlockEditor/ProductTemplates/DownloadableProductTrait.php` — class DownloadableProductTrait
+- `wp-content/plugins/woocommerce/src/Internal/Features/ProductBlockEditor/ProductTemplates/Group.php`
+  - class Group
+  - function __construct
+  - function add_section
+- `wp-content/plugins/woocommerce/src/Internal/Features/ProductBlockEditor/ProductTemplates/ProductBlock.php` — class ProductBlock
+- `wp-content/plugins/woocommerce/src/Internal/Features/ProductBlockEditor/ProductTemplates/ProductVariationTemplate.php`
+  - class ProductVariationTemplate
+  - function __construct
+  - function get_id
+  - function get_title
+  - function get_description
+- `wp-content/plugins/woocommerce/src/Internal/Features/ProductBlockEditor/ProductTemplates/Section.php`
+  - class Section
+  - function __construct
+  - function add_subsection
+  - function add_section
+- `wp-content/plugins/woocommerce/src/Internal/Features/ProductBlockEditor/ProductTemplates/SimpleProductTemplate.php`
+  - class SimpleProductTemplate
+  - function __construct
+  - function get_id
+  - function get_title
+  - function get_description
+  - function get_tax_classes
+- `wp-content/plugins/woocommerce/src/Internal/Features/ProductBlockEditor/ProductTemplates/Subsection.php` — class Subsection, function __construct
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Fulfillment.php`
+  - class Fulfillment
+  - function __construct
+  - function get_id
+  - function set_id
+  - function get_entity_type
+  - function set_entity_type
+  - _...19 more_
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/FulfillmentException.php` — class FulfillmentException, function __construct
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/FulfillmentUtils.php`
+  - class FulfillmentUtils
+  - function get_pending_items
+  - function get_refunded_items
+  - function get_fulfillment_items
+  - function has_pending_items
+  - function calculate_order_fulfillment_status
+  - _...17 more_
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/FulfillmentsController.php`
+  - class FulfillmentsController
+  - function register
+  - function initialize_fulfillments
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/FulfillmentsManager.php`
+  - class FulfillmentsManager
+  - function register
+  - function translate_fulfillment_meta_key
+  - function get_initial_shipping_providers
+  - function update_order_fulfillment_status_on_fulfillment_update
+  - function update_fulfillment_status_after_refund_deleted
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/FulfillmentsRenderer.php`
+  - class FulfillmentsRenderer
+  - function register
+  - function init_admin_hooks
+  - function add_fulfillment_columns
+  - function render_fulfillment_column_row_data_legacy
+  - function render_fulfillment_column_row_data
+  - _...11 more_
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/FulfillmentsSettings.php`
+  - class FulfillmentsSettings
+  - function register
+  - function init_settings_auto_fulfill
+  - function add_auto_fulfill_settings
+  - function auto_fulfill_items_on_processing
+  - function auto_fulfill_items_on_completed
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/OrderFulfillmentsRestController.php`
+  - class OrderFulfillmentsRestController
+  - function register_routes
+  - function get_fulfillments
+  - function create_fulfillment
+  - function get_fulfillment
+  - function update_fulfillment
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/ACSCourierShippingProvider.php`
+  - class ACSCourierShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/AbstractShippingProvider.php`
+  - class AbstractShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+  - function get_shipping_from_countries
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/AmazonLogisticsShippingProvider.php`
+  - class AmazonLogisticsShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_shipping_from_countries
+  - function get_shipping_to_countries
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/AnPostShippingProvider.php`
+  - class AnPostShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/ArasKargoShippingProvider.php`
+  - class ArasKargoShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/AustraliaPostShippingProvider.php`
+  - class AustraliaPostShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_shipping_from_countries
+  - function get_shipping_to_countries
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/AzerpostShippingProvider.php`
+  - class AzerpostShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/BartoliniBRTShippingProvider.php`
+  - class BartoliniBRTShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/BelpochtaShippingProvider.php`
+  - class BelpochtaShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/BpostShippingProvider.php`
+  - class BpostShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/BulgarianPostsShippingProvider.php`
+  - class BulgarianPostsShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/CDEKShippingProvider.php`
+  - class CDEKShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/CTTShippingProvider.php`
+  - class CTTShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/CanadaPostShippingProvider.php`
+  - class CanadaPostShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_shipping_from_countries
+  - function get_shipping_to_countries
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/CeskaPostaShippingProvider.php`
+  - class CeskaPostaShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/ChronopostShippingProvider.php`
+  - class ChronopostShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/CorreosShippingProvider.php`
+  - class CorreosShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/CyprusPostShippingProvider.php`
+  - class CyprusPostShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/DHLShippingProvider.php`
+  - class DHLShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+  - function get_shipping_from_countries
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/DPDShippingProvider.php`
+  - class DPDShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_shipping_from_countries
+  - function get_shipping_to_countries
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/DeutschePostShippingProvider.php`
+  - class DeutschePostShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/ELTAShippingProvider.php`
+  - class ELTAShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/EcontShippingProvider.php`
+  - class EcontShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/EimskipShippingProvider.php`
+  - class EimskipShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/EvriHermesShippingProvider.php`
+  - class EvriHermesShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_shipping_from_countries
+  - function get_shipping_to_countries
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/FanCourierShippingProvider.php`
+  - class FanCourierShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/FastwayShippingProvider.php`
+  - class FastwayShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/FedExShippingProvider.php`
+  - class FedExShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+  - function get_shipping_from_countries
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/GLSShippingProvider.php`
+  - class GLSShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/GenikiTaxydromikiShippingProvider.php`
+  - class GenikiTaxydromikiShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/HayPostShippingProvider.php`
+  - class HayPostShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/HelthjemShippingProvider.php`
+  - class HelthjemShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/HrvatskaPostaShippingProvider.php`
+  - class HrvatskaPostaShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/InPostShippingProvider.php`
+  - class InPostShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/IslandsposturShippingProvider.php`
+  - class IslandsposturShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/ItellaShippingProvider.php`
+  - class ItellaShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/KazpostShippingProvider.php`
+  - class KazpostShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/LaPosteColissimoShippingProvider.php`
+  - class LaPosteColissimoShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/LasershipOntracShippingProvider.php`
+  - class LasershipOntracShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/LatvijasPastsShippingProvider.php`
+  - class LatvijasPastsShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/LiechtensteinischePostShippingProvider.php`
+  - class LiechtensteinischePostShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/MPLShippingProvider.php`
+  - class MPLShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/MRWShippingProvider.php`
+  - class MRWShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/MagyarPostaShippingProvider.php`
+  - class MagyarPostaShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/MakedonskaPostaShippingProvider.php`
+  - class MakedonskaPostaShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/MaltaPostShippingProvider.php`
+  - class MaltaPostShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/MatkahuoltoShippingProvider.php`
+  - class MatkahuoltoShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/MondialRelayShippingProvider.php`
+  - class MondialRelayShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/NewZealandPostShippingProvider.php`
+  - class NewZealandPostShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/NovaPoshtaShippingProvider.php`
+  - class NovaPoshtaShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/OmnivaShippingProvider.php`
+  - class OmnivaShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/OsterreichischePostShippingProvider.php`
+  - class OsterreichischePostShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/ParcelForceShippingProvider.php`
+  - class ParcelForceShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/PocztaPolskaShippingProvider.php`
+  - class PocztaPolskaShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/PostLuxembourgShippingProvider.php`
+  - class PostLuxembourgShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/PostNLShippingProvider.php`
+  - class PostNLShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/PostNordShippingProvider.php`
+  - class PostNordShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/PostaMoldoveiShippingProvider.php`
+  - class PostaMoldoveiShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/PostaRomanaShippingProvider.php`
+  - class PostaRomanaShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/PosteItalianeShippingProvider.php`
+  - class PosteItalianeShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/PosteSanMarinoShippingProvider.php`
+  - class PosteSanMarinoShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/PostenNorgeBringShippingProvider.php`
+  - class PostenNorgeBringShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/PurolatorShippingProvider.php`
+  - class PurolatorShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/RoyalMailShippingProvider.php`
+  - class RoyalMailShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_shipping_from_countries
+  - function get_shipping_to_countries
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/RussianPostShippingProvider.php`
+  - class RussianPostShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/SDAShippingProvider.php`
+  - class SDAShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/SeurShippingProvider.php`
+  - class SeurShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/SlovenskaPostaShippingProvider.php`
+  - class SlovenskaPostaShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/SpeeDeeDeliveryShippingProvider.php`
+  - class SpeeDeeDeliveryShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/StarTrackShippingProvider.php`
+  - class StarTrackShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/SwissPostShippingProvider.php`
+  - class SwissPostShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/TollShippingProvider.php`
+  - class TollShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/UPSShippingProvider.php`
+  - class UPSShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+  - function get_shipping_from_countries
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/USPSShippingProvider.php`
+  - class USPSShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+  - function get_shipping_from_countries
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/UkrposhtaShippingProvider.php`
+  - class UkrposhtaShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/UrgentCargusShippingProvider.php`
+  - class UrgentCargusShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/YurticiKargoShippingProvider.php`
+  - class YurticiKargoShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Fulfillments/Providers/ZasilkovnaShippingProvider.php`
+  - class ZasilkovnaShippingProvider
+  - function get_key
+  - function get_name
+  - function get_icon
+  - function get_tracking_url
+- `wp-content/plugins/woocommerce/src/Internal/Integrations/WPConsentAPI.php` — class WPConsentAPI, function register
+- `wp-content/plugins/woocommerce/src/Internal/Integrations/WPPostsImporter.php`
+  - class WPPostsImporter
+  - function register
+  - function register_product_attribute_taxonomies
+- `wp-content/plugins/woocommerce/src/Internal/Jetpack/JetpackConnection.php`
+  - class JetpackConnection
+  - function get_manager
+  - function get_authorization_url
+- `wp-content/plugins/woocommerce/src/Internal/Logging/OrderLogsDeletionProcessor.php`
+  - class OrderLogsDeletionProcessor
+  - function init
+  - function get_name
+  - function get_description
+  - function get_default_batch_size
+  - function get_total_pending_count
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/Logging/RemoteLogger.php`
+  - class RemoteLogger
+  - function handle
+  - function get_formatted_log
+  - function is_remote_logging_allowed
+- `wp-content/plugins/woocommerce/src/Internal/Logging/SafeGlobalFunctionProxy.php` — class SafeGlobalFunctionProxy, function __callStatic
+- `wp-content/plugins/woocommerce/src/Internal/MCP/MCPAdapterProvider.php`
+  - class MCPAdapterProvider
+  - function __construct
+  - function maybe_initialize
+  - function initialize_mcp_server
+  - function disable_mcp_validation
+  - function is_initialized
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/MCP/Transport/WooCommerceRestTransport.php`
+  - class WooCommerceRestTransport
+  - function __construct
+  - function check_permission
+  - function validate_request
+  - function get_current_user_permissions
+  - function check_ability_permission
+- `wp-content/plugins/woocommerce/src/Internal/McStats.php`
+  - class McStats
+  - function get_group_query_args
+  - function do_stats
+  - function do_server_side_stat
+  - function do_server_side_stats
+- `wp-content/plugins/woocommerce/src/Internal/OrderCouponDataMigrator.php`
+  - class OrderCouponDataMigrator
+  - function register
+  - function get_name
+  - function get_description
+  - function get_total_pending_count
+  - function get_next_batch_to_process
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/Orders/CouponsController.php`
+  - class CouponsController
+  - function add_coupon_discount_via_ajax
+  - function add_coupon_discount
+- `wp-content/plugins/woocommerce/src/Internal/Orders/IppFunctions.php`
+  - class IppFunctions
+  - function is_order_in_person_payment_eligible
+  - function is_store_in_person_payment_eligible
+  - function has_store_specified_country_currency
+- `wp-content/plugins/woocommerce/src/Internal/Orders/MobileMessagingHandler.php` — class MobileMessagingHandler, function prepare_mobile_message
+- `wp-content/plugins/woocommerce/src/Internal/Orders/OrderActionsRestController.php`
+  - class OrderActionsRestController
+  - function register_routes
+  - function get_schema_for_email_templates
+  - function get_schema_for_order_actions
+- `wp-content/plugins/woocommerce/src/Internal/Orders/OrderAttributionBlocksController.php`
+  - class OrderAttributionBlocksController
+  - function init
+  - function register
+  - function on_init
+- `wp-content/plugins/woocommerce/src/Internal/Orders/OrderAttributionController.php`
+  - class OrderAttributionController
+  - function init
+  - function register
+  - function on_init
+  - function get_field_names
+  - function get_prefix
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Internal/Orders/OrderNoteGroup.php` — class OrderNoteGroup, function get_default_group_title
+- `wp-content/plugins/woocommerce/src/Internal/Orders/OrderStatusRestController.php`
+  - class OrderStatusRestController
+  - function register_routes
+  - function get_items
+  - function get_item_schema
+- `wp-content/plugins/woocommerce/src/Internal/Orders/PaymentInfo.php` — class PaymentInfo, function get_card_info
+- `wp-content/plugins/woocommerce/src/Internal/Orders/PointOfSaleOrderUtil.php` — class PointOfSaleOrderUtil, function is_pos_order
+- `wp-content/plugins/woocommerce/src/Internal/Orders/TaxesController.php`
+  - class TaxesController
+  - function calc_line_taxes_via_ajax
+  - function calc_line_taxes
+- `wp-content/plugins/woocommerce/src/Internal/ProductAttributesLookup/CLIRunner.php`
+  - class CLIRunner
+  - function __construct
+  - function enable
+  - function disable
+  - function regenerate_for_product
+  - function info
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/ProductAttributesLookup/DataRegenerator.php`
+  - class DataRegenerator
+  - function __construct
+  - function init
+  - function get_last_regeneration_step_failed
+  - function initiate_regeneration
+  - function truncate_lookup_table
+  - _...13 more_
+- `wp-content/plugins/woocommerce/src/Internal/ProductAttributesLookup/Filterer.php`
+  - class Filterer
+  - function init
+  - function filtering_via_lookup_table_is_active
+  - function filter_by_attribute_post_clauses
+  - function get_filtered_term_product_counts
+- `wp-content/plugins/woocommerce/src/Internal/ProductAttributesLookup/LookupDataStore.php`
+  - class LookupDataStore
+  - function __construct
+  - function can_use_optimized_db_access
+  - function check_lookup_table_exists
+  - function get_lookup_table_name
+  - function get_last_create_operation_failed
+  - _...15 more_
+- `wp-content/plugins/woocommerce/src/Internal/ProductDownloads/ApprovedDirectories/Admin/SyncUI.php`
+  - class SyncUI
+  - function init
+  - function init_hooks
+  - function add_tools
+  - function trigger_sync
+  - function clear_existing_entries
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/ProductDownloads/ApprovedDirectories/Admin/Table.php`
+  - class Table
+  - function __construct
+  - function set_items_per_page
+  - function no_items
+  - function render_views
+  - function get_columns
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Internal/ProductDownloads/ApprovedDirectories/Admin/UI.php`
+  - class UI
+  - function init
+  - function init_hooks
+  - function add_section
+  - function setup
+  - function render
+- `wp-content/plugins/woocommerce/src/Internal/ProductDownloads/ApprovedDirectories/ApprovedDirectoriesException.php` — class ApprovedDirectoriesException
+- `wp-content/plugins/woocommerce/src/Internal/ProductDownloads/ApprovedDirectories/Register.php`
+  - class Register
+  - function init
+  - function get_table
+  - function get_mode
+  - function set_mode
+  - function add_approved_directory
+  - _...13 more_
+- `wp-content/plugins/woocommerce/src/Internal/ProductDownloads/ApprovedDirectories/StoredUrl.php`
+  - class StoredUrl
+  - function __construct
+  - function get_id
+  - function get_url
+  - function is_enabled
+- `wp-content/plugins/woocommerce/src/Internal/ProductDownloads/ApprovedDirectories/Synchronize.php`
+  - class Synchronize
+  - function init
+  - function init_hooks
+  - function init_feature
+  - function add_default_directories
+  - function start
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Internal/ProductFeed/Feed/FeedInterface.php`
+  - interface FeedInterface
+  - function start
+  - function add_entry
+  - function end
+  - function get_file_path
+  - function get_file_url
+- `wp-content/plugins/woocommerce/src/Internal/ProductFeed/Feed/FeedValidatorInterface.php` — interface FeedValidatorInterface, function validate_entry
+- `wp-content/plugins/woocommerce/src/Internal/ProductFeed/Feed/ProductLoader.php` — class ProductLoader, function get_products
+- `wp-content/plugins/woocommerce/src/Internal/ProductFeed/Feed/ProductMapperInterface.php` — interface ProductMapperInterface, function map_product
+- `wp-content/plugins/woocommerce/src/Internal/ProductFeed/Feed/ProductWalker.php`
+  - class ProductWalker
+  - function from_integration
+  - function set_batch_size
+  - function add_time_limit
+  - function walk
+- `wp-content/plugins/woocommerce/src/Internal/ProductFeed/Feed/WalkerProgress.php` — class WalkerProgress, function from_wc_get_products_result
+- `wp-content/plugins/woocommerce/src/Internal/ProductFeed/Integrations/IntegrationInterface.php`
+  - interface IntegrationInterface
+  - function get_id
+  - function register_hooks
+  - function activate
+  - function deactivate
+  - function get_product_feed_query_args
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Internal/ProductFeed/Integrations/IntegrationRegistry.php`
+  - class IntegrationRegistry
+  - function register_integration
+  - function get_integration
+  - function get_integrations
+- `wp-content/plugins/woocommerce/src/Internal/ProductFeed/Integrations/POSCatalog/ApiController.php`
+  - class ApiController
+  - function init
+  - function register_routes
+  - function is_authorized
+  - function generate_feed
+- `wp-content/plugins/woocommerce/src/Internal/ProductFeed/Integrations/POSCatalog/AsyncGenerator.php`
+  - class AsyncGenerator
+  - function init
+  - function register_hooks
+  - function get_status
+  - function feed_generation_action
+  - function force_regeneration
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/ProductFeed/Integrations/POSCatalog/FeedValidator.php` — class FeedValidator, function validate_entry
+- `wp-content/plugins/woocommerce/src/Internal/ProductFeed/Integrations/POSCatalog/POSIntegration.php`
+  - class POSIntegration
+  - function init
+  - function get_id
+  - function get_product_feed_query_args
+  - function register_hooks
+  - function rest_api_init
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/ProductFeed/Integrations/POSCatalog/POSProductVisibilitySync.php`
+  - class POSProductVisibilitySync
+  - function register_hooks
+  - function set_product_pos_visibility
+  - function inherit_parent_pos_visibility
+- `wp-content/plugins/woocommerce/src/Internal/ProductFeed/Integrations/POSCatalog/ProductMapper.php`
+  - class ProductMapper
+  - function init
+  - function set_fields
+  - function set_variation_fields
+  - function map_product
+- `wp-content/plugins/woocommerce/src/Internal/ProductFeed/ProductFeed.php`
+  - class ProductFeed
+  - function init
+  - function register_integration
+  - function register
+  - function activate
+  - function deactivate
+- `wp-content/plugins/woocommerce/src/Internal/ProductFeed/Storage/JsonFileFeed.php`
+  - class JsonFileFeed
+  - function __construct
+  - function start
+  - function add_entry
+  - function end
+  - function get_file_path
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/ProductFeed/Utils/MemoryManager.php`
+  - class MemoryManager
+  - function get_available_memory
+  - function flush_caches
+- `wp-content/plugins/woocommerce/src/Internal/ProductFeed/Utils/StringHelper.php`
+  - class StringHelper
+  - function bool_string
+  - function truncate
+- `wp-content/plugins/woocommerce/src/Internal/ProductFilters/CacheController.php`
+  - class CacheController
+  - function init
+  - function register
+  - function invalidate_filter_data_cache
+  - function clear_taxonomy_hierarchy_cache
+  - function clear_taxonomy_hierarchy_cache_on_meta_update
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/ProductFilters/FilterData.php`
+  - class FilterData
+  - function __construct
+  - function get_filtered_price
+  - function get_stock_status_counts
+  - function get_rating_counts
+  - function get_attribute_counts
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/ProductFilters/FilterDataProvider.php`
+  - class FilterDataProvider
+  - function init
+  - function with
+- `wp-content/plugins/woocommerce/src/Internal/ProductFilters/Interfaces/FilterUrlParam.php`
+  - interface FilterUrlParam
+  - function get_param_keys
+  - function get_param
+- `wp-content/plugins/woocommerce/src/Internal/ProductFilters/Interfaces/MainQueryClausesGenerator.php` — interface MainQueryClausesGenerator, function add_query_clauses_for_main_query
+- `wp-content/plugins/woocommerce/src/Internal/ProductFilters/Interfaces/QueryClausesGenerator.php` — interface QueryClausesGenerator, function add_query_clauses
+- `wp-content/plugins/woocommerce/src/Internal/ProductFilters/MainQueryController.php`
+  - class MainQueryController
+  - function init
+  - function register
+  - function add_query_vars
+- `wp-content/plugins/woocommerce/src/Internal/ProductFilters/Params.php`
+  - class Params
+  - function get_param_keys
+  - function get_param
+- `wp-content/plugins/woocommerce/src/Internal/ProductFilters/QueryClauses.php`
+  - class QueryClauses
+  - function init
+  - function add_query_clauses
+  - function add_query_clauses_for_main_query
+  - function add_stock_clauses
+  - function add_price_clauses
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/ProductFilters/TaxonomyHierarchyData.php`
+  - class TaxonomyHierarchyData
+  - function get_hierarchy_map
+  - function get_descendants
+  - function get_ancestors
+  - function clear_cache
+- `wp-content/plugins/woocommerce/src/Internal/ProductImage/MatchImageBySKU.php`
+  - class MatchImageBySKU
+  - function __construct
+  - function is_enabled
+  - function add_product_image_sku_setting
+- `wp-content/plugins/woocommerce/src/Internal/PushNotifications/Controllers/PushTokenRestController.php`
+  - class PushTokenRestController
+  - function register_routes
+  - function create
+  - function delete
+  - function validate_argument
+  - function get_schema
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/PushNotifications/DataStores/PushTokensDataStore.php`
+  - class PushTokensDataStore
+  - function create
+  - function read
+  - function update
+  - function delete
+  - function get_by_token_or_device_id
+- `wp-content/plugins/woocommerce/src/Internal/PushNotifications/Entities/PushToken.php`
+  - class PushToken
+  - function __construct
+  - function set_id
+  - function set_user_id
+  - function set_token
+  - function set_device_uuid
+  - _...16 more_
+- `wp-content/plugins/woocommerce/src/Internal/PushNotifications/Exceptions/PushTokenInvalidDataException.php` — class PushTokenInvalidDataException, function __construct
+- `wp-content/plugins/woocommerce/src/Internal/PushNotifications/Exceptions/PushTokenNotFoundException.php` — class PushTokenNotFoundException, function __construct
+- `wp-content/plugins/woocommerce/src/Internal/PushNotifications/PushNotifications.php`
+  - class PushNotifications
+  - function register
+  - function on_init
+  - function register_post_types
+  - function should_be_enabled
+- `wp-content/plugins/woocommerce/src/Internal/PushNotifications/Validators/PushTokenValidator.php` — class PushTokenValidator, function validate
+- `wp-content/plugins/woocommerce/src/Internal/ReceiptRendering/ReceiptRenderingEngine.php`
+  - class ReceiptRenderingEngine
+  - function init
+  - function generate_receipt
+  - function get_existing_receipt
+- `wp-content/plugins/woocommerce/src/Internal/ReceiptRendering/ReceiptRenderingRestController.php`
+  - class ReceiptRenderingRestController
+  - function register_routes
+  - function get_order_receipt
+  - function create_order_receipt
+- `wp-content/plugins/woocommerce/src/Internal/RegisterHooksInterface.php` — interface RegisterHooksInterface, function register
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/AbstractCollectionQuery.php`
+  - class AbstractCollectionQuery
+  - function get_query_schema
+  - function get_query_args
+  - function get_query_results
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/AbstractController.php`
+  - class AbstractController
+  - function get_collection_params
+  - function get_item_schema
+  - function prepare_item_for_response
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/AbstractSchema.php`
+  - class AbstractSchema
+  - function get_item_schema
+  - function get_item_response
+  - function get_item_schema_properties
+  - function get_writable_item_schema_properties
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Customers/CollectionQuery.php`
+  - class CollectionQuery
+  - function get_query_schema
+  - function get_query_args
+  - function get_query_results
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Customers/Controller.php`
+  - class Controller
+  - function init
+  - function register_routes
+  - function get_item
+  - function get_items
+  - function create_item
+  - _...7 more_
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Customers/CustomerSchema.php`
+  - class CustomerSchema
+  - function get_item_schema_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Customers/UpdateUtils.php` — class UpdateUtils, function update_customer_from_request
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Fulfillments/Controller.php`
+  - class Controller
+  - function init
+  - function register_routes
+  - function get_fulfillments
+  - function create_fulfillment
+  - function get_fulfillment
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Fulfillments/Schema/FulfillmentSchema.php`
+  - class FulfillmentSchema
+  - function get_item_schema_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/OrderNotes/CollectionQuery.php`
+  - class CollectionQuery
+  - function get_query_schema
+  - function get_query_args
+  - function get_query_results
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/OrderNotes/Controller.php`
+  - class Controller
+  - function init
+  - function register_routes
+  - function get_item_permissions_check
+  - function get_items_permissions_check
+  - function create_item_permissions_check
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/OrderNotes/Schema/OrderNoteSchema.php`
+  - class OrderNoteSchema
+  - function get_item_schema_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Orders/ActionController.php`
+  - class ActionController
+  - function get_endpoint_args_for_actions
+  - function run_actions
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Orders/CollectionQuery.php`
+  - class CollectionQuery
+  - function get_query_schema
+  - function get_query_args
+  - function get_query_results
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Orders/Controller.php`
+  - class Controller
+  - function init
+  - function register_routes
+  - function get_item
+  - function get_items
+  - function create_item
+  - _...7 more_
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Orders/Schema/AbstractLineItemSchema.php` — class AbstractLineItemSchema
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Orders/Schema/OrderCouponSchema.php`
+  - class OrderCouponSchema
+  - function get_item_schema_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Orders/Schema/OrderFeeSchema.php`
+  - class OrderFeeSchema
+  - function get_item_schema_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Orders/Schema/OrderItemSchema.php`
+  - class OrderItemSchema
+  - function get_item_schema_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Orders/Schema/OrderSchema.php`
+  - class OrderSchema
+  - function init
+  - function get_item_schema_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Orders/Schema/OrderShippingSchema.php`
+  - class OrderShippingSchema
+  - function get_item_schema_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Orders/Schema/OrderTaxSchema.php`
+  - class OrderTaxSchema
+  - function get_item_schema_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Orders/UpdateUtils.php`
+  - class UpdateUtils
+  - function init
+  - function update_order_from_request
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Products/Controller.php`
+  - class Controller
+  - function register_routes
+  - function get_item_permissions_check
+  - function duplicate_product
+  - function add_search_criteria_to_wp_query_join
+  - function add_search_criteria_to_wp_query_where
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Refunds/CollectionQuery.php`
+  - class CollectionQuery
+  - function get_query_schema
+  - function get_query_args
+  - function get_query_results
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Refunds/Controller.php`
+  - class Controller
+  - function init
+  - function register_routes
+  - function get_item
+  - function get_items
+  - function create_item
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Refunds/DataUtils.php`
+  - class DataUtils
+  - function convert_line_items_to_internal_format
+  - function calculate_refund_amount
+  - function validate_line_items
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Refunds/Schema/RefundSchema.php`
+  - class RefundSchema
+  - function init
+  - function get_item_schema_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Settings/Account/Controller.php`
+  - class Controller
+  - function init
+  - function register_routes
+  - function get_item_permissions_check
+  - function update_item_permissions_check
+  - function get_item
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Settings/Email/Controller.php`
+  - class Controller
+  - function init
+  - function register_routes
+  - function get_item_permissions_check
+  - function update_item_permissions_check
+  - function get_item
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Settings/Emails/Controller.php`
+  - class Controller
+  - function init
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_item_permissions_check
+  - function update_item_permissions_check
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Settings/General/Controller.php`
+  - class Controller
+  - function init
+  - function register_routes
+  - function get_item_permissions_check
+  - function update_item_permissions_check
+  - function get_item
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Settings/OfflinePaymentMethods/Controller.php`
+  - class Controller
+  - function init
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Settings/PaymentGateways/Controller.php`
+  - class Controller
+  - function register_routes
+  - function get_item
+  - function get_items_permissions_check
+  - function update_item_permissions_check
+  - function update_item
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Settings/Products/Controller.php`
+  - class Controller
+  - function init
+  - function register_routes
+  - function get_item_permissions_check
+  - function update_item_permissions_check
+  - function get_item
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/Settings/Tax/Controller.php`
+  - class Controller
+  - function init
+  - function register_routes
+  - function get_item_permissions_check
+  - function update_item_permissions_check
+  - function get_item
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/ShippingZoneMethod/Controller.php`
+  - class Controller
+  - function init
+  - function register_routes
+  - function check_permissions
+  - function get_item
+  - function create_item
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/ShippingZoneMethod/ShippingMethodSchema.php`
+  - class ShippingMethodSchema
+  - function get_item_schema_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/ShippingZoneMethod/ShippingZoneMethodService.php`
+  - class ShippingZoneMethodService
+  - function update_shipping_method_settings
+  - function update_shipping_zone_method
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/ShippingZones/Controller.php`
+  - class Controller
+  - function init
+  - function register_routes
+  - function get_item
+  - function get_items
+  - function check_permissions
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/ShippingZones/ShippingZoneSchema.php`
+  - class ShippingZoneSchema
+  - function get_item_schema_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/Internal/RestApi/Routes/V4/ShippingZones/ShippingZoneService.php`
+  - class ShippingZoneService
+  - function get_sorted_shipping_zones
+  - function create_shipping_zone
+  - function update_shipping_zone
+- `wp-content/plugins/woocommerce/src/Internal/RestApiControllerBase.php`
+  - class RestApiControllerBase
+  - function register_routes
+  - function register
+  - function handle_woocommerce_rest_api_get_rest_namespaces
+- `wp-content/plugins/woocommerce/src/Internal/RestApiParameterUtil.php` — class RestApiParameterUtil, function adjust_create_refund_request_parameters
+- `wp-content/plugins/woocommerce/src/Internal/RestockRefundedItemsAdjuster.php`
+  - class RestockRefundedItemsAdjuster
+  - function init
+  - function initialize_restock_refunded_items
+- `wp-content/plugins/woocommerce/src/Internal/Settings/OptionSanitizer.php`
+  - class OptionSanitizer
+  - function __construct
+  - function sanitize_color_option
+- `wp-content/plugins/woocommerce/src/Internal/Settings/PointOfSaleDefaultSettings.php`
+  - class PointOfSaleDefaultSettings
+  - function get_default_store_email
+  - function get_default_store_name
+  - function get_default_store_address
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Admin/AdminManager.php`
+  - class AdminManager
+  - function __construct
+  - function admin_resources
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Admin/ListTable.php`
+  - class ListTable
+  - function init
+  - function __construct
+  - function column_cb
+  - function column_id
+  - function column_status
+  - _...11 more_
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Admin/MenusController.php`
+  - class MenusController
+  - function init
+  - function __construct
+  - function add_menu
+  - function add_screen_options
+  - function set_screen_option
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Admin/NotificationCreatePage.php`
+  - class NotificationCreatePage
+  - function output
+  - function process_create_form
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Admin/NotificationEditPage.php`
+  - class NotificationEditPage
+  - function output
+  - function process_edit_form
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Admin/NotificationsPage.php`
+  - class NotificationsPage
+  - function output
+  - function create
+  - function edit
+  - function add_notice
+  - function output_admin_notice
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Admin/SettingsController.php`
+  - class SettingsController
+  - function __construct
+  - function add_customer_stock_notifications_section
+  - function add_customer_stock_notifications_settings
+  - function output_admin_notices
+  - function add_disable_stock_notifications_checkbox
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/AsyncTasks/CycleStateService.php`
+  - class CycleStateService
+  - function __construct
+  - function get_or_initialize_cycle_state
+  - function complete_cycle
+  - function save_cycle_state
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/AsyncTasks/JobManager.php`
+  - class JobManager
+  - function __construct
+  - function schedule_initial_job_for_product
+  - function schedule_next_batch_for_product
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/AsyncTasks/NotificationsProcessor.php`
+  - class NotificationsProcessor
+  - function init
+  - function __construct
+  - function process_batch
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Config.php`
+  - class Config
+  - function get_supported_product_types
+  - function get_supported_product_statuses
+  - function get_eligible_stock_statuses
+  - function get_product_signups_meta_key
+  - function allows_signups
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/DataRetentionController.php`
+  - class DataRetentionController
+  - function __construct
+  - function on_woo_install_or_update
+  - function schedule_or_unschedule_daily_task
+  - function clear_daily_task
+  - function do_wc_customer_stock_notifications_daily
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Emails/CustomerStockNotificationEmail.php`
+  - class CustomerStockNotificationEmail
+  - function __construct
+  - function get_default_subject
+  - function get_default_heading
+  - function get_default_intro_content
+  - function get_default_additional_content
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Emails/CustomerStockNotificationVerifiedEmail.php`
+  - class CustomerStockNotificationVerifiedEmail
+  - function __construct
+  - function get_default_subject
+  - function get_default_heading
+  - function get_default_intro_content
+  - function get_default_additional_content
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Emails/CustomerStockNotificationVerifyEmail.php`
+  - class CustomerStockNotificationVerifyEmail
+  - function __construct
+  - function get_default_subject
+  - function get_default_heading
+  - function get_default_intro_content
+  - function get_default_additional_content
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Emails/EmailActionController.php`
+  - class EmailActionController
+  - function __construct
+  - function maybe_process_email_action
+  - function validate_and_maybe_process_request
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Emails/EmailManager.php`
+  - class EmailManager
+  - function init
+  - function email_classes
+  - function add_transactional_emails
+  - function maybe_restore_customer_tax_location_data
+  - function add_stylesheets
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Emails/EmailTemplatesController.php`
+  - class EmailTemplatesController
+  - function init
+  - function register_template_hooks
+  - function email_product_image
+  - function email_product_title
+  - function email_product_attributes
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Enums/NotificationCancellationSource.php` — class NotificationCancellationSource, function get_valid_cancellation_sources
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Enums/NotificationStatus.php` — class NotificationStatus, function get_valid_statuses
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Factory.php`
+  - class Factory
+  - function get_notification
+  - function create_dummy_notification
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Frontend/FormHandlerService.php`
+  - class FormHandlerService
+  - function init
+  - function __construct
+  - function handle_signup
+  - function requires_nonce_check
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Frontend/NotificationManagementService.php` — class NotificationManagementService, function get_resend_verification_email_url
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Frontend/ProductPageIntegration.php`
+  - class ProductPageIntegration
+  - function init
+  - function __construct
+  - function maybe_render_form
+  - function display_account_required
+  - function display_already_signed_up
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Frontend/SignupResult.php`
+  - class SignupResult
+  - function __construct
+  - function get_code
+  - function get_notification
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Frontend/SignupService.php`
+  - class SignupService
+  - function init
+  - function signup
+  - function is_already_signed_up
+  - function parse
+  - function get_error_message
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Notification.php`
+  - class Notification
+  - function __construct
+  - function get_product_id
+  - function get_user_id
+  - function get_user_email
+  - function get_status
+  - _...27 more_
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/NotificationQuery.php`
+  - class NotificationQuery
+  - function get_notifications
+  - function product_has_active_notifications
+  - function notification_exists_by_email
+  - function notification_exists_by_user_id
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Privacy/PrivacyEraser.php`
+  - class PrivacyEraser
+  - function __construct
+  - function register_erasers_exporters
+  - function erase_notification_data
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/StockNotifications.php`
+  - class StockNotifications
+  - function __construct
+  - function on_install_or_update
+  - function init_hooks
+  - function register_data_stores
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/StockSyncController.php`
+  - class StockSyncController
+  - function init
+  - function __construct
+  - function handle_product_stock_status_change
+  - function process_queue
+  - function output_admin_notice
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Utilities/EligibilityService.php`
+  - class EligibilityService
+  - function init
+  - function is_product_eligible
+  - function product_allows_signups
+  - function is_stock_status_eligible
+  - function has_active_notifications
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Utilities/HasherHelper.php`
+  - class HasherHelper
+  - function wp_fast_hash
+  - function wp_verify_fast_hash
+- `wp-content/plugins/woocommerce/src/Internal/StockNotifications/Utilities/StockManagementHelper.php` — class StockManagementHelper, function get_managed_variations
+- `wp-content/plugins/woocommerce/src/Internal/Traits/AccessiblePrivateMethods.php`
+  - class AccessiblePrivateMethods
+  - function __call
+  - function __callStatic
+- `wp-content/plugins/woocommerce/src/Internal/Traits/OrderAttributionMeta.php` — class OrderAttributionMeta
+- `wp-content/plugins/woocommerce/src/Internal/Traits/RestApiCache.php`
+  - class RestApiCache
+  - function __construct
+  - function register_routes
+  - function handle_rest_send_nocache_headers
+- `wp-content/plugins/woocommerce/src/Internal/Traits/ScriptDebug.php` — class ScriptDebug
+- `wp-content/plugins/woocommerce/src/Internal/TransientFiles/TransientFilesEngine.php`
+  - class TransientFilesEngine
+  - function register
+  - function init
+  - function get_transient_files_directory
+  - function create_transient_file
+  - function get_transient_file_path
+  - _...13 more_
+- `wp-content/plugins/woocommerce/src/Internal/Utilities/ArrayUtil.php`
+  - class ArrayUtil
+  - function array_is_list
+  - function merge_by_key
+  - function filter_null_values_recursive
+- `wp-content/plugins/woocommerce/src/Internal/Utilities/BlocksUtil.php`
+  - class BlocksUtil
+  - function flatten_blocks
+  - function get_blocks_from_widget_area
+  - function get_block_from_template_part
+- `wp-content/plugins/woocommerce/src/Internal/Utilities/COTMigrationUtil.php`
+  - class COTMigrationUtil
+  - function init
+  - function get_order_admin_screen
+  - function is_custom_order_tables_in_sync
+  - function get_post_or_object_meta
+  - function init_theorder_object
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/Internal/Utilities/DatabaseUtil.php`
+  - class DatabaseUtil
+  - function dbdelta
+  - function get_missing_tables
+  - function parse_dbdelta_output
+  - function drop_database_table
+  - function drop_table_index
+  - _...14 more_
+- `wp-content/plugins/woocommerce/src/Internal/Utilities/FilesystemUtil.php`
+  - class FilesystemUtil
+  - function get_wp_filesystem
+  - function get_wp_filesystem_method_or_direct
+  - function mkdir_p_not_indexable
+  - function validate_upload_file_path
+- `wp-content/plugins/woocommerce/src/Internal/Utilities/HtmlSanitizer.php`
+  - class HtmlSanitizer
+  - function styled_post_content
+  - function sanitize
+- `wp-content/plugins/woocommerce/src/Internal/Utilities/LegacyRestApiStub.php`
+  - class LegacyRestApiStub
+  - function register
+  - function init
+  - function add_rewrite_rules_for_legacy_rest_api_stub
+  - function add_query_vars_for_legacy_rest_api_stub
+  - function parse_legacy_rest_api_request
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/Utilities/PluginInstaller.php`
+  - class PluginInstaller
+  - function register
+  - function install_plugin
+  - function handle_plugin_list_rows
+  - function handle_upgrader_process_complete
+- `wp-content/plugins/woocommerce/src/Internal/Utilities/ProductUtil.php` — class ProductUtil, function delete_product_specific_transients
+- `wp-content/plugins/woocommerce/src/Internal/Utilities/Types.php` — class Types, function ensure_instance_of
+- `wp-content/plugins/woocommerce/src/Internal/Utilities/URL.php`
+  - class URL
+  - function __construct
+  - function __toString
+  - function get_all_parent_urls
+  - function get_parent_url
+  - function get_url
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/Internal/Utilities/URLException.php` — class URLException
+- `wp-content/plugins/woocommerce/src/Internal/Utilities/Users.php`
+  - class Users
+  - function is_site_administrator
+  - function get_user_in_current_site
+  - function should_user_verify_order_email
+  - function get_site_user_meta
+  - function update_site_user_meta
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Internal/Utilities/WebhookUtil.php`
+  - class WebhookUtil
+  - function __construct
+  - function reassign_webhooks_to_new_user_id
+  - function maybe_render_user_with_webhooks_warning
+  - function get_legacy_webhooks_count
+- `wp-content/plugins/woocommerce/src/Internal/WCCom/ConnectionHelper.php` — class ConnectionHelper, function is_connected
+- `wp-content/plugins/woocommerce/src/LayoutTemplates/LayoutTemplateRegistry.php`
+  - class LayoutTemplateRegistry
+  - function get_instance
+  - function unregister_all
+  - function is_registered
+  - function register
+  - function instantiate_layout_templates
+- `wp-content/plugins/woocommerce/src/Packages.php`
+  - class Packages
+  - function init
+  - function on_init
+  - function package_exists
+  - function should_load_class
+  - function is_package_enabled
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Proxies/ActionsProxy.php`
+  - class ActionsProxy
+  - function did_action
+  - function apply_filters
+- `wp-content/plugins/woocommerce/src/Proxies/LegacyProxy.php`
+  - class LegacyProxy
+  - function get_instance_of
+  - function call_function
+  - function call_static
+  - function get_global
+  - function exit
+- `wp-content/plugins/woocommerce/src/StoreApi/Authentication.php`
+  - class Authentication
+  - function init
+  - function allowed_cors_headers
+  - function maybe_use_store_api_session_handler
+  - function exposed_cors_headers
+  - function send_cors_headers
+  - _...3 more_
+- `wp-content/plugins/woocommerce/src/StoreApi/Exceptions/InvalidCartException.php`
+  - class InvalidCartException
+  - function __construct
+  - function getErrorCode
+  - function getError
+  - function getAdditionalData
+- `wp-content/plugins/woocommerce/src/StoreApi/Exceptions/InvalidStockLevelsInCartException.php`
+  - class InvalidStockLevelsInCartException
+  - function __construct
+  - function getErrorCode
+  - function getError
+  - function getAdditionalData
+- `wp-content/plugins/woocommerce/src/StoreApi/Exceptions/NotPurchasableException.php` — class NotPurchasableException
+- `wp-content/plugins/woocommerce/src/StoreApi/Exceptions/OutOfStockException.php` — class OutOfStockException
+- `wp-content/plugins/woocommerce/src/StoreApi/Exceptions/PartialOutOfStockException.php` — class PartialOutOfStockException
+- `wp-content/plugins/woocommerce/src/StoreApi/Exceptions/RouteException.php`
+  - class RouteException
+  - function __construct
+  - function getErrorCode
+  - function getAdditionalData
+- `wp-content/plugins/woocommerce/src/StoreApi/Exceptions/StockAvailabilityException.php`
+  - class StockAvailabilityException
+  - function __construct
+  - function getErrorCode
+  - function getAdditionalData
+  - function getProductName
+- `wp-content/plugins/woocommerce/src/StoreApi/Exceptions/TooManyInCartException.php` — class TooManyInCartException
+- `wp-content/plugins/woocommerce/src/StoreApi/Formatters/CurrencyFormatter.php` — class CurrencyFormatter, function format
+- `wp-content/plugins/woocommerce/src/StoreApi/Formatters/DefaultFormatter.php` — class DefaultFormatter, function format
+- `wp-content/plugins/woocommerce/src/StoreApi/Formatters/FormatterInterface.php` — interface FormatterInterface, function format
+- `wp-content/plugins/woocommerce/src/StoreApi/Formatters/HtmlFormatter.php` — class HtmlFormatter, function format
+- `wp-content/plugins/woocommerce/src/StoreApi/Formatters/MoneyFormatter.php` — class MoneyFormatter, function format
+- `wp-content/plugins/woocommerce/src/StoreApi/Formatters.php`
+  - class Formatters
+  - function __get
+  - function register
+- `wp-content/plugins/woocommerce/src/StoreApi/Legacy.php`
+  - class Legacy
+  - function init
+  - function process_legacy_payment
+- `wp-content/plugins/woocommerce/src/StoreApi/Payments/PaymentContext.php`
+  - class PaymentContext
+  - function __get
+  - function set_payment_method
+  - function get_payment_method_instance
+  - function set_order
+  - function set_payment_data
+- `wp-content/plugins/woocommerce/src/StoreApi/Payments/PaymentResult.php`
+  - class PaymentResult
+  - function __construct
+  - function __get
+  - function get_status
+  - function set_status
+  - function set_payment_details
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/RouteInterface.php`
+  - interface RouteInterface
+  - function get_path
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/AI/Middleware.php` — class Middleware
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/AI/Products.php` — class Products
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/AbstractCartRoute.php`
+  - class AbstractCartRoute
+  - function __construct
+  - function get_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/AbstractRoute.php`
+  - class AbstractRoute
+  - function __construct
+  - function get_namespace
+  - function set_namespace
+  - function get_item_schema
+  - function get_response
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/AbstractTermsRoute.php` — class AbstractTermsRoute, function get_collection_params
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Agentic/AgenticCheckoutSession.php`
+  - class AgenticCheckoutSession
+  - function __construct
+  - function get_cart
+  - function get_messages
+  - function get_id
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Agentic/CheckoutSessions.php`
+  - class CheckoutSessions
+  - function __construct
+  - function get_path
+  - function get_path_regex
+  - function get_args
+  - function is_authorized
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Agentic/CheckoutSessionsComplete.php`
+  - class CheckoutSessionsComplete
+  - function __construct
+  - function get_path
+  - function get_path_regex
+  - function get_args
+  - function is_authorized
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Agentic/CheckoutSessionsUpdate.php`
+  - class CheckoutSessionsUpdate
+  - function __construct
+  - function get_path
+  - function get_path_regex
+  - function get_args
+  - function is_authorized
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Agentic/Enums/OrderMetaKey.php` — class OrderMetaKey
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Agentic/Enums/SessionKey.php` — class SessionKey
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Agentic/Error.php`
+  - class Error
+  - function invalid_request
+  - function request_not_idempotent
+  - function processing_error
+  - function service_unavailable
+  - function to_rest_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Agentic/Messages/Message.php`
+  - class Message
+  - function is_error
+  - function to_array
+  - function use_markdown
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Agentic/Messages/MessageError.php`
+  - class MessageError
+  - function __construct
+  - function missing
+  - function invalid
+  - function out_of_stock
+  - function payment_declined
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Agentic/Messages/MessageInfo.php`
+  - class MessageInfo
+  - function __construct
+  - function is_error
+  - function to_array
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Agentic/Messages/Messages.php`
+  - class Messages
+  - function add
+  - function has_errors
+  - function get_formatted_messages
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Batch.php`
+  - class Batch
+  - function get_path
+  - function get_path_regex
+  - function get_args
+  - function get_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Cart.php`
+  - class Cart
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/CartAddItem.php`
+  - class CartAddItem
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/CartApplyCoupon.php`
+  - class CartApplyCoupon
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/CartCoupons.php`
+  - class CartCoupons
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/CartCouponsByCode.php`
+  - class CartCouponsByCode
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/CartExtensions.php`
+  - class CartExtensions
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/CartItems.php`
+  - class CartItems
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/CartItemsByKey.php`
+  - class CartItemsByKey
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/CartRemoveCoupon.php`
+  - class CartRemoveCoupon
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/CartRemoveItem.php`
+  - class CartRemoveItem
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/CartSelectShippingRate.php`
+  - class CartSelectShippingRate
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/CartUpdateCustomer.php`
+  - class CartUpdateCustomer
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/CartUpdateItem.php`
+  - class CartUpdateItem
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Checkout.php`
+  - class Checkout
+  - function get_path
+  - function get_path_regex
+  - function get_args
+  - function get_response
+  - function validate_callback
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/CheckoutOrder.php`
+  - class CheckoutOrder
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Order.php`
+  - class Order
+  - function __construct
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Patterns.php`
+  - class Patterns
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/ProductAttributeTerms.php`
+  - class ProductAttributeTerms
+  - function get_path
+  - function get_path_regex
+  - function get_args
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/ProductAttributes.php`
+  - class ProductAttributes
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/ProductAttributesById.php`
+  - class ProductAttributesById
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/ProductBrands.php`
+  - class ProductBrands
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/ProductBrandsById.php`
+  - class ProductBrandsById
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/ProductCategories.php`
+  - class ProductCategories
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/ProductCategoriesById.php`
+  - class ProductCategoriesById
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/ProductCollectionData.php`
+  - class ProductCollectionData
+  - function get_path
+  - function get_path_regex
+  - function get_args
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/ProductReviews.php`
+  - class ProductReviews
+  - function get_path
+  - function get_path_regex
+  - function get_args
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/ProductTags.php`
+  - class ProductTags
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/Products.php`
+  - class Products
+  - function get_path
+  - function get_path_regex
+  - function get_args
+  - function get_collection_params
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/ProductsById.php`
+  - class ProductsById
+  - function get_path
+  - function get_path_regex
+  - function get_args
+- `wp-content/plugins/woocommerce/src/StoreApi/Routes/V1/ProductsBySlug.php`
+  - class ProductsBySlug
+  - function get_path
+  - function get_path_regex
+  - function get_args
+  - function get_product_by_slug
+- `wp-content/plugins/woocommerce/src/StoreApi/RoutesController.php`
+  - class RoutesController
+  - function __construct
+  - function register_all_routes
+  - function get
+  - function get_all_routes
+- `wp-content/plugins/woocommerce/src/StoreApi/SchemaController.php`
+  - class SchemaController
+  - function __construct
+  - function get
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/ExtendSchema.php`
+  - class ExtendSchema
+  - function __construct
+  - function register_endpoint_data
+  - function register_update_callback
+  - function register_payment_requirements
+  - function get_formatter
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/AI/ProductsSchema.php` — class ProductsSchema
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/AbstractAddressSchema.php`
+  - class AbstractAddressSchema
+  - function __construct
+  - function get_properties
+  - function sanitize_callback
+  - function validate_callback
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/AbstractSchema.php`
+  - class AbstractSchema
+  - function __construct
+  - function get_item_schema
+  - function get_item_response
+  - function get_properties
+  - function get_public_item_schema
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/Agentic/CheckoutSessionSchema.php`
+  - class CheckoutSessionSchema
+  - function get_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/BatchSchema.php` — class BatchSchema, function get_properties
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/BillingAddressSchema.php`
+  - class BillingAddressSchema
+  - function get_properties
+  - function sanitize_callback
+  - function validate_callback
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/CartCouponSchema.php`
+  - class CartCouponSchema
+  - function get_properties
+  - function coupon_exists
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/CartExtensionsSchema.php`
+  - class CartExtensionsSchema
+  - function __construct
+  - function get_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/CartFeeSchema.php`
+  - class CartFeeSchema
+  - function get_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/CartItemSchema.php` — class CartItemSchema, function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/CartSchema.php`
+  - class CartSchema
+  - function __construct
+  - function get_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/CartShippingRateSchema.php`
+  - class CartShippingRateSchema
+  - function get_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/CheckoutOrderSchema.php` — class CheckoutOrderSchema, function get_properties
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/CheckoutSchema.php`
+  - class CheckoutSchema
+  - function __construct
+  - function get_properties
+  - function get_item_response
+  - function sanitize_additional_fields
+  - function validate_additional_fields
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/ErrorSchema.php`
+  - class ErrorSchema
+  - function get_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/ImageAttachmentSchema.php`
+  - class ImageAttachmentSchema
+  - function get_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/ItemSchema.php` — class ItemSchema, function get_properties
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/OrderCouponSchema.php`
+  - class OrderCouponSchema
+  - function get_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/OrderFeeSchema.php`
+  - class OrderFeeSchema
+  - function get_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/OrderItemSchema.php`
+  - class OrderItemSchema
+  - function get_item_response
+  - function get_totals
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/OrderSchema.php`
+  - class OrderSchema
+  - function __construct
+  - function get_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/PatternsSchema.php`
+  - class PatternsSchema
+  - function get_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/ProductAttributeSchema.php`
+  - class ProductAttributeSchema
+  - function get_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/ProductBrandSchema.php`
+  - class ProductBrandSchema
+  - function __construct
+  - function get_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/ProductCategorySchema.php`
+  - class ProductCategorySchema
+  - function __construct
+  - function get_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/ProductCollectionDataSchema.php`
+  - class ProductCollectionDataSchema
+  - function get_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/ProductReviewSchema.php`
+  - class ProductReviewSchema
+  - function __construct
+  - function get_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/ProductSchema.php`
+  - class ProductSchema
+  - function __construct
+  - function get_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/ShippingAddressSchema.php` — class ShippingAddressSchema, function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/Schemas/V1/TermSchema.php`
+  - class TermSchema
+  - function get_properties
+  - function get_item_response
+- `wp-content/plugins/woocommerce/src/StoreApi/SessionHandler.php`
+  - class SessionHandler
+  - function __construct
+  - function init
+  - function get_session
+  - function save_data
+- `wp-content/plugins/woocommerce/src/StoreApi/StoreApi.php`
+  - class StoreApi
+  - function init
+  - function container
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/AgenticCheckoutUtils.php`
+  - class AgenticCheckoutUtils
+  - function get_shared_params
+  - function add_items_to_cart
+  - function set_buyer_data
+  - function set_fulfillment_address
+  - function clear_fulfillment_address
+  - _...7 more_
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/ArrayUtils.php`
+  - class ArrayUtils
+  - function natural_language_join
+  - function string_contains_array
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/CartController.php`
+  - class CartController
+  - function load_cart
+  - function normalize_cart
+  - function get_cart_for_response
+  - function calculate_totals
+  - function add_to_cart
+  - _...18 more_
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/CartTokenUtils.php`
+  - class CartTokenUtils
+  - function get_cart_token
+  - function validate_cart_token
+  - function get_cart_token_payload
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/CheckoutTrait.php`
+  - class CheckoutTrait
+  - function prepare_item_for_response
+  - function get_document_object_from_rest_request
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/DraftOrderTrait.php` — class DraftOrderTrait
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/JsonWebToken.php`
+  - class JsonWebToken
+  - function create
+  - function validate
+  - function shallow_validate
+  - function get_parts
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/LocalPickupUtils.php`
+  - class LocalPickupUtils
+  - function get_local_pickup_settings
+  - function is_local_pickup_enabled
+  - function get_local_pickup_method_ids
+  - function is_local_pickup_method
+  - function get_local_pickup_method_locations
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/NoticeHandler.php`
+  - class NoticeHandler
+  - function convert_notices_to_exceptions
+  - function convert_notices_to_wp_errors
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/OrderAuthorizationTrait.php`
+  - class OrderAuthorizationTrait
+  - function is_authorized
+  - function validate_billing_email_matches_order
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/OrderController.php`
+  - class OrderController
+  - function __construct
+  - function create_order_from_cart
+  - function update_order_from_cart
+  - function sync_customer_data_with_order
+  - function validate_order_before_payment
+  - _...5 more_
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/Pagination.php` — class Pagination, function add_headers
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/PaymentUtils.php`
+  - class PaymentUtils
+  - function include_token_id_with_payment_methods
+  - function get_enabled_payment_gateways
+  - function get_saved_payment_methods
+  - function get_default_payment_method
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/ProductItemTrait.php` — class ProductItemTrait
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/ProductQuery.php`
+  - class ProductQuery
+  - function prepare_objects_query
+  - function convert_tax_query_to_meta_query
+  - function get_results
+  - function get_objects
+  - function get_last_modified
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/ProductQueryFilters.php`
+  - class ProductQueryFilters
+  - function get_filtered_price
+  - function get_stock_status_counts
+  - function get_attribute_counts
+  - function get_rating_counts
+  - function get_taxonomy_counts
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/QuantityLimits.php`
+  - class QuantityLimits
+  - function get_cart_item_quantity_limits
+  - function get_add_to_cart_limits
+  - function normalize_cart_item_quantity
+  - function limit_to_multiple
+  - function validate_cart_item_quantity
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/RateLimits.php`
+  - class RateLimits
+  - function get_rate_limit
+  - function is_exceeded_retry_after
+  - function update_rate_limit
+  - function get_options
+  - function get_option
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/SanitizationUtils.php` — class SanitizationUtils, function wp_kses_array
+- `wp-content/plugins/woocommerce/src/StoreApi/Utilities/ValidationUtils.php`
+  - class ValidationUtils
+  - function get_states_for_country
+  - function validate_state
+  - function format_state
+- `wp-content/plugins/woocommerce/src/Utilities/ArrayUtil.php`
+  - class ArrayUtil
+  - function get_nested_value
+  - function is_truthy
+  - function get_value_or_default
+  - function to_ranges_string
+  - function select
+  - _...7 more_
+- `wp-content/plugins/woocommerce/src/Utilities/CallbackUtil.php`
+  - class CallbackUtil
+  - function get_callback_signature
+  - function get_hook_callback_signatures
+- `wp-content/plugins/woocommerce/src/Utilities/DiscountsUtil.php` — class DiscountsUtil, function is_coupon_emails_allowed
+- `wp-content/plugins/woocommerce/src/Utilities/FeaturesUtil.php`
+  - class FeaturesUtil
+  - function get_features
+  - function feature_is_enabled
+  - function declare_compatibility
+  - function get_compatible_features_for_plugin
+  - function get_compatible_plugins_for_feature
+  - _...2 more_
+- `wp-content/plugins/woocommerce/src/Utilities/I18nUtil.php`
+  - class I18nUtil
+  - function get_weight_unit_label
+  - function get_dimensions_unit_label
+- `wp-content/plugins/woocommerce/src/Utilities/LoggingUtil.php`
+  - class LoggingUtil
+  - function get_logs_tab_url
+  - function logging_is_enabled
+  - function get_default_handler
+  - function get_retention_period
+  - function get_level_threshold
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Utilities/NumberUtil.php`
+  - class NumberUtil
+  - function normalize
+  - function round
+  - function floor
+  - function ceil
+  - function array_sum
+  - _...1 more_
+- `wp-content/plugins/woocommerce/src/Utilities/OrderUtil.php`
+  - class OrderUtil
+  - function get_order_admin_screen
+  - function custom_orders_table_usage_is_enabled
+  - function custom_orders_table_datastore_cache_enabled
+  - function orders_cache_usage_is_enabled
+  - function is_custom_order_tables_in_sync
+  - _...16 more_
+- `wp-content/plugins/woocommerce/src/Utilities/PluginUtil.php`
+  - class PluginUtil
+  - function __construct
+  - function init
+  - function get_all_active_valid_plugins
+  - function get_woocommerce_aware_plugins
+  - function get_plugin_name
+  - _...6 more_
+- `wp-content/plugins/woocommerce/src/Utilities/RestApiUtil.php`
+  - class RestApiUtil
+  - function get_endpoint_data
+  - function lazy_load_namespace
+  - function attach_lazy_loaded_namespace
+- `wp-content/plugins/woocommerce/src/Utilities/ShippingUtil.php` — class ShippingUtil, function get_selected_shipping_rates_from_packages
+- `wp-content/plugins/woocommerce/src/Utilities/StringUtil.php`
+  - class StringUtil
+  - function starts_with
+  - function ends_with
+  - function contains
+  - function plugin_name_from_plugin_file
+  - function is_null_or_empty
+  - _...4 more_
+- `wp-content/plugins/woocommerce/src/Utilities/TimeUtil.php`
+  - class TimeUtil
+  - function __construct
+  - function get_utc_date_time_zone
+  - function is_valid_date
+- `wp-includes/ID3/getid3.lib.php`
+  - class getid3_lib
+  - function PrintHexBytes
+  - function trunc
+  - function safe_inc
+  - function CastAsInt
+  - function intValueSupported
+  - _...66 more_
+- `wp-includes/ID3/getid3.php`
+  - class getID3
+  - class getid3_handler
+  - class getid3_exception
+  - function __construct
+  - function version
+  - function fread_buffer_size
+  - _...23 more_
+- `wp-includes/ID3/module.audio-video.asf.php`
+  - class getid3_asf
+  - function __construct
+  - function Analyze
+  - function codecListObjectTypeLookup
+  - function KnownGUIDs
+  - function GUIDname
+  - _...10 more_
+- `wp-includes/ID3/module.audio-video.flv.php`
+  - class getid3_flv
+  - class AMFStream
+  - class AMFReader
+  - class AVCSequenceParameterSetReader
+  - function Analyze
+  - function audioFormatLookup
+  - _...34 more_
+- `wp-includes/ID3/module.audio-video.matroska.php`
+  - class getid3_matroska
+  - function Analyze
+  - function TargetTypeValue
+  - function BlockLacingType
+  - function CodecIDtoCommonName
+  - function displayUnit
+- `wp-includes/ID3/module.audio-video.quicktime.php`
+  - class getid3_quicktime
+  - function Analyze
+  - function QuicktimeParseAtom
+  - function QuicktimeParseContainerAtom
+  - function quicktime_read_mp4_descr_length
+  - function QuicktimeLanguageLookup
+  - _...19 more_
+- `wp-includes/ID3/module.audio-video.riff.php`
+  - class getid3_riff
+  - function Analyze
+  - function ParseRIFFAMV
+  - function ParseRIFF
+  - function ParseRIFFdata
+  - function parseComments
+  - _...7 more_
+- `wp-includes/ID3/module.audio.ac3.php`
+  - class getid3_ac3
+  - function Analyze
+  - function sampleRateCodeLookup
+  - function sampleRateCodeLookup2
+  - function serviceTypeLookup
+  - function audioCodingModeLookup
+  - _...9 more_
+- `wp-includes/ID3/module.audio.dts.php`
+  - class getid3_dts
+  - function Analyze
+  - function bitrateLookup
+  - function sampleRateLookup
+  - function bitPerSampleLookup
+  - function numChannelsLookup
+  - _...2 more_
+- `wp-includes/ID3/module.audio.flac.php`
+  - class getid3_flac
+  - function Analyze
+  - function parseMETAdata
+  - function parseSTREAMINFOdata
+  - function parsePICTURE
+  - function metaBlockTypeLookup
+  - _...2 more_
+- `wp-includes/ID3/module.audio.mp3.php`
+  - class getid3_mp3
+  - function Analyze
+  - function GuessEncoderOptions
+  - function decodeMPEGaudioHeader
+  - function RecursiveFrameScanning
+  - function FreeFormatFrameLength
+  - _...20 more_
+- `wp-includes/ID3/module.audio.ogg.php`
+  - class getid3_ogg
+  - function Analyze
+  - function ParseVorbisPageHeader
+  - function ParseOpusPageHeader
+  - function ParseOggPageHeader
+  - function ParseVorbisComments
+  - _...5 more_
+- `wp-includes/ID3/module.tag.apetag.php`
+  - class getid3_apetag
+  - function Analyze
+  - function parseAPEheaderFooter
+  - function parseAPEtagFlags
+  - function APEcontentTypeFlagLookup
+  - function APEtagItemIsUTF8Lookup
+- `wp-includes/ID3/module.tag.id3v1.php`
+  - class getid3_id3v1
+  - function Analyze
+  - function cutfield
+  - function ArrayOfGenres
+  - function LookupGenreName
+  - function LookupGenreID
+  - _...2 more_
+- `wp-includes/ID3/module.tag.id3v2.php`
+  - class getid3_id3v2
+  - function Analyze
+  - function ParseID3v2GenreString
+  - function ParseID3v2Frame
+  - function DeUnsynchronise
+  - function LookupExtendedHeaderRestrictionsTagSizeLimits
+  - _...23 more_
+- `wp-includes/ID3/module.tag.lyrics3.php`
+  - class getid3_lyrics3
+  - function Analyze
+  - function getLyrics3Data
+  - function Lyrics3Timestamp2Seconds
+  - function Lyrics3LyricsTimestampParse
+  - function IntString2Bool
+- `wp-includes/IXR/class-IXR-base64.php` — class IXR_Base64
+- `wp-includes/IXR/class-IXR-client.php` — class IXR_Client
+- `wp-includes/IXR/class-IXR-clientmulticall.php` — class IXR_ClientMulticall
+- `wp-includes/IXR/class-IXR-date.php` — class IXR_Date
+- `wp-includes/IXR/class-IXR-error.php` — class IXR_Error
+- `wp-includes/IXR/class-IXR-introspectionserver.php` — class IXR_IntrospectionServer
+- `wp-includes/IXR/class-IXR-message.php` — class IXR_Message
+- `wp-includes/IXR/class-IXR-request.php` — class IXR_Request
+- `wp-includes/IXR/class-IXR-server.php` — class IXR_Server
+- `wp-includes/IXR/class-IXR-value.php` — class IXR_Value
+- `wp-includes/PHPMailer/DSNConfigurator.php`
+  - class DSNConfigurator
+  - function mailer
+  - function configure
+- `wp-includes/PHPMailer/Exception.php` — class Exception, function errorMessage
+- `wp-includes/PHPMailer/OAuth.php`
+  - class OAuth
+  - function __construct
+  - function getOauth64
+- `wp-includes/PHPMailer/OAuthTokenProvider.php` — interface OAuthTokenProvider, function getOauth64
+- `wp-includes/PHPMailer/PHPMailer.php`
+  - class PHPMailer
+  - function __construct
+  - function __destruct
+  - function isHTML
+  - function isSMTP
+  - function isMail
+  - _...94 more_
+- `wp-includes/PHPMailer/POP3.php`
+  - class POP3
+  - function popBeforeSmtp
+  - function authorise
+  - function connect
+  - function login
+  - function disconnect
+  - _...1 more_
+- `wp-includes/PHPMailer/SMTP.php`
+  - class SMTP
+  - function connect
+  - function startTLS
+  - function authenticate
+  - function connected
+  - function close
+  - _...27 more_
+- `wp-includes/Requests/src/Auth/Basic.php`
+  - class Basic
+  - function __construct
+  - function register
+  - function curl_before_send
+  - function fsockopen_header
+  - function getAuthString
+- `wp-includes/Requests/src/Auth.php` — interface Auth, function register
+- `wp-includes/Requests/src/Autoload.php`
+  - class Autoload
+  - function register
+  - function load
+- `wp-includes/Requests/src/Cookie/Jar.php`
+  - class Jar
+  - function __construct
+  - function normalize_cookie
+  - function offsetExists
+  - function offsetGet
+  - function offsetSet
+  - _...5 more_
+- `wp-includes/Requests/src/Cookie.php`
+  - class Cookie
+  - function __construct
+  - function __toString
+  - function is_expired
+  - function uri_matches
+  - function domain_matches
+  - _...6 more_
+- `wp-includes/Requests/src/Exception/ArgumentCount.php` — class ArgumentCount, function create
+- `wp-includes/Requests/src/Exception/Http/Status304.php` — class Status304
+- `wp-includes/Requests/src/Exception/Http/Status305.php` — class Status305
+- `wp-includes/Requests/src/Exception/Http/Status306.php` — class Status306
+- `wp-includes/Requests/src/Exception/Http/Status400.php` — class Status400
+- `wp-includes/Requests/src/Exception/Http/Status401.php` — class Status401
+- `wp-includes/Requests/src/Exception/Http/Status402.php` — class Status402
+- `wp-includes/Requests/src/Exception/Http/Status403.php` — class Status403
+- `wp-includes/Requests/src/Exception/Http/Status404.php` — class Status404
+- `wp-includes/Requests/src/Exception/Http/Status405.php` — class Status405
+- `wp-includes/Requests/src/Exception/Http/Status406.php` — class Status406
+- `wp-includes/Requests/src/Exception/Http/Status407.php` — class Status407
+- `wp-includes/Requests/src/Exception/Http/Status408.php` — class Status408
+- `wp-includes/Requests/src/Exception/Http/Status409.php` — class Status409
+- `wp-includes/Requests/src/Exception/Http/Status410.php` — class Status410
+- `wp-includes/Requests/src/Exception/Http/Status411.php` — class Status411
+- `wp-includes/Requests/src/Exception/Http/Status412.php` — class Status412
+- `wp-includes/Requests/src/Exception/Http/Status413.php` — class Status413
+- `wp-includes/Requests/src/Exception/Http/Status414.php` — class Status414
+- `wp-includes/Requests/src/Exception/Http/Status415.php` — class Status415
+- `wp-includes/Requests/src/Exception/Http/Status416.php` — class Status416
+- `wp-includes/Requests/src/Exception/Http/Status417.php` — class Status417
+- `wp-includes/Requests/src/Exception/Http/Status418.php` — class Status418
+- `wp-includes/Requests/src/Exception/Http/Status428.php` — class Status428
+- `wp-includes/Requests/src/Exception/Http/Status429.php` — class Status429
+- `wp-includes/Requests/src/Exception/Http/Status431.php` — class Status431
+- `wp-includes/Requests/src/Exception/Http/Status500.php` — class Status500
+- `wp-includes/Requests/src/Exception/Http/Status501.php` — class Status501
+- `wp-includes/Requests/src/Exception/Http/Status502.php` — class Status502
+- `wp-includes/Requests/src/Exception/Http/Status503.php` — class Status503
+- `wp-includes/Requests/src/Exception/Http/Status504.php` — class Status504
+- `wp-includes/Requests/src/Exception/Http/Status505.php` — class Status505
+- `wp-includes/Requests/src/Exception/Http/Status511.php` — class Status511
+- `wp-includes/Requests/src/Exception/Http/StatusUnknown.php` — class StatusUnknown, function __construct
+- `wp-includes/Requests/src/Exception/Http.php`
+  - class Http
+  - function __construct
+  - function getReason
+  - function get_class
+- `wp-includes/Requests/src/Exception/InvalidArgument.php` — class InvalidArgument, function create
+- `wp-includes/Requests/src/Exception/Transport/Curl.php`
+  - class Curl
+  - function __construct
+  - function getReason
+- `wp-includes/Requests/src/Exception/Transport.php` — class Transport
+- `wp-includes/Requests/src/Exception.php`
+  - class Exception
+  - function __construct
+  - function getType
+  - function getData
+- `wp-includes/Requests/src/HookManager.php`
+  - interface HookManager
+  - function register
+  - function dispatch
+- `wp-includes/Requests/src/Hooks.php`
+  - class Hooks
+  - function register
+  - function dispatch
+  - function __wakeup
+- `wp-includes/Requests/src/IdnaEncoder.php`
+  - class IdnaEncoder
+  - function encode
+  - function to_ascii
+  - function punycode_encode
+- `wp-includes/Requests/src/Ipv6.php`
+  - class Ipv6
+  - function uncompress
+  - function compress
+  - function check_ipv6
+- `wp-includes/Requests/src/Iri.php`
+  - class Iri
+  - function __toString
+  - function __set
+  - function __get
+  - function __isset
+  - function __unset
+  - _...4 more_
+- `wp-includes/Requests/src/Port.php` — class Port, function get
+- `wp-includes/Requests/src/Proxy/Http.php`
+  - class Http
+  - function __construct
+  - function register
+  - function curl_before_send
+  - function fsockopen_remote_socket
+  - function fsockopen_remote_host_path
+  - _...2 more_
+- `wp-includes/Requests/src/Proxy.php` — interface Proxy, function register
+- `wp-includes/Requests/src/Requests.php`
+  - class Requests
+  - function add_transport
+  - function has_capabilities
+  - function get
+  - function head
+  - function delete
+  - _...13 more_
+- `wp-includes/Requests/src/Response/Headers.php`
+  - class Headers
+  - function offsetGet
+  - function offsetSet
+  - function getValues
+  - function flatten
+  - function getIterator
+- `wp-includes/Requests/src/Response.php`
+  - class Response
+  - function __construct
+  - function is_redirect
+  - function throw_for_status
+  - function decode_body
+- `wp-includes/Requests/src/Session.php`
+  - class Session
+  - function __construct
+  - function __get
+  - function __set
+  - function __isset
+  - function __unset
+  - _...9 more_
+- `wp-includes/Requests/src/Ssl.php`
+  - class Ssl
+  - function verify_certificate
+  - function verify_reference_name
+  - function match_domain
+- `wp-includes/Requests/src/Transport/Curl.php`
+  - class Curl
+  - function __construct
+  - function __destruct
+  - function request
+  - function request_multiple
+  - function process_response
+  - _...3 more_
+- `wp-includes/Requests/src/Transport/Fsockopen.php`
+  - class Fsockopen
+  - function request
+  - function request_multiple
+  - function connect_error_handler
+  - function verify_certificate_from_context
+  - function test
+- `wp-includes/Requests/src/Transport.php`
+  - interface Transport
+  - function request
+  - function request_multiple
+  - function test
+- `wp-includes/Requests/src/Utility/CaseInsensitiveDictionary.php`
+  - class CaseInsensitiveDictionary
+  - function __construct
+  - function offsetExists
+  - function offsetGet
+  - function offsetSet
+  - function offsetUnset
+  - _...2 more_
+- `wp-includes/Requests/src/Utility/FilteredIterator.php`
+  - class FilteredIterator
+  - function __construct
+  - function __unserialize
+  - function __wakeup
+  - function current
+  - function unserialize
+- `wp-includes/Requests/src/Utility/InputValidator.php`
+  - class InputValidator
+  - function is_string_or_stringable
+  - function is_numeric_array_key
+  - function is_stringable_object
+  - function has_array_access
+  - function is_iterable
+  - _...1 more_
+- `wp-includes/SimplePie/autoloader.php`
+  - class SimplePie_Autoloader
+  - function __construct
+  - function autoload
+- `wp-includes/SimplePie/library/SimplePie/Author.php` — class SimplePie_Author
+- `wp-includes/SimplePie/library/SimplePie/Cache/DB.php` — class SimplePie_Cache_DB
+- `wp-includes/SimplePie/library/SimplePie/Cache/File.php` — class SimplePie_Cache_File
+- `wp-includes/SimplePie/library/SimplePie/Cache/Memcache.php` — class SimplePie_Cache_Memcache
+- `wp-includes/SimplePie/library/SimplePie/Cache/Memcached.php` — class SimplePie_Cache_Memcached
+- `wp-includes/SimplePie/library/SimplePie/Cache/MySQL.php` — class SimplePie_Cache_MySQL
+- `wp-includes/SimplePie/library/SimplePie/Cache/Redis.php` — class SimplePie_Cache_Redis
+- `wp-includes/SimplePie/library/SimplePie/Cache.php` — class SimplePie_Cache
+- `wp-includes/SimplePie/library/SimplePie/Caption.php` — class SimplePie_Caption
+- `wp-includes/SimplePie/library/SimplePie/Category.php` — class SimplePie_Category
+- `wp-includes/SimplePie/library/SimplePie/Content/Type/Sniffer.php` — class SimplePie_Content_Type_Sniffer
+- `wp-includes/SimplePie/library/SimplePie/Copyright.php` — class SimplePie_Copyright
+- `wp-includes/SimplePie/library/SimplePie/Core.php` — class SimplePie_Core
+- `wp-includes/SimplePie/library/SimplePie/Credit.php` — class SimplePie_Credit
+- `wp-includes/SimplePie/library/SimplePie/Decode/HTML/Entities.php`
+  - class SimplePie_Decode_HTML_Entities
+  - function __construct
+  - function parse
+  - function consume
+  - function consume_range
+  - function unconsume
+  - _...1 more_
+- `wp-includes/SimplePie/library/SimplePie/Enclosure.php` — class SimplePie_Enclosure
+- `wp-includes/SimplePie/library/SimplePie/Exception.php` — class SimplePie_Exception
+- `wp-includes/SimplePie/library/SimplePie/File.php` — class SimplePie_File
+- `wp-includes/SimplePie/library/SimplePie/HTTP/Parser.php` — class SimplePie_HTTP_Parser
+- `wp-includes/SimplePie/library/SimplePie/IRI.php` — class SimplePie_IRI
+- `wp-includes/SimplePie/library/SimplePie/Item.php` — class SimplePie_Item
+- `wp-includes/SimplePie/library/SimplePie/Locator.php` — class SimplePie_Locator
+- `wp-includes/SimplePie/library/SimplePie/Misc.php` — class SimplePie_Misc
+- `wp-includes/SimplePie/library/SimplePie/Net/IPv6.php` — class SimplePie_Net_IPv6
+- `wp-includes/SimplePie/library/SimplePie/Parse/Date.php` — class SimplePie_Parse_Date
+- `wp-includes/SimplePie/library/SimplePie/Parser.php` — class SimplePie_Parser
+- `wp-includes/SimplePie/library/SimplePie/Rating.php` — class SimplePie_Rating
+- `wp-includes/SimplePie/library/SimplePie/Registry.php` — class SimplePie_Registry
+- `wp-includes/SimplePie/library/SimplePie/Restriction.php` — class SimplePie_Restriction
+- `wp-includes/SimplePie/library/SimplePie/Sanitize.php` — class SimplePie_Sanitize
+- `wp-includes/SimplePie/library/SimplePie/Source.php` — class SimplePie_Source
+- `wp-includes/SimplePie/library/SimplePie/XML/Declaration/Parser.php` — class SimplePie_XML_Declaration_Parser
+- `wp-includes/SimplePie/library/SimplePie/gzdecode.php` — class SimplePie_gzdecode
+- `wp-includes/SimplePie/library/SimplePie.php` — class SimplePie
+- `wp-includes/SimplePie/src/Author.php`
+  - class Author
+  - function __construct
+  - function __toString
+  - function get_name
+  - function get_link
+  - function get_email
+- `wp-includes/SimplePie/src/Cache/Base.php`
+  - interface Base
+  - function __construct
+  - function save
+  - function load
+  - function mtime
+  - function touch
+  - _...1 more_
+- `wp-includes/SimplePie/src/Cache/BaseDataCache.php`
+  - class BaseDataCache
+  - function __construct
+  - function get
+  - function get_data
+  - function set
+  - function set_data
+  - _...2 more_
+- `wp-includes/SimplePie/src/Cache/CallableNameFilter.php`
+  - class CallableNameFilter
+  - function __construct
+  - function filter
+- `wp-includes/SimplePie/src/Cache/DB.php` — class DB
+- `wp-includes/SimplePie/src/Cache/DataCache.php`
+  - interface DataCache
+  - function get
+  - function get_data
+  - function set
+  - function set_data
+  - function delete
+  - _...1 more_
+- `wp-includes/SimplePie/src/Cache/File.php`
+  - class File
+  - function __construct
+  - function save
+  - function load
+  - function mtime
+  - function touch
+  - _...1 more_
+- `wp-includes/SimplePie/src/Cache/Memcache.php`
+  - class Memcache
+  - function __construct
+  - function save
+  - function load
+  - function mtime
+  - function touch
+  - _...1 more_
+- `wp-includes/SimplePie/src/Cache/Memcached.php`
+  - class Memcached
+  - function __construct
+  - function save
+  - function load
+  - function mtime
+  - function touch
+  - _...1 more_
+- `wp-includes/SimplePie/src/Cache/MySQL.php`
+  - class MySQL
+  - function __construct
+  - function save
+  - function load
+  - function mtime
+  - function touch
+  - _...1 more_
+- `wp-includes/SimplePie/src/Cache/NameFilter.php` — interface NameFilter, function filter
+- `wp-includes/SimplePie/src/Cache/Psr16.php`
+  - class Psr16
+  - function __construct
+  - function get
+  - function get_data
+  - function set
+  - function set_data
+  - _...2 more_
+- `wp-includes/SimplePie/src/Cache/Redis.php`
+  - class Redis
+  - function __construct
+  - function setRedisClient
+  - function save
+  - function load
+  - function mtime
+  - _...2 more_
+- `wp-includes/SimplePie/src/Cache.php`
+  - class Cache
+  - function get_handler
+  - function create
+  - function register
+  - function parse_URL
+- `wp-includes/SimplePie/src/Caption.php`
+  - class Caption
+  - function __construct
+  - function __toString
+  - function get_endtime
+  - function get_language
+  - function get_starttime
+  - _...2 more_
+- `wp-includes/SimplePie/src/Category.php`
+  - class Category
+  - function __construct
+  - function __toString
+  - function get_term
+  - function get_scheme
+  - function get_label
+  - _...1 more_
+- `wp-includes/SimplePie/src/Content/Type/Sniffer.php`
+  - class Sniffer
+  - function __construct
+  - function get_type
+  - function text_or_binary
+  - function unknown
+  - function image
+  - _...1 more_
+- `wp-includes/SimplePie/src/Copyright.php`
+  - class Copyright
+  - function __construct
+  - function __toString
+  - function get_url
+  - function get_attribution
+- `wp-includes/SimplePie/src/Credit.php`
+  - class Credit
+  - function __construct
+  - function __toString
+  - function get_role
+  - function get_scheme
+  - function get_name
+- `wp-includes/SimplePie/src/Enclosure.php`
+  - class Enclosure
+  - function __construct
+  - function __toString
+  - function get_bitrate
+  - function get_caption
+  - function get_captions
+  - _...36 more_
+- `wp-includes/SimplePie/src/Exception.php` — class Exception
+- `wp-includes/SimplePie/src/File.php`
+  - class File
+  - function __construct
+  - function get_permanent_uri
+  - function get_final_requested_uri
+  - function get_status_code
+  - function get_headers
+  - _...6 more_
+- `wp-includes/SimplePie/src/Gzdecode.php`
+  - class Gzdecode
+  - function __set
+  - function __construct
+  - function parse
+- `wp-includes/SimplePie/src/HTTP/Client.php` — interface Client, function request
+- `wp-includes/SimplePie/src/HTTP/ClientException.php` — class ClientException
+- `wp-includes/SimplePie/src/HTTP/FileClient.php`
+  - class FileClient
+  - function __construct
+  - function request
+- `wp-includes/SimplePie/src/HTTP/Parser.php`
+  - class Parser
+  - function __construct
+  - function parse
+  - function prepareHeaders
+- `wp-includes/SimplePie/src/HTTP/Psr18Client.php`
+  - class Psr18Client
+  - function __construct
+  - function getHttpClient
+  - function getRequestFactory
+  - function getUriFactory
+  - function request
+- `wp-includes/SimplePie/src/HTTP/Psr7Response.php`
+  - class Psr7Response
+  - function __construct
+  - function get_permanent_uri
+  - function get_final_requested_uri
+  - function get_status_code
+  - function get_headers
+  - _...5 more_
+- `wp-includes/SimplePie/src/HTTP/RawTextResponse.php`
+  - class RawTextResponse
+  - function __construct
+  - function get_permanent_uri
+  - function get_final_requested_uri
+  - function get_status_code
+  - function get_headers
+  - _...5 more_
+- `wp-includes/SimplePie/src/HTTP/Response.php`
+  - interface Response
+  - function get_permanent_uri
+  - function get_final_requested_uri
+  - function get_status_code
+  - function get_headers
+  - function has_header
+  - _...4 more_
+- `wp-includes/SimplePie/src/IRI.php`
+  - class IRI
+  - function __toString
+  - function __set
+  - function __get
+  - function __isset
+  - function __unset
+  - _...16 more_
+- `wp-includes/SimplePie/src/Item.php`
+  - class Item
+  - function __construct
+  - function set_registry
+  - function __toString
+  - function __destruct
+  - function get_item_tags
+  - _...29 more_
+- `wp-includes/SimplePie/src/Locator.php`
+  - class Locator
+  - function __construct
+  - function set_http_client
+  - function set_registry
+  - function find
+  - function is_feed
+  - _...6 more_
+- `wp-includes/SimplePie/src/Misc.php`
+  - class Misc
+  - function time_hms
+  - function absolutize_url
+  - function is_remote_uri
+  - function get_element
+  - function element_implode
+  - _...30 more_
+- `wp-includes/SimplePie/src/Net/IPv6.php`
+  - class IPv6
+  - function uncompress
+  - function compress
+  - function check_ipv6
+  - function checkIPv6
+- `wp-includes/SimplePie/src/Parse/Date.php`
+  - class Date
+  - function __construct
+  - function get
+  - function parse
+  - function add_callback
+  - function date_w3cdtf
+  - _...5 more_
+- `wp-includes/SimplePie/src/Parser.php`
+  - class Parser
+  - function set_registry
+  - function parse
+  - function get_error_code
+  - function get_error_string
+  - function get_current_line
+  - _...7 more_
+- `wp-includes/SimplePie/src/Rating.php`
+  - class Rating
+  - function __construct
+  - function __toString
+  - function get_scheme
+  - function get_value
+- `wp-includes/SimplePie/src/Registry.php`
+  - class Registry
+  - function __construct
+  - function register
+  - function get_class
+- `wp-includes/SimplePie/src/RegistryAware.php` — interface RegistryAware, function set_registry
+- `wp-includes/SimplePie/src/Restriction.php`
+  - class Restriction
+  - function __construct
+  - function __toString
+  - function get_relationship
+  - function get_type
+  - function get_value
+- `wp-includes/SimplePie/src/Sanitize.php`
+  - class Sanitize
+  - function __construct
+  - function remove_div
+  - function set_image_handler
+  - function set_registry
+  - function pass_cache_data
+  - _...15 more_
+- `wp-includes/SimplePie/src/SimplePie.php`
+  - class SimplePie
+  - function __construct
+  - function __toString
+  - function __destruct
+  - function force_feed
+  - function set_feed_url
+  - _...92 more_
+- `wp-includes/SimplePie/src/Source.php`
+  - class Source
+  - function __construct
+  - function set_registry
+  - function __toString
+  - function get_source_tags
+  - function get_base
+  - _...18 more_
+- `wp-includes/SimplePie/src/XML/Declaration/Parser.php`
+  - class Parser
+  - function __construct
+  - function parse
+  - function has_data
+  - function skip_whitespace
+  - function get_value
+  - _...10 more_
+- `wp-includes/Text/Diff/Engine/native.php` — class Text_Diff_Engine_native
+- `wp-includes/Text/Diff/Engine/shell.php` — class Text_Diff_Engine_shell
+- `wp-includes/Text/Diff/Engine/string.php` — class Text_Diff_Engine_string
+- `wp-includes/Text/Diff/Engine/xdiff.php` — class Text_Diff_Engine_xdiff
+- `wp-includes/Text/Diff/Renderer/inline.php` — class Text_Diff_Renderer_inline
+- `wp-includes/Text/Diff/Renderer.php` — class Text_Diff_Renderer
+- `wp-includes/Text/Diff.php`
+  - class Text_Diff
+  - class Text_MappedDiff
+  - class Text_Diff_Op
+  - class Text_Diff_Op_copy
+  - class Text_Diff_Op_delete
+  - class Text_Diff_Op_add
+  - _...1 more_
+- `wp-includes/Text/Exception.php` — class Text_Exception
+- `wp-includes/abilities-api/class-wp-abilities-registry.php`
+  - class WP_Abilities_Registry
+  - function register
+  - function unregister
+  - function get_all_registered
+  - function is_registered
+  - function get_registered
+  - _...3 more_
+- `wp-includes/abilities-api/class-wp-ability-categories-registry.php`
+  - class WP_Ability_Categories_Registry
+  - function register
+  - function unregister
+  - function get_all_registered
+  - function is_registered
+  - function get_registered
+  - _...3 more_
+- `wp-includes/abilities-api/class-wp-ability-category.php`
+  - class WP_Ability_Category
+  - function __construct
+  - function get_slug
+  - function get_label
+  - function get_description
+  - function get_meta
+  - _...2 more_
+- `wp-includes/abilities-api/class-wp-ability.php`
+  - class WP_Ability
+  - function __construct
+  - function get_name
+  - function get_label
+  - function get_description
+  - function get_category
+  - _...10 more_
+- `wp-includes/atomlib.php`
+  - class AtomFeed
+  - class AtomEntry
+  - class AtomParser
+  - function map_attrs
+  - function map_xmlns
+- `wp-includes/blocks/block.php` — class WP_Block_Cloner, function clone_instance
+- `wp-includes/blocks/image.php` — function block_core_image_extract_empty_figcaption_element
+- `wp-includes/blocks/navigation.php` — class WP_Navigation_Block_Renderer, function render
+- `wp-includes/class-avif-info.php`
+  - class Tile
+  - class Prop
+  - class Dim_Prop
+  - class Chan_Prop
+  - class Features
+  - class Box
+  - _...5 more_
+- `wp-includes/class-json.php`
+  - class Services_JSON
+  - class Services_JSON_Error
+  - class Services_JSON_Error
+- `wp-includes/class-phpass.php` — class PasswordHash
+- `wp-includes/class-pop3.php` — class POP3
+- `wp-includes/class-requests.php`
+  - class Requests
+  - function autoloader
+  - function register_autoloader
+- `wp-includes/class-snoopy.php` — class Snoopy
+- `wp-includes/class-walker-category-dropdown.php` — class Walker_CategoryDropdown, function start_el
+- `wp-includes/class-walker-category.php`
+  - class Walker_Category
+  - function start_lvl
+  - function end_lvl
+  - function start_el
+  - function end_el
+- `wp-includes/class-walker-comment.php`
+  - class Walker_Comment
+  - function start_lvl
+  - function end_lvl
+  - function display_element
+  - function start_el
+  - function end_el
+  - _...1 more_
+- `wp-includes/class-walker-nav-menu.php`
+  - class Walker_Nav_Menu
+  - function __construct
+  - function start_lvl
+  - function end_lvl
+  - function start_el
+  - function end_el
+- `wp-includes/class-walker-page-dropdown.php` — class Walker_PageDropdown, function start_el
+- `wp-includes/class-walker-page.php`
+  - class Walker_Page
+  - function start_lvl
+  - function end_lvl
+  - function start_el
+  - function end_el
+- `wp-includes/class-wp-admin-bar.php`
+  - class WP_Admin_Bar
+  - function initialize
+  - function add_menu
+  - function remove_menu
+  - function add_node
+  - function get_node
+  - _...6 more_
+- `wp-includes/class-wp-ajax-response.php`
+  - class WP_Ajax_Response
+  - function __construct
+  - function add
+  - function send
+- `wp-includes/class-wp-application-passwords.php`
+  - class WP_Application_Passwords
+  - function is_in_use
+  - function create_new_application_password
+  - function get_user_application_passwords
+  - function get_user_application_password
+  - function application_name_exists_for_user
+  - _...7 more_
+- `wp-includes/class-wp-block-bindings-registry.php`
+  - class WP_Block_Bindings_Registry
+  - function register
+  - function unregister
+  - function get_all_registered
+  - function get_registered
+  - function is_registered
+  - _...2 more_
+- `wp-includes/class-wp-block-bindings-source.php`
+  - class WP_Block_Bindings_Source
+  - function __construct
+  - function get_value
+  - function __wakeup
+- `wp-includes/class-wp-block-editor-context.php` — class WP_Block_Editor_Context, function __construct
+- `wp-includes/class-wp-block-list.php`
+  - class WP_Block_List
+  - function __construct
+  - function offsetExists
+  - function offsetGet
+  - function offsetSet
+  - function offsetUnset
+  - _...6 more_
+- `wp-includes/class-wp-block-metadata-registry.php`
+  - class WP_Block_Metadata_Registry
+  - function register_collection
+  - function get_metadata
+  - function get_collection_block_metadata_files
+  - function has_metadata
+- `wp-includes/class-wp-block-parser-block.php` — class WP_Block_Parser_Block, function __construct
+- `wp-includes/class-wp-block-parser-frame.php` — class WP_Block_Parser_Frame, function __construct
+- `wp-includes/class-wp-block-parser.php`
+  - class WP_Block_Parser
+  - function parse
+  - function proceed
+  - function next_token
+  - function freeform
+  - function add_freeform
+  - _...2 more_
+- `wp-includes/class-wp-block-pattern-categories-registry.php`
+  - class WP_Block_Pattern_Categories_Registry
+  - function register
+  - function unregister
+  - function get_registered
+  - function get_all_registered
+  - function is_registered
+  - _...1 more_
+- `wp-includes/class-wp-block-patterns-registry.php`
+  - class WP_Block_Patterns_Registry
+  - function register
+  - function unregister
+  - function get_registered
+  - function get_all_registered
+  - function is_registered
+  - _...2 more_
+- `wp-includes/class-wp-block-processor.php`
+  - class WP_Block_Processor
+  - function __construct
+  - function next_block
+  - function next_delimiter
+  - function next_token
+  - function get_breadcrumbs
+  - _...18 more_
+- `wp-includes/class-wp-block-styles-registry.php`
+  - class WP_Block_Styles_Registry
+  - function register
+  - function unregister
+  - function get_registered
+  - function get_all_registered
+  - function get_registered_styles_for_block
+  - _...2 more_
+- `wp-includes/class-wp-block-supports.php`
+  - class WP_Block_Supports
+  - function get_instance
+  - function init
+  - function register
+  - function apply_block_supports
+- `wp-includes/class-wp-block-template.php` — class WP_Block_Template
+- `wp-includes/class-wp-block-templates-registry.php`
+  - class WP_Block_Templates_Registry
+  - function register
+  - function get_all_registered
+  - function get_registered
+  - function get_by_slug
+  - function get_by_query
+  - _...3 more_
+- `wp-includes/class-wp-block-type-registry.php`
+  - class WP_Block_Type_Registry
+  - function register
+  - function unregister
+  - function get_registered
+  - function get_all_registered
+  - function is_registered
+  - _...2 more_
+- `wp-includes/class-wp-block-type.php`
+  - class WP_Block_Type
+  - function __construct
+  - function __get
+  - function __isset
+  - function __set
+  - function render
+  - _...6 more_
+- `wp-includes/class-wp-block.php`
+  - class WP_Block
+  - function __construct
+  - function refresh_context_dependents
+  - function refresh_parsed_block_dependents
+  - function __get
+  - function replace_rich_text
+  - _...1 more_
+- `wp-includes/class-wp-classic-to-block-menu-converter.php` — class WP_Classic_To_Block_Menu_Converter, function convert
+- `wp-includes/class-wp-comment-query.php`
+  - class WP_Comment_Query
+  - function __call
+  - function __construct
+  - function parse_query
+  - function query
+  - function get_comments
+- `wp-includes/class-wp-comment.php`
+  - class WP_Comment
+  - function get_instance
+  - function __construct
+  - function to_array
+  - function get_children
+  - function add_child
+  - _...4 more_
+- `wp-includes/class-wp-customize-control.php`
+  - class WP_Customize_Control
+  - function __construct
+  - function enqueue
+  - function active
+  - function active_callback
+  - function value
+  - _...9 more_
+- `wp-includes/class-wp-customize-manager.php`
+  - class WP_Customize_Manager
+  - function __construct
+  - function doing_ajax
+  - function wp_die_handler
+  - function setup_theme
+  - function establish_loaded_changeset
+  - _...104 more_
+- `wp-includes/class-wp-customize-nav-menus.php`
+  - class WP_Customize_Nav_Menus
+  - function __construct
+  - function filter_nonces
+  - function ajax_load_available_items
+  - function load_available_items_query
+  - function ajax_search_available_items
+  - _...23 more_
+- `wp-includes/class-wp-customize-panel.php`
+  - class WP_Customize_Panel
+  - function __construct
+  - function active
+  - function active_callback
+  - function json
+  - function check_capabilities
+  - _...3 more_
+- `wp-includes/class-wp-customize-section.php`
+  - class WP_Customize_Section
+  - function __construct
+  - function active
+  - function active_callback
+  - function json
+  - function check_capabilities
+  - _...3 more_
+- `wp-includes/class-wp-customize-setting.php`
+  - class WP_Customize_Setting
+  - function __construct
+  - function id_data
+  - function reset_aggregated_multidimensionals
+  - function is_current_blog_previewed
+  - function preview
+  - _...11 more_
+- `wp-includes/class-wp-customize-widgets.php`
+  - class WP_Customize_Widgets
+  - function __construct
+  - function get_selective_refreshable_widgets
+  - function is_widget_selective_refreshable
+  - function register_settings
+  - function filter_customize_dynamic_setting_args
+  - _...52 more_
+- `wp-includes/class-wp-date-query.php`
+  - class WP_Date_Query
+  - function __construct
+  - function sanitize_query
+  - function get_compare
+  - function validate_date_values
+  - function validate_column
+  - _...5 more_
+- `wp-includes/class-wp-dependencies.php`
+  - class WP_Dependencies
+  - function do_items
+  - function do_item
+  - function all_deps
+  - function add
+  - function add_data
+  - _...7 more_
+- `wp-includes/class-wp-dependency.php`
+  - class _WP_Dependency
+  - function __construct
+  - function add_data
+  - function set_translations
+- `wp-includes/class-wp-duotone.php`
+  - class WP_Duotone
+  - function get_filter_id_from_preset
+  - function get_filter_svg_from_preset
+  - function register_duotone_support
+  - function render_duotone_support
+  - function restore_image_outer_container
+  - _...6 more_
+- `wp-includes/class-wp-editor.php`
+  - class _WP_Editors
+  - function parse_settings
+  - function editor
+  - function editor_settings
+  - function enqueue_scripts
+  - function enqueue_default_editor
+  - _...10 more_
+- `wp-includes/class-wp-embed.php`
+  - class WP_Embed
+  - function __construct
+  - function run_shortcode
+  - function maybe_run_ajax_cache
+  - function register_handler
+  - function unregister_handler
+  - _...8 more_
+- `wp-includes/class-wp-error.php`
+  - class WP_Error
+  - function __construct
+  - function get_error_codes
+  - function get_error_code
+  - function get_error_messages
+  - function get_error_message
+  - _...8 more_
+- `wp-includes/class-wp-exception.php` — class WP_Exception
+- `wp-includes/class-wp-fatal-error-handler.php` — class WP_Fatal_Error_Handler, function handle
+- `wp-includes/class-wp-feed-cache-transient.php`
+  - class WP_Feed_Cache_Transient
+  - function __construct
+  - function save
+  - function load
+  - function mtime
+  - function touch
+  - _...1 more_
+- `wp-includes/class-wp-feed-cache.php` — class WP_Feed_Cache, function create
+- `wp-includes/class-wp-hook.php`
+  - class WP_Hook
+  - function add_filter
+  - function remove_filter
+  - function has_filter
+  - function has_filters
+  - function remove_all_filters
+  - _...14 more_
+- `wp-includes/class-wp-http-cookie.php`
+  - class WP_Http_Cookie
+  - function __construct
+  - function test
+  - function getHeaderValue
+  - function getFullHeader
+  - function get_attributes
+- `wp-includes/class-wp-http-curl.php`
+  - class WP_Http_Curl
+  - function request
+  - function test
+- `wp-includes/class-wp-http-encoding.php`
+  - class WP_Http_Encoding
+  - function compress
+  - function decompress
+  - function compatible_gzinflate
+  - function accept_encoding
+  - function content_encoding
+  - _...2 more_
+- `wp-includes/class-wp-http-ixr-client.php`
+  - class WP_HTTP_IXR_Client
+  - function __construct
+  - function query
+- `wp-includes/class-wp-http-proxy.php`
+  - class WP_HTTP_Proxy
+  - function is_enabled
+  - function use_authentication
+  - function host
+  - function port
+  - function username
+  - _...4 more_
+- `wp-includes/class-wp-http-requests-hooks.php`
+  - class WP_HTTP_Requests_Hooks
+  - function __construct
+  - function dispatch
+- `wp-includes/class-wp-http-requests-response.php`
+  - class WP_HTTP_Requests_Response
+  - function __construct
+  - function get_response_object
+  - function get_headers
+  - function set_headers
+  - function header
+  - _...6 more_
+- `wp-includes/class-wp-http-response.php`
+  - class WP_HTTP_Response
+  - function __construct
+  - function get_headers
+  - function set_headers
+  - function header
+  - function get_status
+  - _...4 more_
+- `wp-includes/class-wp-http-streams.php`
+  - class WP_Http_Streams
+  - class WP_HTTP_Fsockopen
+  - function request
+  - function verify_ssl_certificate
+  - function test
+- `wp-includes/class-wp-http.php`
+  - class WP_Http
+  - function request
+  - function normalize_cookies
+  - function browser_redirect_compatibility
+  - function validate_redirects
+  - function _get_first_available_transport
+  - _...11 more_
+- `wp-includes/class-wp-image-editor-gd.php`
+  - class WP_Image_Editor_GD
+  - function __destruct
+  - function test
+  - function supports_mime_type
+  - function load
+  - function resize
+  - _...8 more_
+- `wp-includes/class-wp-image-editor-imagick.php`
+  - class WP_Image_Editor_Imagick
+  - function __destruct
+  - function test
+  - function supports_mime_type
+  - function load
+  - function set_quality
+  - _...10 more_
+- `wp-includes/class-wp-image-editor.php`
+  - class WP_Image_Editor
+  - function __construct
+  - function test
+  - function supports_mime_type
+  - function load
+  - function save
+  - _...12 more_
+- `wp-includes/class-wp-list-util.php`
+  - class WP_List_Util
+  - function __construct
+  - function get_input
+  - function get_output
+  - function filter
+  - function pluck
+  - _...1 more_
+- `wp-includes/class-wp-locale-switcher.php`
+  - class WP_Locale_Switcher
+  - function __construct
+  - function init
+  - function switch_to_locale
+  - function switch_to_user_locale
+  - function restore_previous_locale
+  - _...5 more_
+- `wp-includes/class-wp-locale.php`
+  - class WP_Locale
+  - function __construct
+  - function init
+  - function get_weekday
+  - function get_weekday_initial
+  - function get_weekday_abbrev
+  - _...9 more_
+- `wp-includes/class-wp-matchesmapregex.php`
+  - class WP_MatchesMapRegex
+  - function __construct
+  - function apply
+  - function callback
+- `wp-includes/class-wp-meta-query.php`
+  - class WP_Meta_Query
+  - function __construct
+  - function sanitize_query
+  - function parse_query_vars
+  - function get_cast_for_type
+  - function get_sql
+  - _...3 more_
+- `wp-includes/class-wp-metadata-lazyloader.php`
+  - class WP_Metadata_Lazyloader
+  - function __construct
+  - function queue_objects
+  - function reset_queue
+  - function lazyload_term_meta
+  - function lazyload_comment_meta
+  - _...1 more_
+- `wp-includes/class-wp-navigation-fallback.php`
+  - class WP_Navigation_Fallback
+  - function update_wp_navigation_post_schema
+  - function get_fallback
+- `wp-includes/class-wp-network-query.php`
+  - class WP_Network_Query
+  - function __construct
+  - function parse_query
+  - function query
+  - function get_networks
+- `wp-includes/class-wp-network.php`
+  - class WP_Network
+  - function get_instance
+  - function __construct
+  - function __get
+  - function __isset
+  - function __set
+  - _...1 more_
+- `wp-includes/class-wp-object-cache.php`
+  - class WP_Object_Cache
+  - function __construct
+  - function __get
+  - function __set
+  - function __isset
+  - function __unset
+  - _...17 more_
+- `wp-includes/class-wp-oembed-controller.php`
+  - class WP_oEmbed_Controller
+  - function register_routes
+  - function get_item
+  - function get_proxy_item_permissions_check
+  - function get_proxy_item
+- `wp-includes/class-wp-oembed.php`
+  - class WP_oEmbed
+  - function __construct
+  - function __call
+  - function get_provider
+  - function _add_provider_early
+  - function _remove_provider_early
+  - _...6 more_
+- `wp-includes/class-wp-paused-extensions-storage.php`
+  - class WP_Paused_Extensions_Storage
+  - function __construct
+  - function set
+  - function delete
+  - function get
+  - function get_all
+  - _...1 more_
+- `wp-includes/class-wp-phpmailer.php`
+  - class WP_PHPMailer
+  - function __construct
+  - function setLanguage
+- `wp-includes/class-wp-plugin-dependencies.php`
+  - class WP_Plugin_Dependencies
+  - function initialize
+  - function has_dependents
+  - function has_dependencies
+  - function has_active_dependents
+  - function get_dependents
+  - _...11 more_
+- `wp-includes/class-wp-post-type.php`
+  - class WP_Post_Type
+  - function __construct
+  - function set_props
+  - function add_supports
+  - function add_rewrite_rules
+  - function register_meta_boxes
+  - _...12 more_
+- `wp-includes/class-wp-post.php`
+  - class WP_Post
+  - function get_instance
+  - function __construct
+  - function __isset
+  - function __get
+  - function filter
+  - _...1 more_
+- `wp-includes/class-wp-query.php`
+  - class WP_Query
+  - function init
+  - function parse_query_vars
+  - function fill_query_vars
+  - function parse_query
+  - function parse_tax_query
+  - _...54 more_
+- `wp-includes/class-wp-recovery-mode-cookie-service.php`
+  - class WP_Recovery_Mode_Cookie_Service
+  - function is_cookie_set
+  - function set_cookie
+  - function clear_cookie
+  - function validate_cookie
+  - function get_session_id_from_cookie
+- `wp-includes/class-wp-recovery-mode-email-service.php`
+  - class WP_Recovery_Mode_Email_Service
+  - function __construct
+  - function maybe_send_recovery_mode_email
+  - function clear_rate_limit
+- `wp-includes/class-wp-recovery-mode-key-service.php`
+  - class WP_Recovery_Mode_Key_Service
+  - function generate_recovery_mode_token
+  - function generate_and_store_recovery_mode_key
+  - function validate_recovery_mode_key
+  - function clean_expired_keys
+- `wp-includes/class-wp-recovery-mode-link-service.php`
+  - class WP_Recovery_Mode_Link_Service
+  - function __construct
+  - function generate_url
+  - function handle_begin_link
+- `wp-includes/class-wp-recovery-mode.php`
+  - class WP_Recovery_Mode
+  - function __construct
+  - function initialize
+  - function is_active
+  - function get_session_id
+  - function is_initialized
+  - _...4 more_
+- `wp-includes/class-wp-rewrite.php`
+  - class WP_Rewrite
+  - function using_permalinks
+  - function using_index_permalinks
+  - function using_mod_rewrite_permalinks
+  - function preg_index
+  - function page_uri_index
+  - _...32 more_
+- `wp-includes/class-wp-role.php`
+  - class WP_Role
+  - function __construct
+  - function add_cap
+  - function remove_cap
+  - function has_cap
+- `wp-includes/class-wp-roles.php`
+  - class WP_Roles
+  - function __construct
+  - function __call
+  - function reinit
+  - function add_role
+  - function remove_role
+  - _...8 more_
+- `wp-includes/class-wp-script-modules.php`
+  - class WP_Script_Modules
+  - function register
+  - function get_queue
+  - function set_fetchpriority
+  - function set_in_footer
+  - function enqueue
+  - _...9 more_
+- `wp-includes/class-wp-scripts.php`
+  - class WP_Scripts
+  - function __construct
+  - function init
+  - function print_scripts
+  - function print_scripts_l10n
+  - function print_extra_script
+  - _...15 more_
+- `wp-includes/class-wp-session-tokens.php`
+  - class WP_Session_Tokens
+  - function get_instance
+  - function get
+  - function verify
+  - function create
+  - function update
+  - _...6 more_
+- `wp-includes/class-wp-simplepie-file.php` — class WP_SimplePie_File, function __construct
+- `wp-includes/class-wp-simplepie-sanitize-kses.php` — class WP_SimplePie_Sanitize_KSES, function sanitize
+- `wp-includes/class-wp-site-query.php`
+  - class WP_Site_Query
+  - function __construct
+  - function parse_query
+  - function query
+  - function get_sites
+- `wp-includes/class-wp-site.php`
+  - class WP_Site
+  - function get_instance
+  - function __construct
+  - function to_array
+  - function __get
+  - function __isset
+  - _...1 more_
+- `wp-includes/class-wp-speculation-rules.php`
+  - class WP_Speculation_Rules
+  - function add_rule
+  - function has_rule
+  - function jsonSerialize
+  - function is_valid_mode
+  - function is_valid_eagerness
+  - _...1 more_
+- `wp-includes/class-wp-styles.php`
+  - class WP_Styles
+  - function __construct
+  - function do_item
+  - function add_inline_style
+  - function print_inline_style
+  - function add_data
+  - _...5 more_
+- `wp-includes/class-wp-tax-query.php`
+  - class WP_Tax_Query
+  - function __construct
+  - function sanitize_query
+  - function sanitize_relation
+  - function get_sql
+  - function get_sql_for_clause
+  - _...1 more_
+- `wp-includes/class-wp-taxonomy.php`
+  - class WP_Taxonomy
+  - function __construct
+  - function set_props
+  - function add_rewrite_rules
+  - function remove_rewrite_rules
+  - function add_hooks
+  - _...4 more_
+- `wp-includes/class-wp-term-query.php`
+  - class WP_Term_Query
+  - function __construct
+  - function parse_query
+  - function query
+  - function get_terms
+- `wp-includes/class-wp-term.php`
+  - class WP_Term
+  - function get_instance
+  - function __construct
+  - function filter
+  - function to_array
+  - function __get
+- `wp-includes/class-wp-text-diff-renderer-inline.php` — class WP_Text_Diff_Renderer_inline, function _splitOnWords
+- `wp-includes/class-wp-text-diff-renderer-table.php`
+  - class WP_Text_Diff_Renderer_Table
+  - function __construct
+  - function _startBlock
+  - function _lines
+  - function addedLine
+  - function deletedLine
+  - _...13 more_
+- `wp-includes/class-wp-textdomain-registry.php`
+  - class WP_Textdomain_Registry
+  - function init
+  - function get
+  - function has
+  - function set
+  - function set_custom_path
+  - _...2 more_
+- `wp-includes/class-wp-theme-json-data.php`
+  - class WP_Theme_JSON_Data
+  - function __construct
+  - function update_with
+  - function get_data
+  - function get_theme_json
+- `wp-includes/class-wp-theme-json-resolver.php`
+  - class WP_Theme_JSON_Resolver
+  - function get_fields_to_translate
+  - function get_core_data
+  - function get_theme_data
+  - function get_block_data
+  - function get_user_data_from_wp_global_styles
+  - _...8 more_
+- `wp-includes/class-wp-theme-json-schema.php` — class WP_Theme_JSON_Schema, function migrate
+- `wp-includes/class-wp-theme-json.php`
+  - class WP_Theme_JSON
+  - function get_element_class_name
+  - function __construct
+  - function get_settings
+  - function get_stylesheet
+  - function get_custom_css
+  - _...15 more_
+- `wp-includes/class-wp-theme.php`
+  - class WP_Theme
+  - function __construct
+  - function __toString
+  - function __isset
+  - function __get
+  - function offsetSet
+  - _...36 more_
+- `wp-includes/class-wp-token-map.php`
+  - class WP_Token_Map
+  - function from_array
+  - function from_precomputed_table
+  - function contains
+  - function read_token
+  - function to_array
+  - _...1 more_
+- `wp-includes/class-wp-url-pattern-prefixer.php`
+  - class WP_URL_Pattern_Prefixer
+  - function __construct
+  - function prefix_path_pattern
+  - function get_default_contexts
+- `wp-includes/class-wp-user-meta-session-tokens.php` — class WP_User_Meta_Session_Tokens, function drop_sessions
+- `wp-includes/class-wp-user-query.php`
+  - class WP_User_Query
+  - function __construct
+  - function fill_query_vars
+  - function prepare_query
+  - function query
+  - function get
+  - _...8 more_
+- `wp-includes/class-wp-user-request.php` — class WP_User_Request, function __construct
+- `wp-includes/class-wp-user.php`
+  - class WP_User
+  - function __construct
+  - function init
+  - function get_data_by
+  - function __isset
+  - function __get
+  - _...21 more_
+- `wp-includes/class-wp-walker.php`
+  - class Walker
+  - function start_lvl
+  - function end_lvl
+  - function start_el
+  - function end_el
+  - function display_element
+  - _...4 more_
+- `wp-includes/class-wp-widget-factory.php`
+  - class WP_Widget_Factory
+  - function __construct
+  - function register
+  - function unregister
+  - function _register_widgets
+  - function get_widget_object
+  - _...1 more_
+- `wp-includes/class-wp-widget.php`
+  - class WP_Widget
+  - function widget
+  - function update
+  - function form
+  - function __construct
+  - function get_field_name
+  - _...13 more_
+- `wp-includes/class-wp-xmlrpc-server.php`
+  - class wp_xmlrpc_server
+  - function __construct
+  - function __call
+  - function serve_request
+  - function sayHello
+  - function addTwoNumbers
+  - _...84 more_
+- `wp-includes/class-wp.php`
+  - class WP
+  - function add_query_var
+  - function remove_query_var
+  - function set_query_var
+  - function parse_request
+  - function send_headers
+  - _...6 more_
+- `wp-includes/class-wpdb.php`
+  - class wpdb
+  - function __construct
+  - function __get
+  - function __set
+  - function __isset
+  - function __unset
+  - _...54 more_
+- `wp-includes/customize/class-wp-customize-background-image-control.php`
+  - class WP_Customize_Background_Image_Control
+  - function __construct
+  - function enqueue
+- `wp-includes/customize/class-wp-customize-background-image-setting.php` — class WP_Customize_Background_Image_Setting, function update
+- `wp-includes/customize/class-wp-customize-background-position-control.php`
+  - class WP_Customize_Background_Position_Control
+  - function render_content
+  - function content_template
+- `wp-includes/customize/class-wp-customize-code-editor-control.php`
+  - class WP_Customize_Code_Editor_Control
+  - function enqueue
+  - function json
+  - function render_content
+  - function content_template
+- `wp-includes/customize/class-wp-customize-color-control.php`
+  - class WP_Customize_Color_Control
+  - function __construct
+  - function enqueue
+  - function to_json
+  - function render_content
+  - function content_template
+- `wp-includes/customize/class-wp-customize-cropped-image-control.php`
+  - class WP_Customize_Cropped_Image_Control
+  - function enqueue
+  - function to_json
+- `wp-includes/customize/class-wp-customize-custom-css-setting.php`
+  - class WP_Customize_Custom_CSS_Setting
+  - function __construct
+  - function preview
+  - function filter_previewed_wp_get_custom_css
+  - function value
+  - function validate
+  - _...1 more_
+- `wp-includes/customize/class-wp-customize-date-time-control.php`
+  - class WP_Customize_Date_Time_Control
+  - function render_content
+  - function json
+  - function content_template
+  - function get_month_choices
+  - function get_timezone_info
+  - _...1 more_
+- `wp-includes/customize/class-wp-customize-filter-setting.php` — class WP_Customize_Filter_Setting, function update
+- `wp-includes/customize/class-wp-customize-header-image-control.php`
+  - class WP_Customize_Header_Image_Control
+  - function __construct
+  - function enqueue
+  - function prepare_control
+  - function print_header_image_template
+  - function get_current_image_src
+  - _...1 more_
+- `wp-includes/customize/class-wp-customize-header-image-setting.php` — class WP_Customize_Header_Image_Setting, function update
+- `wp-includes/customize/class-wp-customize-image-control.php`
+  - class WP_Customize_Image_Control
+  - function prepare_control
+  - function add_tab
+  - function remove_tab
+  - function print_tab_image
+- `wp-includes/customize/class-wp-customize-media-control.php`
+  - class WP_Customize_Media_Control
+  - function __construct
+  - function enqueue
+  - function to_json
+  - function render_content
+  - function content_template
+  - _...1 more_
+- `wp-includes/customize/class-wp-customize-nav-menu-auto-add-control.php` — class WP_Customize_Nav_Menu_Auto_Add_Control
+- `wp-includes/customize/class-wp-customize-nav-menu-control.php`
+  - class WP_Customize_Nav_Menu_Control
+  - function render_content
+  - function content_template
+  - function json
+- `wp-includes/customize/class-wp-customize-nav-menu-item-control.php`
+  - class WP_Customize_Nav_Menu_Item_Control
+  - function __construct
+  - function render_content
+  - function content_template
+  - function json
+- `wp-includes/customize/class-wp-customize-nav-menu-item-setting.php`
+  - class WP_Customize_Nav_Menu_Item_Setting
+  - function __construct
+  - function flush_cached_value
+  - function value
+  - function js_value
+  - function preview
+  - _...5 more_
+- `wp-includes/customize/class-wp-customize-nav-menu-location-control.php`
+  - class WP_Customize_Nav_Menu_Location_Control
+  - function to_json
+  - function render_content
+- `wp-includes/customize/class-wp-customize-nav-menu-locations-control.php`
+  - class WP_Customize_Nav_Menu_Locations_Control
+  - function render_content
+  - function content_template
+- `wp-includes/customize/class-wp-customize-nav-menu-name-control.php` — class WP_Customize_Nav_Menu_Name_Control
+- `wp-includes/customize/class-wp-customize-nav-menu-section.php` — class WP_Customize_Nav_Menu_Section, function json
+- `wp-includes/customize/class-wp-customize-nav-menu-setting.php`
+  - class WP_Customize_Nav_Menu_Setting
+  - function __construct
+  - function value
+  - function preview
+  - function filter_wp_get_nav_menus
+  - function filter_wp_get_nav_menu_object
+  - _...3 more_
+- `wp-includes/customize/class-wp-customize-nav-menus-panel.php`
+  - class WP_Customize_Nav_Menus_Panel
+  - function render_screen_options
+  - function wp_nav_menu_manage_columns
+- `wp-includes/customize/class-wp-customize-new-menu-control.php`
+  - class WP_Customize_New_Menu_Control
+  - function __construct
+  - function render_content
+- `wp-includes/customize/class-wp-customize-new-menu-section.php` — class WP_Customize_New_Menu_Section, function __construct
+- `wp-includes/customize/class-wp-customize-partial.php`
+  - class WP_Customize_Partial
+  - function __construct
+  - function id_data
+  - function render
+  - function render_callback
+  - function json
+  - _...1 more_
+- `wp-includes/customize/class-wp-customize-selective-refresh.php`
+  - class WP_Customize_Selective_Refresh
+  - function __construct
+  - function partials
+  - function add_partial
+  - function get_partial
+  - function remove_partial
+  - _...7 more_
+- `wp-includes/customize/class-wp-customize-sidebar-section.php`
+  - class WP_Customize_Sidebar_Section
+  - function json
+  - function active_callback
+- `wp-includes/customize/class-wp-customize-site-icon-control.php`
+  - class WP_Customize_Site_Icon_Control
+  - function __construct
+  - function content_template
+- `wp-includes/customize/class-wp-customize-theme-control.php`
+  - class WP_Customize_Theme_Control
+  - function to_json
+  - function render_content
+  - function content_template
+- `wp-includes/customize/class-wp-customize-themes-panel.php` — class WP_Customize_Themes_Panel
+- `wp-includes/customize/class-wp-customize-themes-section.php` — class WP_Customize_Themes_Section, function json
+- `wp-includes/customize/class-wp-customize-upload-control.php` — class WP_Customize_Upload_Control, function to_json
+- `wp-includes/customize/class-wp-sidebar-block-editor-control.php` — class WP_Sidebar_Block_Editor_Control, function render_content
+- `wp-includes/customize/class-wp-widget-area-customize-control.php`
+  - class WP_Widget_Area_Customize_Control
+  - function to_json
+  - function render_content
+- `wp-includes/customize/class-wp-widget-form-customize-control.php`
+  - class WP_Widget_Form_Customize_Control
+  - function to_json
+  - function render_content
+  - function active_callback
+- `wp-includes/fonts/class-wp-font-collection.php`
+  - class WP_Font_Collection
+  - function __construct
+  - function get_data
+- `wp-includes/fonts/class-wp-font-face-resolver.php`
+  - class WP_Font_Face_Resolver
+  - function get_fonts_from_theme_json
+  - function get_fonts_from_style_variations
+- `wp-includes/fonts/class-wp-font-face.php`
+  - class WP_Font_Face
+  - function __construct
+  - function generate_and_print
+- `wp-includes/fonts/class-wp-font-library.php`
+  - class WP_Font_Library
+  - function register_font_collection
+  - function unregister_font_collection
+  - function get_font_collections
+  - function get_font_collection
+  - function get_instance
+- `wp-includes/fonts/class-wp-font-utils.php`
+  - class WP_Font_Utils
+  - function sanitize_font_family
+  - function get_font_face_slug
+  - function sanitize_from_schema
+  - function get_allowed_font_mime_types
+- `wp-includes/html-api/class-wp-html-active-formatting-elements.php`
+  - class WP_HTML_Active_Formatting_Elements
+  - function contains_node
+  - function count
+  - function current_node
+  - function insert_marker
+  - function push
+  - _...4 more_
+- `wp-includes/html-api/class-wp-html-attribute-token.php` — class WP_HTML_Attribute_Token, function __construct
+- `wp-includes/html-api/class-wp-html-decoder.php`
+  - class WP_HTML_Decoder
+  - function attribute_starts_with
+  - function decode_text_node
+  - function decode_attribute
+  - function decode
+  - function read_character_reference
+  - _...1 more_
+- `wp-includes/html-api/class-wp-html-doctype-info.php` — class WP_HTML_Doctype_Info, function from_doctype_token
+- `wp-includes/html-api/class-wp-html-open-elements.php`
+  - class WP_HTML_Open_Elements
+  - function set_pop_handler
+  - function set_push_handler
+  - function at
+  - function contains
+  - function contains_node
+  - _...22 more_
+- `wp-includes/html-api/class-wp-html-processor-state.php` — class WP_HTML_Processor_State, function __construct
+- `wp-includes/html-api/class-wp-html-processor.php`
+  - class WP_HTML_Processor
+  - function create_fragment
+  - function create_full_parser
+  - function __construct
+  - function get_last_error
+  - function get_unsupported_exception
+  - _...32 more_
+- `wp-includes/html-api/class-wp-html-span.php` — class WP_HTML_Span, function __construct
+- `wp-includes/html-api/class-wp-html-stack-event.php` — class WP_HTML_Stack_Event, function __construct
+- `wp-includes/html-api/class-wp-html-tag-processor.php`
+  - class WP_HTML_Tag_Processor
+  - function __construct
+  - function change_parsing_namespace
+  - function next_tag
+  - function next_token
+  - function paused_at_incomplete_token
+  - _...29 more_
+- `wp-includes/html-api/class-wp-html-text-replacement.php` — class WP_HTML_Text_Replacement, function __construct
+- `wp-includes/html-api/class-wp-html-token.php`
+  - class WP_HTML_Token
+  - function __construct
+  - function __destruct
+  - function __wakeup
+- `wp-includes/html-api/class-wp-html-unsupported-exception.php` — class WP_HTML_Unsupported_Exception, function __construct
+- `wp-includes/interactivity-api/class-wp-interactivity-api-directives-processor.php`
+  - class WP_Interactivity_API_Directives_Processor
+  - function get_content_between_balanced_template_tags
+  - function set_content_between_balanced_tags
+  - function append_content_after_template_tag_closer
+  - function skip_to_tag_closer
+  - function next_balanced_tag_closer_tag
+  - _...1 more_
+- `wp-includes/interactivity-api/class-wp-interactivity-api.php`
+  - class WP_Interactivity_API
+  - function state
+  - function config
+  - function print_client_interactivity_data
+  - function filter_script_module_interactivity_router_data
+  - function filter_script_module_interactivity_data
+  - _...9 more_
+- `wp-includes/l10n/class-wp-translation-controller.php`
+  - class WP_Translation_Controller
+  - function get_instance
+  - function get_locale
+  - function set_locale
+  - function load_file
+  - function unload_file
+  - _...7 more_
+- `wp-includes/l10n/class-wp-translation-file-mo.php` — class WP_Translation_File_MO, function export
+- `wp-includes/l10n/class-wp-translation-file-php.php` — class WP_Translation_File_PHP, function export
+- `wp-includes/l10n/class-wp-translation-file.php`
+  - class WP_Translation_File
+  - function create
+  - function transform
+  - function headers
+  - function entries
+  - function error
+  - _...4 more_
+- `wp-includes/l10n/class-wp-translations.php`
+  - class WP_Translations
+  - function __construct
+  - function __get
+  - function translate_plural
+  - function translate
+- `wp-includes/pluggable-deprecated.php`
+  - class wp_atom_server
+  - function __call
+  - function __callStatic
+- `wp-includes/pomo/entry.php`
+  - class Translation_Entry
+  - function __construct
+  - function key
+  - function merge_with
+- `wp-includes/pomo/mo.php`
+  - class MO
+  - function get_filename
+  - function import_from_file
+  - function export_to_file
+  - function export
+  - function is_entry_good_for_export
+  - _...8 more_
+- `wp-includes/pomo/plural-forms.php`
+  - class Plural_Forms
+  - function __construct
+  - function get
+  - function execute
+- `wp-includes/pomo/po.php`
+  - class PO
+  - function export_headers
+  - function export_entries
+  - function export
+  - function export_to_file
+  - function set_comment_before_headers
+  - _...11 more_
+- `wp-includes/pomo/streams.php`
+  - class POMO_Reader
+  - class POMO_FileReader
+  - class POMO_StringReader
+  - class POMO_CachedFileReader
+  - class POMO_CachedIntFileReader
+  - function __construct
+  - _...14 more_
+- `wp-includes/pomo/translations.php`
+  - class Translations
+  - class Gettext_Translations
+  - class NOOP_Translations
+  - function add_entry
+  - function add_entry_or_merge
+  - function set_header
+  - _...14 more_
+- `wp-includes/rest-api/class-wp-rest-request.php`
+  - class WP_REST_Request
+  - function __construct
+  - function get_method
+  - function set_method
+  - function get_headers
+  - function is_method
+  - _...37 more_
+- `wp-includes/rest-api/class-wp-rest-response.php`
+  - class WP_REST_Response
+  - function add_link
+  - function remove_link
+  - function add_links
+  - function get_links
+  - function link_header
+  - _...7 more_
+- `wp-includes/rest-api/class-wp-rest-server.php`
+  - class WP_REST_Server
+  - function __construct
+  - function check_authentication
+  - function serve_request
+  - function response_to_data
+  - function get_response_links
+  - _...18 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-abilities-v1-categories-controller.php`
+  - class WP_REST_Abilities_V1_Categories_Controller
+  - function register_routes
+  - function get_items
+  - function get_item
+  - function get_items_permissions_check
+  - function get_item_permissions_check
+  - _...3 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-abilities-v1-list-controller.php`
+  - class WP_REST_Abilities_V1_List_Controller
+  - function register_routes
+  - function get_items
+  - function get_item
+  - function get_items_permissions_check
+  - function get_item_permissions_check
+  - _...3 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-abilities-v1-run-controller.php`
+  - class WP_REST_Abilities_V1_Run_Controller
+  - function register_routes
+  - function execute_ability
+  - function validate_request_method
+  - function check_ability_permissions
+  - function get_run_args
+  - _...1 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-application-passwords-controller.php`
+  - class WP_REST_Application_Passwords_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function get_item_permissions_check
+  - _...14 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php`
+  - class WP_REST_Attachments_Controller
+  - function register_routes
+  - function create_item_permissions_check
+  - function create_item
+  - function update_item
+  - function post_process_item
+  - _...7 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-autosaves-controller.php`
+  - class WP_REST_Autosaves_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function create_item_permissions_check
+  - function create_item
+  - _...6 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-block-directory-controller.php`
+  - class WP_REST_Block_Directory_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function prepare_item_for_response
+  - _...2 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-block-pattern-categories-controller.php`
+  - class WP_REST_Block_Pattern_Categories_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function prepare_item_for_response
+  - _...1 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-block-patterns-controller.php`
+  - class WP_REST_Block_Patterns_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function prepare_item_for_response
+  - _...1 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-block-renderer-controller.php`
+  - class WP_REST_Block_Renderer_Controller
+  - function __construct
+  - function register_routes
+  - function get_item_permissions_check
+  - function get_item
+  - function get_item_schema
+- `wp-includes/rest-api/endpoints/class-wp-rest-block-types-controller.php`
+  - class WP_REST_Block_Types_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function get_item_permissions_check
+  - _...4 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-blocks-controller.php`
+  - class WP_REST_Blocks_Controller
+  - function check_read_permission
+  - function filter_response_by_context
+  - function get_item_schema
+- `wp-includes/rest-api/endpoints/class-wp-rest-comments-controller.php`
+  - class WP_REST_Comments_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function get_item_permissions_check
+  - _...11 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-controller.php`
+  - class WP_REST_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function get_item_permissions_check
+  - function get_item
+  - _...16 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-edit-site-export-controller.php`
+  - class WP_REST_Edit_Site_Export_Controller
+  - function __construct
+  - function register_routes
+  - function permissions_check
+  - function export
+- `wp-includes/rest-api/endpoints/class-wp-rest-font-collections-controller.php`
+  - class WP_REST_Font_Collections_Controller
+  - function __construct
+  - function register_routes
+  - function get_items
+  - function get_item
+  - function prepare_item_for_response
+  - _...3 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-font-faces-controller.php`
+  - class WP_REST_Font_Faces_Controller
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_item_permissions_check
+  - function validate_create_font_face_settings
+  - function sanitize_font_face_settings
+  - _...10 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-font-families-controller.php`
+  - class WP_REST_Font_Families_Controller
+  - function get_items_permissions_check
+  - function get_item_permissions_check
+  - function validate_font_family_settings
+  - function sanitize_font_family_settings
+  - function create_item
+  - _...6 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-global-styles-controller.php`
+  - class WP_REST_Global_Styles_Controller
+  - function __construct
+  - function register_routes
+  - function _sanitize_global_styles_callback
+  - function get_item_permissions_check
+  - function check_read_permission
+  - _...8 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-global-styles-revisions-controller.php`
+  - class WP_REST_Global_Styles_Revisions_Controller
+  - function __construct
+  - function register_routes
+  - function get_items
+  - function prepare_item_for_response
+  - function get_item_schema
+  - _...1 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-menu-items-controller.php`
+  - class WP_REST_Menu_Items_Controller
+  - function get_items_permissions_check
+  - function get_item_permissions_check
+  - function create_item
+  - function update_item
+  - function delete_item
+  - _...3 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-menu-locations-controller.php`
+  - class WP_REST_Menu_Locations_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function get_item_permissions_check
+  - _...4 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-menus-controller.php`
+  - class WP_REST_Menus_Controller
+  - function get_items_permissions_check
+  - function get_item_permissions_check
+  - function prepare_item_for_response
+  - function prepare_item_for_database
+  - function create_item
+  - _...3 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-navigation-fallback-controller.php`
+  - class WP_REST_Navigation_Fallback_Controller
+  - function __construct
+  - function register_routes
+  - function get_item_permissions_check
+  - function get_item
+  - function get_item_schema
+  - _...1 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-pattern-directory-controller.php`
+  - class WP_REST_Pattern_Directory_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function prepare_item_for_response
+  - _...2 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-plugins-controller.php`
+  - class WP_REST_Plugins_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function get_item_permissions_check
+  - _...12 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-post-statuses-controller.php`
+  - class WP_REST_Post_Statuses_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function get_item_permissions_check
+  - _...4 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-post-types-controller.php`
+  - class WP_REST_Post_Types_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function get_item
+  - _...3 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php`
+  - class WP_REST_Posts_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function check_password_required
+  - function get_items
+  - _...18 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-revisions-controller.php`
+  - class WP_REST_Revisions_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function get_item_permissions_check
+  - _...6 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-search-controller.php`
+  - class WP_REST_Search_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permission_check
+  - function get_items
+  - function prepare_item_for_response
+  - _...3 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-settings-controller.php`
+  - class WP_REST_Settings_Controller
+  - function __construct
+  - function register_routes
+  - function get_item_permissions_check
+  - function get_item
+  - function update_item
+  - _...2 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-sidebars-controller.php`
+  - class WP_REST_Sidebars_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function get_item_permissions_check
+  - _...5 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-site-health-controller.php`
+  - class WP_REST_Site_Health_Controller
+  - function __construct
+  - function register_routes
+  - function test_background_updates
+  - function test_dotorg_communication
+  - function test_loopback_requests
+  - _...5 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-taxonomies-controller.php`
+  - class WP_REST_Taxonomies_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function get_item_permissions_check
+  - _...4 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-template-autosaves-controller.php`
+  - class WP_REST_Template_Autosaves_Controller
+  - function __construct
+  - function register_routes
+  - function prepare_item_for_response
+  - function get_item
+  - function get_item_schema
+- `wp-includes/rest-api/endpoints/class-wp-rest-template-revisions-controller.php`
+  - class WP_REST_Template_Revisions_Controller
+  - function __construct
+  - function register_routes
+  - function prepare_item_for_response
+  - function delete_item_permissions_check
+  - function get_item_schema
+- `wp-includes/rest-api/endpoints/class-wp-rest-templates-controller.php`
+  - class WP_REST_Templates_Controller
+  - function __construct
+  - function register_routes
+  - function get_template_fallback
+  - function _sanitize_template_id
+  - function get_items_permissions_check
+  - _...12 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-terms-controller.php`
+  - class WP_REST_Terms_Controller
+  - function __construct
+  - function register_routes
+  - function check_read_terms_permission_for_post
+  - function get_items_permissions_check
+  - function get_items
+  - _...12 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-themes-controller.php`
+  - class WP_REST_Themes_Controller
+  - function __construct
+  - function register_routes
+  - function _sanitize_stylesheet_callback
+  - function get_items_permissions_check
+  - function get_item_permissions_check
+  - _...6 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-url-details-controller.php`
+  - class WP_REST_URL_Details_Controller
+  - function __construct
+  - function register_routes
+  - function get_item_schema
+  - function parse_url_details
+  - function permissions_check
+- `wp-includes/rest-api/endpoints/class-wp-rest-users-controller.php`
+  - class WP_REST_Users_Controller
+  - function __construct
+  - function register_routes
+  - function check_reassign
+  - function get_items_permissions_check
+  - function get_items
+  - _...18 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-widget-types-controller.php`
+  - class WP_REST_Widget_Types_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function get_item_permissions_check
+  - _...7 more_
+- `wp-includes/rest-api/endpoints/class-wp-rest-widgets-controller.php`
+  - class WP_REST_Widgets_Controller
+  - function __construct
+  - function register_routes
+  - function get_items_permissions_check
+  - function get_items
+  - function get_item_permissions_check
+  - _...10 more_
+- `wp-includes/rest-api/fields/class-wp-rest-comment-meta-fields.php` — class WP_REST_Comment_Meta_Fields, function get_rest_field_type
+- `wp-includes/rest-api/fields/class-wp-rest-meta-fields.php`
+  - class WP_REST_Meta_Fields
+  - function register_field
+  - function get_value
+  - function update_value
+  - function get_field_schema
+  - function prepare_value
+  - _...1 more_
+- `wp-includes/rest-api/fields/class-wp-rest-post-meta-fields.php`
+  - class WP_REST_Post_Meta_Fields
+  - function __construct
+  - function get_rest_field_type
+- `wp-includes/rest-api/fields/class-wp-rest-term-meta-fields.php`
+  - class WP_REST_Term_Meta_Fields
+  - function __construct
+  - function get_rest_field_type
+- `wp-includes/rest-api/fields/class-wp-rest-user-meta-fields.php` — class WP_REST_User_Meta_Fields, function get_rest_field_type
+- `wp-includes/rest-api/search/class-wp-rest-post-format-search-handler.php`
+  - class WP_REST_Post_Format_Search_Handler
+  - function __construct
+  - function search_items
+  - function prepare_item
+  - function prepare_item_links
+- `wp-includes/rest-api/search/class-wp-rest-post-search-handler.php`
+  - class WP_REST_Post_Search_Handler
+  - function __construct
+  - function search_items
+  - function prepare_item
+  - function prepare_item_links
+  - function protected_title_format
+- `wp-includes/rest-api/search/class-wp-rest-search-handler.php`
+  - class WP_REST_Search_Handler
+  - function get_type
+  - function get_subtypes
+  - function search_items
+  - function prepare_item
+  - function prepare_item_links
+- `wp-includes/rest-api/search/class-wp-rest-term-search-handler.php`
+  - class WP_REST_Term_Search_Handler
+  - function __construct
+  - function search_items
+  - function prepare_item
+  - function prepare_item_links
+- `wp-includes/rss.php` — class MagpieRSS, class RSSCache
+- `wp-includes/script-loader.php`
+  - function insert_before
+  - function insert_after
+  - function remove
+- `wp-includes/sitemaps/class-wp-sitemaps-index.php`
+  - class WP_Sitemaps_Index
+  - function __construct
+  - function get_sitemap_list
+  - function get_index_url
+- `wp-includes/sitemaps/class-wp-sitemaps-provider.php`
+  - class WP_Sitemaps_Provider
+  - function get_url_list
+  - function get_max_num_pages
+  - function get_sitemap_type_data
+  - function get_sitemap_entries
+  - function get_sitemap_url
+  - _...1 more_
+- `wp-includes/sitemaps/class-wp-sitemaps-registry.php`
+  - class WP_Sitemaps_Registry
+  - function add_provider
+  - function get_provider
+  - function get_providers
+- `wp-includes/sitemaps/class-wp-sitemaps-renderer.php`
+  - class WP_Sitemaps_Renderer
+  - function __construct
+  - function get_sitemap_stylesheet_url
+  - function get_sitemap_index_stylesheet_url
+  - function render_index
+  - function get_sitemap_index_xml
+  - _...2 more_
+- `wp-includes/sitemaps/class-wp-sitemaps-stylesheet.php`
+  - class WP_Sitemaps_Stylesheet
+  - function render_stylesheet
+  - function get_sitemap_stylesheet
+  - function get_sitemap_index_stylesheet
+  - function get_stylesheet_css
+- `wp-includes/sitemaps/class-wp-sitemaps.php`
+  - class WP_Sitemaps
+  - function __construct
+  - function init
+  - function sitemaps_enabled
+  - function register_sitemaps
+  - function register_rewrites
+  - _...3 more_
+- `wp-includes/sitemaps/providers/class-wp-sitemaps-posts.php`
+  - class WP_Sitemaps_Posts
+  - function __construct
+  - function get_object_subtypes
+  - function get_url_list
+  - function get_max_num_pages
+- `wp-includes/sitemaps/providers/class-wp-sitemaps-taxonomies.php`
+  - class WP_Sitemaps_Taxonomies
+  - function __construct
+  - function get_object_subtypes
+  - function get_url_list
+  - function get_max_num_pages
+- `wp-includes/sitemaps/providers/class-wp-sitemaps-users.php`
+  - class WP_Sitemaps_Users
+  - function __construct
+  - function get_url_list
+  - function get_max_num_pages
+- `wp-includes/sodium_compat/namespaced/Compat.php` — class Compat
+- `wp-includes/sodium_compat/namespaced/Core/BLAKE2b.php` — class BLAKE2b
+- `wp-includes/sodium_compat/namespaced/Core/ChaCha20/Ctx.php` — class Ctx
+- `wp-includes/sodium_compat/namespaced/Core/ChaCha20/IetfCtx.php` — class IetfCtx
+- `wp-includes/sodium_compat/namespaced/Core/ChaCha20.php` — class ChaCha20
+- `wp-includes/sodium_compat/namespaced/Core/Curve25519/Fe.php` — class Fe
+- `wp-includes/sodium_compat/namespaced/Core/Curve25519/Ge/Cached.php` — class Cached
+- `wp-includes/sodium_compat/namespaced/Core/Curve25519/Ge/P1p1.php` — class P1p1
+- `wp-includes/sodium_compat/namespaced/Core/Curve25519/Ge/P2.php` — class P2
+- `wp-includes/sodium_compat/namespaced/Core/Curve25519/Ge/P3.php` — class P3
+- `wp-includes/sodium_compat/namespaced/Core/Curve25519/Ge/Precomp.php` — class Precomp
+- `wp-includes/sodium_compat/namespaced/Core/Curve25519/H.php` — class H
+- `wp-includes/sodium_compat/namespaced/Core/Curve25519.php` — class Curve25519
+- `wp-includes/sodium_compat/namespaced/Core/Ed25519.php` — class Ed25519
+- `wp-includes/sodium_compat/namespaced/Core/HChaCha20.php` — class HChaCha20
+- `wp-includes/sodium_compat/namespaced/Core/HSalsa20.php` — class HSalsa20
+- `wp-includes/sodium_compat/namespaced/Core/Poly1305/State.php` — class State
+- `wp-includes/sodium_compat/namespaced/Core/Poly1305.php` — class Poly1305
+- `wp-includes/sodium_compat/namespaced/Core/Salsa20.php` — class Salsa20
+- `wp-includes/sodium_compat/namespaced/Core/SipHash.php` — class SipHash
+- `wp-includes/sodium_compat/namespaced/Core/Util.php` — class Util
+- `wp-includes/sodium_compat/namespaced/Core/X25519.php` — class X25519
+- `wp-includes/sodium_compat/namespaced/Core/XChaCha20.php` — class XChaCha20
+- `wp-includes/sodium_compat/namespaced/Core/Xsalsa20.php` — class Xsalsa20
+- `wp-includes/sodium_compat/namespaced/Crypto.php` — class Crypto
+- `wp-includes/sodium_compat/namespaced/File.php` — class File
+- `wp-includes/sodium_compat/src/Compat.php`
+  - class ParagonIE_Sodium_Compat
+  - function add
+  - function base642bin
+  - function bin2base64
+  - function bin2hex
+  - function compare
+  - _...121 more_
+- `wp-includes/sodium_compat/src/Core/AEGIS/State128L.php`
+  - class ParagonIE_Sodium_Core_AEGIS_State128L
+  - function __construct
+  - function getState
+  - function initForUnitTests
+  - function init
+  - function absorb
+  - _...5 more_
+- `wp-includes/sodium_compat/src/Core/AEGIS/State256.php`
+  - class ParagonIE_Sodium_Core_AEGIS_State256
+  - function __construct
+  - function getState
+  - function initForUnitTests
+  - function init
+  - function absorb
+  - _...5 more_
+- `wp-includes/sodium_compat/src/Core/AEGIS128L.php`
+  - class ParagonIE_Sodium_Core_AEGIS128L
+  - function decrypt
+  - function encrypt
+  - function init
+- `wp-includes/sodium_compat/src/Core/AEGIS256.php`
+  - class ParagonIE_Sodium_Core_AEGIS256
+  - function decrypt
+  - function encrypt
+  - function init
+- `wp-includes/sodium_compat/src/Core/AES/Block.php`
+  - class ParagonIE_Sodium_Core_AES_Block
+  - function __construct
+  - function init
+  - function fromArray
+  - function offsetSet
+  - function offsetExists
+  - _...13 more_
+- `wp-includes/sodium_compat/src/Core/AES/Expanded.php` — class ParagonIE_Sodium_Core_AES_Expanded
+- `wp-includes/sodium_compat/src/Core/AES/KeySchedule.php`
+  - class ParagonIE_Sodium_Core_AES_KeySchedule
+  - function __construct
+  - function get
+  - function getNumRounds
+  - function getRoundKey
+  - function expand
+- `wp-includes/sodium_compat/src/Core/AES.php`
+  - class ParagonIE_Sodium_Core_AES
+  - function sbox
+  - function invSbox
+  - function subWord
+  - function keySchedule
+  - function addRoundKey
+  - _...6 more_
+- `wp-includes/sodium_compat/src/Core/BLAKE2b.php`
+  - class ParagonIE_Sodium_Core_BLAKE2b
+  - function new64
+  - function rotr64
+  - function pseudoConstructor
+  - function G
+  - function increment_counter
+  - _...7 more_
+- `wp-includes/sodium_compat/src/Core/Base64/Original.php`
+  - class ParagonIE_Sodium_Core_Base64_Original
+  - function encode
+  - function encodeUnpadded
+  - function decode
+  - function decodeNoPadding
+- `wp-includes/sodium_compat/src/Core/Base64/UrlSafe.php`
+  - class ParagonIE_Sodium_Core_Base64_UrlSafe
+  - function encode
+  - function encodeUnpadded
+  - function decode
+  - function decodeNoPadding
+- `wp-includes/sodium_compat/src/Core/ChaCha20/Ctx.php`
+  - class ParagonIE_Sodium_Core_ChaCha20_Ctx
+  - function __construct
+  - function offsetSet
+  - function offsetExists
+  - function offsetUnset
+  - function offsetGet
+  - _...1 more_
+- `wp-includes/sodium_compat/src/Core/ChaCha20/IetfCtx.php` — class ParagonIE_Sodium_Core_ChaCha20_IetfCtx, function __construct
+- `wp-includes/sodium_compat/src/Core/ChaCha20.php`
+  - class ParagonIE_Sodium_Core_ChaCha20
+  - function rotate
+  - function encryptBytes
+  - function stream
+  - function ietfStream
+  - function ietfStreamXorIc
+  - _...1 more_
+- `wp-includes/sodium_compat/src/Core/Curve25519/Fe.php`
+  - class ParagonIE_Sodium_Core_Curve25519_Fe
+  - function __construct
+  - function fromArray
+  - function offsetSet
+  - function offsetExists
+  - function offsetUnset
+  - _...2 more_
+- `wp-includes/sodium_compat/src/Core/Curve25519/Ge/Cached.php` — class ParagonIE_Sodium_Core_Curve25519_Ge_Cached, function __construct
+- `wp-includes/sodium_compat/src/Core/Curve25519/Ge/P1p1.php` — class ParagonIE_Sodium_Core_Curve25519_Ge_P1p1, function __construct
+- `wp-includes/sodium_compat/src/Core/Curve25519/Ge/P2.php` — class ParagonIE_Sodium_Core_Curve25519_Ge_P2, function __construct
+- `wp-includes/sodium_compat/src/Core/Curve25519/Ge/P3.php` — class ParagonIE_Sodium_Core_Curve25519_Ge_P3, function __construct
+- `wp-includes/sodium_compat/src/Core/Curve25519/Ge/Precomp.php` — class ParagonIE_Sodium_Core_Curve25519_Ge_Precomp, function __construct
+- `wp-includes/sodium_compat/src/Core/Curve25519/H.php` — class ParagonIE_Sodium_Core_Curve25519_H
+- `wp-includes/sodium_compat/src/Core/Curve25519.php`
+  - class ParagonIE_Sodium_Core_Curve25519
+  - function fe_0
+  - function fe_1
+  - function fe_add
+  - function fe_cmov
+  - function fe_copy
+  - _...46 more_
+- `wp-includes/sodium_compat/src/Core/Ed25519.php`
+  - class ParagonIE_Sodium_Core_Ed25519
+  - function keypair
+  - function seed_keypair
+  - function secretkey
+  - function publickey
+  - function publickey_from_secretkey
+  - _...14 more_
+- `wp-includes/sodium_compat/src/Core/HChaCha20.php` — class ParagonIE_Sodium_Core_HChaCha20, function hChaCha20
+- `wp-includes/sodium_compat/src/Core/HSalsa20.php` — class ParagonIE_Sodium_Core_HSalsa20, function hsalsa20
+- `wp-includes/sodium_compat/src/Core/Poly1305/State.php`
+  - class ParagonIE_Sodium_Core_Poly1305_State
+  - function __construct
+  - function __destruct
+  - function update
+  - function blocks
+  - function finish
+- `wp-includes/sodium_compat/src/Core/Poly1305.php`
+  - class ParagonIE_Sodium_Core_Poly1305
+  - function onetimeauth
+  - function onetimeauth_verify
+- `wp-includes/sodium_compat/src/Core/Ristretto255.php`
+  - class ParagonIE_Sodium_Core_Ristretto255
+  - function fe_cneg
+  - function fe_abs
+  - function fe_iszero
+  - function ristretto255_sqrt_ratio_m1
+  - function ristretto255_point_is_canonical
+  - _...20 more_
+- `wp-includes/sodium_compat/src/Core/Salsa20.php`
+  - class ParagonIE_Sodium_Core_Salsa20
+  - function core_salsa20
+  - function salsa20
+  - function salsa20_xor_ic
+  - function salsa20_xor
+  - function rotate
+- `wp-includes/sodium_compat/src/Core/SecretStream/State.php`
+  - class ParagonIE_Sodium_Core_SecretStream_State
+  - function __construct
+  - function counterReset
+  - function getKey
+  - function getCounter
+  - function getNonce
+  - _...7 more_
+- `wp-includes/sodium_compat/src/Core/SipHash.php`
+  - class ParagonIE_Sodium_Core_SipHash
+  - function sipRound
+  - function add
+  - function rotl_64
+  - function sipHash24
+- `wp-includes/sodium_compat/src/Core/Util.php`
+  - class ParagonIE_Sodium_Core_Util
+  - function abs
+  - function andStrings
+  - function bin2hex
+  - function bin2hexUpper
+  - function chrToInt
+  - _...22 more_
+- `wp-includes/sodium_compat/src/Core/X25519.php`
+  - class ParagonIE_Sodium_Core_X25519
+  - function fe_cswap
+  - function fe_mul121666
+  - function crypto_scalarmult_curve25519_ref10
+  - function edwards_to_montgomery
+  - function crypto_scalarmult_curve25519_ref10_base
+- `wp-includes/sodium_compat/src/Core/XChaCha20.php`
+  - class ParagonIE_Sodium_Core_XChaCha20
+  - function stream
+  - function ietfStream
+  - function streamXorIc
+  - function ietfStreamXorIc
+- `wp-includes/sodium_compat/src/Core/XSalsa20.php`
+  - class ParagonIE_Sodium_Core_XSalsa20
+  - function xsalsa20
+  - function xsalsa20_xor
+- `wp-includes/sodium_compat/src/Core32/BLAKE2b.php`
+  - class ParagonIE_Sodium_Core32_BLAKE2b
+  - function new64
+  - function add364
+  - function xor64
+  - function rotr64
+  - function load64
+  - _...11 more_
+- `wp-includes/sodium_compat/src/Core32/ChaCha20/Ctx.php`
+  - class ParagonIE_Sodium_Core32_ChaCha20_Ctx
+  - function __construct
+  - function offsetSet
+  - function offsetExists
+  - function offsetUnset
+  - function offsetGet
+- `wp-includes/sodium_compat/src/Core32/ChaCha20/IetfCtx.php` — class ParagonIE_Sodium_Core32_ChaCha20_IetfCtx, function __construct
+- `wp-includes/sodium_compat/src/Core32/ChaCha20.php`
+  - class ParagonIE_Sodium_Core32_ChaCha20
+  - function encryptBytes
+  - function stream
+  - function ietfStream
+  - function ietfStreamXorIc
+  - function streamXorIc
+- `wp-includes/sodium_compat/src/Core32/Curve25519/Fe.php`
+  - class ParagonIE_Sodium_Core32_Curve25519_Fe
+  - function fromArray
+  - function fromIntArray
+  - function offsetSet
+  - function offsetExists
+  - function offsetUnset
+  - _...2 more_
+- `wp-includes/sodium_compat/src/Core32/Curve25519/Ge/Cached.php` — class ParagonIE_Sodium_Core32_Curve25519_Ge_Cached, function __construct
+- `wp-includes/sodium_compat/src/Core32/Curve25519/Ge/P1p1.php` — class ParagonIE_Sodium_Core32_Curve25519_Ge_P1p1, function __construct
+- `wp-includes/sodium_compat/src/Core32/Curve25519/Ge/P2.php` — class ParagonIE_Sodium_Core32_Curve25519_Ge_P2, function __construct
+- `wp-includes/sodium_compat/src/Core32/Curve25519/Ge/P3.php` — class ParagonIE_Sodium_Core32_Curve25519_Ge_P3, function __construct
+- `wp-includes/sodium_compat/src/Core32/Curve25519/Ge/Precomp.php` — class ParagonIE_Sodium_Core32_Curve25519_Ge_Precomp, function __construct
+- `wp-includes/sodium_compat/src/Core32/Curve25519/H.php` — class ParagonIE_Sodium_Core32_Curve25519_H
+- `wp-includes/sodium_compat/src/Core32/Curve25519.php`
+  - class ParagonIE_Sodium_Core32_Curve25519
+  - function fe_0
+  - function fe_1
+  - function fe_add
+  - function fe_cmov
+  - function fe_copy
+  - _...37 more_
+- `wp-includes/sodium_compat/src/Core32/Ed25519.php`
+  - class ParagonIE_Sodium_Core32_Ed25519
+  - function keypair
+  - function seed_keypair
+  - function secretkey
+  - function publickey
+  - function publickey_from_secretkey
+  - _...8 more_
+- `wp-includes/sodium_compat/src/Core32/HChaCha20.php` — class ParagonIE_Sodium_Core32_HChaCha20, function hChaCha20
+- `wp-includes/sodium_compat/src/Core32/HSalsa20.php` — class ParagonIE_Sodium_Core32_HSalsa20, function hsalsa20
+- `wp-includes/sodium_compat/src/Core32/Int32.php`
+  - class ParagonIE_Sodium_Core32_Int32
+  - function __construct
+  - function addInt32
+  - function addInt
+  - function compareInt
+  - function mask
+  - _...26 more_
+- `wp-includes/sodium_compat/src/Core32/Int64.php`
+  - class ParagonIE_Sodium_Core32_Int64
+  - function __construct
+  - function addInt64
+  - function addInt
+  - function compareInt
+  - function isGreaterThan
+  - _...28 more_
+- `wp-includes/sodium_compat/src/Core32/Poly1305/State.php`
+  - class ParagonIE_Sodium_Core32_Poly1305_State
+  - function __construct
+  - function update
+  - function blocks
+  - function finish
+- `wp-includes/sodium_compat/src/Core32/Poly1305.php`
+  - class ParagonIE_Sodium_Core32_Poly1305
+  - function onetimeauth
+  - function onetimeauth_verify
+- `wp-includes/sodium_compat/src/Core32/Salsa20.php`
+  - class ParagonIE_Sodium_Core32_Salsa20
+  - function core_salsa20
+  - function salsa20
+  - function salsa20_xor_ic
+  - function salsa20_xor
+- `wp-includes/sodium_compat/src/Core32/SecretStream/State.php`
+  - class ParagonIE_Sodium_Core32_SecretStream_State
+  - function __construct
+  - function counterReset
+  - function getKey
+  - function getCounter
+  - function getNonce
+  - _...7 more_
+- `wp-includes/sodium_compat/src/Core32/SipHash.php`
+  - class ParagonIE_Sodium_Core32_SipHash
+  - function sipRound
+  - function sipHash24
+- `wp-includes/sodium_compat/src/Core32/Util.php` — class ParagonIE_Sodium_Core32_Util
+- `wp-includes/sodium_compat/src/Core32/X25519.php`
+  - class ParagonIE_Sodium_Core32_X25519
+  - function fe_cswap
+  - function fe_mul121666
+  - function crypto_scalarmult_curve25519_ref10
+  - function edwards_to_montgomery
+  - function crypto_scalarmult_curve25519_ref10_base
+- `wp-includes/sodium_compat/src/Core32/XChaCha20.php`
+  - class ParagonIE_Sodium_Core32_XChaCha20
+  - function stream
+  - function streamXorIc
+  - function ietfStreamXorIc
+- `wp-includes/sodium_compat/src/Core32/XSalsa20.php`
+  - class ParagonIE_Sodium_Core32_XSalsa20
+  - function xsalsa20
+  - function xsalsa20_xor
+- `wp-includes/sodium_compat/src/Crypto.php`
+  - class ParagonIE_Sodium_Crypto
+  - function aead_chacha20poly1305_decrypt
+  - function aead_chacha20poly1305_encrypt
+  - function aead_chacha20poly1305_ietf_decrypt
+  - function aead_chacha20poly1305_ietf_encrypt
+  - function aead_xchacha20poly1305_ietf_decrypt
+  - _...35 more_
+- `wp-includes/sodium_compat/src/Crypto32.php`
+  - class ParagonIE_Sodium_Crypto32
+  - function aead_chacha20poly1305_decrypt
+  - function aead_chacha20poly1305_encrypt
+  - function aead_chacha20poly1305_ietf_decrypt
+  - function aead_chacha20poly1305_ietf_encrypt
+  - function aead_xchacha20poly1305_ietf_decrypt
+  - _...35 more_
+- `wp-includes/sodium_compat/src/File.php`
+  - class ParagonIE_Sodium_File
+  - function box
+  - function box_open
+  - function box_seal
+  - function box_seal_open
+  - function generichash
+  - _...6 more_
+- `wp-includes/sodium_compat/src/PHP52/SplFixedArray.php`
+  - class SplFixedArray
+  - function __construct
+  - function count
+  - function toArray
+  - function fromArray
+  - function getSize
+  - _...14 more_
+- `wp-includes/sodium_compat/src/SodiumException.php` — class SodiumException
+- `wp-includes/style-engine/class-wp-style-engine-css-declarations.php`
+  - class WP_Style_Engine_CSS_Declarations
+  - function __construct
+  - function add_declaration
+  - function remove_declaration
+  - function add_declarations
+  - function remove_declarations
+  - _...2 more_
+- `wp-includes/style-engine/class-wp-style-engine-css-rule.php`
+  - class WP_Style_Engine_CSS_Rule
+  - function __construct
+  - function set_selector
+  - function add_declarations
+  - function set_rules_group
+  - function get_rules_group
+  - _...3 more_
+- `wp-includes/style-engine/class-wp-style-engine-css-rules-store.php`
+  - class WP_Style_Engine_CSS_Rules_Store
+  - function get_store
+  - function get_stores
+  - function remove_all_stores
+  - function set_name
+  - function get_name
+  - _...3 more_
+- `wp-includes/style-engine/class-wp-style-engine-processor.php`
+  - class WP_Style_Engine_Processor
+  - function add_store
+  - function add_rules
+  - function get_css
+- `wp-includes/style-engine/class-wp-style-engine.php`
+  - class WP_Style_Engine
+  - function store_css_rule
+  - function get_store
+  - function parse_block_styles
+  - function compile_css
+  - function compile_stylesheet_from_css_rules
+- `wp-includes/widgets/class-wp-nav-menu-widget.php`
+  - class WP_Nav_Menu_Widget
+  - function __construct
+  - function widget
+  - function update
+  - function form
+- `wp-includes/widgets/class-wp-widget-archives.php`
+  - class WP_Widget_Archives
+  - function __construct
+  - function widget
+  - function update
+  - function form
+- `wp-includes/widgets/class-wp-widget-block.php`
+  - class WP_Widget_Block
+  - function __construct
+  - function widget
+  - function update
+  - function form
+  - function set_is_wide_widget_in_customizer
+- `wp-includes/widgets/class-wp-widget-calendar.php`
+  - class WP_Widget_Calendar
+  - function __construct
+  - function widget
+  - function update
+  - function form
+- `wp-includes/widgets/class-wp-widget-categories.php`
+  - class WP_Widget_Categories
+  - function __construct
+  - function widget
+  - function update
+  - function form
+- `wp-includes/widgets/class-wp-widget-custom-html.php`
+  - class WP_Widget_Custom_HTML
+  - function __construct
+  - function _register_one
+  - function _filter_gallery_shortcode_attrs
+  - function widget
+  - function update
+  - _...4 more_
+- `wp-includes/widgets/class-wp-widget-links.php`
+  - class WP_Widget_Links
+  - function __construct
+  - function widget
+  - function update
+  - function form
+- `wp-includes/widgets/class-wp-widget-media-audio.php`
+  - class WP_Widget_Media_Audio
+  - function __construct
+  - function get_instance_schema
+  - function render_media
+  - function enqueue_preview_scripts
+  - function enqueue_admin_scripts
+  - _...1 more_
+- `wp-includes/widgets/class-wp-widget-media-gallery.php`
+  - class WP_Widget_Media_Gallery
+  - function __construct
+  - function get_instance_schema
+  - function render_media
+  - function enqueue_admin_scripts
+  - function render_control_template_scripts
+- `wp-includes/widgets/class-wp-widget-media-image.php`
+  - class WP_Widget_Media_Image
+  - function __construct
+  - function get_instance_schema
+  - function render_media
+  - function enqueue_admin_scripts
+  - function render_control_template_scripts
+- `wp-includes/widgets/class-wp-widget-media-video.php`
+  - class WP_Widget_Media_Video
+  - function __construct
+  - function get_instance_schema
+  - function render_media
+  - function inject_video_max_width_style
+  - function enqueue_preview_scripts
+  - _...2 more_
+- `wp-includes/widgets/class-wp-widget-media.php`
+  - class WP_Widget_Media
+  - function __construct
+  - function _register_one
+  - function get_instance_schema
+  - function is_attachment_with_mime_type
+  - function sanitize_token_list
+  - _...9 more_
+- `wp-includes/widgets/class-wp-widget-meta.php`
+  - class WP_Widget_Meta
+  - function __construct
+  - function widget
+  - function update
+  - function form
+- `wp-includes/widgets/class-wp-widget-pages.php`
+  - class WP_Widget_Pages
+  - function __construct
+  - function widget
+  - function update
+  - function form
+- `wp-includes/widgets/class-wp-widget-recent-comments.php`
+  - class WP_Widget_Recent_Comments
+  - function __construct
+  - function recent_comments_style
+  - function widget
+  - function update
+  - function form
+  - _...1 more_
+- `wp-includes/widgets/class-wp-widget-recent-posts.php`
+  - class WP_Widget_Recent_Posts
+  - function __construct
+  - function widget
+  - function update
+  - function form
+- `wp-includes/widgets/class-wp-widget-rss.php`
+  - class WP_Widget_RSS
+  - function __construct
+  - function widget
+  - function update
+  - function form
+- `wp-includes/widgets/class-wp-widget-search.php`
+  - class WP_Widget_Search
+  - function __construct
+  - function widget
+  - function form
+  - function update
+- `wp-includes/widgets/class-wp-widget-tag-cloud.php`
+  - class WP_Widget_Tag_Cloud
+  - function __construct
+  - function widget
+  - function update
+  - function form
+  - function _get_current_taxonomy
+- `wp-includes/widgets/class-wp-widget-text.php`
+  - class WP_Widget_Text
+  - function __construct
+  - function _register_one
+  - function is_legacy_instance
+  - function _filter_gallery_shortcode_attrs
+  - function widget
+  - _...6 more_

@@ -24,6 +24,13 @@ defined( 'ABSPATH' ) || exit;
 class Orders_Dashboard {
 
 	/**
+	 * Static cache for cancel rate memoization (ISS-012).
+	 *
+	 * @var array<string,int>
+	 */
+	private static array $cancel_rate_cache = [];
+
+	/**
 	 * Attach admin hooks.
 	 *
 	 * @since  1.0.0
@@ -43,22 +50,12 @@ class Orders_Dashboard {
 	 * @return void
 	 */
 	public function register_menu_pages(): void {
-		add_menu_page(
-			__( 'SwiftCart', 'swiftcart-cod' ),
-			__( 'SwiftCart', 'swiftcart-cod' ),
-			'manage_swiftcart',
-			'swiftcart',
-			array( $this, 'render_orders_page' ),
-			'dashicons-cart',
-			55
-		);
-
 		add_submenu_page(
-			'swiftcart',
+			'swiftcart-dashboard',
 			__( 'Orders', 'swiftcart-cod' ),
 			__( 'Orders', 'swiftcart-cod' ),
 			'manage_swiftcart',
-			'swiftcart',
+			'swiftcart-orders',
 			array( $this, 'render_orders_page' )
 		);
 	}
@@ -71,6 +68,15 @@ class Orders_Dashboard {
 	 * @return void
 	 */
 	public function enqueue_admin_assets( string $hook ): void {
+		// Global admin theme — loads on ALL wp-admin pages.
+		wp_enqueue_style(
+			'motoshop-admin-theme',
+			SWIFTCART_URL . 'assets/css/admin-theme.css',
+			array(),
+			(string) filemtime( SWIFTCART_DIR . 'assets/css/admin-theme.css' )
+		);
+
+		// SwiftCart-specific assets — only on plugin pages.
 		if ( ! str_contains( $hook, 'swiftcart' ) && ! str_contains( $hook, 'warehouse' ) ) {
 			return;
 		}
@@ -111,13 +117,24 @@ class Orders_Dashboard {
 			wp_die( esc_html__( 'Unauthorized.', 'swiftcart-cod' ) );
 		}
 
-		$kpis   = $this->get_kpis();
-		$orders = $this->get_orders();
+		// Verify nonce when filter params are present (ISS-021).
+		if ( isset( $_GET['sc_status'] ) || isset( $_GET['sc_search'] ) || isset( $_GET['sc_paged'] ) ) {
+			if ( ! isset( $_GET['_sc_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_GET['_sc_nonce'] ) ), 'sc_orders_filter' ) ) {
+				wp_die( esc_html__( 'Security check failed.', 'swiftcart-cod' ) );
+			}
+		}
+
+		$kpis      = $this->get_kpis();
+		$paged     = max( 1, absint( $_GET['sc_paged'] ?? 1 ) );
+		$per_page  = 50;
+		$orders    = $this->get_orders( $paged, $per_page );
+		$total     = $this->count_orders();
+		$max_pages = max( 1, (int) ceil( $total / $per_page ) );
 
 		?>
 		<div class="wrap sc-admin-wrap">
 			<h1 class="wp-heading-inline"><?php esc_html_e( 'SwiftCart Orders', 'swiftcart-cod' ); ?></h1>
-			<p style="color:#888;font-size:13px;margin-top:4px;"><?php echo esc_html( date( 'l, F j, Y', current_time( 'timestamp' ) ) ); ?></p>
+			<p class="sc-date-sub"><?php echo esc_html( wp_date( 'l, F j, Y' ) ); ?></p>
 
 			<!-- Widgets Row -->
 			<div class="sc-widgets-row">
@@ -166,7 +183,7 @@ class Orders_Dashboard {
 			<table class="wp-list-table widefat fixed striped sc-orders-table">
 				<thead>
 					<tr>
-						<th style="width:32px;"><input type="checkbox" id="sc-select-all"></th>
+						<th class="sc-checkbox-col"><input type="checkbox" id="sc-select-all"></th>
 						<th><?php esc_html_e( 'Order', 'swiftcart-cod' ); ?></th>
 						<th><?php esc_html_e( 'Customer', 'swiftcart-cod' ); ?></th>
 						<th><?php esc_html_e( 'Mobile', 'swiftcart-cod' ); ?></th>
@@ -182,10 +199,24 @@ class Orders_Dashboard {
 					<?php $this->render_order_row( $order ); ?>
 				<?php endforeach; ?>
 				<?php if ( empty( $orders ) ) : ?>
-					<tr><td colspan="9" style="text-align:center;padding:24px;color:#666;"><?php esc_html_e( 'No orders found.', 'swiftcart-cod' ); ?></td></tr>
+					<tr class="sc-empty-row"><td colspan="9"><?php esc_html_e( 'No orders found.', 'swiftcart-cod' ); ?></td></tr>
 				<?php endif; ?>
 				</tbody>
 			</table>
+
+			<?php if ( $max_pages > 1 ) : ?>
+			<div class="sc-pagination" style="display:flex;gap:8px;align-items:center;margin-top:16px;">
+				<?php if ( $paged > 1 ) : ?>
+				<a href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'sc_paged', $paged - 1 ), 'sc_orders_filter', '_sc_nonce' ) ); ?>" class="button"><?php esc_html_e( '← Previous', 'swiftcart-cod' ); ?></a>
+				<?php endif; ?>
+				<span class="sc-date-sub">
+					<?php printf( esc_html__( 'Page %1$d of %2$d', 'swiftcart-cod' ), $paged, $max_pages ); ?>
+				</span>
+				<?php if ( $paged < $max_pages ) : ?>
+				<a href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'sc_paged', $paged + 1 ), 'sc_orders_filter', '_sc_nonce' ) ); ?>" class="button"><?php esc_html_e( 'Next →', 'swiftcart-cod' ); ?></a>
+				<?php endif; ?>
+			</div>
+			<?php endif; ?>
 		</div>
 		<?php
 	}
@@ -211,7 +242,7 @@ class Orders_Dashboard {
 			'sc-returned' => __( 'Returned', 'swiftcart-cod' ),
 		);
 
-		echo '<div class="sc-filters" style="display:flex;gap:10px;align-items:center;margin-bottom:16px;flex-wrap:wrap;">';
+		echo '<div class="sc-filters">';
 
 		echo '<select name="sc_status" onchange="this.form.submit()">';
 		foreach ( $statuses as $val => $label ) {
@@ -226,6 +257,7 @@ class Orders_Dashboard {
 
 		echo '<input type="text" name="sc_search" placeholder="' . esc_attr__( 'Order ID or phone…', 'swiftcart-cod' ) . '" value="' . esc_attr( $search ) . '">';
 		echo '<button type="submit" class="button">' . esc_html__( 'Filter', 'swiftcart-cod' ) . '</button>';
+		wp_nonce_field( 'sc_orders_filter', '_sc_nonce' );
 		echo '</div>';
 	}
 
@@ -241,10 +273,10 @@ class Orders_Dashboard {
 		$customer    = trim( $order->get_billing_first_name() . ' ' . $order->get_billing_last_name() );
 		$phone       = $order->get_billing_phone();
 		$city        = $order->get_billing_city();
-		$barangay    = get_post_meta( $order_id, '_billing_barangay', true );
+		$barangay    = $order->get_meta( '_billing_barangay' );
 		$total       = $order->get_total();
 		$status      = $order->get_status();
-		$is_flagged  = (bool) get_post_meta( $order_id, '_sc_blacklist_flag', true );
+		$is_flagged  = (bool) $order->get_meta( '_sc_blacklist_flag' );
 		$cancel_rate = $this->get_customer_cancel_rate( $phone );
 
 		$status_labels = array(
@@ -271,27 +303,27 @@ class Orders_Dashboard {
 			$risk_label = __( 'Normal', 'swiftcart-cod' );
 		}
 
-		$row_style = $is_flagged ? ' style="background:#FFEBEE;"' : '';
+		$row_class = $is_flagged ? ' class="sc-row--flagged"' : '';
 
-		echo '<tr' . $row_style . '>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<tr' . $row_class . '>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo '<td><input type="checkbox" name="sc_order_ids[]" value="' . esc_attr( $order_id ) . '"></td>';
 
 		echo '<td><a href="' . esc_url( get_edit_post_link( $order_id ) ) . '"><strong>#SC-' . esc_html( $order_id ) . '</strong></a><br>'
-			. '<span style="font-size:11px;color:#888;">' . esc_html( $order->get_date_created()?->date( 'M d, Y H:i' ) ?? '' ) . '</span></td>';
+			. '<span class="sc-order-date">' . esc_html( $order->get_date_created()?->date( 'M d, Y H:i' ) ?? '' ) . '</span></td>';
 
 		echo '<td>' . esc_html( $customer );
 		if ( $is_flagged ) {
-			echo ' <span title="' . esc_attr__( 'Blacklisted', 'swiftcart-cod' ) . '" style="color:#D32F2F;">🚫</span>';
+			echo ' <span title="' . esc_attr__( 'Blacklisted', 'swiftcart-cod' ) . '" class="sc-blacklist-icon">🚫</span>';
 		}
 		echo '</td>';
 
 		echo '<td><a href="tel:' . esc_attr( $phone ) . '">' . esc_html( $phone ) . '</a></td>';
-		echo '<td>' . esc_html( $city ) . ( $barangay ? '<br><span style="font-size:11px;color:#888;">' . esc_html( $barangay ) . '</span>' : '' ) . '</td>';
+		echo '<td>' . esc_html( $city ) . ( $barangay ? '<br><span class="sc-barangay-sub">' . esc_html( $barangay ) . '</span>' : '' ) . '</td>';
 		echo '<td><strong>₱' . esc_html( number_format( (float) $total, 2 ) ) . '</strong></td>';
 		echo '<td><span class="sc-status sc-status--' . esc_attr( $status_class ) . '">' . esc_html( ucfirst( str_replace( '-', ' ', $status_class ) ) ) . '</span></td>';
 		echo '<td><span class="sc-risk-badge sc-risk-badge--' . esc_attr( $risk_class ) . '">' . esc_html( $risk_label ) . '</span>';
 		if ( $cancel_rate > 0 ) {
-			echo '<br><span style="font-size:10px;color:#888;">' . esc_html( sprintf( '%d%% cancel rate', $cancel_rate ) ) . '</span>';
+			echo '<br><span class="sc-cancel-rate">' . esc_html( sprintf( '%d%% cancel rate', $cancel_rate ) ) . '</span>';
 		}
 		echo '</td>';
 
@@ -307,7 +339,7 @@ class Orders_Dashboard {
 		if ( ! in_array( $status, array( 'completed', 'cancelled', 'sc-returned' ), true ) ) {
 			echo '<button class="button sc-action-btn" data-order="' . esc_attr( $order_id ) . '" data-action="cancelled" '
 				. 'onclick="return confirm(\'' . esc_js( __( 'Cancel this order?', 'swiftcart-cod' ) ) . '\')" '
-				. 'style="color:#D32F2F;">' . esc_html__( 'Cancel', 'swiftcart-cod' ) . '</button>';
+				. 'class="button sc-action-btn sc-cancel-btn">' . esc_html__( 'Cancel', 'swiftcart-cod' ) . '</button>';
 		}
 		echo '</td>';
 
@@ -354,9 +386,15 @@ class Orders_Dashboard {
 		}
 
 		$order_id = absint( $_POST['order_id'] ?? 0 );
-		$flagged  = (bool) get_post_meta( $order_id, '_sc_blacklist_flag', true );
+		$order    = wc_get_order( $order_id );
+		if ( ! $order instanceof \WC_Order ) {
+			wp_send_json_error( array( 'message' => __( 'Order not found.', 'swiftcart-cod' ) ), 404 );
+		}
 
-		update_post_meta( $order_id, '_sc_blacklist_flag', ! $flagged );
+		$flagged  = (bool) $order->get_meta( '_sc_blacklist_flag' );
+
+		$order->update_meta_data( '_sc_blacklist_flag', ! $flagged );
+		$order->save_meta_data();
 
 		wp_send_json_success( array( 'flagged' => ! $flagged ) );
 	}
@@ -368,44 +406,43 @@ class Orders_Dashboard {
 	 * @return array<string,int|float>
 	 */
 	private function get_kpis(): array {
-		$today_start = date( 'Y-m-d 00:00:00' ); // phpcs:ignore WordPress.DateTime.RestrictedFunctions.date_date
+		$today_start = wp_date( 'Y-m-d 00:00:00' );
 
-		$today_ids = wc_get_orders( array(
+		// Today's orders — load as objects to iterate (limited to today).
+		$today_orders = wc_get_orders( array(
 			'date_created' => '>=' . strtotime( $today_start ),
 			'limit'        => -1,
-			'return'       => 'ids',
+			'return'       => 'objects',
 		) );
 
-		$cod_expected  = 0.0;
-		$return_req    = 0;
+		$today_total   = 0;
+		$cod_expected   = 0.0;
+		$return_req     = 0;
 
-		foreach ( $today_ids as $id ) {
-			$o = wc_get_order( $id );
+		foreach ( $today_orders as $o ) {
 			if ( ! $o instanceof \WC_Order ) {
 				continue;
 			}
 
+			$today_total++;
 			$s = $o->get_status();
 
-			// COD expected = pending + out for delivery orders total.
 			if ( in_array( $s, array( 'pending', 'processing', 'sc-packed', 'sc-dispatch' ), true ) ) {
 				$cod_expected += (float) $o->get_total();
 			}
 
-			// Return requests = returned + cancelled today.
 			if ( in_array( $s, array( 'cancelled', 'sc-returned' ), true ) ) {
 				$return_req++;
 			}
 		}
 
-		// All-time delivery stats.
-		$all_ids = wc_get_orders( array( 'limit' => -1, 'return' => 'ids' ) );
+		// All-time stats — count queries only, no object loading (ISS-013).
 		$delivered_total = count( wc_get_orders( array( 'status' => 'completed', 'limit' => -1, 'return' => 'ids' ) ) );
-		$all_time_total  = count( $all_ids );
+		$all_time_total  = count( wc_get_orders( array( 'limit' => -1, 'return' => 'ids' ) ) );
 		$delivery_rate   = $all_time_total > 0 ? round( ( $delivered_total / $all_time_total ) * 100 ) : 0;
 
 		return array(
-			'today_total'     => count( $today_ids ),
+			'today_total'     => $today_total,
 			'cod_expected'    => $cod_expected,
 			'delivery_rate'   => $delivery_rate,
 			'delivered_total' => $delivered_total,
@@ -418,14 +455,17 @@ class Orders_Dashboard {
 	 * Fetch filtered orders for the table.
 	 *
 	 * @since  1.0.0
+	 * @param  int $paged    Current page number.
+	 * @param  int $per_page Orders per page.
 	 * @return \WC_Order[]
 	 */
-	private function get_orders(): array {
+	private function get_orders( int $paged = 1, int $per_page = 50 ): array {
 		$args = array(
-			'limit'  => 50,
-			'return' => 'objects',
+			'limit'   => $per_page,
+			'paged'   => $paged,
+			'return'  => 'objects',
 			'orderby' => 'date',
-			'order'  => 'DESC',
+			'order'   => 'DESC',
 		);
 
 		$status_filter = sanitize_text_field( wp_unslash( $_GET['sc_status'] ?? '' ) );
@@ -451,6 +491,35 @@ class Orders_Dashboard {
 	}
 
 	/**
+	 * Count total orders for current filters (pagination support).
+	 *
+	 * @since  1.5.0
+	 * @return int
+	 */
+	private function count_orders(): int {
+		$args = array(
+			'limit'  => -1,
+			'return' => 'ids',
+		);
+
+		$status_filter = sanitize_text_field( wp_unslash( $_GET['sc_status'] ?? '' ) );
+		if ( '' !== $status_filter ) {
+			$args['status'] = $status_filter;
+		}
+
+		$search = sanitize_text_field( wp_unslash( $_GET['sc_search'] ?? '' ) );
+		if ( '' !== $search ) {
+			if ( is_numeric( $search ) ) {
+				$args['post__in'] = array( (int) $search );
+			} else {
+				$args['billing_phone'] = $search;
+			}
+		}
+
+		return count( wc_get_orders( $args ) );
+	}
+
+	/**
 	 * Calculate a customer's cancellation rate by phone number.
 	 *
 	 * @since  1.0.0
@@ -462,6 +531,11 @@ class Orders_Dashboard {
 			return 0;
 		}
 
+		// ISS-012: Memoize per-request to avoid N+1 queries.
+		if ( isset( self::$cancel_rate_cache[ $phone ] ) ) {
+			return self::$cancel_rate_cache[ $phone ];
+		}
+
 		$all = wc_get_orders( array(
 			'billing_phone' => $phone,
 			'limit'         => -1,
@@ -469,6 +543,7 @@ class Orders_Dashboard {
 		) );
 
 		if ( empty( $all ) ) {
+			self::$cancel_rate_cache[ $phone ] = 0;
 			return 0;
 		}
 
@@ -479,6 +554,9 @@ class Orders_Dashboard {
 			'return'        => 'ids',
 		) );
 
-		return (int) round( ( count( $cancelled ) / count( $all ) ) * 100 );
+		$rate = (int) round( ( count( $cancelled ) / count( $all ) ) * 100 );
+		self::$cancel_rate_cache[ $phone ] = $rate;
+
+		return $rate;
 	}
 }

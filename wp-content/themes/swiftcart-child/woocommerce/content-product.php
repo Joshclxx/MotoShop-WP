@@ -46,7 +46,7 @@ $buy_now_url = add_query_arg( array( 'add-to-cart' => $product_id, 'buy-now' => 
 		<?php echo $image; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 
 		<?php if ( $is_on_sale ) : ?>
-			<span class="sc-product-card__badge" style="background:#D32F2F;color:#fff;">
+			<span class="sc-product-card__badge sc-product-card__badge--sale">
 				<?php esc_html_e( 'Sale', 'swiftcart-cod' ); ?>
 			</span>
 		<?php endif; ?>
@@ -71,7 +71,7 @@ $buy_now_url = add_query_arg( array( 'add-to-cart' => $product_id, 'buy-now' => 
 		</div>
 
 		<!-- COD Badge -->
-		<span class="sc-cod-badge" style="font-size:11px;padding:3px 8px;">COD</span>
+		<span class="sc-cod-badge sc-cod-badge--sm">COD</span>
 
 		<!-- Dual CTA Buttons -->
 		<?php if ( $is_in_stock ) : ?>
@@ -94,8 +94,8 @@ $buy_now_url = add_query_arg( array( 'add-to-cart' => $product_id, 'buy-now' => 
 			<?php endif; ?>
 		</div>
 		<?php else : ?>
-		<div class="sc-product-card__actions" style="grid-template-columns:1fr;">
-			<a href="<?php echo esc_url( $permalink ); ?>" class="sc-btn--add-to-cart" style="grid-column:1/-1;">
+		<div class="sc-product-card__actions sc-product-card__actions--single">
+			<a href="<?php echo esc_url( $permalink ); ?>" class="sc-btn--add-to-cart">
 				<?php esc_html_e( 'View Product', 'swiftcart-cod' ); ?>
 			</a>
 		</div>

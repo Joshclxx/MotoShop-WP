@@ -1,0 +1,668 @@
+/**
+ * MoTo Shop — Custom Admin Panel Stylesheet
+ *
+ * Standalone UI for /motoshop-admin/ — no WordPress admin chrome.
+ *
+ * @package SwiftCart
+ * @since   1.1.0
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 1. Reset & Tokens
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+	--ms-green-900: #0d2912;
+	--ms-green-800: #14341a;
+	--ms-green-700: #1b5e20;
+	--ms-green-600: #2E7D32;
+	--ms-green-500: #4CAF50;
+	--ms-green-100: #e8f5e9;
+	--ms-green-50:  #f1f8e9;
+
+	--ms-orange-600: #E64A19;
+	--ms-orange-500: #FF5722;
+	--ms-orange-100: #FFF3E0;
+
+	--ms-red-600: #D32F2F;
+	--ms-amber-600: #F57F17;
+	--ms-blue-600: #1565C0;
+
+	--ms-surface: #f5f6f8;
+	--ms-bg: #eef0f2;
+	--ms-text: #111;
+	--ms-text-muted: #666;
+	--ms-text-dim: #999;
+	--ms-border: #e0e0e0;
+	--ms-radius: 10px;
+	--ms-radius-sm: 6px;
+	--ms-shadow: 0 1px 4px rgba(0,0,0,0.06);
+	--ms-shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+
+	--ms-sidebar-w: 240px;
+	--ms-topbar-h: 60px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+	font-family: 'Inter', system-ui, -apple-system, sans-serif;
+	background: var(--ms-bg);
+	color: var(--ms-text);
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--ms-green-700); text-decoration: none; }
+a:hover { color: var(--ms-orange-500); }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 2. Layout Shell
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.ms-app {
+	display: flex;
+	min-height: 100vh;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 3. Sidebar
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.ms-sidebar {
+	width: var(--ms-sidebar-w);
+	background: var(--ms-green-800);
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 100;
+	overflow-y: auto;
+}
+
+.ms-sidebar__brand {
+	padding: 20px 20px 16px;
+	border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.ms-sidebar__logo {
+	font-size: 20px;
+	font-weight: 900;
+	color: #fff;
+	letter-spacing: -0.5px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.ms-sidebar__logo span { font-size: 22px; }
+
+.ms-sidebar__tagline {
+	font-size: 11px;
+	color: rgba(255,255,255,0.45);
+	margin-top: 2px;
+	font-weight: 500;
+}
+
+.ms-sidebar__nav {
+	padding: 12px 0;
+	flex: 1;
+}
+
+.ms-sidebar__link {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 10px 20px;
+	color: rgba(255,255,255,0.65);
+	font-size: 14px;
+	font-weight: 500;
+	transition: all 0.15s ease;
+	border-left: 3px solid transparent;
+}
+
+.ms-sidebar__link:hover {
+	color: #fff;
+	background: rgba(255,255,255,0.06);
+}
+
+.ms-sidebar__link.active {
+	color: #fff;
+	background: rgba(255,255,255,0.1);
+	border-left-color: var(--ms-orange-500);
+	font-weight: 700;
+}
+
+.ms-sidebar__link-icon { font-size: 18px; width: 24px; text-align: center; }
+
+.ms-sidebar__divider {
+	border: none;
+	border-top: 1px solid rgba(255,255,255,0.08);
+	margin: 8px 20px;
+}
+
+.ms-sidebar__footer {
+	padding: 16px 20px;
+	border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.ms-sidebar__user {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.ms-sidebar__avatar {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: var(--ms-green-600);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 800;
+	font-size: 14px;
+	color: #fff;
+	flex-shrink: 0;
+}
+
+.ms-sidebar__user-info {
+	flex: 1;
+	min-width: 0;
+}
+
+.ms-sidebar__username {
+	font-size: 13px;
+	font-weight: 700;
+	color: #fff;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.ms-sidebar__role {
+	font-size: 11px;
+	color: rgba(255,255,255,0.45);
+}
+
+.ms-sidebar__logout {
+	display: block;
+	text-align: center;
+	margin-top: 12px;
+	color: rgba(255,255,255,0.4) !important;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.ms-sidebar__logout:hover {
+	color: #ff6b6b !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 4. Main Content Area
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.ms-main {
+	flex: 1;
+	margin-left: var(--ms-sidebar-w);
+	padding: 28px 32px;
+	min-height: 100vh;
+}
+
+/* ── Page Header ── */
+.ms-page-header {
+	margin-bottom: 24px;
+}
+
+.ms-page-header__title {
+	font-size: 26px;
+	font-weight: 800;
+	color: var(--ms-text);
+	letter-spacing: -0.3px;
+}
+
+.ms-page-header__sub {
+	font-size: 14px;
+	color: var(--ms-text-muted);
+	margin-top: 4px;
+}
+
+/* ── Dashboard Header Banner ── */
+.ms-hero {
+	background: linear-gradient(135deg, var(--ms-green-700), var(--ms-green-600) 60%, var(--ms-green-500));
+	color: #fff;
+	padding: 28px 32px;
+	border-radius: var(--ms-radius);
+	margin-bottom: 24px;
+	box-shadow: 0 4px 20px rgba(27,94,32,0.25);
+}
+
+.ms-hero__title {
+	font-size: 26px;
+	font-weight: 900;
+	margin-bottom: 4px;
+	letter-spacing: -0.3px;
+}
+
+.ms-hero__sub {
+	font-size: 14px;
+	color: rgba(255,255,255,0.8);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 5. KPI Widgets
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.ms-kpi-row {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+.ms-kpi {
+	background: #fff;
+	border: 1px solid var(--ms-border);
+	border-radius: var(--ms-radius);
+	padding: 20px;
+	box-shadow: var(--ms-shadow);
+	border-top: 3px solid var(--ms-border);
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ms-kpi:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--ms-shadow-md);
+}
+
+.ms-kpi--orange { border-top-color: var(--ms-orange-500); }
+.ms-kpi--green  { border-top-color: var(--ms-green-600); }
+.ms-kpi--amber  { border-top-color: var(--ms-amber-600); }
+.ms-kpi--red    { border-top-color: var(--ms-red-600); }
+
+.ms-kpi__icon { font-size: 24px; margin-bottom: 8px; }
+.ms-kpi__value {
+	font-size: 28px;
+	font-weight: 900;
+	line-height: 1.1;
+	margin-bottom: 4px;
+}
+
+.ms-kpi--orange .ms-kpi__value { color: var(--ms-orange-600); }
+.ms-kpi--green  .ms-kpi__value { color: var(--ms-green-700); }
+.ms-kpi--amber  .ms-kpi__value { color: var(--ms-amber-600); }
+.ms-kpi--red    .ms-kpi__value { color: var(--ms-red-600); }
+
+.ms-kpi__label { font-size: 12px; font-weight: 600; color: var(--ms-text-muted); text-transform: uppercase; letter-spacing: 0.3px; }
+.ms-kpi__sub   { font-size: 11px; color: var(--ms-text-dim); margin-top: 2px; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 6. Cards & Sections
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.ms-card {
+	background: #fff;
+	border: 1px solid var(--ms-border);
+	border-radius: var(--ms-radius);
+	padding: 20px 24px;
+	margin-bottom: 20px;
+	box-shadow: var(--ms-shadow);
+}
+
+.ms-card__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 16px;
+	padding-bottom: 12px;
+	border-bottom: 2px solid var(--ms-surface);
+}
+
+.ms-card__title {
+	font-size: 16px;
+	font-weight: 700;
+	color: var(--ms-text);
+}
+
+.ms-card__action {
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--ms-orange-500);
+}
+
+/* ── Two-column grid ── */
+.ms-grid-2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+@media (max-width: 960px) {
+	.ms-grid-2 { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 7. Quick Actions
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.ms-actions-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	gap: 12px;
+}
+
+.ms-action {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 20px 12px;
+	background: var(--ms-surface);
+	border: 2px solid var(--ms-border);
+	border-radius: var(--ms-radius);
+	color: var(--ms-text);
+	font-weight: 600;
+	font-size: 13px;
+	transition: all 0.2s ease;
+	cursor: pointer;
+}
+
+.ms-action:hover {
+	border-color: var(--ms-orange-500);
+	background: var(--ms-orange-100);
+	color: var(--ms-orange-600);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(255,87,34,0.15);
+}
+
+.ms-action__icon { font-size: 28px; line-height: 1; }
+.ms-action__label { text-align: center; line-height: 1.3; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 8. Tables
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.ms-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.ms-table thead th {
+	background: var(--ms-surface);
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: var(--ms-text-muted);
+	padding: 10px 12px;
+	text-align: left;
+	border-bottom: 2px solid var(--ms-border);
+}
+
+.ms-table tbody td {
+	padding: 12px;
+	font-size: 13px;
+	vertical-align: middle;
+	border-bottom: 1px solid var(--ms-surface);
+}
+
+.ms-table tbody tr:hover td {
+	background: var(--ms-green-50);
+}
+
+.ms-table--empty td {
+	text-align: center;
+	padding: 32px;
+	color: var(--ms-text-dim);
+	font-size: 14px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 9. Status Badges
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.ms-badge {
+	display: inline-flex;
+	padding: 3px 10px;
+	border-radius: 999px;
+	font-size: 11px;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.ms-badge--pending    { background: #FFCCBC; color: #E64A19; }
+.ms-badge--confirmed  { background: #C8E6C9; color: #2E7D32; }
+.ms-badge--packed     { background: #C4CC82; color: #33691E; }
+.ms-badge--dispatched { background: #B3E5FC; color: #01579B; }
+.ms-badge--delivered  { background: #2E7D32; color: #fff; }
+.ms-badge--cancelled  { background: #FFEBEE; color: #C62828; }
+.ms-badge--returned   { background: #F5F5F5; color: #E64A19; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 10. Stock Indicators
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.ms-stock--ok   { color: var(--ms-green-600); font-weight: 700; }
+.ms-stock--low  { color: var(--ms-amber-600); font-weight: 800; }
+.ms-stock--out  { color: var(--ms-red-600); font-weight: 800; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 11. Buttons
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.ms-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	padding: 8px 16px;
+	border: none;
+	border-radius: var(--ms-radius-sm);
+	font-size: 13px;
+	font-weight: 600;
+	font-family: inherit;
+	cursor: pointer;
+	transition: all 0.15s ease;
+	text-decoration: none;
+}
+
+.ms-btn--primary {
+	background: var(--ms-green-700);
+	color: #fff;
+}
+
+.ms-btn--primary:hover {
+	background: var(--ms-green-600);
+	color: #fff;
+}
+
+.ms-btn--secondary {
+	background: var(--ms-surface);
+	color: var(--ms-text);
+	border: 1px solid var(--ms-border);
+}
+
+.ms-btn--secondary:hover {
+	border-color: var(--ms-green-600);
+	background: var(--ms-green-100);
+}
+
+.ms-btn--sm {
+	padding: 4px 10px;
+	font-size: 12px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 12. Filters Bar
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.ms-filters {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 16px;
+}
+
+.ms-filters select,
+.ms-filters input[type="text"] {
+	height: 36px;
+	padding: 0 12px;
+	border: 1px solid var(--ms-border);
+	border-radius: var(--ms-radius-sm);
+	font-size: 13px;
+	font-family: inherit;
+	background: #fff;
+}
+
+.ms-filters select:focus,
+.ms-filters input[type="text"]:focus {
+	outline: none;
+	border-color: var(--ms-green-600);
+	box-shadow: 0 0 0 2px rgba(46,125,50,0.15);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 13. Report Tabs
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.ms-tabs {
+	display: flex;
+	gap: 6px;
+	margin-bottom: 20px;
+	flex-wrap: wrap;
+}
+
+.ms-tab {
+	padding: 7px 16px;
+	border-radius: var(--ms-radius-sm);
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--ms-text-muted);
+	background: #fff;
+	border: 1px solid var(--ms-border);
+	cursor: pointer;
+	transition: all 0.15s ease;
+	text-decoration: none;
+}
+
+.ms-tab:hover {
+	border-color: var(--ms-green-600);
+	color: var(--ms-green-700);
+}
+
+.ms-tab.active {
+	background: var(--ms-green-700);
+	color: #fff;
+	border-color: var(--ms-green-700);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 14. Product Grid
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.ms-product-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	gap: 16px;
+}
+
+.ms-product-card {
+	background: #fff;
+	border: 1px solid var(--ms-border);
+	border-radius: var(--ms-radius);
+	overflow: hidden;
+	box-shadow: var(--ms-shadow);
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ms-product-card:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--ms-shadow-md);
+}
+
+.ms-product-card__img {
+	width: 100%;
+	height: 160px;
+	object-fit: cover;
+	background: var(--ms-surface);
+	display: block;
+}
+
+.ms-product-card__body {
+	padding: 14px 16px;
+}
+
+.ms-product-card__name {
+	font-size: 14px;
+	font-weight: 700;
+	color: var(--ms-text);
+	margin-bottom: 4px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.ms-product-card__price {
+	font-size: 16px;
+	font-weight: 800;
+	color: var(--ms-orange-600);
+}
+
+.ms-product-card__meta {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 8px;
+	padding-top: 8px;
+	border-top: 1px solid var(--ms-surface);
+}
+
+.ms-product-card__stock {
+	font-size: 12px;
+	font-weight: 700;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 15. Rate Indicators (cancel rate)
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+.ms-rate--ok   { color: var(--ms-green-600); }
+.ms-rate--warn { color: var(--ms-orange-600); }
+.ms-rate--bad  { color: var(--ms-red-600); }
+
+.ms-bl--yes { color: var(--ms-red-600); font-weight: 700; }
+.ms-bl--no  { color: var(--ms-text-dim); }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * 16. Responsive
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+	.ms-sidebar {
+		width: 100%;
+		position: relative;
+		flex-direction: row;
+		overflow-x: auto;
+		padding: 0;
+	}
+
+	.ms-sidebar__brand { display: none; }
+	.ms-sidebar__footer { display: none; }
+	.ms-sidebar__nav { display: flex; padding: 0; }
+	.ms-sidebar__link { padding: 12px 16px; border-left: none; border-bottom: 3px solid transparent; white-space: nowrap; }
+	.ms-sidebar__link.active { border-left-color: transparent; border-bottom-color: var(--ms-orange-500); }
+	.ms-sidebar__divider { display: none; }
+
+	.ms-app { flex-direction: column; }
+	.ms-main { margin-left: 0; padding: 16px; }
+	.ms-kpi-row { grid-template-columns: repeat(2, 1fr); }
+	.ms-product-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+}

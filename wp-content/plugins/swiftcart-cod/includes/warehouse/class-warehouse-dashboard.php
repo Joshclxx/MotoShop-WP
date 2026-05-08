@@ -280,7 +280,7 @@ class Warehouse_Dashboard {
 			$is_packed = $row['is_packed'];
 			$order_id  = $order->get_id();
 			$city      = $order->get_billing_city();
-			$barangay  = get_post_meta( $order_id, '_billing_barangay', true );
+			$barangay  = $order->get_meta( '_billing_barangay' );
 			$cod       = $order->get_total();
 
 			// Determine zone badge.
@@ -303,7 +303,7 @@ class Warehouse_Dashboard {
 			if ( $is_packed ) {
 				$pack_class = 'packed';
 				$pack_label = __( 'Packed', 'swiftcart-cod' );
-			} elseif ( (bool) get_post_meta( $order_id, '_sc_packing_started', true ) ) {
+			} elseif ( (bool) $order->get_meta( '_sc_packing_started' ) ) {
 				$pack_class = 'packing';
 				$pack_label = __( 'In Progress', 'swiftcart-cod' );
 			} else {
@@ -372,8 +372,8 @@ class Warehouse_Dashboard {
 
 		$cod      = $order->get_total();
 		$city     = $order->get_billing_city();
-		$barangay = get_post_meta( $order_id, '_billing_barangay', true );
-		$landmark = get_post_meta( $order_id, '_billing_landmark', true );
+		$barangay = $order->get_meta( '_billing_barangay' );
+		$landmark = $order->get_meta( '_billing_landmark' );
 		$phone    = $order->get_billing_phone();
 		$name     = $order->get_billing_first_name() . ' ' . $order->get_billing_last_name();
 		$items    = $order->get_items();
@@ -461,7 +461,7 @@ class Warehouse_Dashboard {
 			if ( ! $order instanceof \WC_Order ) continue;
 
 			$city     = $order->get_billing_city();
-			$barangay = get_post_meta( $order->get_id(), '_billing_barangay', true );
+			$barangay = $order->get_meta( '_billing_barangay' );
 			$cod      = $order->get_total();
 			$phone    = $order->get_billing_phone();
 
@@ -650,8 +650,9 @@ class Warehouse_Dashboard {
 				$order_id = absint( $_POST['order_id'] ?? 0 );
 				$order    = wc_get_order( $order_id );
 				if ( $order instanceof \WC_Order ) {
-					update_post_meta( $order_id, '_sc_packing_started_by', get_current_user_id() );
-					update_post_meta( $order_id, '_sc_packing_started_at', current_time( 'mysql' ) );
+				$order->update_meta_data( '_sc_packing_started_by', get_current_user_id() );
+					$order->update_meta_data( '_sc_packing_started_at', current_time( 'mysql' ) );
+					$order->save_meta_data();
 				}
 				wp_send_json_success();
 				break;

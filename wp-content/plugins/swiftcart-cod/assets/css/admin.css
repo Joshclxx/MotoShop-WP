@@ -2,8 +2,8 @@
  * SwiftCart COD — Admin Styles
  *
  * Palette: Dendro / Nature Green
- * #518123 · #99BD49 · #B6D455 · #EBF7A9
- * #225808 · #8ABB63 · #0C1805 · #88B43A · #BBD394 · #C4CC82
+ * #E64A19 · #FF5722 · #FF8A65 · #FFCCBC
+ * #2E7D32 · #8ABB63 · #111111 · #F57F17 · #E0E0E0 · #C4CC82
  *
  * @package SwiftCart
  * @since   1.0.0
@@ -11,19 +11,19 @@
 
 /* Inline design tokens — admin pages don't load the child theme. */
 :root {
-	--sc-primary:      #99BD49;
-	--sc-primary-dark: #518123;
-	--sc-primary-deep: #225808;
-	--sc-primary-lite: #EBF7A9;
+	--sc-primary:      #FF5722;
+	--sc-primary-dark: #E64A19;
+	--sc-primary-deep: #2E7D32;
+	--sc-primary-lite: #FFCCBC;
 
-	--sc-orange:  #99BD49;
-	--sc-green:   #225808;
-	--sc-amber:   #88B43A;
+	--sc-primary:  #FF5722;
+	--sc-green:   #2E7D32;
+	--sc-amber:   #F57F17;
 	--sc-red:     #D32F2F;
-	--sc-blue:    #518123;
-	--sc-surface: #F4FAE8;
-	--sc-text:    #0C1805;
-	--sc-border:  #BBD394;
+	--sc-accent:    #E64A19;
+	--sc-surface: #F5F6F8;
+	--sc-text:    #111111;
+	--sc-border:  #E0E0E0;
 	--sc-radius:  8px;
 	--sc-shadow:  0 2px 8px rgba(12,24,5,0.10);
 }
@@ -55,20 +55,20 @@
 .sc-widget__label { font-size: 12px; color: #555; font-weight: 600; }
 .sc-widget__sub   { font-size: 11px; color: #888; margin-top: 2px; }
 
-.sc-widget--orange { border-top-color: #99BD49; }
-.sc-widget--orange .sc-widget__value { color: #518123; }
+.sc-widget--orange { border-top-color: #FF5722; }
+.sc-widget--orange .sc-widget__value { color: #E64A19; }
 
-.sc-widget--green  { border-top-color: #225808; }
-.sc-widget--green  .sc-widget__value { color: #225808; }
+.sc-widget--green  { border-top-color: #2E7D32; }
+.sc-widget--green  .sc-widget__value { color: #2E7D32; }
 
-.sc-widget--amber  { border-top-color: #88B43A; }
-.sc-widget--amber  .sc-widget__value { color: #88B43A; }
+.sc-widget--amber  { border-top-color: #F57F17; }
+.sc-widget--amber  .sc-widget__value { color: #F57F17; }
 
 .sc-widget--red    { border-top-color: #D32F2F; }
 .sc-widget--red    .sc-widget__value { color: #D32F2F; }
 
-.sc-widget--blue   { border-top-color: #518123; }
-.sc-widget--blue   .sc-widget__value { color: #518123; }
+.sc-widget--blue   { border-top-color: #E64A19; }
+.sc-widget--blue   .sc-widget__value { color: #E64A19; }
 
 /* ── Status badges ─────────────────────────────────────── */
 .sc-status {
@@ -80,13 +80,13 @@
 	white-space:   nowrap;
 }
 
-.sc-status--pending    { background: #EBF7A9; color: #518123; }
-.sc-status--confirmed  { background: #B6D455; color: #225808; }
-.sc-status--packed     { background: #C4CC82; color: #518123; }
-.sc-status--dispatched { background: #8ABB63; color: #0C1805; }
-.sc-status--delivered  { background: #225808; color: #EBF7A9; }
+.sc-status--pending    { background: #FFCCBC; color: #E64A19; }
+.sc-status--confirmed  { background: #FF8A65; color: #2E7D32; }
+.sc-status--packed     { background: #C4CC82; color: #E64A19; }
+.sc-status--dispatched { background: #8ABB63; color: #111111; }
+.sc-status--delivered  { background: #2E7D32; color: #FFCCBC; }
 .sc-status--cancelled  { background: #FFEBEE; color: #C62828; }
-.sc-status--returned   { background: #F4FAE8; color: #518123; }
+.sc-status--returned   { background: #F5F6F8; color: #E64A19; }
 
 /* ── Risk level badges ─────────────────────────────────── */
 .sc-risk-badge {
@@ -99,8 +99,8 @@
 	letter-spacing: 0.3px;
 }
 
-.sc-risk-badge--normal    { background: #EBF7A9; color: #225808; }
-.sc-risk-badge--watchlist { background: #C4CC82; color: #518123; }
+.sc-risk-badge--normal    { background: #FFCCBC; color: #2E7D32; }
+.sc-risk-badge--watchlist { background: #C4CC82; color: #E64A19; }
 .sc-risk-badge--flagged   { background: #FFEBEE; color: #D32F2F; }
 
 /* ── KPI Cards (legacy, kept for backwards compat) ─────── */
@@ -124,16 +124,185 @@
 .sc-kpi-card__value { font-size: 28px; font-weight: 900; line-height: 1; }
 .sc-kpi-card__label { font-size: 12px; color: #888; margin-top: 4px; }
 
-.sc-kpi-card--orange .sc-kpi-card__value { color: #518123; }
-.sc-kpi-card--green  .sc-kpi-card__value { color: #225808; }
-.sc-kpi-card--amber  .sc-kpi-card__value { color: #88B43A; }
+.sc-kpi-card--primary .sc-kpi-card__value { color: #E64A19; }
+.sc-kpi-card--green  .sc-kpi-card__value { color: #2E7D32; }
+.sc-kpi-card--amber  .sc-kpi-card__value { color: #F57F17; }
 .sc-kpi-card--red    .sc-kpi-card__value { color: #D32F2F; }
-.sc-kpi-card--blue   .sc-kpi-card__value { color: #518123; }
+.sc-kpi-card--blue   .sc-kpi-card__value { color: #E64A19; }
 
 /* ── Orders table ──────────────────────────────────────── */
 .sc-orders-table .sc-order-actions { white-space: nowrap; }
 .sc-orders-table .sc-order-actions .button { margin-right: 4px; }
 
 /* ── Filters ───────────────────────────────────────────── */
+.sc-filters { display: flex; gap: 10px; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
 .sc-filters input[type="text"],
 .sc-filters select { height: 32px; }
+
+/* ── Inline-style replacements (ISS-009) ───────────────── */
+.sc-date-sub       { color: #888; font-size: 13px; margin-top: 4px; }
+.sc-row--flagged    { background: #FFEBEE; }
+.sc-order-date      { font-size: 11px; color: #888; }
+.sc-cancel-rate     { font-size: 10px; color: #888; }
+.sc-blacklist-icon  { color: #D32F2F; }
+.sc-cancel-btn      { color: #D32F2F; }
+.sc-barangay-sub    { font-size: 11px; color: #888; }
+.sc-empty-row td    { text-align: center; padding: 24px; color: #666; }
+.sc-checkbox-col    { width: 32px; }
+.sc-report-tabs     { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.sc-report-note     { color: #666; font-size: 13px; margin-top: 24px; }
+.sc-rate--warn      { color: #F57C00; }
+.sc-rate--ok        { color: #2E7D32; }
+.sc-bl-status--yes  { color: #D32F2F; }
+.sc-bl-status--no   { color: #888; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+ * Dashboard — sc-dash-* prefix
+ * ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Branded Header ── */
+.sc-dash-header {
+	background: linear-gradient(135deg, #1b5e20 0%, #2E7D32 60%, #4CAF50 100%);
+	color: #fff;
+	padding: 28px 32px;
+	border-radius: var(--sc-radius);
+	margin-bottom: 24px;
+	box-shadow: 0 4px 16px rgba(27,94,32,0.25);
+}
+
+.sc-dash-header__title {
+	font-size: 28px;
+	font-weight: 900;
+	margin: 0 0 4px;
+	letter-spacing: -0.5px;
+	color: #fff;
+}
+
+.sc-dash-header__sub {
+	font-size: 14px;
+	color: rgba(255,255,255,0.85);
+	margin: 0;
+}
+
+/* ── Dashboard Sections (card containers) ── */
+.sc-dash-section {
+	background: #fff;
+	border: 1px solid var(--sc-border);
+	border-radius: var(--sc-radius);
+	padding: 20px 24px;
+	margin-bottom: 20px;
+	box-shadow: var(--sc-shadow);
+}
+
+.sc-dash-section__title {
+	font-size: 16px;
+	font-weight: 700;
+	color: var(--sc-text);
+	margin: 0 0 16px;
+	padding-bottom: 12px;
+	border-bottom: 2px solid var(--sc-border);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.sc-dash-section__link {
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--sc-primary);
+	text-decoration: none;
+}
+
+.sc-dash-section__link:hover {
+	text-decoration: underline;
+}
+
+/* ── Quick Actions Grid ── */
+.sc-dash-actions-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	gap: 12px;
+}
+
+.sc-dash-action {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 20px 12px;
+	background: var(--sc-surface);
+	border: 2px solid var(--sc-border);
+	border-radius: var(--sc-radius);
+	text-decoration: none;
+	color: var(--sc-text);
+	font-weight: 600;
+	font-size: 13px;
+	transition: all 0.2s ease;
+	cursor: pointer;
+}
+
+.sc-dash-action:hover {
+	border-color: var(--sc-primary);
+	background: #FFF3E0;
+	color: var(--sc-primary-dark);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(255,87,34,0.15);
+}
+
+.sc-dash-action__icon {
+	font-size: 28px;
+	line-height: 1;
+}
+
+.sc-dash-action__label {
+	text-align: center;
+	line-height: 1.3;
+}
+
+/* ── Two-Column Layout ── */
+.sc-dash-columns {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	margin-bottom: 20px;
+}
+
+@media (max-width: 960px) {
+	.sc-dash-columns {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* ── Dashboard Tables ── */
+.sc-dash-table {
+	border: none !important;
+	box-shadow: none !important;
+}
+
+.sc-dash-table thead th {
+	background: var(--sc-surface);
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	color: #666;
+	padding: 8px 10px;
+}
+
+.sc-dash-table tbody td {
+	padding: 10px;
+	font-size: 13px;
+	vertical-align: middle;
+}
+
+/* ── Stock indicators ── */
+.sc-stock--out {
+	color: #D32F2F;
+	font-weight: 800;
+}
+
+.sc-stock--low {
+	color: #F57F17;
+	font-weight: 800;
+}

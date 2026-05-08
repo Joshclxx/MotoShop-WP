@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<phpunit
+	bootstrap="bootstrap.php"
+	colors="true"
+	beStrictAboutTestsThatDoNotTestAnything="true"
+	beStrictAboutOutputDuringTests="true"
+>
+	<testsuites>
+		<testsuite name="SwiftCart COD Plugin Tests">
+			<directory suffix=".php">./</directory>
+		</testsuite>
+	</testsuites>
+	<php>
+		<const name="SWIFTCART_TESTING" value="1" />
+	</php>
+</phpunit>
