@@ -14,11 +14,13 @@ namespace SwiftCart;
 
 defined( 'ABSPATH' ) || exit;
 
+use SwiftCart\Admin\Admin_Dashboard;
 use SwiftCart\Admin\Orders_Dashboard;
 use SwiftCart\Admin\Customer_Management;
 use SwiftCart\Admin\COD_Reports;
 use SwiftCart\Admin\Delivery_Zones;
 use SwiftCart\Admin\Product_Stock_Meta;
+use SwiftCart\Admin\MotoShop_Panel;
 use SwiftCart\Checkout\Checkout_Fields;
 use SwiftCart\Checkout\Checkout_Steps;
 use SwiftCart\Stock\Stock_Status;
@@ -77,11 +79,15 @@ final class SwiftCart {
 		( new Stock_Status() )->register();
 
 		// Admin pages.
+		( new Admin_Dashboard() )->register();
 		( new Orders_Dashboard() )->register();
 		( new Customer_Management() )->register();
 		( new COD_Reports() )->register();
 		( new Delivery_Zones() )->register();
 		( new Product_Stock_Meta() )->register();
+
+		// Custom admin panel (front-end).
+		( new MotoShop_Panel() )->register();
 
 		// Warehouse ops.
 		( new Warehouse_Dashboard() )->register();

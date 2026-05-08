@@ -4,7 +4,7 @@ Contributors:      wordpressdotorg, aristath, janjakes, zieladam, berislav.grgic
 Requires at least: 6.4
 Tested up to:      6.9
 Requires PHP:      7.2
-Stable tag:        2.2.17
+Stable tag:        3.0.0-rc.1
 License:           GPLv2 or later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 Tags:              performance, database
@@ -14,8 +14,6 @@ SQLite integration plugin by the WordPress Team.
 == Description ==
 
 The SQLite plugin is a community, feature plugin. The intent is to allow testing an SQLite integration with WordPress and gather feedback, with the goal of eventually landing it in WordPress core.
-
-This feature plugin includes code from the PHPMyAdmin project (specifically parts of the PHPMyAdmin/sql-parser library), licensed under the GPL v2 or later. More info on the PHPMyAdmin/sql-parser library can be found on [GitHub](https://github.com/phpmyadmin/sql-parser).
 
 == Frequently Asked Questions ==
 
@@ -44,4 +42,26 @@ SQLite-backed implementation. Core WordPress code continues to use
 the wpdb API, while queries are internally adapted to be compatible
 with SQLite syntax and behavior.
 
+== Changelog ==
 
+= 3.0.0-rc.1 =
+
+* Improve concurrent database access ([#361](https://github.com/WordPress/sqlite-database-integration/pull/361))
+* Remove legacy SQLite driver ([#358](https://github.com/WordPress/sqlite-database-integration/pull/358))
+
+= 2.2.23 =
+
+* Add Query Monitor 4.0 support ([#357](https://github.com/WordPress/sqlite-database-integration/pull/357))
+* Translate MySQL CONVERT() expressions to SQLite ([#356](https://github.com/WordPress/sqlite-database-integration/pull/356))
+
+= 2.2.22 =
+
+* Support INSERT without INTO keyword ([#354](https://github.com/WordPress/sqlite-database-integration/pull/354))
+* Add tests for MySQL row-level locking clauses ([#342](https://github.com/WordPress/sqlite-database-integration/pull/342))
+* Improve automated deploy setup.
+
+= 2.2.21 =
+
+* Monorepo setup + release automation ([#334](https://github.com/WordPress/sqlite-database-integration/pull/334))
+* Rework release workflow ([#350](https://github.com/WordPress/sqlite-database-integration/pull/350))
+* Fix incorrect PHP polyfill implementations ([#338](https://github.com/WordPress/sqlite-database-integration/pull/338))

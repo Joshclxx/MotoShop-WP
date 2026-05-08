@@ -191,6 +191,11 @@ class Checkout_Fields {
 	 * @return void
 	 */
 	public function save_custom_fields( int $order_id ): void {
+		$order = wc_get_order( $order_id );
+		if ( ! $order instanceof \WC_Order ) {
+			return;
+		}
+
 		$fields = array(
 			'billing_barangay' => '_billing_barangay',
 			'billing_landmark' => '_billing_landmark',
@@ -203,8 +208,10 @@ class Checkout_Fields {
 			}
 
 			$value = sanitize_text_field( wp_unslash( $_POST[ $post_key ] ) ); // phpcs:ignore WordPress.Security.NonceVerification
-			update_post_meta( $order_id, $meta_key, $value );
+			$order->update_meta_data( $meta_key, $value );
 		}
+
+		$order->save_meta_data();
 	}
 
 	/**
@@ -215,9 +222,9 @@ class Checkout_Fields {
 	 * @return void
 	 */
 	public function display_custom_fields_admin( \WC_Order $order ): void {
-		$barangay = get_post_meta( $order->get_id(), '_billing_barangay', true );
-		$landmark = get_post_meta( $order->get_id(), '_billing_landmark', true );
-		$province = get_post_meta( $order->get_id(), '_billing_province', true );
+		$barangay = $order->get_meta( '_billing_barangay' );
+		$landmark = $order->get_meta( '_billing_landmark' );
+		$province = $order->get_meta( '_billing_province' );
 
 		if ( $province ) {
 			echo '<p><strong>' . esc_html__( 'Province:', 'swiftcart-cod' ) . '</strong> ' . esc_html( $province ) . '</p>';

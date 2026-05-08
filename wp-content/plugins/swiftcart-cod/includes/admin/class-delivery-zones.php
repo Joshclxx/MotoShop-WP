@@ -37,7 +37,7 @@ class Delivery_Zones {
 	 */
 	public function register_menu_page(): void {
 		add_submenu_page(
-			'swiftcart',
+			'swiftcart-dashboard',
 			__( 'Delivery Zones', 'swiftcart-cod' ),
 			__( 'Delivery Zones', 'swiftcart-cod' ),
 			'manage_swiftcart',

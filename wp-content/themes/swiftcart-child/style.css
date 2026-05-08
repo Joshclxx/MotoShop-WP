@@ -14,22 +14,23 @@
  * @since   1.0.0
  */
 
-/* ─── Design Tokens — Dendro / Nature Green Palette ────────────────────────── */
+/* ─── Design Tokens — Fallback (UX-011) ────────────────────────────────────
+   Canonical source: swiftcart-enhancements.css
+   These values serve as fallback in case the enhancements file fails to load. */
 :root {
   --sc-primary: #ff5722; /* primary CTA (blaze orange)   */
   --sc-primary-dark: #e64a19; /* primary hover (burnt orange) */
-  --sc-green: #2e7d32; /* success / green             */
-  --sc-amber: #f57f17; /* warning / amber             */
-  --sc-red: #d32f2f; /* danger / error              */
-  --sc-blue: #0A0A0A; /* replaced with asphalt dark */
-  --sc-surface: #f5f6f8; /* page background             */
-  --sc-text: #111111; /* carbon black                */
-  --sc-text-muted: #757575;
-  --sc-border: #e0e0e0; /* steel border                */
-  --sc-radius: 4px;
+  --sc-green: #2e7d32; /* success / green              */
+  --sc-amber: #f57f17; /* warning / amber              */
+  --sc-red: #d32f2f; /* danger / error               */
+  --sc-accent: #e64a19; /* accent (burnt orange)        */
+  --sc-surface: #f5f6f8; /* page background              */
+  --sc-text: #111111; /* carbon black                 */
+  --sc-text-muted: #757575; /* secondary text (grey)        */
+  --sc-border: #e0e0e0; /* steel border                 */
+  --sc-radius: 8px;
   --sc-radius-pill: 999px;
-  --sc-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --sc-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --sc-shadow: 0 2px 8px rgba(12, 24, 5, 0.1);
   --sc-font: "Inter", "Poppins", system-ui, -apple-system, sans-serif;
 }
 
@@ -49,6 +50,9 @@ a:hover {
 }
 
 /* ─── Buttons ───────────────────────────────────────────────────────────────── */
+/* ISS-010: !important flags in this block are required — WooCommerce injects
+   inline styles and high-specificity selectors (.woocommerce a.button etc.)
+   that override color/background. Without !important, WC defaults win. */
 .sc-btn,
 .woocommerce #respond input#submit,
 .woocommerce a.button,
@@ -105,7 +109,7 @@ a:hover {
   align-items: center;
   gap: 6px;
   padding: 4px 12px;
-  background-color: var(--sc-blue);
+  background-color: var(--sc-accent);
   color: #fff;
   font-size: 12px;
   font-weight: 700;
@@ -152,8 +156,7 @@ a:hover {
   font-weight: 600;
   padding: 8px 40px;
   position: relative;
-  /* Fix spacing at the top */
-  margin-bottom: 24px;
+  margin-bottom: 80px;
 }
 
 .sc-announcement-bar__dismiss {
@@ -217,13 +220,6 @@ a:hover {
   border-radius: var(--sc-radius);
   overflow: hidden;
   box-shadow: var(--sc-shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  height: 100%;
-}
-
-.sc-product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--sc-shadow-hover);
 }
 
 .sc-product-card__image-wrap {
@@ -262,7 +258,6 @@ a:hover {
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -280,6 +275,7 @@ a:hover {
   margin-left: 4px;
 }
 
+/* Product card ATC: !important needed — WC link color specificity */
 .sc-product-card__atc {
   margin-top: auto;
   display: block;
@@ -294,87 +290,9 @@ a:hover {
   transition: background-color 0.2s;
 }
 
-.sc-product-card__actions {
-  display: grid;
-  gap: 8px;
-  margin-top: 12px;
-}
-
-.sc-btn--buy-now {
-  background: var(--sc-primary);
-  color: #fff !important;
-  font-weight: 700;
-  font-size: 13px;
-  text-align: center;
-  padding: 10px;
-  border-radius: var(--sc-radius);
-  text-decoration: none;
-  display: block;
-  transition: background-color 0.2s;
-  border: 1px solid var(--sc-primary);
-}
-
-.sc-btn--buy-now:hover {
+.sc-product-card__atc:hover {
   background: var(--sc-primary-dark);
-  border-color: var(--sc-primary-dark);
   color: #fff !important;
-}
-
-.sc-btn--add-to-cart {
-  background: #fff;
-  color: var(--sc-text) !important;
-  font-weight: 700;
-  font-size: 13px;
-  text-align: center;
-  padding: 10px;
-  border-radius: var(--sc-radius);
-  text-decoration: none;
-  display: block;
-  transition: all 0.2s;
-  border: 1px solid var(--sc-border);
-}
-
-.sc-btn--add-to-cart:hover {
-  background: #0A0A0A;
-  color: #fff !important;
-  border-color: #0A0A0A;
-}
-
-/* ─── Shop Page Layout (Racing Style) ────────────────────────────────────────── */
-.sc-shop-hero {
-  background-color: var(--sc-text);
-  color: #fff;
-  padding: 60px 20px;
-  margin-bottom: 32px;
-  background-image: linear-gradient(135deg, rgba(255,87,34,0.1) 0%, rgba(17,17,17,1) 100%);
-  border-bottom: 4px solid var(--sc-primary);
-}
-
-.sc-shop-hero__inner {
-  text-align: center;
-}
-
-.sc-shop-hero__inner h1 {
-  font-size: 40px;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 0;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-.sc-shop-page ul.products {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) !important;
-  gap: 24px !important;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.sc-shop-page ul.products:before,
-.sc-shop-page ul.products:after {
-  display: none !important;
 }
 
 /* ─── Checkout Progress Bar ──────────────────────────────────────────────────── */
@@ -469,7 +387,7 @@ a:hover {
 /* ─── COD Confirmation Block ─────────────────────────────────────────────────── */
 .sc-cod-confirm-block {
   background: #eef5ff;
-  border: 2px solid var(--sc-blue);
+  border: 2px solid var(--sc-accent);
   border-radius: var(--sc-radius);
   padding: 20px;
   text-align: center;
@@ -485,7 +403,7 @@ a:hover {
 .sc-cod-confirm-block__title {
   font-size: 18px;
   font-weight: 800;
-  color: var(--sc-blue);
+  color: var(--sc-accent);
   margin-bottom: 8px;
 }
 
@@ -621,7 +539,7 @@ a:hover {
   border-radius: var(--sc-radius-pill);
   font-size: 12px;
   font-weight: 700;
-  background: var(--sc-blue);
+  background: var(--sc-accent);
   color: #fff;
   margin-left: 8px;
 }
@@ -670,7 +588,7 @@ a:hover {
 .sc-item-check__qty {
   font-size: 18px;
   font-weight: 800;
-  color: var(--sc-blue);
+  color: var(--sc-accent);
 }
 
 /* ─── Admin KPI Cards ────────────────────────────────────────────────────────── */
@@ -715,7 +633,7 @@ a:hover {
   color: var(--sc-red);
 }
 .sc-kpi-card--blue .sc-kpi-card__value {
-  color: var(--sc-blue);
+  color: var(--sc-accent);
 }
 
 /* ─── Status Badges ──────────────────────────────────────────────────────────── */
@@ -777,109 +695,4 @@ a:hover {
   .woocommerce input.button {
     width: auto;
   }
-}
-
-/* ─── Shop Toolbar (Sorting & Results) ─────────────────────────────────────── */
-.sc-shop-toolbar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--sc-surface);
-  padding: 12px 20px;
-  border-radius: var(--sc-radius);
-  margin-bottom: 24px;
-  border: 1px solid var(--sc-border);
-}
-
-.sc-shop-toolbar .woocommerce-result-count {
-  margin: 0;
-  font-size: 14px;
-  color: var(--sc-text-muted);
-  font-weight: 500;
-}
-
-.sc-shop-toolbar .woocommerce-ordering {
-  margin: 0;
-}
-
-.sc-shop-toolbar select.orderby {
-  appearance: none;
-  background-color: #fff;
-  border: 1px solid var(--sc-border);
-  color: var(--sc-text);
-  padding: 8px 36px 8px 16px;
-  border-radius: var(--sc-radius);
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  background-image: url('data:image/svg+xml;utf8,<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="%23111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  outline: none;
-}
-
-.sc-shop-toolbar select.orderby:focus {
-  border-color: var(--sc-primary);
-  box-shadow: 0 0 0 2px rgba(255,87,34,0.2);
-}
-
-/* ─── Shop Pagination ──────────────────────────────────────────────────────── */
-.woocommerce-pagination,
-.sc-shop-page nav.woocommerce-pagination {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.woocommerce-pagination ul.page-numbers {
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  border: none !important;
-}
-
-.woocommerce-pagination ul.page-numbers li {
-  border: none !important;
-  display: block !important;
-}
-
-.woocommerce-pagination ul.page-numbers li .page-numbers {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  background: #fff;
-  border: 1px solid var(--sc-border) !important;
-  border-radius: var(--sc-radius);
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--sc-text);
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.woocommerce-pagination ul.page-numbers li a.page-numbers:hover {
-  border-color: var(--sc-primary) !important;
-  color: var(--sc-primary);
-  background: #fff5ee;
-}
-
-.sc-shop-page nav.woocommerce-pagination ul.page-numbers li span.current,
-.woocommerce-pagination ul.page-numbers li .page-numbers.current,
-.woocommerce-pagination ul.page-numbers li span[aria-current="page"] {
-  background-color: var(--sc-primary) !important;
-  border-color: var(--sc-primary) !important;
-  color: #ffffff !important;
-}
-
-.woocommerce-pagination ul.page-numbers li a.next,
-.woocommerce-pagination ul.page-numbers li a.prev {
-  width: auto;
-  padding: 0 16px;
 }

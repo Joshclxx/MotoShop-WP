@@ -57,20 +57,24 @@ $enable_registration = 'yes' === get_option( 'woocommerce_enable_myaccount_regis
 					<label for="password"><?php esc_html_e( 'Password', 'swiftcart-cod' ); ?>&nbsp;<span class="required" aria-hidden="true">*</span></label>
 					<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" required aria-required="true" />
 				</p>
+				<p class="sc-show-password">
+					<label><input type="checkbox" class="sc-show-pw-checkbox" data-fields="password" /> <?php esc_html_e( 'Show password', 'swiftcart-cod' ); ?></label>
+				</p>
 
 				<?php do_action( 'woocommerce_login_form' ); ?>
 
-				<p class="form-row" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
-					<label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme" style="margin:0;">
+				<p class="form-row sc-login-form__remember-row">
+					<label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
 						<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" />
 						<span><?php esc_html_e( 'Remember me', 'swiftcart-cod' ); ?></span>
 					</label>
-					<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>" style="font-size:0.85rem;color:#518123;">
+					<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>" class="sc-login-form__forgot">
 						<?php esc_html_e( 'Forgot password?', 'swiftcart-cod' ); ?>
 					</a>
 				</p>
 
 				<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
+				<input type="hidden" name="redirect" value="<?php echo esc_url( home_url( '/' ) ); ?>" />
 				<button type="submit" class="woocommerce-button button woocommerce-form-login__submit<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>">
 					<?php esc_html_e( 'Log In', 'swiftcart-cod' ); ?>
 				</button>
@@ -79,14 +83,7 @@ $enable_registration = 'yes' === get_option( 'woocommerce_enable_myaccount_regis
 
 			</form>
 
-			<?php if ( $enable_registration ) : ?>
-			<div class="sc-divider"><?php esc_html_e( 'or', 'swiftcart-cod' ); ?></div>
-			<p style="text-align:center;margin:0;">
-				<button type="button" class="sc-switch-to-register" style="background:none;border:none;color:#518123;font-weight:600;cursor:pointer;font-size:0.95rem;">
-					<?php esc_html_e( 'Create a new account →', 'swiftcart-cod' ); ?>
-				</button>
-			</p>
-			<?php endif; ?>
+
 
 		</div>
 
@@ -115,8 +112,16 @@ $enable_registration = 'yes' === get_option( 'woocommerce_enable_myaccount_regis
 					<label for="reg_password"><?php esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required" aria-hidden="true">*</span></label>
 					<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" autocomplete="new-password" required aria-required="true" />
 				</p>
+				<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+					<label for="reg_password_confirm"><?php esc_html_e( 'Confirm Password', 'swiftcart-cod' ); ?>&nbsp;<span class="required" aria-hidden="true">*</span></label>
+					<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password_confirm" id="reg_password_confirm" autocomplete="new-password" required aria-required="true" />
+					<span class="sc-password-mismatch" id="sc-pw-mismatch" hidden><?php esc_html_e( 'Passwords do not match.', 'swiftcart-cod' ); ?></span>
+				</p>
+				<p class="sc-show-password">
+					<label><input type="checkbox" class="sc-show-pw-checkbox" data-fields="reg_password,reg_password_confirm" /> <?php esc_html_e( 'Show password', 'swiftcart-cod' ); ?></label>
+				</p>
 				<?php else : ?>
-				<p style="font-size:0.85rem;color:#888;"><?php esc_html_e( 'A link to set a new password will be sent to your email address.', 'woocommerce' ); ?></p>
+				<p class="sc-login-form__password-hint"><?php esc_html_e( 'A link to set a new password will be sent to your email address.', 'woocommerce' ); ?></p>
 				<?php endif; ?>
 
 				<?php do_action( 'woocommerce_register_form' ); ?>
@@ -132,12 +137,7 @@ $enable_registration = 'yes' === get_option( 'woocommerce_enable_myaccount_regis
 
 			</form>
 
-			<div class="sc-divider"><?php esc_html_e( 'or', 'swiftcart-cod' ); ?></div>
-			<p style="text-align:center;margin:0;">
-				<button type="button" class="sc-switch-to-login" style="background:none;border:none;color:#518123;font-weight:600;cursor:pointer;font-size:0.95rem;">
-					<?php esc_html_e( '← Back to Login', 'swiftcart-cod' ); ?>
-				</button>
-			</p>
+
 
 		</div>
 		<?php endif; ?>
@@ -168,21 +168,68 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	});
 
-	// "Create a new account" link
-	var switchToReg = document.querySelector('.sc-switch-to-register');
-	if (switchToReg) {
-		switchToReg.addEventListener('click', function () { switchTab('sc-register-tab'); });
-	}
-
-	// "Back to Login" link
-	var switchToLogin = document.querySelector('.sc-switch-to-login');
-	if (switchToLogin) {
-		switchToLogin.addEventListener('click', function () { switchTab('sc-login-tab'); });
-	}
-
 	// Auto-switch to register tab if URL has #register
 	if (window.location.hash === '#register') {
 		switchTab('sc-register-tab');
 	}
+
+	// ── Show/Hide Password Checkbox ──
+	document.querySelectorAll('.sc-show-pw-checkbox').forEach(function (cb) {
+		cb.addEventListener('change', function () {
+			var fields = this.getAttribute('data-fields').split(',');
+			var type = this.checked ? 'text' : 'password';
+			fields.forEach(function (id) {
+				var input = document.getElementById(id.trim());
+				if (input) input.type = type;
+			});
+		});
+	});
+
+
+
+	// ── Confirm Password Validation ──
+	var regPw      = document.getElementById('reg_password');
+	var regPwConf  = document.getElementById('reg_password_confirm');
+	var mismatch   = document.getElementById('sc-pw-mismatch');
+	var regForm    = document.querySelector('.woocommerce-form-register');
+
+	function checkMatch() {
+		if (!regPw || !regPwConf || !mismatch) return;
+		if (regPwConf.value && regPw.value !== regPwConf.value) {
+			mismatch.hidden = false;
+			regPwConf.setCustomValidity('Passwords do not match');
+		} else {
+			mismatch.hidden = true;
+			regPwConf.setCustomValidity('');
+		}
+	}
+
+	if (regPw) regPw.addEventListener('input', checkMatch);
+	if (regPwConf) regPwConf.addEventListener('input', checkMatch);
+
+	if (regForm) {
+		regForm.addEventListener('submit', function (e) {
+			checkMatch();
+			if (regPw && regPwConf && regPw.value !== regPwConf.value) {
+				e.preventDefault();
+				regPwConf.focus();
+			}
+		});
+
+		// Override WooCommerce's password-strength-meter disabling the submit button.
+		// We keep the strength indicator as visual guidance but don't block submission.
+		var regSubmit = regForm.querySelector('.woocommerce-form-register__submit');
+		if (regSubmit) {
+			var observer = new MutationObserver(function () {
+				if (regSubmit.disabled) {
+					regSubmit.disabled = false;
+				}
+			});
+			observer.observe(regSubmit, { attributes: true, attributeFilter: ['disabled'] });
+			// Also re-enable on initial load in case WC already disabled it.
+			regSubmit.disabled = false;
+		}
+	}
 });
 </script>
+

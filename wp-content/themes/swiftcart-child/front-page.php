@@ -78,8 +78,10 @@ get_header();
 					width="480"
 					height="380"
 					loading="eager"
-					onerror="this.style.display='none'"
+					onerror="this.classList.add('sc-img-failed');this.nextElementSibling.style.display='flex';"
 				>
+				<!-- UX-007: Fallback visual shown when hero SVG fails to load -->
+				<div class="sc-hero__image-wrap--fallback" style="display:none;" aria-hidden="true">🏍️</div>
 				<div class="sc-hero__floating-card sc-hero__floating-card--left">
 					<span class="sc-hero__fc-icon">✅</span>
 					<div>
@@ -150,44 +152,44 @@ get_header();
 		</div>
 		<div class="sc-categories__grid">
 			<?php
-			$category_slugs = array( 'brake-parts', 'engine-parts', 'tires-wheels', 'lights-electrical' );
-			$category_defaults = array(
-				array( 'icon' => '🔧', 'name' => 'Brake Parts',        'slug' => 'brake-parts'       ),
-				array( 'icon' => '⚙️', 'name' => 'Engine Parts',       'slug' => 'engine-parts'      ),
-				array( 'icon' => '🏍️', 'name' => 'Tires & Wheels',     'slug' => 'tires-wheels'      ),
-				array( 'icon' => '💡', 'name' => 'Lights & Electrical', 'slug' => 'lights-electrical' ),
+			// ISS-022: Dynamic categories — top 4 non-empty by product count.
+			$icon_map = array(
+				'brake-parts'       => '🔧',
+				'engine-parts'      => '⚙️',
+				'tires-wheels'      => '🏍️',
+				'lights-electrical' => '💡',
 			);
 
 			$terms = get_terms( array(
 				'taxonomy'   => 'product_cat',
-				'slug'       => $category_slugs,
-				'hide_empty' => false,
+				'hide_empty' => true,
+				'number'     => 4,
+				'orderby'    => 'count',
+				'order'      => 'DESC',
+				'exclude'    => array( (int) get_option( 'default_product_cat', 0 ) ),
 			) );
 
-			$term_map = array();
-			if ( ! is_wp_error( $terms ) ) {
-				foreach ( $terms as $term ) {
-					$term_map[ $term->slug ] = $term;
-				}
+			if ( is_wp_error( $terms ) ) {
+				$terms = array();
 			}
 
-			foreach ( $category_defaults as $cat ) :
-				$term      = $term_map[ $cat['slug'] ] ?? null;
-				$url       = $term ? get_term_link( $term ) : get_permalink( wc_get_page_id( 'shop' ) );
-				$count     = $term ? $term->count : 0;
-				$thumb_id  = $term ? get_term_meta( $term->term_id, 'thumbnail_id', true ) : 0;
+			foreach ( $terms as $term ) :
+				$url       = get_term_link( $term );
+				$count     = $term->count;
+				$thumb_id  = get_term_meta( $term->term_id, 'thumbnail_id', true );
 				$thumb_url = $thumb_id ? wp_get_attachment_image_url( $thumb_id, 'medium' ) : '';
+				$icon      = $icon_map[ $term->slug ] ?? '🔩';
 			?>
 			<a href="<?php echo esc_url( is_wp_error( $url ) ? '#' : $url ); ?>" class="sc-cat-card">
 				<div class="sc-cat-card__image">
 					<?php if ( $thumb_url ) : ?>
-						<img src="<?php echo esc_url( $thumb_url ); ?>" alt="<?php echo esc_attr( $cat['name'] ); ?>" loading="lazy">
+						<img src="<?php echo esc_url( $thumb_url ); ?>" alt="<?php echo esc_attr( $term->name ); ?>" loading="lazy">
 					<?php else : ?>
-						<span class="sc-cat-card__icon" aria-hidden="true"><?php echo $cat['icon']; ?></span>
+						<span class="sc-cat-card__icon" aria-hidden="true"><?php echo $icon; ?></span>
 					<?php endif; ?>
 				</div>
 				<div class="sc-cat-card__info">
-					<strong class="sc-cat-card__name"><?php echo esc_html( $cat['name'] ); ?></strong>
+					<strong class="sc-cat-card__name"><?php echo esc_html( $term->name ); ?></strong>
 					<?php if ( $count > 0 ) : ?>
 						<span class="sc-cat-card__count">
 							<?php echo esc_html( sprintf( _n( '%d item', '%d items', $count, 'swiftcart-cod' ), $count ) ); ?>
@@ -253,7 +255,11 @@ get_header();
 				<a href="<?php the_permalink(); ?>" class="sc-product-card__image-link" tabindex="-1" aria-hidden="true">
 					<div class="sc-product-card__image">
 						<?php if ( has_post_thumbnail() ) : ?>
-							<?php the_post_thumbnail( 'woocommerce_thumbnail', array( 'loading' => 'lazy' ) ); ?>
+						<?php
+						// UX-013: First 4 products above-the-fold get eager loading.
+						$loading_attr = $featured_query->current_post < 4 ? 'eager' : 'lazy';
+						the_post_thumbnail( 'woocommerce_thumbnail', array( 'loading' => $loading_attr ) );
+						?>
 						<?php else : ?>
 							<div class="sc-product-card__no-image">📦</div>
 						<?php endif; ?>
@@ -282,9 +288,19 @@ get_header();
 						<span class="sc-cod-tag">💳 <?php esc_html_e( 'COD Available', 'swiftcart-cod' ); ?></span>
 					</div>
 					<?php if ( 'out_of_stock' !== $stock_status ) : ?>
-					<a href="<?php the_permalink(); ?>" class="sc-btn sc-btn--primary sc-btn--block">
+					<?php
+					// UX-015: Use real add-to-cart for simple products.
+					if ( $product->is_type( 'simple' ) ) :
+						$atc_url = add_query_arg( 'add-to-cart', $product->get_id(), wc_get_cart_url() );
+					?>
+					<a href="<?php echo esc_url( $atc_url ); ?>" class="sc-btn sc-btn--primary sc-btn--block add_to_cart_button" data-product_id="<?php echo esc_attr( $product->get_id() ); ?>" data-quantity="1">
 						<?php esc_html_e( 'Add to Cart', 'swiftcart-cod' ); ?>
 					</a>
+					<?php else : ?>
+					<a href="<?php the_permalink(); ?>" class="sc-btn sc-btn--primary sc-btn--block">
+						<?php esc_html_e( 'Select Options', 'swiftcart-cod' ); ?>
+					</a>
+					<?php endif; ?>
 					<?php else : ?>
 					<button class="sc-btn sc-btn--ghost sc-btn--block" disabled>
 						<?php esc_html_e( 'Out of Stock', 'swiftcart-cod' ); ?>
@@ -343,7 +359,7 @@ get_header();
 			</a>
 		</div>
 		<div class="sc-how-cod__note">
-			🔒 <?php esc_html_e( 'SwiftCart COD will NEVER ask for GCash or any prepayment. If anyone does, it is a scam.', 'swiftcart-cod' ); ?>
+			🔒 <?php esc_html_e( 'MoTo Shop will NEVER ask for GCash or any prepayment. If anyone does, it is a scam.', 'swiftcart-cod' ); ?>
 		</div>
 	</div>
 </section>
@@ -351,7 +367,7 @@ get_header();
 <!-- ═══════════════════════════════════════════════════════
      DELIVERY COVERAGE TEASER
 ═══════════════════════════════════════════════════════ -->
-<section class="sc-section sc-coverage" aria-label="<?php esc_attr_e( 'Delivery coverage', 'swiftcart-cod' ); ?>">
+<section id="delivery-coverage" class="sc-section sc-coverage" aria-label="<?php esc_attr_e( 'Delivery coverage', 'swiftcart-cod' ); ?>">
 	<div class="sc-container">
 		<div class="sc-coverage__inner">
 			<div class="sc-coverage__content">
@@ -369,7 +385,7 @@ get_header();
 					<span class="sc-coverage__city">📍 Bulacan</span>
 					<span class="sc-coverage__city">📍 + many more</span>
 				</div>
-				<a href="<?php echo esc_url( home_url( '/delivery-coverage' ) ); ?>" class="sc-btn sc-btn--outline sc-btn--lg">
+				<a href="#faq" class="sc-btn sc-btn--outline sc-btn--lg">
 					<?php esc_html_e( 'Check Your Area →', 'swiftcart-cod' ); ?>
 				</a>
 			</div>
@@ -394,7 +410,7 @@ get_header();
 <!-- ═══════════════════════════════════════════════════════
      FAQ PREVIEW
 ═══════════════════════════════════════════════════════ -->
-<section class="sc-section sc-faq-preview" aria-label="<?php esc_attr_e( 'Frequently asked questions', 'swiftcart-cod' ); ?>">
+<section id="faq" class="sc-section sc-faq-preview" aria-label="<?php esc_attr_e( 'Frequently asked questions', 'swiftcart-cod' ); ?>">
 	<div class="sc-container">
 		<div class="sc-section__header sc-section__header--center">
 			<h2 class="sc-section__title"><?php esc_html_e( 'Frequently Asked Questions', 'swiftcart-cod' ); ?></h2>
@@ -433,6 +449,7 @@ get_header();
 			<div class="sc-faq__item" data-open="<?php echo 0 === $i ? 'true' : 'false'; ?>">
 				<button
 					class="sc-faq__question"
+					id="sc-faq-q-<?php echo esc_attr( $i ); ?>"
 					aria-expanded="<?php echo 0 === $i ? 'true' : 'false'; ?>"
 					aria-controls="sc-faq-<?php echo esc_attr( $i ); ?>"
 				>
@@ -443,6 +460,7 @@ get_header();
 					class="sc-faq__answer"
 					id="sc-faq-<?php echo esc_attr( $i ); ?>"
 					role="region"
+					aria-labelledby="sc-faq-q-<?php echo esc_attr( $i ); ?>"
 					<?php echo 0 === $i ? '' : 'hidden'; ?>
 				>
 					<p><?php echo esc_html( $faq['a'] ); ?></p>
@@ -451,7 +469,7 @@ get_header();
 			<?php endforeach; ?>
 		</div>
 		<div class="sc-faq__more">
-			<a href="<?php echo esc_url( home_url( '/faq' ) ); ?>" class="sc-btn sc-btn--ghost">
+			<a href="#faq" class="sc-btn sc-btn--ghost">
 				<?php esc_html_e( 'View All FAQs', 'swiftcart-cod' ); ?>
 			</a>
 		</div>
@@ -465,7 +483,7 @@ get_header();
 	<div class="sc-container">
 		<p>
 			🚨 <strong><?php esc_html_e( 'Anti-Scam Notice:', 'swiftcart-cod' ); ?></strong>
-			<?php esc_html_e( 'SwiftCart COD will NEVER ask for GCash, bank transfers, or any prepayment before delivery. Report scams to our official Facebook page.', 'swiftcart-cod' ); ?>
+			<?php esc_html_e( 'MoTo Shop will NEVER ask for GCash, bank transfers, or any prepayment before delivery. Report scams to our official Facebook page.', 'swiftcart-cod' ); ?>
 		</p>
 	</div>
 </div>
@@ -483,9 +501,9 @@ get_header();
 					<?php esc_html_e( 'Your trusted source for quality motorcycle parts in the Philippines. Cash on Delivery — no prepayment needed.', 'swiftcart-cod' ); ?>
 				</p>
 				<div class="sc-footer__social">
-					<a href="#" class="sc-footer__social-link" aria-label="Facebook">📘</a>
-					<a href="#" class="sc-footer__social-link" aria-label="Instagram">📸</a>
-					<a href="#" class="sc-footer__social-link" aria-label="TikTok">🎵</a>
+				<a href="#" class="sc-footer__social-link" aria-label="Facebook"><span aria-hidden="true">📘</span></a>
+					<a href="#" class="sc-footer__social-link" aria-label="Instagram"><span aria-hidden="true">📸</span></a>
+					<a href="#" class="sc-footer__social-link" aria-label="TikTok"><span aria-hidden="true">🎵</span></a>
 				</div>
 			</div>
 
@@ -633,3 +651,6 @@ get_header();
 	}
 } )();
 </script>
+
+<?php get_footer(); ?>
+

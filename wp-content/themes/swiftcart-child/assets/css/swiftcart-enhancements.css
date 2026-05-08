@@ -9,41 +9,41 @@
  */
 
 /* ─────────────────────────────────────────────────────────
-   DESIGN TOKENS
+   DESIGN TOKENS  (UX-011: Canonical source — style.css has
+   fallback values; this block is the authoritative override.)
 ───────────────────────────────────────────────────────── */
 :root {
-  /* ── Palette: Dendro / Nature Green ─────────────────── */
+  /* ── Palette: MotoShop Blaze Orange ─────────────────── */
   /* #E64A19  #FF5722  #FF8A65  #FFCCBC                   */
   /* #2E7D32  #8ABB63  #111111  #F57F17  #E0E0E0  #C4CC82 */
 
-  --sc-primary: #ff5722; /* bright lime  — CTA buttons        */
-  --sc-primary-dark: #e64a19; /* dark olive   — hover / press       */
-  --sc-primary-deep: #2e7d32; /* forest green — success / delivered */
-  --sc-primary-light: #ffccbc; /* pale lime    — tinted backgrounds  */
-  --sc-primary-mid: #ff8a65; /* lime         — accents / badges    */
+  --sc-primary: #ff5722; /* blaze orange — CTA buttons         */
+  --sc-primary-dark: #e64a19; /* burnt orange — hover / press        */
+  --sc-primary-deep: #2e7d32; /* forest green — success / delivered  */
+  --sc-primary-light: #ffccbc; /* peach        — tinted backgrounds   */
+  --sc-primary-mid: #ff8a65; /* light coral  — accents / badges     */
 
-  /* Legacy token aliases so every component picks up the new palette */
-  --sc-primary: var(--sc-primary);
-  --sc-primary-dark: var(--sc-primary-dark);
-  --sc-primary-light: var(--sc-primary-light);
+  --sc-green: #2e7d32; /* forest green — success states       */
+  /* UX-010: Renamed from --sc-green-light. Correct green hex for
+     success/in-stock backgrounds (was #ff8a65 orange — misleading). */
+  --sc-success-bg: #e8f5e9; /* mint         — success light bg     */
+  --sc-green-light: var(--sc-success-bg); /* alias kept for back-compat */
 
-  --sc-green: #2e7d32; /* forest green — success states      */
-  --sc-green-light: #ff8a65; /* lime         — success light bg    */
+  --sc-amber: #f57f17; /* amber        — warnings / low-stock */
+  --sc-amber-light: #fff3e0; /* light amber  — warning light bg     */
 
-  --sc-amber: #f57f17; /* olive        — warnings / low-stock */
-  --sc-amber-light: #c4cc82; /* khaki        — warning light bg    */
-
-  --sc-red: #d32f2f; /* keep red for genuine errors        */
+  --sc-red: #d32f2f; /* red          — genuine errors       */
   --sc-red-light: #ffebee;
 
-  --sc-blue: #e64a19; /* dark olive — info / trust blocks   */
-  --sc-blue-light: #ffccbc;
+  --sc-accent: #e64a19; /* burnt orange — info / trust blocks  */
+  --sc-accent-light: #ffccbc;
 
-  --sc-surface: #f5f6f8; /* very-light green tint              */
+  --sc-surface: #f5f6f8; /* very-light grey tint                */
   --sc-white: #ffffff;
-  --sc-text: #111111; /* near-black green                   */
-  --sc-text-muted: #e64a19;
-  --sc-border: #e0e0e0; /* sage border                        */
+  --sc-text: #111111; /* near-black                          */
+  /* UX-009: Fixed from #e64a19 (orange). Muted text must be subdued. */
+  --sc-text-muted: #757575; /* medium grey — secondary text        */
+  --sc-border: #e0e0e0; /* light grey border                   */
 
   --sc-radius-sm: 4px;
   --sc-radius: 8px;
@@ -257,13 +257,14 @@ img {
 }
 
 .sc-btn--ghost {
-  background: transparent;
-  border-color: var(--sc-primary);
-  color: var(--sc-primary);
+  background: var(--sc-white) !important;
+  border: 2px solid var(--sc-primary) !important;
+  color: var(--sc-primary) !important;
+  font-weight: 700;
 }
 .sc-btn--ghost:hover {
-  background: var(--sc-primary-light);
-  color: var(--sc-primary-dark);
+  background: var(--sc-primary) !important;
+  color: var(--sc-white) !important;
   transform: translateY(-1px);
   box-shadow: var(--sc-shadow);
 }
@@ -1481,8 +1482,8 @@ img {
 }
 
 .sc-delivery-estimate {
-  background: var(--sc-blue-light);
-  border: 1px solid var(--sc-blue);
+  background: var(--sc-accent-light);
+  border: 1px solid var(--sc-accent);
   border-radius: var(--sc-radius);
   padding: 14px 16px;
   margin: 16px 0;
@@ -1491,7 +1492,7 @@ img {
 
 .sc-delivery-estimate__title {
   font-weight: 700;
-  color: var(--sc-blue);
+  color: var(--sc-accent);
   margin-bottom: 6px;
   font-size: 14px;
 }
@@ -2025,7 +2026,7 @@ img {
   color: var(--sc-red);
 }
 .sc-widget--blue .sc-widget__value {
-  color: var(--sc-blue);
+  color: var(--sc-accent);
 }
 
 /* Risk level labels */
@@ -2131,8 +2132,8 @@ img {
   color: var(--sc-amber);
 }
 .sc-packing-status--packing {
-  background: var(--sc-blue-light);
-  color: var(--sc-blue);
+  background: var(--sc-accent-light);
+  color: var(--sc-accent);
 }
 .sc-packing-status--packed {
   background: var(--sc-green-light);
@@ -2354,21 +2355,112 @@ a.sc-product-card__name:hover {
   font-size: 0.78rem;
 }
 
-/* Products grid — WooCommerce default overrides */
+/* ── Shop / Archive page background ─────────────────────
+   Give the WooCommerce shop & category pages a tinted
+   background so white product cards pop visually.        */
+.woocommerce.archive .site-content,
+.woocommerce.archive .wp-site-blocks,
+.woocommerce.archive .entry-content,
+.woocommerce.archive .wp-block-post-content,
+.woocommerce.tax-product_cat .site-content,
+.woocommerce.tax-product_cat .wp-site-blocks,
+.woocommerce.tax-product_cat .entry-content,
+.woocommerce.tax-product_cat .wp-block-post-content,
+.post-type-archive-product .site-content,
+.post-type-archive-product .wp-site-blocks,
+.post-type-archive-product .entry-content,
+.post-type-archive-product .wp-block-post-content {
+  background: var(--sc-surface) !important;
+}
+
+/* Add some padding around the product grid on shop pages */
+.woocommerce .woocommerce-products-header,
+.woocommerce ul.products {
+  max-width: 1200px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Products grid — WooCommerce default overrides
+   ISS-010: !important required — WC uses inline width/float styles on
+   ul.products and li.product. Without !important, grid layout breaks. */
 .woocommerce ul.products,
 ul.products {
   display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
-  gap: 16px !important;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) !important;
+  gap: 24px !important;
   list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
+  padding: 16px 24px 40px !important;
+  margin: 0 auto !important;
 }
 
 ul.products li.product {
   float: none !important;
   width: 100% !important;
   margin: 0 !important;
+}
+
+/* ── Enhanced product card visibility on archive pages ── */
+ul.products li.product.sc-product-card,
+ul.products li.product,
+.wc-block-grid__product {
+  background: #fff;
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-lg);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s var(--sc-ease-smooth),
+    box-shadow 0.3s var(--sc-ease-smooth),
+    border-color 0.3s var(--sc-ease-smooth);
+}
+
+ul.products li.product.sc-product-card:hover,
+ul.products li.product:hover,
+.wc-block-grid__product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: var(--sc-primary);
+}
+
+/* ── WC Block card inner layout polish ──────────────── */
+ul.products li.product .woocommerce-loop-product__title,
+.wc-block-grid__product .wc-block-grid__product-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0 16px;
+  margin: 8px 0 4px;
+}
+
+ul.products li.product .woocommerce-loop-product__title a,
+.wc-block-grid__product .wc-block-grid__product-title a {
+  color: var(--sc-text);
+  text-decoration: none;
+}
+
+ul.products li.product .woocommerce-loop-product__title a:hover,
+.wc-block-grid__product .wc-block-grid__product-title a:hover {
+  color: var(--sc-primary);
+}
+
+ul.products li.product .price,
+.wc-block-grid__product .price {
+  padding: 0 16px;
+  margin-bottom: 4px;
+}
+
+/* ── Dual CTA actions (injected by JS on block cards) ── */
+ul.products li.product .sc-product-card__actions,
+.wc-block-grid__product .sc-product-card__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 12px 16px 16px;
+  margin-top: auto;
 }
 
 /* COD steps connecting dashed line (desktop only) */
@@ -2523,6 +2615,8 @@ ul.products li.product {
   box-shadow: 0 0 0 3px rgba(153, 189, 73, 0.2);
 }
 
+/* ISS-010: !important required — WC account form buttons use high-specificity
+   selectors (.woocommerce-MyAccount-content .button) with inline styles. */
 .sc-account-body .woocommerce-Button,
 .sc-account-body .woocommerce-form-login__submit,
 .sc-account-body .woocommerce-form-register__submit {
@@ -2572,18 +2666,1169 @@ ul.products li.product {
   margin: 0 8px;
 }
 
+/* WC notices on the account login page — center within the card flow */
+.sc-account-page .woocommerce-notices-wrapper {
+  max-width: 480px;
+  margin: 0 auto 16px;
+}
+
+.sc-account-page .woocommerce-error,
+.sc-account-page .woocommerce-message,
+.sc-account-page .woocommerce-info {
+  background: #fff;
+  border: 1px solid var(--sc-border);
+  border-left: 4px solid var(--sc-red);
+  padding: 14px 20px;
+  border-radius: 0 var(--sc-radius) var(--sc-radius) 0;
+  font-size: 0.88rem;
+  color: var(--sc-text);
+  list-style: none;
+  margin: 0;
+  box-shadow: var(--sc-shadow);
+}
+
+.sc-account-page .woocommerce-message {
+  border-left-color: var(--sc-green);
+}
+
+.sc-account-page .woocommerce-info {
+  border-left-color: var(--sc-primary);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   MY ACCOUNT DASHBOARD (post-login)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Viewport-locked layout: no page scroll ── */
+body.woocommerce-account:has(.woocommerce-MyAccount-navigation) {
+  overflow: hidden;
+  height: 100vh;
+}
+
+body.woocommerce-account:has(.woocommerce-MyAccount-navigation) .sc-footer,
+body.woocommerce-account:has(.woocommerce-MyAccount-navigation) footer {
+  display: none !important;
+}
+
+body.woocommerce-account:has(.woocommerce-MyAccount-navigation) .site-content,
+body.woocommerce-account:has(.woocommerce-MyAccount-navigation) .wp-site-blocks,
+body.woocommerce-account:has(.woocommerce-MyAccount-navigation) .entry-content,
+body.woocommerce-account:has(.woocommerce-MyAccount-navigation) .woocommerce {
+  height: 100%;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation,
+.woocommerce-account .woocommerce-MyAccount-content {
+  font-family: var(--sc-font);
+}
+
+.woocommerce-account .woocommerce:has(.woocommerce-MyAccount-navigation) {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 24px 40px;
+  height: calc(100vh - 120px); /* viewport - header - bottom safe area */
+  box-sizing: border-box;
+}
+
+/* ── Page title — hidden, both login form and dashboard have branded headers ── */
+.woocommerce-account .entry-title,
+.woocommerce-account .wp-block-post-title {
+  display: none !important;
+}
+
+/* ── Sidebar Navigation ── */
+.woocommerce-MyAccount-navigation {
+  background: #fff;
+  border-radius: var(--sc-radius-lg, 12px);
+  box-shadow: var(--sc-shadow);
+  padding: 8px;
+  align-self: start;
+  overflow: hidden;
+  max-height: 100%;
+}
+
+/* Nav profile mini-card */
+.sc-nav-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 12px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--sc-border);
+}
+
+.sc-nav-profile__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--sc-primary);
+  flex-shrink: 0;
+}
+
+.sc-nav-profile__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.sc-nav-profile__name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--sc-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sc-nav-profile__role {
+  font-size: 0.75rem;
+  color: var(--sc-text-muted);
+}
+
+.woocommerce-MyAccount-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.woocommerce-MyAccount-navigation ul li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: var(--sc-radius);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--sc-text);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.woocommerce-MyAccount-navigation ul li a:hover {
+  background: var(--sc-surface);
+  color: var(--sc-primary);
+}
+
+.woocommerce-MyAccount-navigation ul li.is-active a,
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--dashboard.is-active a {
+  background: linear-gradient(135deg, var(--sc-primary), var(--sc-primary-dark));
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255, 87, 34, 0.3);
+}
+
+/* Nav icon spans (rendered in navigation.php template) */
+.sc-nav-icon {
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+  line-height: 1;
+}
+
+/* Logout link — muted style */
+.woocommerce-MyAccount-navigation-link--customer-logout a {
+  color: var(--sc-text-muted);
+  font-weight: 500;
+  margin-top: 8px;
+  border-top: 1px solid var(--sc-border);
+  padding-top: 16px;
+  border-radius: 0 0 var(--sc-radius) var(--sc-radius);
+}
+
+.woocommerce-MyAccount-navigation-link--customer-logout a:hover {
+  background: var(--sc-red-light, #ffebee);
+  color: var(--sc-red);
+}
+
+/* ── Content Area — scrollable within viewport ── */
+.woocommerce-MyAccount-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+  max-height: calc(100vh - 160px); /* viewport - header - padding - safe area */
+  padding-bottom: 40px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--sc-border) transparent;
+}
+
+.woocommerce-MyAccount-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.woocommerce-MyAccount-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.woocommerce-MyAccount-content::-webkit-scrollbar-thumb {
+  background: var(--sc-border);
+  border-radius: 3px;
+}
+
+.woocommerce-MyAccount-content > p:first-child {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--sc-text-muted);
+}
+
+.woocommerce-MyAccount-content > p a {
+  color: var(--sc-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.woocommerce-MyAccount-content > p a:hover {
+  color: var(--sc-primary-dark);
+  text-decoration: underline;
+}
+
+/* ── Dashboard greeting ── */
+.woocommerce-MyAccount-content > p:first-child strong,
+.woocommerce-MyAccount-content > p:first-child b {
+  color: var(--sc-text);
+}
+
+/* ── Order Cards (buyer view) ── */
+.sc-orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sc-order-card {
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-lg, 12px);
+  padding: 20px 24px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s ease;
+}
+
+.sc-order-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.sc-order-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.sc-order-card__right {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.sc-order-card__id {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--sc-text);
+}
+
+.sc-order-card__date {
+  font-size: 0.82rem;
+  color: var(--sc-text-muted);
+  margin-top: 2px;
+}
+
+.sc-order-card__total {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--sc-primary);
+  margin-bottom: 6px;
+}
+
+.sc-order-card__items-summary {
+  font-size: 0.88rem;
+  color: var(--sc-text-muted);
+  padding: 8px 0 12px;
+  border-bottom: 1px solid var(--sc-border);
+  margin-bottom: 16px;
+}
+
+/* ── Order Timeline ── */
+.sc-order-timeline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4px;
+  padding: 20px 0;
+  position: relative;
+}
+
+.sc-order-timeline::before {
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: 20px;
+  right: 20px;
+  height: 3px;
+  background: var(--sc-border);
+  border-radius: 2px;
+  z-index: 0;
+}
+
+.sc-timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.sc-timeline-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--sc-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--sc-text-muted);
+  transition: all 0.3s ease;
+}
+
+.sc-timeline-step--done .sc-timeline-dot {
+  background: var(--sc-green);
+  border-color: var(--sc-green);
+  color: #fff;
+  font-size: 14px;
+}
+
+.sc-timeline-step--active .sc-timeline-dot {
+  background: var(--sc-primary);
+  border-color: var(--sc-primary);
+  color: #fff;
+  box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.2);
+  animation: sc-pulse 2s infinite;
+}
+
+@keyframes sc-pulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.2); }
+  50%      { box-shadow: 0 0 0 8px rgba(255, 87, 34, 0.08); }
+}
+
+.sc-timeline-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--sc-text-muted);
+  text-align: center;
+  max-width: 80px;
+  line-height: 1.3;
+}
+
+.sc-timeline-step--done .sc-timeline-label,
+.sc-timeline-step--active .sc-timeline-label {
+  color: var(--sc-text);
+}
+
+/* ── Order Card Actions ── */
+.sc-order-card__actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: 12px;
+}
+
+.sc-btn--ghost {
+  background: transparent;
+  color: var(--sc-primary);
+  border: 2px solid var(--sc-primary);
+  padding: 8px 20px;
+  border-radius: var(--sc-radius);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sc-btn--ghost:hover {
+  background: var(--sc-primary);
+  color: #fff;
+}
+
+.sc-btn--sm {
+  padding: 8px 16px;
+  font-size: 0.82rem;
+  min-height: 36px;
+}
+
+.sc-btn--primary {
+  background: var(--sc-primary);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: var(--sc-radius);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sc-btn--primary:hover {
+  background: var(--sc-primary-dark);
+}
+
+.sc-btn--cancel {
+  background: transparent;
+  color: var(--sc-red);
+  border: 2px solid var(--sc-red);
+  padding: 8px 16px;
+  border-radius: var(--sc-radius);
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sc-btn--cancel:hover {
+  background: var(--sc-red);
+  color: #fff;
+}
+
+/* ── Cancelled order notice ── */
+.sc-order-cancelled-notice {
+  padding: 12px 16px;
+  background: var(--sc-red-light, #ffebee);
+  color: var(--sc-red);
+  border-radius: var(--sc-radius);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 16px 0;
+}
+
+/* ── Empty orders state ── */
+.sc-orders-empty {
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.sc-orders-empty__icon {
+  font-size: 56px;
+  margin-bottom: 12px;
+}
+
+.sc-orders-empty__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--sc-text);
+  margin: 0 0 8px;
+}
+
+.sc-orders-empty__desc {
+  font-size: 0.9rem;
+  color: var(--sc-text-muted);
+  margin: 0 0 24px;
+}
+
+.sc-orders-empty .sc-btn--primary {
+  display: inline-flex;
+}
+
+/* ── Orders Pagination ── */
+.sc-orders-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--sc-border);
+}
+
+/* ── Addresses ── */
+.woocommerce-MyAccount-content .woocommerce-Addresses {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.woocommerce-MyAccount-content .woocommerce-Address {
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius);
+  padding: 20px;
+  background: var(--sc-surface);
+}
+
+.woocommerce-MyAccount-content .woocommerce-Address header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--sc-border);
+}
+
+.woocommerce-MyAccount-content .woocommerce-Address header h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--sc-text);
+}
+
+.woocommerce-MyAccount-content .woocommerce-Address address {
+  font-style: normal;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--sc-text-muted);
+}
+
+/* ── Edit Account Form ── */
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm fieldset {
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius);
+  padding: 24px;
+  margin: 24px 0;
+}
+
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm fieldset legend {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--sc-text);
+  padding: 0 8px;
+}
+
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm .form-row label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: var(--sc-text);
+  font-size: 0.9rem;
+}
+
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm .form-row input[type="text"],
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm .form-row input[type="email"],
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm .form-row input[type="password"] {
+  border: 2px solid var(--sc-border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 100%;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+  font-family: var(--sc-font);
+}
+
+.woocommerce-MyAccount-content .woocommerce-EditAccountForm .form-row input:focus {
+  border-color: var(--sc-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.15);
+}
+
+/* ═══ Dashboard — Welcome Card ═══ */
+.sc-dash-welcome {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+  color: #fff;
+  padding: 24px;
+  border-radius: var(--sc-radius-lg, 12px);
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sc-dash-welcome::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+}
+
+.sc-dash-welcome__avatar img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  object-fit: cover;
+}
+
+.sc-dash-welcome__info { flex: 1; min-width: 0; }
+
+.sc-dash-welcome__greeting {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: #fff;
+}
+
+.sc-dash-welcome__greeting span { color: #ffcc80; }
+
+.sc-dash-welcome__meta {
+  font-size: 0.82rem;
+  opacity: 0.85;
+  margin: 0;
+}
+
+.sc-dash-welcome__meta a {
+  color: #ffcc80;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sc-dash-welcome__meta a:hover { text-decoration: underline; }
+.sc-dash-welcome__separator { margin: 0 6px; opacity: 0.5; }
+
+.sc-dash-welcome__logout {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--sc-radius-pill);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.sc-dash-welcome__logout:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ═══ Dashboard — Quick Actions Grid ═══ */
+.sc-dash-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.sc-dash-action-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-lg, 12px);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.sc-dash-action-card:hover {
+  border-color: var(--sc-primary);
+  box-shadow: 0 4px 16px rgba(255, 87, 34, 0.12);
+  transform: translateY(-2px);
+}
+
+.sc-dash-action-card__icon { font-size: 1.6rem; line-height: 1; }
+
+.sc-dash-action-card__label {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--sc-text);
+}
+
+.sc-dash-action-card__desc {
+  font-size: 0.78rem;
+  color: var(--sc-text-muted);
+  line-height: 1.4;
+}
+
+.sc-dash-action-card--cta {
+  border-color: var(--sc-primary);
+  background: linear-gradient(135deg, #fff5ee, #fff);
+}
+
+.sc-dash-action-card--cta .sc-dash-action-card__label { color: var(--sc-primary); }
+
+/* ═══ Dashboard — Recent Orders ═══ */
+.sc-dash-recent {
+  background: #fff;
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius-lg, 12px);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.sc-dash-recent__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--sc-border);
+}
+
+.sc-dash-recent__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--sc-text);
+}
+
+.sc-dash-recent__view-all {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--sc-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sc-dash-recent__view-all:hover { color: var(--sc-primary-dark); }
+
+.sc-dash-recent-order {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--sc-surface);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.sc-dash-recent-order:last-child { border-bottom: none; }
+.sc-dash-recent-order:hover { background: var(--sc-surface); }
+
+.sc-dash-recent-order__icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sc-surface);
+  border-radius: 10px;
+}
+
+.sc-dash-recent-order__info { flex: 1; min-width: 0; }
+
+.sc-dash-recent-order__id {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--sc-text);
+}
+
+.sc-dash-recent-order__items {
+  font-size: 0.78rem;
+  color: var(--sc-text-muted);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sc-dash-recent-order__right { text-align: right; flex-shrink: 0; }
+
+.sc-dash-recent-order__total {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--sc-primary);
+}
+
+.sc-dash-recent-order__status {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--sc-radius-pill);
+  margin-top: 4px;
+  display: inline-block;
+  background: var(--sc-surface);
+  color: var(--sc-text-muted);
+}
+
+.sc-dash-recent-order__status--pending    { background: #fff9c4; color: #f57f17; }
+.sc-dash-recent-order__status--processing { background: #ebf7a9; color: #518123; }
+.sc-dash-recent-order__status--sc-packed  { background: #f3e5f5; color: #6a1b9a; }
+.sc-dash-recent-order__status--sc-dispatch { background: #ede7f6; color: #4527a0; }
+.sc-dash-recent-order__status--completed  { background: #b6d455; color: #225808; }
+.sc-dash-recent-order__status--on-hold    { background: #fff9c4; color: #f57f17; }
+
+/* Empty orders state */
+.sc-dash-recent__empty {
+  text-align: center;
+  padding: 40px 24px;
+}
+
+.sc-dash-recent__empty-icon { font-size: 48px; margin-bottom: 8px; }
+
+.sc-dash-recent__empty-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--sc-text);
+  margin: 0 0 4px;
+}
+
+.sc-dash-recent__empty-desc {
+  font-size: 0.85rem;
+  color: var(--sc-text-muted);
+  margin: 0 0 20px;
+}
+
+/* ── WC notices within content ── */
+.woocommerce-MyAccount-content .woocommerce-message,
+.woocommerce-MyAccount-content .woocommerce-info {
+  background: var(--sc-surface);
+  border-left: 4px solid var(--sc-primary);
+  padding: 14px 20px;
+  border-radius: 0 var(--sc-radius) var(--sc-radius) 0;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.woocommerce-MyAccount-content .woocommerce-error {
+  background: #ffebee;
+  border-left: 4px solid var(--sc-red);
+  padding: 14px 20px;
+  border-radius: 0 var(--sc-radius) var(--sc-radius) 0;
+  font-size: 0.9rem;
+  color: var(--sc-red);
+  margin-bottom: 20px;
+}
+
+/* Non-dashboard content pages get card wrapper */
+.woocommerce-MyAccount-content:has(.sc-orders-list),
+.woocommerce-MyAccount-content:has(.woocommerce-Addresses),
+.woocommerce-MyAccount-content:has(.woocommerce-EditAccountForm),
+.woocommerce-MyAccount-content:has(.woocommerce-orders-table),
+.woocommerce-MyAccount-content:has(.woocommerce-order-details) {
+  background: #fff;
+  border-radius: var(--sc-radius-lg, 12px);
+  box-shadow: var(--sc-shadow);
+  padding: 32px;
+}
+
+/* ═══ View Order — Status Banner ═══ */
+.woocommerce-MyAccount-content > p:first-child:has(.order-number) {
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius);
+  padding: 14px 20px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--sc-text-muted);
+  margin-bottom: 24px;
+}
+
+mark.order-number,
+mark.order-date {
+  background: none;
+  color: var(--sc-text);
+  font-weight: 700;
+}
+
+mark.order-status {
+  background: var(--sc-primary);
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: var(--sc-radius-pill);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* ═══ View Order — Details Table ═══ */
+.woocommerce-table--order-details {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.woocommerce-table--order-details thead th {
+  text-align: left;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--sc-text-muted);
+  padding: 10px 0;
+  border-bottom: 2px solid var(--sc-border);
+}
+
+.woocommerce-table--order-details thead th:last-child {
+  text-align: right;
+}
+
+.woocommerce-table--order-details tbody td {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--sc-border);
+  vertical-align: top;
+}
+
+.woocommerce-table--order-details tbody td:last-child {
+  text-align: right;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.woocommerce-table--order-details tbody td a {
+  color: var(--sc-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.woocommerce-table--order-details tbody td a:hover {
+  text-decoration: underline;
+}
+
+.woocommerce-table--order-details tbody .product-quantity {
+  color: var(--sc-text-muted);
+}
+
+.woocommerce-table--order-details tfoot th {
+  text-align: right;
+  padding: 10px 16px 10px 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--sc-text-muted);
+}
+
+.woocommerce-table--order-details tfoot td {
+  padding: 10px 0;
+  text-align: right;
+  font-size: 0.9rem;
+  color: var(--sc-text);
+}
+
+/* Total row emphasis */
+.woocommerce-table--order-details tfoot tr:last-child th,
+.woocommerce-table--order-details tfoot tr:last-child td {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--sc-primary);
+  border-top: 2px solid var(--sc-border);
+  padding-top: 14px;
+}
+
+/* ═══ View Order — Section Titles ═══ */
+.woocommerce-order-details__title,
+.woocommerce-column__title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--sc-text);
+  margin: 0 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--sc-border);
+}
+
+/* ═══ View Order — Customer Details (Billing/Shipping) ═══ */
+.woocommerce-customer-details {
+  margin-top: 24px;
+}
+
+.woocommerce-customer-details .woocommerce-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.woocommerce-customer-details .woocommerce-column {
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius);
+  padding: 20px;
+}
+
+.woocommerce-customer-details address {
+  font-style: normal;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--sc-text-muted);
+}
+
+.woocommerce-customer-details address p {
+  margin: 0;
+}
+
+/* ═══ View Order — Order Notes Timeline ═══ */
+.woocommerce-OrderUpdates {
+  list-style: none;
+  margin: 16px 0;
+  padding: 0;
+}
+
+.woocommerce-OrderUpdate {
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  background: var(--sc-surface);
+  border: 1px solid var(--sc-border);
+  border-radius: var(--sc-radius);
+}
+
+.woocommerce-OrderUpdate-meta {
+  font-size: 0.78rem;
+  color: var(--sc-text-muted);
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.woocommerce-OrderUpdate-description p {
+  font-size: 0.88rem;
+  color: var(--sc-text);
+  margin: 0;
+}
+
+/* ═══ View Order — Action Buttons ═══ */
+.woocommerce-table--order-details tfoot .order-actions-button {
+  background: var(--sc-primary);
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: var(--sc-radius);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-right: 6px;
+}
+
+.woocommerce-table--order-details tfoot .order-actions-button:hover {
+  background: var(--sc-primary-dark);
+}
+
+/* ── Mobile Responsive ── */
+@media (max-width: 768px) {
+  .woocommerce-account .woocommerce:has(.woocommerce-MyAccount-navigation) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px 16px 60px;
+  }
+
+  .woocommerce-MyAccount-navigation {
+    position: static;
+  }
+
+  .sc-nav-profile { display: none; }
+
+  .woocommerce-MyAccount-navigation ul {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 6px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 4px;
+  }
+
+  .woocommerce-MyAccount-navigation ul::-webkit-scrollbar { display: none; }
+
+  .woocommerce-MyAccount-navigation ul li a {
+    white-space: nowrap;
+    padding: 10px 14px;
+    font-size: 0.82rem;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+  }
+
+  .sc-nav-icon { font-size: 1.2rem; }
+
+  .woocommerce-MyAccount-navigation-link--customer-logout a {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 10px;
+  }
+
+  /* Dashboard welcome — stack vertically */
+  .sc-dash-welcome {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 16px;
+  }
+
+  .sc-dash-welcome__logout {
+    position: static;
+    margin-top: 8px;
+  }
+
+  .sc-dash-actions {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .sc-dash-action-card {
+    padding: 14px;
+  }
+
+  .sc-dash-action-card__desc { display: none; }
+
+  /* Orders cards */
+  .sc-order-card { padding: 16px; }
+
+  .sc-order-card__header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .sc-order-card__right {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .sc-order-timeline {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0;
+    padding: 16px 0;
+  }
+
+  .sc-timeline-label {
+    font-size: 0.65rem;
+    max-width: 60px;
+  }
+
+  .woocommerce-MyAccount-content .woocommerce-Addresses {
+    grid-template-columns: 1fr;
+  }
+
+  .woocommerce-MyAccount-content:has(.sc-orders-list),
+  .woocommerce-MyAccount-content:has(.woocommerce-Addresses),
+  .woocommerce-MyAccount-content:has(.woocommerce-EditAccountForm),
+  .woocommerce-MyAccount-content:has(.woocommerce-orders-table),
+  .woocommerce-MyAccount-content:has(.woocommerce-order-details) {
+    padding: 20px 16px;
+  }
+
+  .woocommerce-customer-details .woocommerce-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ═══════════════════════════════════════════════════════════════════════════
    STICKY HEADER WRAPPER
    ═══════════════════════════════════════════════════════════════════════════ */
 
-/* Suppress the FSE block-theme header and site title entirely */
-#header,
-.wp-block-template-part[data-slug="header"],
-.wp-block-site-title,
-.wp-block-template-part .wp-block-site-title,
-.wp-block-template-part[data-slug="header"] .wp-block-site-title {
-  display: none !important;
-}
+/*
+ * ISS-007: FSE header/footer suppressed via empty template part overrides
+ * in parts/header.html and parts/footer.html. The parent theme's block
+ * header no longer renders in the DOM, so no CSS hiding is needed.
+ */
 
 #sc-sticky-header {
   position: fixed;
@@ -2606,9 +3851,9 @@ ul.products li.product {
 
 /* Scrolled state — dark floating card with full border-radius */
 #sc-sticky-header.scrolled {
-  background: #1c1c1c;
+  background: #1b5e20;
   border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 32px rgba(27, 94, 32, 0.35);
 }
 
 .sc-sticky-header__left {
@@ -2627,6 +3872,33 @@ ul.products li.product {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  gap: 16px;
+}
+
+/* Non-scrolled on front-page (floating over dark hero) — white text */
+.home #sc-sticky-header:not(.scrolled) .sc-main-nav__link {
+  color: #fff;
+}
+
+.home #sc-sticky-header:not(.scrolled) .sc-main-nav__link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.home #sc-sticky-header:not(.scrolled) .sc-main-nav__link--active {
+  background: rgba(255, 87, 34, 0.25);
+  color: #fff;
+}
+
+.home #sc-sticky-header:not(.scrolled) .sc-header-account {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.home #sc-sticky-header:not(.scrolled) .sc-header-cart {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+  background: transparent;
 }
 
 /* When scrolled: invert nav pill to dark-on-dark style */
@@ -2729,6 +4001,8 @@ ul.products li.product {
    TASK 7 — MOBILE RESPONSIVENESS
    ═══════════════════════════════════════════════════════════════════════════ */
 
+/* ISS-010: !important in media queries required — overrides desktop
+   grid-template-columns and layout values set at equal specificity above. */
 @media (max-width: 768px) {
   /* Product grid — 2 columns */
   .woocommerce ul.products,
@@ -2882,8 +4156,8 @@ body:not(.wp-admin) {
    ═══════════════════════════════════════════════════════════════════════════ */
 
 .sc-footer {
-  background: var(--sc-text);
-  color: rgba(255, 255, 255, 0.8);
+  background: #1b5e20;
+  color: rgba(255, 255, 255, 0.85);
   padding: 64px 0 32px;
 }
 
@@ -2997,9 +4271,40 @@ body:not(.wp-admin) {
     text-align: center;
   }
 
-  /* Unified header hidden on mobile — nav pill moves to bottom independently */
+  /* UX-005: Show a slimmed header bar on mobile with account + cart icons */
   #sc-sticky-header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    padding: 8px 12px;
+    height: auto;
+    min-height: 48px;
+  }
+
+  /* Hide desktop nav and account bar text links on mobile */
+  #sc-sticky-header .sc-sticky-header__left {
     display: none;
+  }
+
+  #sc-sticky-header .sc-header-account-bar .sc-header-account:not(.sc-header-account--mobile) {
+    display: none;
+  }
+
+  /* Mobile account icons row */
+  .sc-header-account--mobile {
+    display: inline-flex !important;
+    font-size: 0;
+    padding: 6px 10px;
+    border: none;
+    background: transparent;
+  }
+
+  .sc-header-account--mobile .sc-mobile-icon {
+    font-size: 20px;
+  }
+
+  .sc-site-logo img {
+    width: 130px;
+    height: 34px;
   }
 
   /* Restore nav pill as a standalone bottom-fixed element on mobile */
@@ -3012,6 +4317,11 @@ body:not(.wp-admin) {
     transform: translateX(-50%);
     z-index: 10000;
     box-shadow: var(--sc-shadow-md);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: var(--sc-radius-pill);
+    border: 1px solid var(--sc-border);
   }
 
   .sc-main-nav__link {
@@ -3019,9 +4329,10 @@ body:not(.wp-admin) {
     padding: 5px 10px;
   }
 
-  /* Remove body padding on mobile (no top header bar) */
+  /* UX-016: Padding so bottom nav pill doesn't overlap footer content */
   body:not(.wp-admin) {
     padding-top: 0;
+    padding-bottom: 64px;
   }
 
   .sc-hero {
@@ -3030,24 +4341,494 @@ body:not(.wp-admin) {
   }
 }
 
-/* MotoShop - Force Brand Colors & Fix UI overrides */
-.sc-btn--buy-now {
-  background-color: #ff5722 !important;
-  color: #fff !important;
-  font-size: 13px !important;
-  text-transform: uppercase !important;
-  font-weight: 700 !important;
+/* ═══════════════════════════════════════════════════════════════════════════
+   UX-006 — CART ICON WITH COUNT BADGE
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.sc-header-cart {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--sc-text);
+  font-size: 1.5rem;
+  padding: 4px;
+  background: none;
+  border: none;
+  transition: color var(--sc-anim-fast);
 }
 
-.sc-btn--buy-now::before {
-  content: none !important;
+.sc-header-cart:hover {
+  color: var(--sc-primary);
 }
 
-.sc-shop-page nav.woocommerce-pagination ul.page-numbers li span.current,
-.woocommerce-pagination ul.page-numbers li .page-numbers.current,
-.woocommerce-pagination ul.page-numbers li span[aria-current="page"] {
-  background-color: #ff5722 !important;
-  border-color: #ff5722 !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 12px rgba(255, 87, 34, 0.3) !important;
+.sc-header-cart__icon {
+  font-size: 18px;
+}
+
+.sc-header-cart__count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 18px;
+  height: 18px;
+  background: var(--sc-primary);
+  color: var(--sc-white);
+  font-size: 10px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  line-height: 1;
+  padding: 0 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sc-header-cart__count:empty,
+.sc-header-cart__count[data-count="0"] {
+  display: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   UX-002 — FOCUS-VISIBLE STYLES FOR ALL INTERACTIVE ELEMENTS
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.sc-main-nav__link:focus-visible,
+.sc-product-card__name a:focus-visible,
+.sc-faq__question:focus-visible,
+.sc-cat-card:focus-visible,
+.sc-header-account:focus-visible,
+.sc-header-cart:focus-visible,
+.sc-footer__links a:focus-visible,
+.sc-footer__social-link:focus-visible,
+.sc-product-card__image-wrap:focus-visible,
+.sc-product-card__image-link:focus-visible,
+.sc-btn--buy-now:focus-visible,
+.sc-btn--add-to-cart:focus-visible,
+.sc-section__link:focus-visible,
+.sc-coverage__city:focus-visible,
+.sc-announcement-bar__close:focus-visible,
+.sc-account-tab:focus-visible,
+.sc-switch-to-register:focus-visible,
+.sc-switch-to-login:focus-visible,
+.sc-login-form__forgot:focus-visible {
+  outline: 3px solid var(--sc-primary);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(255, 87, 34, 0.15);
+}
+
+/* Form inputs */
+.woocommerce-Input:focus-visible,
+.input-text:focus-visible,
+input[type="text"]:focus-visible,
+input[type="email"]:focus-visible,
+input[type="password"]:focus-visible,
+input[type="tel"]:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--sc-primary);
+  outline-offset: 1px;
+  border-color: var(--sc-primary);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   UX-003 — EXTRACTED INLINE STYLE CLASSES (content-product.php)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Sale badge — replaces inline style="background:#D32F2F;color:#fff;" */
+.sc-product-card__badge--sale {
+  background: var(--sc-red);
+  color: var(--sc-white);
+}
+
+/* Compact COD badge — replaces inline style="font-size:11px;padding:3px 8px;" */
+.sc-cod-badge--sm {
+  font-size: 11px;
+  padding: 3px 8px;
+}
+
+/* Single-column actions (out of stock) — replaces inline grid-template-columns:1fr */
+.sc-product-card__actions--single {
+  grid-template-columns: 1fr;
+}
+
+.sc-product-card__actions--single .sc-btn--add-to-cart {
+  grid-column: 1 / -1;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   UX-003 — EXTRACTED INLINE STYLE CLASSES (form-login.php)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Remember-me + forgot-password row */
+.sc-login-form__remember-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sc-login-form__remember-row .woocommerce-form__label-for-checkbox {
+  margin: 0;
+}
+
+/* Forgot password link */
+.sc-login-form__forgot {
+  font-size: 0.85rem;
+  color: var(--sc-green);
+  text-decoration: none;
+}
+
+.sc-login-form__forgot:hover {
+  color: var(--sc-primary-dark);
+  text-decoration: underline;
+}
+
+/* Tab-switch buttons (login ↔ register) */
+.sc-login-form__switch-wrap {
+  text-align: center;
+  margin: 0;
+}
+
+.sc-login-form__switch-btn {
+  background: none;
+  border: none;
+  color: var(--sc-green);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  padding: 4px 8px;
+  transition: color var(--sc-anim-fast);
+}
+
+.sc-login-form__switch-btn:hover {
+  color: var(--sc-primary-dark);
+}
+
+/* Show password checkbox */
+.sc-show-password {
+  margin-top: -4px !important;
+  margin-bottom: 8px !important;
+}
+
+.sc-show-password label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--sc-text-muted);
+  cursor: pointer;
+  user-select: none;
+}
+
+.sc-show-pw-checkbox {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--sc-primary);
+  cursor: pointer;
+  margin: 0;
+}
+
+/* WooCommerce password strength meter styling */
+.woocommerce-password-strength {
+  display: block;
+  margin-top: 8px;
+  padding: 6px 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: var(--sc-radius-sm);
+  background: var(--sc-surface);
+  color: var(--sc-text-muted);
+}
+
+.woocommerce-password-strength.short  { color: var(--sc-red); background: var(--sc-red-light); }
+.woocommerce-password-strength.bad    { color: var(--sc-red); background: var(--sc-red-light); }
+.woocommerce-password-strength.good   { color: var(--sc-amber); background: var(--sc-amber-light); }
+.woocommerce-password-strength.strong { color: var(--sc-green); background: var(--sc-success-bg); }
+
+.woocommerce-password-hint {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.78rem;
+  color: var(--sc-text-muted);
+  line-height: 1.4;
+}
+
+/* Password mismatch warning */
+.sc-password-mismatch {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.82rem;
+  color: var(--sc-red);
+  font-weight: 600;
+}
+
+.sc-password-mismatch[hidden] {
+  display: none;
+}
+
+/* Registration password hint */
+.sc-login-form__password-hint {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   LOST / RESET PASSWORD PAGES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.sc-lost-pw__intro {
+  font-size: 0.9rem;
+  color: var(--sc-text-muted);
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+.sc-lost-pw__back {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.sc-lost-pw__back a {
+  font-size: 0.85rem;
+  color: var(--sc-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--sc-anim-fast);
+}
+
+.sc-lost-pw__back a:hover {
+  color: var(--sc-primary-dark);
+  text-decoration: underline;
+}
+
+/* Confirmation page */
+.sc-lost-pw__confirmation {
+  text-align: center;
+  padding: 10px 0 6px;
+}
+
+.sc-lost-pw__icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.sc-lost-pw__confirmation .sc-lost-pw__intro {
+  text-align: left;
+}
+
+/* Reset password form buttons — reuse login card button style */
+.woocommerce-ResetPassword .woocommerce-Button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: var(--sc-primary);
+  color: var(--sc-white);
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--sc-radius);
+  cursor: pointer;
+  transition: background var(--sc-anim-fast);
+  text-align: center;
+}
+
+.woocommerce-ResetPassword .woocommerce-Button:hover {
+  background: var(--sc-primary-dark);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   LOGIN GATE MODAL (guest users)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.sc-login-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: sc-fadeIn 0.2s ease;
+}
+
+.sc-login-gate[hidden] {
+  display: none !important;
+}
+
+.sc-login-gate__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.sc-login-gate__card {
+  position: relative;
+  background: var(--sc-white);
+  border-radius: var(--sc-radius-lg);
+  box-shadow: var(--sc-shadow-xl);
+  padding: 36px 32px 28px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  animation: sc-slideUp 0.25s ease;
+}
+
+@keyframes sc-fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes sc-slideUp {
+  from { opacity: 0; transform: translateY(24px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.sc-login-gate__close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--sc-text-muted);
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+  transition: color var(--sc-anim-fast);
+}
+
+.sc-login-gate__close:hover {
+  color: var(--sc-text);
+}
+
+.sc-login-gate__icon {
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+.sc-login-gate__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--sc-text);
+  margin: 0 0 8px;
+}
+
+.sc-login-gate__message {
+  font-size: 0.9rem;
+  color: var(--sc-text-muted);
+  line-height: 1.5;
+  margin: 0 0 24px;
+}
+
+.sc-login-gate__btn {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: var(--sc-radius);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--sc-anim-fast), color var(--sc-anim-fast);
+}
+
+.sc-login-gate__btn--primary {
+  background: var(--sc-primary);
+  color: var(--sc-white);
+  margin-bottom: 10px;
+}
+
+.sc-login-gate__btn--primary:hover {
+  background: var(--sc-primary-dark);
+  color: var(--sc-white);
+}
+
+.sc-login-gate__btn--secondary {
+  background: transparent;
+  color: var(--sc-primary);
+  border: 2px solid var(--sc-primary);
+}
+
+.sc-login-gate__btn--secondary:hover {
+  background: var(--sc-primary);
+  color: var(--sc-white);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   UX-004 — COD BADGE SUB-TEXT (single product)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.sc-product-cod-badge__sub {
+  font-size: 13px;
+  color: var(--sc-amber);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   UX-007 — HERO IMAGE FALLBACK
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.sc-hero__image-wrap img.sc-img-failed {
+  display: none;
+}
+
+.sc-hero__image-wrap--fallback {
+  width: 100%;
+  aspect-ratio: 480 / 380;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 87, 34, 0.15) 100%);
+  border-radius: var(--sc-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   UX-001 — REDUCED MOTION SUPPORT (WCAG 2.1 SC 2.3.3)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Disable specific heavy animations */
+  .sc-hero,
+  .sc-announcement-bar {
+    background-size: 100% 100% !important;
+    animation: none !important;
+  }
+
+  .sc-hero__floating-card {
+    animation: none !important;
+  }
+
+  .sc-hero::before,
+  .sc-hero::after {
+    animation: none !important;
+  }
+
+  .sc-product-card__sale-badge {
+    animation: none !important;
+  }
+
+  /* Keep transforms but remove transitions */
+  .sc-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .sc-btn--primary::after {
+    display: none;
+  }
 }
